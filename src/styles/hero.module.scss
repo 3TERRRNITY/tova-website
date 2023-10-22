@@ -1,0 +1,18 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/hero-image-exp.png);
+  background-size: cover;
+  position: relative;
+  &__text {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    text-transform: uppercase;
+    font-size: 70px;
+    font-weight: 600;
+    line-height: 76px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
