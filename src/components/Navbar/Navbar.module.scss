@@ -1,0 +1,65 @@
+.navbar {
+  position: fixed;
+  top: 50%;
+  right: 40px;
+  display: flex;
+
+  gap: 16px;
+
+  &__top {
+    margin: 0;
+    width: 100%;
+
+    border-radius: 13px;
+
+    padding: 7px 20px;
+
+    background-color: #d9d9d938;
+    transition: opacity 0.4s ease-in-out;
+
+    opacity: 0;
+    &.active {
+      opacity: 1;
+    }
+    &__col {
+      position: relative;
+
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      & > div {
+        padding: 10px 15px;
+      }
+    }
+    &__link {
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0.015em;
+      text-align: left;
+    }
+    &__link:hover {
+      opacity: 0.7;
+      transition: all 0.2s;
+    }
+  }
+
+  &__bottom {
+    cursor: pointer;
+    height: max-content;
+    &__home {
+      flex: 1;
+      transition: 0.5s all;
+    }
+    &__hamburger {
+      position: relative;
+      width: 27px;
+      height: 20px;
+      &:hover {
+        opacity: 0.7;
+        transition: opacity 0.25s;
+      }
+    }
+  }
+}
