@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import styles from "../styles/hero.module.scss";
+import Image from "next/image";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -21,11 +22,23 @@ export default function Home() {
     <>
       <div className={styles.hero}>
         <div className={styles.hero__text}>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          <div className={styles.hero__text__description}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </div>
+          <div className={styles.hero__text__logo}>
+            <Image src="/TOVA-logo.svg" alt="logo" fill />
+          </div>
+        </div>
+        <div className={styles.hero__contact}>
+          <div className={styles.hero__contact_href}>
+            <a href="">связаться</a>
+          </div>
+          <div className={styles.hero__contact__description}>
+            tova <br />
+            про дизайн
+          </div>
         </div>
       </div>
-      <div style={{ height: "100vh", backgroundColor: "#cac" }}></div>
-      <div style={{ height: "100vh", backgroundColor: "#bfb" }}></div>
     </>
   );
 }
