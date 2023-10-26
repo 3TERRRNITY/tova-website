@@ -1,0 +1,21 @@
+.header {
+  height: max-content;
+  padding: 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    position: relative;
+    width: 107px;
+    height: 18px;
+  }
+
+  &__text {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 34px;
+    text-align: right;
+  }
+}

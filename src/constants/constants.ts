@@ -8,6 +8,9 @@ export const IMAGES: ILogos[] = [
   { img: "/logos/migrenol.svg", key: 6 },
   { img: "/logos/mindly.png", key: 7 },
   { img: "/logos/vademecum.svg", key: 8 },
+  { img: "/logos/madaia.svg", key: 9 },
+  { img: "/logos/pfarm.svg", key: 10 },
+  { img: "/logos/rambam.svg", key: 11 },
 ];
 export const PROJECTS: IProjects[] = [
   {
