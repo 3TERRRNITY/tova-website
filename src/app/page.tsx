@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import styles from "../styles/hero.module.scss";
 import Image from "next/image";
+import { IMAGES } from "../constants/constants";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -36,6 +37,30 @@ export default function Home() {
           <div className={styles.hero__contact__description}>
             tova <br />
             про дизайн
+          </div>
+        </div>
+        <div className={styles.hero__sliderContainer}>
+          <div className={styles.hero__slider}>
+            {IMAGES.map(({ img, key }) => (
+              <div className={styles.hero__slider__item} key={key}>
+                <Image
+                  className={styles.hero__slider__item_img}
+                  src={img}
+                  alt="logo"
+                  fill
+                />
+              </div>
+            ))}
+            {IMAGES.map(({ img, key }) => (
+              <div className={styles.hero__slider__item} key={key}>
+                <Image
+                  className={styles.hero__slider__item_img}
+                  src={img}
+                  alt="logo"
+                  fill
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
