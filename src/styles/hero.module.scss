@@ -1,3 +1,6 @@
+@import "./mixins.scss";
+@import "./variable.scss";
+
 .hero {
   width: 100vw;
   height: 100vh;
@@ -7,26 +10,22 @@
 
   background-image: url(/hero-image-exp.png);
   background-size: cover;
-
   &__text {
-    width: 1373px;
-    padding: 40px 0 0 40px;
-    font-size: 93px;
-    font-weight: 600;
-    line-height: 101px;
+    padding: $space-40 0 0 $space-40;
+    @include h1Title;
     text-align: left;
   }
 }
 
 .sliderContainer {
-  height: 190px;
+  height: $sliderHeight;
   width: 100%;
 }
 
 .slider {
   position: relative;
   display: flex;
-  gap: 74px;
+  gap: $space-80;
   align-items: center;
   width: 100%;
   height: 100%;
@@ -36,23 +35,23 @@
     position: relative;
 
     img {
-      max-width: 130px;
-      max-height: 50px;
+      width: $sliderImageWidth;
+      max-height: $sliderImageHeight;
     }
   }
 
   &__container {
     display: flex;
-    gap: 74px;
+    gap: $space-80;
     align-items: center;
-    margin-right: 72px;
+    margin-right: $space-80;
 
     &_duplicate {
       position: absolute;
-      left: 135%;
+      left: $sliderDuplicateSpace;
 
       display: flex;
-      gap: 74px;
+      gap: $space-80;
       align-items: center;
     }
   }

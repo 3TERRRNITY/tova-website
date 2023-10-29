@@ -1,0 +1,31 @@
+@import "./variable.scss";
+
+@mixin h1Title {
+  font-size: $h1;
+  line-height: $lineHeightH1;
+  font-weight: 600;
+}
+
+@mixin h3Title {
+  font-size: $h2;
+  line-height: $lineHeightH2;
+  font-weight: 600;
+}
+
+@mixin h3Title {
+  font-size: $h3;
+  line-height: $lineHeightH3;
+  font-weight: 400;
+}
+
+@mixin paragraph {
+  font-size: $p;
+  line-height: $lineHeightP;
+  font-weight: 400;
+}
+
+@mixin smallParagraph {
+  font-size: $pSmall;
+  line-height: $lineHeightPSmall;
+  font-weight: 400;
+}

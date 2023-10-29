@@ -1,10 +1,13 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variable.scss";
+
 .navbar {
   position: fixed;
   top: 50%;
-  right: 40px;
+  right: $space-40;
   display: flex;
   z-index: +1;
-  gap: 16px;
+  gap: $space-20;
 
   &__top {
     margin: 0;
@@ -12,7 +15,7 @@
 
     border-radius: 13px;
 
-    padding: 7px 20px;
+    padding: $space-20;
 
     background-color: #d9d9d938;
     transition: opacity 0.4s ease-in-out;
@@ -35,9 +38,7 @@
       }
     }
     &__link {
-      font-size: 22px;
-      font-weight: 400;
-      line-height: 32px;
+      @include paragraph;
       letter-spacing: 0.015em;
       text-align: left;
     }
@@ -56,8 +57,8 @@
     }
     &__hamburger {
       position: relative;
-      width: 27px;
-      height: 20px;
+      width: $hamburgerWidth;
+      height: $hamburgerHeight;
       &:hover {
         opacity: 0.7;
         transition: opacity 0.25s;

@@ -38,12 +38,12 @@ export default function Home() {
   }, []);
 
   const animation = () => {
-    if (xPercent <= -105) {
+    if (xPercent <= -100) {
       xPercent = 0;
     }
     gsap.set(firstContainer.current, { xPercent: xPercent });
     gsap.set(secondContainer.current, { xPercent: xPercent });
-    xPercent += 0.01 * direction;
+    xPercent += 0.05 * direction;
     requestAnimationFrame(animation);
   };
   const brandsContainer = IMAGES.map(({ img, key }) => (
@@ -57,7 +57,8 @@ export default function Home() {
       <Navbar />
       <div className={styles.hero}>
         <div className={styles.hero__text}>
-          креатив - он как нейросеть главное правильно сформулировать запрос
+          креатив - он как нейросеть <br /> главное правильно <br />{" "}
+          сформулировать запрос
         </div>
         <Header />
       </div>
