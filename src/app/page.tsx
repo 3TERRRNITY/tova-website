@@ -3,10 +3,25 @@ import { useEffect, useRef, useState } from "react";
 import styles from "../styles/hero.module.scss";
 import Navbar from "../components/Navbar/Navbar";
 import Header from "../components/Header/Header";
-import { IMAGES } from "../constants/constants";
+import { IMAGES, PROJECTS } from "../constants/constants";
 import gsap from "gsap";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 export default function Home() {
+  const [isHovered, setIsHovered] = useState(false);
+  const cardVariants = {
+    initial: {
+      opacity: 1,
+      y: 0,
+    },
+    hover: {
+      opacity: 1,
+      y: 20,
+    },
+  };
+
   const [isLoading, setIsLoading] = useState(true);
   const firstContainer = useRef(null);
   const secondContainer = useRef(null);
@@ -28,7 +43,7 @@ export default function Home() {
     }
     gsap.set(firstContainer.current, { xPercent: xPercent });
     gsap.set(secondContainer.current, { xPercent: xPercent });
-    xPercent += 0.1 * direction;
+    xPercent += 0.01 * direction;
     requestAnimationFrame(animation);
   };
   const brandsContainer = IMAGES.map(({ img, key }) => (
@@ -58,6 +73,53 @@ export default function Home() {
             {brandsContainer}
           </div>
         </div>
+      </div>
+      <div className={styles.projects}>
+        {PROJECTS.map(
+          ({
+            img,
+            description,
+            title,
+          }: {
+            img: string;
+            description: string;
+            title: string;
+          }) => (
+            <motion.div
+              className="card"
+              initial="initial"
+              whileHover="hover"
+              variants={cardVariants}
+              onHoverStart={() => setIsHovered(true)}
+              onHoverEnd={() => setIsHovered(false)}
+            >
+              <motion.h2>{title}</motion.h2>
+              <AnimatePresence>
+                {isHovered && (
+                  <motion.p
+                    key="description"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    {description}
+                  </motion.p>
+                )}
+              </AnimatePresence>
+              {isHovered && (
+                <motion.div className="arrow-year">
+                  <Image
+                    src="/right-arrow.svg"
+                    alt="arrow"
+                    width={41}
+                    height={21}
+                  />
+                  <div className="year">2023</div>
+                </motion.div>
+              )}
+            </motion.div>
+          )
+        )}
       </div>
     </>
   );
