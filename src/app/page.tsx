@@ -6,36 +6,71 @@ import Header from "../components/Header/Header";
 import { IMAGES, PROJECTS } from "../constants/constants";
 import gsap from "gsap";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { AnimatePresence } from "framer-motion";
-
-export default function Home() {
+import { motion, useAnimation } from "framer-motion";
+function Card({ title, description }: { title: string; description: string }) {
+  const controls = useAnimation();
   const [isHovered, setIsHovered] = useState(false);
-  const cardVariants = {
-    initial: {
+
+  const handleHover = () => {
+    controls.start({
       opacity: 1,
-      y: 0,
-    },
-    hover: {
-      opacity: 1,
-      y: 20,
-    },
+      x: 0,
+    });
+    setIsHovered(true);
   };
 
-  const [isLoading, setIsLoading] = useState(true);
+  const handleUnhover = () => {
+    controls.start({
+      opacity: 0,
+      x: -100,
+    });
+    setIsHovered(false);
+  };
+  return (
+    <motion.div
+      className={styles.projects__card}
+      onHoverStart={handleHover}
+      onHoverEnd={handleUnhover}
+    >
+      <motion.div
+        initial={{ opacity: 0, x: -100 }}
+        transition={{ duration: 0.25 }}
+        animate={controls}
+        className={styles.projects__card__yearContainer}
+      >
+        <Image src="/right-arrow.svg" alt="arrow" width={41} height={21} />
+        <div className="year">2023</div>
+      </motion.div>
+      <motion.div className={styles.projects__card__container}>
+        <motion.h2
+          className={styles.projects__card__title}
+          initial={{ y: 0 }}
+          transition={{ duration: 0.25 }}
+          animate={{
+            y: isHovered ? 200 : 0,
+          }}
+        >
+          {title}
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0 }}
+          transition={{ duration: 0.4 }}
+          className={styles.projects__card__description}
+          animate={{
+            opacity: isHovered ? 1 : 0,
+          }}
+        >
+          {description}
+        </motion.p>
+      </motion.div>
+    </motion.div>
+  );
+}
+export default function Home() {
   const firstContainer = useRef(null);
   const secondContainer = useRef(null);
   let xPercent = 0;
   let direction = -1;
-  useEffect(() => {
-    (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
-    })();
-  }, []);
-  useEffect(() => {
-    requestAnimationFrame(animation);
-  }, []);
 
   const animation = () => {
     if (xPercent <= -100) {
@@ -86,39 +121,7 @@ export default function Home() {
             description: string;
             title: string;
           }) => (
-            <motion.div
-              className="card"
-              initial="initial"
-              whileHover="hover"
-              variants={cardVariants}
-              onHoverStart={() => setIsHovered(true)}
-              onHoverEnd={() => setIsHovered(false)}
-            >
-              <motion.h2>{title}</motion.h2>
-              <AnimatePresence>
-                {isHovered && (
-                  <motion.p
-                    key="description"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                  >
-                    {description}
-                  </motion.p>
-                )}
-              </AnimatePresence>
-              {isHovered && (
-                <motion.div className="arrow-year">
-                  <Image
-                    src="/right-arrow.svg"
-                    alt="arrow"
-                    width={41}
-                    height={21}
-                  />
-                  <div className="year">2023</div>
-                </motion.div>
-              )}
-            </motion.div>
+            <Card key={title} title={title} description={description} />
           )
         )}
       </div>

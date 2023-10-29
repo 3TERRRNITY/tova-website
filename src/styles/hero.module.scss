@@ -58,8 +58,31 @@
 }
 
 .projects {
+  overflow: hidden;
   width: 100%;
   height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: $space-20;
+  cursor: pointer;
+
+  &__card {
+    height: $projectCardHeight;
+
+    &__container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    &__description {
+      position: absolute;
+      bottom: 0;
+    }
+    &__yearContainer {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }
