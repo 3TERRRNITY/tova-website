@@ -1,0 +1,22 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variable.scss";
+
+.header {
+  height: max-content;
+  padding: $space-40;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    position: relative;
+    width: $logoWidth;
+    height: $logoHeight;
+  }
+
+  &__text {
+    @include h3Title;
+    text-align: right;
+  }
+}

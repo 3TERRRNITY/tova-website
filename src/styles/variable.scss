@@ -1,0 +1,41 @@
+// FONT SIZES
+// 22-88
+$h1: (clamp(1.375rem, 0rem + 4.5833vw, 5.5rem));
+// 24-96
+$lineHeightH1: clamp(1.5rem, 0rem + 5vw, 6rem);
+// 17.5 - 70
+$h2: clamp(1.0938rem, 0rem + 3.6458vw, 4.375rem);
+// 19 - 76
+$lineHeightH2: clamp(1.1875rem, 0rem + 3.9583vw, 4.75rem);
+// 7.5 - 30
+$h3: clamp(0.4688rem, 0rem + 1.5625vw, 1.875rem);
+// 11 - 44
+$lineHeightH3: clamp(0.6875rem, 0rem + 2.2917vw, 2.75rem);
+// 5.5 - 22
+$p: clamp(0.3438rem, 0rem + 1.1458vw, 1.375rem);
+// 7.25 - 29
+$lineHeightP: clamp(0.4531rem, 0rem + 1.5104vw, 1.8125rem);
+// 4.5 - 18
+$pSmall: clamp(0.2813rem, 0rem + 0.9375vw, 1.125rem);
+// 5 - 20
+$lineHeightPSmall: clamp(0.3125rem, 0rem + 1.0417vw, 1.25rem);
+
+// SPACES
+// 10 - 40
+$space-40: clamp(0.625rem, 0rem + 2.0833vw, 2.5rem);
+// 5 - 20
+$space-20: clamp(0.3125rem, 0rem + 1.0417vw, 1.25rem);
+// 20 - 80
+$space-80: clamp(1.25rem, 0rem + 4.1667vw, 5rem);
+// custom
+$sliderDuplicateSpace: clamp(35.9375rem, 0rem + 119.7917vw, 143.75rem);
+
+// MEASURES
+$sliderImageWidth: clamp(2.0625rem, 0.0417rem + 6.7361vw, 8.125rem);
+$sliderImageHeight: clamp(0.8125rem, 0rem + 2.7083vw, 3.25rem);
+$sliderHeight: clamp(2.9375rem, 0.0417rem + 9.6528vw, 11.625rem);
+$hamburgerWidth: clamp(1rem, 0rem + 1.4583vw, 1.75rem);
+$hamburgerHeight: clamp(1rem, 0rem + 1.0417vw, 1.25rem);
+$logoWidth: clamp(1.6875rem, 0rem + 5.625vw, 6.75rem);
+$logoHeight: clamp(0.3125rem, 0rem + 1.0417vw, 1.25rem);
+$projectCardHeight: clamp(8.125rem, 0.0208rem + 27.0139vw, 32.4375rem);

@@ -19,12 +19,18 @@
 html,
 body {
   margin: 0;
-  padding: 0;
+
   box-sizing: border-box;
 
   background: #000;
   color: white;
+  overflow-x: hidden;
 
   font-family: "CodeNext-Trial RegularItalic";
   font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }

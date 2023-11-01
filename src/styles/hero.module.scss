@@ -1,18 +1,94 @@
+@import "./mixins.scss";
+@import "./variable.scss";
+
 .hero {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   background-image: url(/hero-image-exp.png);
   background-size: cover;
-  position: relative;
   &__text {
-    position: absolute;
-    bottom: 40px;
-    left: 40px;
-    text-transform: uppercase;
-    font-size: 70px;
-    font-weight: 600;
-    line-height: 76px;
-    letter-spacing: 0em;
+    padding: $space-40 0 0 $space-40;
+    @include h1Title;
     text-align: left;
+  }
+}
+
+.sliderContainer {
+  height: $sliderHeight;
+  width: 100%;
+}
+
+.slider {
+  position: relative;
+  display: flex;
+  gap: $space-80;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  overflow: hidden;
+  &__item {
+    position: relative;
+
+    img {
+      width: $sliderImageWidth;
+      max-height: $sliderImageHeight;
+    }
+  }
+
+  &__container {
+    display: flex;
+    gap: $space-80;
+    align-items: center;
+    margin-right: $space-80;
+
+    &_duplicate {
+      position: absolute;
+      left: $sliderDuplicateSpace;
+
+      display: flex;
+      gap: $space-80;
+      align-items: center;
+    }
+  }
+}
+
+.projects {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  padding: 0 $space-40;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $space-20;
+  cursor: pointer;
+
+  &__card {
+    height: $projectCardHeight;
+    position: relative;
+
+    &__container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+    }
+
+    &__title {
+      @include paragraph;
+    }
+    &__description {
+      @include smallParagraph;
+    }
+
+    &__yearContainer {
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
