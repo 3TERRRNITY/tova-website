@@ -9,19 +9,22 @@ import { DEPARTAMENTS, VACANCY } from "../../constants/constants";
 
 const About = () => {
   const Departaments = DEPARTAMENTS.map(({ title, description }) => (
-    <>
+    <React.Fragment key={title}>
       <div className={styles.about__team__departaments__departament}>
         <div className={styles.about__team__departaments__departament_title}>
           {title}
         </div>
         {description.map((item: string) => (
-          <div className={styles.about__team__departaments__departament_item}>
+          <div
+            className={styles.about__team__departaments__departament_item}
+            key={item}
+          >
             {item}
           </div>
         ))}
       </div>
       <Separator />
-    </>
+    </React.Fragment>
   ));
   return (
     <>
@@ -73,7 +76,7 @@ const About = () => {
           <div className={styles.about__vacancies__title}>Вакансии</div>
           <Separator />
           {VACANCY.map(({ title, description }) => (
-            <>
+            <React.Fragment key={title}>
               <div className={styles.about__vacancies__vacancy}>
                 <div className={styles.about__vacancies__vacancy_title}>
                   {title}
@@ -83,7 +86,7 @@ const About = () => {
                 </div>
               </div>
               <Separator />
-            </>
+            </React.Fragment>
           ))}
         </div>
       </div>
