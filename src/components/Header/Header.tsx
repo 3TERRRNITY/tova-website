@@ -1,15 +1,17 @@
 import React from "react";
 import styles from "./Header.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 
-type Props = {};
-
-const Header = (props: Props) => {
+const Header = () => {
   return (
     <div className={styles.header}>
-      <div className={styles.header__logo}>
-        <Image src="/TOVA-logo.svg" alt="logo" fill />
-      </div>
+      <Link href={"/"}>
+        <div className={styles.header__logo}>
+          <Image src="/TOVA-logo.svg" alt="logo" fill />
+        </div>
+      </Link>
+
       <div className={styles.header__text}>
         tova
         <br />
