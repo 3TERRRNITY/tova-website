@@ -42,7 +42,7 @@ const Navbar = (props: Props) => {
         <div className={styles.navbar__top__moreLinks}>
           <div className={styles.navbar__top__col}>
             <div className={styles.navbar__top__link}>
-              <Link href="/about">о нас</Link>
+              <Link href="/About">о нас</Link>
             </div>
             <div className={styles.navbar__top__link}>
               <Link href="/services">услуги</Link>

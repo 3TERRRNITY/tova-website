@@ -1,0 +1,35 @@
+@import "/src/styles/mixins.scss";
+@import "/src/styles/variable.scss";
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: $space-40;
+
+  &__collab {
+    display: flex;
+    gap: $space-40;
+  }
+
+  &__colaboration,
+  &__contacts,
+  &__addressContainer {
+    @include smallParagraph;
+  }
+
+  &__icons {
+    display: flex;
+    gap: $space-20;
+
+    &_icon {
+      position: relative;
+      width: $hamburgerHeight;
+      height: $hamburgerHeight;
+    }
+  }
+
+  &__addressContainer {
+    display: flex;
+    gap: $space-40;
+  }
+}

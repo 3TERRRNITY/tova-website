@@ -16,12 +16,15 @@
     url("../fonts/CodeNext-Trial-SemiBold.otf") format("truetype");
   font-weight: 400;
 }
-html,
-body {
+
+* {
   margin: 0;
+  padding: 0;
 
   box-sizing: border-box;
-
+}
+html,
+body {
   background: #000;
   color: white;
   overflow-x: hidden;

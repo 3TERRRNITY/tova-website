@@ -1,0 +1,95 @@
+@import "./mixins.scss";
+@import "./variable.scss";
+
+.about {
+  padding: $space-80 $space-40 240px $space-40;
+  &__headContainer {
+    padding-bottom: $space-80;
+    &__title {
+      @include h1Title;
+      text-transform: uppercase;
+      padding-bottom: $space-40;
+    }
+    &__description {
+      @include h3Title;
+      text-transform: lowercase;
+    }
+  }
+  &__ideologyContainer {
+    padding: $space-80 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    &__title {
+      @include h3Title;
+      text-transform: lowercase;
+    }
+    &__description {
+      @include paragraph;
+      display: flex;
+      flex-direction: column;
+      text-transform: lowercase;
+      list-style-type: none;
+      gap: $space-20;
+    }
+  }
+
+  &__team {
+    padding: $space-80 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &__title {
+      @include h3Title;
+      text-transform: lowercase;
+    }
+
+    &__departaments {
+      @include paragraph;
+      text-transform: lowercase;
+
+      &__departament {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: $space-40 0;
+
+        &:first-of-type {
+          padding-top: 0;
+        }
+
+        &_title {
+          grid-column: 1;
+        }
+        &_item {
+          grid-column: 2;
+        }
+      }
+    }
+  }
+
+  &__vacancies {
+    padding-top: $vacancySpace;
+
+    &__title {
+      @include h1Title;
+      text-transform: uppercase;
+      padding-bottom: $space-80;
+    }
+
+    &__vacancy {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: $space-80 0;
+
+      &_title {
+        @include paragraph;
+        text-transform: uppercase;
+      }
+
+      &_description {
+        @include smallParagraph;
+        text-transform: lowercase;
+      }
+    }
+  }
+}

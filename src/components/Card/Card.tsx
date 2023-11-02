@@ -33,7 +33,7 @@ export default function Card({
 
   useEffect(() => {
     setCardHeight(heightRef.current?.clientHeight ?? 0);
-  }, [heightRef]);
+  }, [cardHeight]);
   return (
     <motion.div
       className={styles.projects__card}
@@ -55,7 +55,7 @@ export default function Card({
         initial={{ y: 0 }}
         transition={{ duration: 0.25 }}
         animate={{
-          y: isHovered ? cardHeight - 150 : 0,
+          y: isHovered ? cardHeight - 100 : 0,
         }}
       >
         <motion.h2 className={styles.projects__card__title}>{title}</motion.h2>
