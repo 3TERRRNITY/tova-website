@@ -1,28 +1,43 @@
-import React from "react";
+"use client";
 
+import React from "react";
+import { motion } from "framer-motion";
 import styles from "../../styles/about.module.scss";
 
 import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
-import Separator from "../../components/Separator/Separator";
+
 import { DEPARTAMENTS, VACANCY } from "../../constants/constants";
+import { lineAnimation, textAnimation } from "../../common/animations";
+import { Separator } from "../../components/Separator/Separator";
 
 const About = () => {
   const Departaments = DEPARTAMENTS.map(({ title, description }) => (
     <React.Fragment key={title}>
-      <div className={styles.about__team__departaments__departament}>
-        <div className={styles.about__team__departaments__departament_title}>
+      <motion.div
+        className={styles.about__team__departaments__departament}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.2, once: true }}
+      >
+        <motion.div
+          custom={1}
+          variants={textAnimation}
+          className={styles.about__team__departaments__departament_title}
+        >
           {title}
-        </div>
+        </motion.div>
         {description.map((item: string) => (
-          <div
+          <motion.div
+            custom={2}
+            variants={textAnimation}
             className={styles.about__team__departaments__departament_item}
             key={item}
           >
             {item}
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
       <Separator />
     </React.Fragment>
   ));
@@ -30,66 +45,157 @@ const About = () => {
     <>
       <Header />
       <Navbar />
-      <div className={styles.about}>
-        <div className={styles.about__headContainer}>
-          <div className={styles.about__headContainer__title}>о нас</div>
-          <div className={styles.about__headContainer__description}>
+      <motion.div
+        className={styles.about}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.2, once: true }}
+      >
+        <motion.div className={styles.about__headContainer}>
+          <motion.div
+            className={styles.about__headContainer__title}
+            custom={1}
+            variants={textAnimation}
+          >
+            о нас
+          </motion.div>
+          <motion.div
+            className={styles.about__headContainer__description}
+            custom={2}
+            variants={textAnimation}
+          >
             Мы - молодое и креативное агентство, специализирующееся <br /> на
             дизайне, веб-разработке и SMM.{" "}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
         <Separator />
-        <div className={styles.about__ideologyContainer}>
-          <div className={styles.about__ideologyContainer__title}>
+        <motion.div
+          className={styles.about__ideologyContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.2, once: true }}
+        >
+          <motion.div
+            className={styles.about__ideologyContainer__title}
+            custom={1}
+            variants={textAnimation}
+          >
             Идеология TOVA Creative Agency:
-          </div>
-          <ul className={styles.about__ideologyContainer__description}>
-            <li className={styles.about__ideologyContainer__description_item}>
+          </motion.div>
+          <motion.ul
+            className={styles.about__ideologyContainer__description}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.2, once: true }}
+          >
+            <motion.li
+              custom={1}
+              variants={textAnimation}
+              className={styles.about__ideologyContainer__description_item}
+            >
               - Вдохновение через креатив. Мы верим в силу инноваций и
               креативного подхода к каждому проекту. результатов.
-            </li>
-            <li className={styles.about__ideologyContainer__description_item}>
+            </motion.li>
+            <motion.li
+              custom={2}
+              variants={textAnimation}
+              className={styles.about__ideologyContainer__description_item}
+            >
               - Совершенство в деталях. Мы уделяем внимание каждой мелочи, чтобы
               достичь выдающихся
-            </li>
-            <li className={styles.about__ideologyContainer__description_item}>
+            </motion.li>
+            <motion.li
+              custom={3}
+              variants={textAnimation}
+              className={styles.about__ideologyContainer__description_item}
+            >
               - Партнерство и сотрудничество. Мы строим долгосрочные отношения с
               клиентами, их цели — наши цели.
-            </li>
-            <li className={styles.about__ideologyContainer__description_item}>
+            </motion.li>
+            <motion.li
+              custom={4}
+              variants={textAnimation}
+              className={styles.about__ideologyContainer__description_item}
+            >
               - Цифровое развитие. Мы помогаем брендам процветать в онлайн-мире,
               используя передовые технологии.
-            </li>
-            <li className={styles.about__ideologyContainer__description_item}>
+            </motion.li>
+            <motion.li
+              custom={5}
+              variants={textAnimation}
+              className={styles.about__ideologyContainer__description_item}
+            >
               - Творческий импульс. Мы вдохновляемся творчеством и привносим его
               в каждый проект.
-            </li>
-          </ul>
-        </div>
+            </motion.li>
+          </motion.ul>
+        </motion.div>
         <Separator />
-        <div className={styles.about__team}>
-          <div className={styles.about__team__title}>Команда</div>
-          <div className={styles.about__team__departaments}>{Departaments}</div>
-        </div>
+        <motion.div
+          className={styles.about__team}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.2, once: true }}
+        >
+          <motion.div
+            className={styles.about__team__title}
+            custom={1}
+            variants={textAnimation}
+          >
+            Команда
+          </motion.div>
+          <motion.div
+            className={styles.about__team__departaments}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.2, once: true }}
+          >
+            {Departaments}
+          </motion.div>
+        </motion.div>
         <Separator />
-        <div className={styles.about__vacancies}>
-          <div className={styles.about__vacancies__title}>Вакансии</div>
+        <motion.div
+          className={styles.about__vacancies}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.2, once: true }}
+        >
+          <motion.div
+            className={styles.about__vacancies__title}
+            custom={1}
+            variants={textAnimation}
+          >
+            Вакансии
+          </motion.div>
           <Separator />
           {VACANCY.map(({ title, description }) => (
             <React.Fragment key={title}>
-              <div className={styles.about__vacancies__vacancy}>
-                <div className={styles.about__vacancies__vacancy_title}>
+              <motion.div
+                className={styles.about__vacancies__vacancy}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ amount: 0.2, once: true }}
+              >
+                <motion.div
+                  className={styles.about__vacancies__vacancy_title}
+                  custom={1}
+                  variants={textAnimation}
+                >
                   {title}
-                </div>
-                <div className={styles.about__vacancies__vacancy_description}>
+                </motion.div>
+                <motion.div
+                  custom={2}
+                  variants={textAnimation}
+                  className={styles.about__vacancies__vacancy_description}
+                >
                   {description}
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
               <Separator />
             </React.Fragment>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </>
   );
 };

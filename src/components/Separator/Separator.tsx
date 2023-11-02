@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Ref, forwardRef } from "react";
 import styles from "./Separator.module.scss";
+import { motion } from "framer-motion";
+import { lineAnimation } from "../../common/animations";
 
-const Separator = () => {
-  return <div className={styles.separator} />;
+export const Separator = () => {
+  return <motion.div variants={lineAnimation} className={styles.separator} />;
 };
-
-export default Separator;
