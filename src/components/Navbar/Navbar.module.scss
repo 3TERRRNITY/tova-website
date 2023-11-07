@@ -5,7 +5,7 @@
   position: fixed;
   right: $space-40;
   top: $space-40;
-
+  z-index: 1;
   &__menu {
     position: relative;
     width: 480px;
