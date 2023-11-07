@@ -1,69 +1,44 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import styles from "./Navbar.module.scss";
-import Link from "next/link";
-import Image from "next/image";
+import Button from "./Button/Button";
+import { AnimatePresence, motion } from "framer-motion";
+import Nav from "./Nav/Nav";
 
 type Props = {};
 
+const variants = {
+  open: {
+    width: 480,
+    height: 650,
+    top: "-20px",
+    right: "-20px",
+    transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] },
+  },
+  closed: {
+    width: 100,
+    height: 40,
+    top: "0px",
+    right: "0px",
+    transition: { duration: 0.5, delay: 0.35, ease: [0.76, 0, 0.24, 1] },
+  },
+};
+
 const Navbar = (props: Props) => {
-  const [navbarTopVisible, setNavbarTopVisible] = useState(false);
-  const navbarTopRef = useRef<HTMLDivElement | null>(null);
+  const [isActive, setIsActive] = useState<boolean>(false);
 
-  const toggleNavbarTop = () => {
-    setNavbarTopVisible(!navbarTopVisible);
-  };
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        navbarTopRef.current &&
-        !navbarTopRef.current.contains(event.target as Node)
-      ) {
-        setNavbarTopVisible(false);
-      }
-    };
-
-    document.addEventListener("click", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
-  }, []);
   return (
-    <div className={styles.navbar}>
-      <div
-        ref={navbarTopRef}
-        className={`${styles.navbar__top} ${
-          navbarTopVisible ? styles.active : ""
-        }`}
+    <div className={styles.header}>
+      <motion.div
+        className={styles.header__menu}
+        variants={variants}
+        animate={isActive ? "open" : "closed"}
+        initial="closed"
       >
-        <div className={styles.navbar__top__moreLinks}>
-          <div className={styles.navbar__top__col}>
-            <div className={styles.navbar__top__link}>
-              <Link href="/About">о нас</Link>
-            </div>
-            <div className={styles.navbar__top__link}>
-              <Link href="/services">услуги</Link>
-            </div>
-            <div className={styles.navbar__top__link}>
-              <Link href="/projects">проекты</Link>
-            </div>
-            <div className={styles.navbar__top__link}>
-              <Link href="/contacts">контакты</Link>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className={styles.navbar__bottom} ref={navbarTopRef}>
-        <div className={styles.navbar__bottom__home} onClick={toggleNavbarTop}>
-          <div className={styles.navbar__bottom__hamburger}>
-            <Image src="/burger.svg" alt="burger" fill />
-          </div>
-        </div>
-      </div>
+        <AnimatePresence>{isActive && <Nav />}</AnimatePresence>
+      </motion.div>
+      <Button isActive={isActive} setIsActive={setIsActive} />
     </div>
   );
 };
