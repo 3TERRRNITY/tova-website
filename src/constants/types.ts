@@ -17,3 +17,15 @@ export interface IVacancy {
   title: string;
   description: string;
 }
+
+export interface IServices {
+  title: string;
+  href: string;
+}
+
+export interface IService {
+  title: string;
+  description: string;
+  points: string[];
+  href: string;
+}
