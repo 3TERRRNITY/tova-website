@@ -7,11 +7,13 @@ import { AnimatePresence, motion } from "framer-motion";
 import Nav from "./Nav/Nav";
 
 type Props = {};
+const navbarHeight = `90vh`;
+const navbarWidth = `30vw`;
 
 const variants = {
   open: {
-    width: 480,
-    height: 650,
+    width: navbarWidth,
+    height: navbarHeight,
     top: "-20px",
     right: "-20px",
     transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] },

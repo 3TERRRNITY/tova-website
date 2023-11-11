@@ -8,8 +8,6 @@ const perspective = {
   initial: {
     opacity: 0,
     rotateX: 90,
-    translateY: 80,
-    translateX: -20,
   },
   enter: (i: number) => ({
     opacity: 1,
@@ -53,17 +51,16 @@ const Nav = () => {
       <div className={styles.nav__body}>
         {LINKS.map((link, i) => {
           return (
-            <div key={i} className={styles.nav__linkContainer}>
-              <motion.div
-                custom={i}
-                variants={perspective}
-                animate="enter"
-                exit="exit"
-                initial="initial"
-              >
-                <Link href={link.href}>{link.title}</Link>
-              </motion.div>
-            </div>
+            <motion.div
+              custom={i}
+              variants={perspective}
+              animate="enter"
+              exit="exit"
+              initial="initial"
+              className={styles.nav__linkContainer}
+            >
+              <Link href={link.href}>{link.title}</Link>
+            </motion.div>
           );
         })}
       </div>

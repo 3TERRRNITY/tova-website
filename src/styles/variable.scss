@@ -21,12 +21,17 @@ $pSmall: clamp(0.2813rem, 0rem + 0.9375vw, 1.125rem);
 $lineHeightPSmall: clamp(0.3125rem, 0rem + 1.0417vw, 1.25rem);
 
 // SPACES
+$space-10: clamp(0.1875rem, -0.0208rem + 0.6944vw, 0.8125rem);
 // 10 - 40
 $space-40: clamp(0.625rem, 0rem + 2.0833vw, 2.5rem);
 // 5 - 20
 $space-20: clamp(0.3125rem, 0rem + 1.0417vw, 1.25rem);
 // 20 - 80
 $space-80: clamp(1.25rem, 0rem + 4.1667vw, 5rem);
+
+$space-100: clamp(1.5625rem, -0.0208rem + 5.2778vw, 6.3125rem);
+
+$space-50: clamp(0.8125rem, -0.0208rem + 2.7778vw, 3.3125rem);
 // custom
 $sliderDuplicateSpace: clamp(35.9375rem, 0rem + 119.7917vw, 143.75rem);
 $vacancySpace: clamp(2.5rem, 0.0417rem + 8.1944vw, 9.875rem);
@@ -40,3 +45,5 @@ $hamburgerHeight: clamp(1rem, 0rem + 1.0417vw, 1.25rem);
 $logoWidth: clamp(1.6875rem, 0rem + 5.625vw, 6.75rem);
 $logoHeight: clamp(0.3125rem, 0rem + 1.0417vw, 1.25rem);
 $projectCardHeight: clamp(8.125rem, 0.0208rem + 27.0139vw, 32.4375rem);
+$navbarWidth: clamp(7.5rem, 0rem + 25vw, 30rem);
+$navbarHeight: clamp(10.125rem, 0.0208rem + 33.6806vw, 40.4375rem);
