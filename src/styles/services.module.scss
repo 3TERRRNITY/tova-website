@@ -1,0 +1,41 @@
+@import "./mixins.scss";
+@import "./variable.scss";
+
+.services {
+  padding: $space-100 $space-40;
+
+  &__title {
+    @include h1Title;
+    text-transform: uppercase;
+    padding-bottom: $space-80;
+  }
+
+  &__preview {
+    padding: $space-80 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    &__title,
+    &__links_title {
+      @include h3Title;
+    }
+    &__links {
+      display: flex;
+      flex-direction: column;
+      &_title {
+        padding-bottom: $space-40;
+      }
+      &_link {
+        @include paragraph;
+        padding: $space-40 0;
+        a {
+          color: #818181;
+        }
+      }
+      &_link_active {
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

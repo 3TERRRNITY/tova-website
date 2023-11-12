@@ -1,0 +1,21 @@
+@import "/src/styles/variable.scss";
+@import "/src/styles/mixins.scss";
+
+.serviceCard {
+  padding: $space-80 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  @include paragraph;
+  text-transform: lowercase;
+
+  &__information {
+    display: flex;
+    flex-direction: column;
+    &_description {
+      padding-bottom: $space-80;
+    }
+    &_point {
+      padding: $space-40 0;
+    }
+  }
+}
