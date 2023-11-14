@@ -8,8 +8,7 @@
   z-index: 1;
   &__menu {
     position: relative;
-    width: 480px;
-    height: 650px;
+    width: $navbarWidth;
     background-color: #000;
     border-radius: 25px;
   }
