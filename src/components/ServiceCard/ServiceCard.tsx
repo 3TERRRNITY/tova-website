@@ -2,26 +2,71 @@ import React from "react";
 import { IService } from "../../constants/types";
 import styles from "./ServiceCard.module.scss";
 import { Separator } from "../Separator/Separator";
+import { PROJECTS } from "../../constants/constants";
+import Card from "../Card/Card";
+import { motion } from "framer-motion";
+import { textAnimation } from "../../common/animations";
 
 const ServiceCard = ({ title, description, points, href }: IService) => {
+  const filteredProjects = PROJECTS.filter((project) => project.id === href);
   return (
-    <div className={styles.serviceCard} id={href}>
-      <div className={styles.serviceCard__title}>{title}</div>
+    <motion.div
+      className={styles.serviceCard}
+      id={href}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.2, once: true }}
+    >
+      <motion.div
+        variants={textAnimation}
+        custom={1}
+        className={styles.serviceCard__title}
+      >
+        {title}
+      </motion.div>
       <div className={styles.serviceCard__information}>
-        <div className={styles.serviceCard__information_description}>
+        <motion.div
+          variants={textAnimation}
+          custom={1}
+          className={styles.serviceCard__information_description}
+        >
           {description}
-        </div>
+        </motion.div>
         <Separator />
-        <ul className={styles.serviceCard__information_points}>
-          {points.map((point) => (
+        <motion.ul
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.2, once: true }}
+          className={styles.serviceCard__information_points}
+        >
+          {points.map((point, index) => (
             <React.Fragment key={point}>
-              <li className={styles.serviceCard__information_point}>{point}</li>
+              <motion.li
+                variants={textAnimation}
+                custom={index + 1}
+                className={styles.serviceCard__information_point}
+              >
+                {point}
+              </motion.li>
               <Separator />
             </React.Fragment>
           ))}
-        </ul>
+        </motion.ul>
       </div>
-    </div>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.2, once: true }}
+        variants={textAnimation}
+        className={styles.serviceCard__information_projects}
+      >
+        {filteredProjects.map((project) => (
+          <React.Fragment key={project.title}>
+            <Card description={project.description} title={project.title} />
+          </React.Fragment>
+        ))}
+      </motion.div>
+    </motion.div>
   );
 };
 

@@ -25,30 +25,93 @@ export const PROJECTS: IProjects[] = [
     img: "",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
+    id: "webdev",
   },
   {
     title: "Aimi",
     img: "",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
+    id: "webdev",
   },
   {
     title: "Madaia",
     img: "",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
+    id: "brand",
   },
   {
     title: "frenchi",
     img: "",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
+    id: "webdev",
   },
   {
     title: "vademekum",
     img: "",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
+    id: "brand",
+  },
+
+  // TODO: снести в скором времени
+  {
+    title: "frenchi",
+    img: "",
+    description:
+      "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
+    id: "graphic",
+  },
+  {
+    title: "vademekum",
+    img: "",
+    description:
+      "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
+    id: "graphic",
+  },
+  {
+    title: "frenchi",
+    img: "",
+    description:
+      "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
+    id: "marketing",
+  },
+  {
+    title: "vademekum",
+    img: "",
+    description:
+      "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
+    id: "marketing",
+  },
+  {
+    title: "frenchi",
+    img: "",
+    description:
+      "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
+    id: "smm",
+  },
+  {
+    title: "vademekum",
+    img: "",
+    description:
+      "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
+    id: "smm",
+  },
+  {
+    title: "frenchi",
+    img: "",
+    description:
+      "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
+    id: "other",
+  },
+  {
+    title: "vademekum",
+    img: "",
+    description:
+      "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
+    id: "other",
   },
 ];
 

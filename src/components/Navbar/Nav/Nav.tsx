@@ -4,6 +4,9 @@ import { LINKS, FOOTER_LINKS } from "./data";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+interface NavProps {
+  closeMenu: () => void;
+}
 const perspective = {
   initial: {
     opacity: 0,
@@ -45,7 +48,7 @@ const slideIn = {
   },
 };
 
-const Nav = () => {
+const Nav = ({ closeMenu }: NavProps) => {
   return (
     <div className={styles.nav}>
       <div className={styles.nav__body}>
@@ -59,7 +62,9 @@ const Nav = () => {
               initial="initial"
               className={styles.nav__linkContainer}
             >
-              <Link href={link.href}>{link.title}</Link>
+              <Link href={link.href} onClick={closeMenu}>
+                {link.title}
+              </Link>
             </motion.div>
           );
         })}

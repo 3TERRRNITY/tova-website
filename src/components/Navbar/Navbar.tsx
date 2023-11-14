@@ -38,7 +38,9 @@ const Navbar = (props: Props) => {
         animate={isActive ? "open" : "closed"}
         initial="closed"
       >
-        <AnimatePresence>{isActive && <Nav />}</AnimatePresence>
+        <AnimatePresence>
+          {isActive && <Nav closeMenu={() => setIsActive(false)} />}
+        </AnimatePresence>
       </motion.div>
       <Button isActive={isActive} setIsActive={setIsActive} />
     </div>
