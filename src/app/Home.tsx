@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
 import styles from "../styles/hero.module.scss";
+import commonStyles from "../styles/common.module.scss";
 import { IMAGES, PROJECTS, SERVICES } from "../constants/constants";
 import Header from "../components/Header/Header";
 import Card from "../components/Card/Card";
@@ -48,7 +49,7 @@ export default function Home() {
   ));
 
   return (
-    <>
+    <div className={commonStyles.mainPageBody}>
       <div className={styles.hero}>
         <div className={styles.hero__text}>
           креатив - он как нейросеть <br /> главное правильно <br />{" "}
@@ -104,6 +105,6 @@ export default function Home() {
           )
         )}
       </div>
-    </>
+    </div>
   );
 }
