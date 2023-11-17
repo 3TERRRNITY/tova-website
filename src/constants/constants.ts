@@ -143,12 +143,42 @@ export const VACANCY: IVacancy[] = [
 ];
 
 export const SERVICES: IServices[] = [
-  { title: "брендинг", href: "brand" },
-  { title: "веб-разработка", href: "webdev" },
-  { title: "графический дизайн", href: "graphic" },
-  { title: "маркетинг", href: "marketing" },
-  { title: "SMM", href: "smm" },
-  { title: "Другое", href: "other" },
+  {
+    title: "брендинг",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    href: "brand",
+    price: "от 2700/час",
+  },
+  {
+    title: "веб-разработка",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    href: "webdev",
+    price: "от 2700/час",
+  },
+  {
+    title: "графический дизайн",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    href: "graphic",
+    price: "от 2700/час",
+  },
+  {
+    title: "маркетинг",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    href: "marketing",
+    price: "от 2700/час",
+  },
+  {
+    title: "SMM",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    href: "smm",
+    price: "от 2700/час",
+  },
+  {
+    title: "Другое",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    href: "other",
+    price: "от 2700/час",
+  },
 ];
 
 export const SERVICE: IService[] = [

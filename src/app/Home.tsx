@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
 import styles from "../styles/hero.module.scss";
-import { IMAGES, PROJECTS } from "../constants/constants";
+import { IMAGES, PROJECTS, SERVICES } from "../constants/constants";
 import Header from "../components/Header/Header";
 import Card from "../components/Card/Card";
 
@@ -67,6 +67,26 @@ export default function Home() {
           >
             {brandsContainer}
           </div>
+        </div>
+      </div>
+      <div className={styles.services}>
+        <div className={styles.services__title}>услуги</div>
+        <div className={styles.services__serviceGrid}>
+          {SERVICES.map((service) => (
+            <div className={styles.services__card}>
+              <div className={styles.services__card__info}>
+                <div className={styles.services__card__info_title}>
+                  {service.title}
+                </div>
+                <div className={styles.services__card__info_description}>
+                  {service.description}
+                </div>
+              </div>
+              <div className={styles.services__card__price}>
+                {service.price}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
       <div className={styles.projects}>

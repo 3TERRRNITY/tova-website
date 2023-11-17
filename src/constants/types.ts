@@ -21,6 +21,8 @@ export interface IVacancy {
 
 export interface IServices {
   title: string;
+  description: string;
+  price: string;
   href: string;
 }
 
