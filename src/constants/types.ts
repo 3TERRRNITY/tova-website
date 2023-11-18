@@ -3,6 +3,7 @@ export interface IProjects {
   img: string;
   description: string;
   id: string;
+  category: string;
 }
 export interface ILogos {
   img: string;
@@ -21,6 +22,8 @@ export interface IVacancy {
 
 export interface IServices {
   title: string;
+  description: string;
+  price: string;
   href: string;
 }
 
@@ -29,4 +32,9 @@ export interface IService {
   description: string;
   points: string[];
   href: string;
+}
+
+export interface IOptions {
+  title: string;
+  id: string;
 }

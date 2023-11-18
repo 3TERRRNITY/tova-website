@@ -4,9 +4,11 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
 import styles from "../styles/hero.module.scss";
-import { IMAGES, PROJECTS } from "../constants/constants";
+import commonStyles from "../styles/common.module.scss";
+import { IMAGES, PROJECTS, SERVICES } from "../constants/constants";
 import Header from "../components/Header/Header";
 import Card from "../components/Card/Card";
+import Footer from "../components/Footer/Footer";
 
 export default function Home() {
   const firstContainer = useRef(null);
@@ -48,7 +50,7 @@ export default function Home() {
   ));
 
   return (
-    <>
+    <div className={commonStyles.mainPageBody}>
       <div className={styles.hero}>
         <div className={styles.hero__text}>
           креатив - он как нейросеть <br /> главное правильно <br />{" "}
@@ -69,6 +71,26 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className={styles.services}>
+        <div className={styles.services__title}>услуги</div>
+        <div className={styles.services__serviceGrid}>
+          {SERVICES.map((service) => (
+            <div className={styles.services__card}>
+              <div className={styles.services__card__info}>
+                <div className={styles.services__card__info_title}>
+                  {service.title}
+                </div>
+                <div className={styles.services__card__info_description}>
+                  {service.description}
+                </div>
+              </div>
+              <div className={styles.services__card__price}>
+                {service.price}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
       <div className={styles.projects}>
         {PROJECTS.map(
           ({
@@ -84,6 +106,7 @@ export default function Home() {
           )
         )}
       </div>
-    </>
+      <Footer />
+    </div>
   );
 }

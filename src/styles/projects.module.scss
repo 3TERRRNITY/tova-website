@@ -1,0 +1,54 @@
+@import "./mixins.scss";
+@import "./variable.scss";
+
+.projects {
+  padding: $space-100 $space-40;
+  overflow: hidden;
+
+  &__title {
+    @include h1Title;
+    text-transform: uppercase;
+    margin-bottom: $space-80;
+  }
+  &__select {
+    display: flex;
+    gap: $space-20;
+    margin-bottom: $space-80;
+    @include paragraph;
+    &__option {
+      padding: $space-20 $space-40;
+      border: 1px solid #fff;
+      cursor: pointer;
+      opacity: 0.5;
+
+      &_active {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__project {
+    padding: $space-80 0;
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: $space-40;
+    }
+
+    &__title {
+      @include h3Title;
+      text-transform: lowercase;
+    }
+    &__description {
+      @include paragraph;
+    }
+
+    &__cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $space-20;
+    }
+  }
+}
