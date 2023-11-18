@@ -10,6 +10,7 @@ import { Separator } from "../../components/Separator/Separator";
 import { motion } from "framer-motion";
 import { textAnimation } from "../../common/animations";
 import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
 
 const Services = () => {
   return (
@@ -90,6 +91,7 @@ const Services = () => {
             ))}
           </div>
         </motion.div>
+        <Footer />
       </div>
     </>
   );

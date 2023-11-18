@@ -8,6 +8,7 @@ import commonStyles from "../styles/common.module.scss";
 import { IMAGES, PROJECTS, SERVICES } from "../constants/constants";
 import Header from "../components/Header/Header";
 import Card from "../components/Card/Card";
+import Footer from "../components/Footer/Footer";
 
 export default function Home() {
   const firstContainer = useRef(null);
@@ -105,6 +106,7 @@ export default function Home() {
           )
         )}
       </div>
+      <Footer />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import {
   IDepartaments,
   ILogos,
+  IOptions,
   IProjects,
   IService,
   IServices,
@@ -26,64 +27,23 @@ export const PROJECTS: IProjects[] = [
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
     id: "webdev",
+    category: "веб-разработка",
   },
   {
     title: "Aimi",
     img: "",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
-    id: "webdev",
+    id: "brand",
+    category: "брендинг",
   },
   {
     title: "Madaia",
     img: "",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
-    id: "brand",
-  },
-  {
-    title: "frenchi",
-    img: "",
-    description:
-      "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
-    id: "webdev",
-  },
-  {
-    title: "vademekum",
-    img: "",
-    description:
-      "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
-    id: "brand",
-  },
-
-  // TODO: снести в скором времени
-  {
-    title: "frenchi",
-    img: "",
-    description:
-      "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
-    id: "graphic",
-  },
-  {
-    title: "vademekum",
-    img: "",
-    description:
-      "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
-    id: "graphic",
-  },
-  {
-    title: "frenchi",
-    img: "",
-    description:
-      "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
-    id: "marketing",
-  },
-  {
-    title: "vademekum",
-    img: "",
-    description:
-      "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
-    id: "marketing",
+    id: "graphics",
+    category: "графический дизайн",
   },
   {
     title: "frenchi",
@@ -91,20 +51,7 @@ export const PROJECTS: IProjects[] = [
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
     id: "smm",
-  },
-  {
-    title: "vademekum",
-    img: "",
-    description:
-      "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
-    id: "smm",
-  },
-  {
-    title: "frenchi",
-    img: "",
-    description:
-      "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
-    id: "other",
+    category: "smm",
   },
   {
     title: "vademekum",
@@ -112,6 +59,7 @@ export const PROJECTS: IProjects[] = [
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
     id: "other",
+    category: "ведение",
   },
 ];
 
@@ -253,5 +201,36 @@ export const SERVICE: IService[] = [
       "- поддержание сайта",
     ],
     href: "other",
+  },
+];
+
+export const OPTIONS: IOptions[] = [
+  {
+    title: "все",
+    id: "all",
+  },
+  {
+    title: "брендинг",
+    id: "brand",
+  },
+  {
+    title: "веб-разработка",
+    id: "webdev",
+  },
+  {
+    title: "графический дизайн",
+    id: "graphic",
+  },
+  {
+    title: "маркетинг",
+    id: "marketing",
+  },
+  {
+    title: "smm",
+    id: "smm",
+  },
+  {
+    title: "другое",
+    id: "other",
   },
 ];

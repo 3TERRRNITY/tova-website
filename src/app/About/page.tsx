@@ -10,6 +10,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import { DEPARTAMENTS, VACANCY } from "../../constants/constants";
 import { lineAnimation, textAnimation } from "../../common/animations";
 import { Separator } from "../../components/Separator/Separator";
+import Footer from "../../components/Footer/Footer";
 
 const About = () => {
   const Departaments = DEPARTAMENTS.map(({ title, description }) => (
@@ -196,6 +197,7 @@ const About = () => {
           ))}
         </motion.div>
       </motion.div>
+      <Footer />
     </>
   );
 };
