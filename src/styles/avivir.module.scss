@@ -1,0 +1,74 @@
+@import "./mixins.scss";
+@import "./variable.scss";
+
+.avivir {
+  &__hero {
+    width: 100%;
+    height: 100vh;
+
+    background-image: url(../../public/projects/avivir/avivir-hero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &__about {
+    padding: $space-80 $space-40 230px $space-40;
+
+    &__head {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      padding-bottom: $space-50;
+
+      &_title {
+        @include h1Title;
+      }
+
+      &_subtitle {
+        @include paragraph;
+      }
+
+      &_point {
+        color: #3e3e3e;
+        &:first-of-type {
+          color: #fff;
+        }
+      }
+    }
+
+    &__description {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      padding-bottom: $space-100;
+
+      &__subtitle {
+        display: flex;
+        flex-direction: column;
+        gap: $space-40;
+
+        &_paragraph {
+          @include paragraph;
+        }
+
+        &_big {
+          @include h3Title;
+        }
+      }
+    }
+
+    &__cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: $space-20;
+
+      &__card {
+        @include paragraph;
+        padding: $space-80 0;
+        text-align: center;
+        width: 100%;
+        border: 1px solid #3e3e3e;
+      }
+    }
+  }
+}

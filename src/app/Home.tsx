@@ -9,6 +9,7 @@ import { IMAGES, PROJECTS, SERVICES } from "../constants/constants";
 import Header from "../components/Header/Header";
 import Card from "../components/Card/Card";
 import Footer from "../components/Footer/Footer";
+import Link from "next/link";
 
 export default function Home() {
   const firstContainer = useRef(null);
@@ -102,7 +103,9 @@ export default function Home() {
             description: string;
             title: string;
           }) => (
-            <Card key={title} title={title} description={description} />
+            <Link key={title} href={title.toLowerCase()}>
+              <Card title={title} description={description} />
+            </Link>
           )
         )}
       </div>

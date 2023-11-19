@@ -3,8 +3,10 @@
 
 .header {
   height: max-content;
-  padding: $space-40;
 
+  position: absolute;
+  left: $space-40;
+  right: $space-40;
   display: flex;
   justify-content: space-between;
   align-items: center;
