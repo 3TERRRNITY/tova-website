@@ -1,0 +1,271 @@
+@import "./mixins.scss";
+@import "./variable.scss";
+
+.aimi {
+  &__hero {
+    width: 100%;
+    height: 100vh;
+
+    background-image: url(../../public/projects/aimi/aimi.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &__about {
+    padding: $space-80 $space-40 230px $space-40;
+    position: relative;
+    &__head {
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      padding-bottom: $space-50;
+
+      &_title {
+        @include h1Title;
+      }
+
+      &_subtitle {
+        @include paragraph;
+      }
+
+      &_point {
+        color: #3e3e3e;
+        &:first-of-type {
+          color: #fff;
+        }
+      }
+    }
+
+    &__description {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      padding-bottom: $space-100;
+
+      &__subtitle {
+        display: flex;
+        flex-direction: column;
+        gap: $space-40;
+
+        &_paragraph {
+          @include paragraph;
+        }
+
+        &_big {
+          @include h3Title;
+        }
+      }
+    }
+  }
+
+  &__mainPage,
+  &__infographics,
+  &__firm,
+  &__typography,
+  &__smm {
+    padding: 0 $space-40 160px $space-40;
+
+    &__info {
+      @include h3Title;
+      text-transform: lowercase;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $space-20;
+
+      padding: 0 0 $space-80 0;
+    }
+  }
+
+  &__mainPage {
+    &__images {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: $space-20;
+      &_image1,
+      &_image2,
+      &_image3,
+      &_image4 {
+        width: 100%;
+        height: 500px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        border-radius: $space-20;
+      }
+
+      &_image1 {
+        background-image: url(../../public/projects/aimi/aimi_design1.png);
+      }
+      &_image2 {
+        background-image: url(../../public/projects/aimi/aimi_design2.png);
+      }
+      &_image3 {
+        background-image: url(../../public/projects/aimi/aimi_design3.png);
+      }
+      &_image4 {
+        background-image: url(../../public/projects/aimi/aimi_design4.png);
+      }
+    }
+  }
+
+  &__infographics {
+    &__images {
+      &_title {
+        @include h3Title;
+        text-transform: lowercase;
+      }
+      span {
+        @include h3Title;
+        text-transform: lowercase;
+      }
+      &_container {
+        margin-top: $space-20;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $space-20;
+      }
+
+      &_image1,
+      &_image2,
+      &_image3,
+      &_image4 {
+        width: 100%;
+        height: 500px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        border-radius: $space-20;
+      }
+
+      &_image1 {
+        background-image: url(../../public/projects/aimi/aimi_graphics1.png);
+      }
+      &_image2 {
+        background-image: url(../../public/projects/aimi/aimi_graphics2.png);
+      }
+      &_image3 {
+        background-image: url(../../public/projects/aimi/aimi_graphics3.png);
+      }
+      &_image4 {
+        background-image: url(../../public/projects/aimi/aimi_graphics4.png);
+      }
+    }
+  }
+
+  &__firm {
+    &__imageGridContainer {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: $space-20;
+
+      &_image1,
+      &_image2,
+      &_image3 {
+        width: 100%;
+        height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: $space-20;
+      }
+
+      &_image1 {
+        grid-row: 1;
+        grid-column: 1/3;
+        background-image: url(../../public/projects/aimi/aimi_firm1.png);
+      }
+      &_image2 {
+        background-image: url(../../public/projects/aimi/aimi_firm2.png);
+      }
+      &_image3 {
+        background-image: url(../../public/projects/aimi/aimi_firm3.png);
+      }
+    }
+  }
+
+  &__typography {
+    &__info__example {
+      text-transform: none;
+      display: grid;
+      grid-template-columns: 0.5fr 1fr;
+
+      &_letters {
+        display: flex;
+        flex-direction: column;
+        gap: $space-20;
+      }
+    }
+  }
+
+  &__smm {
+    &__info {
+      &__images {
+        display: flex;
+        gap: $space-20;
+
+        &_image1,
+        &_image2 {
+          width: 397px;
+          height: 321px;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+
+        &_image1 {
+          background-image: url(../../public/projects/aimi/smm1.png);
+        }
+        &_image2 {
+          background-image: url(../../public/projects/aimi/smm2.png);
+        }
+      }
+    }
+  }
+
+  &__linkedin {
+    padding: 0 $space-40 160px $space-40;
+    @include h3Title;
+    text-transform: lowercase;
+    &__images {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: $space-80;
+
+      &_image1,
+      &_image2,
+      &_image3 {
+        width: 100%;
+        height: 500px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        border-radius: $space-20;
+      }
+      &_image1 {
+        background-image: url(../../public/projects/aimi/linkedin1.png);
+      }
+      &_image2 {
+        background-image: url(../../public/projects/aimi/linkedin2.png);
+      }
+      &_image3 {
+        background-image: url(../../public/projects/aimi/linkedin3.png);
+      }
+    }
+  }
+
+  &__team {
+    padding: 0 $space-40 160px $space-40;
+
+    &_title {
+      @include h3Title;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: $space-50;
+    }
+
+    &__member {
+      display: flex;
+      justify-content: space-between;
+      padding: $space-20 0;
+      @include paragraph;
+      border-bottom: 1px solid #3e3e3e;
+    }
+  }
+}

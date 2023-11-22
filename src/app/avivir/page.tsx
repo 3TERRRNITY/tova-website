@@ -6,7 +6,6 @@ import commonStyles from "../../styles/common.module.scss";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import NeonCircle from "../../components/NeonCircle/NeonCircle";
-import { motion } from "framer-motion";
 
 type Props = {};
 
