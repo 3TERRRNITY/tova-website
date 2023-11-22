@@ -15,7 +15,7 @@ import Footer from "../../components/Footer/Footer";
 const Services = () => {
   return (
     <>
-      <Header />
+      <Header white />
       <Navbar />
       <div className={commonStyles.otherPageBody}>
         <motion.div
@@ -91,7 +91,7 @@ const Services = () => {
             ))}
           </div>
         </motion.div>
-        <Footer />
+        <Footer white />
       </div>
     </>
   );
