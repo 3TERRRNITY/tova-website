@@ -1,3 +1,6 @@
+@import "./mixins.scss";
+@import "./variable.scss";
+
 .otherPageBody {
   background-color: #fff;
   color: #000;
@@ -5,4 +8,7 @@
 .mainPageBody {
   background-color: #000;
   color: #fff;
+}
+
+.projectContainer {
 }
