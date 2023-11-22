@@ -44,7 +44,7 @@ const About = () => {
   ));
   return (
     <>
-      <Header />
+      <Header white />
       <Navbar />
       <motion.div
         className={styles.about}
@@ -197,7 +197,7 @@ const About = () => {
           ))}
         </motion.div>
       </motion.div>
-      <Footer />
+      <Footer white />
     </>
   );
 };

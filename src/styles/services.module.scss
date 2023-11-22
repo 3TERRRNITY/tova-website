@@ -31,13 +31,13 @@
           color: #818181;
           transition: color 0.2s ease;
           &:hover {
-            color: #fff;
+            color: #000;
           }
         }
       }
       &_link_active {
         a {
-          color: #fff;
+          color: #000;
         }
       }
     }

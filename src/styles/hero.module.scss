@@ -77,10 +77,12 @@
 
     &__container {
       height: 100%;
+      width: 100%;
       display: flex;
+      top: 0;
       flex-direction: column;
       position: absolute;
-      margin: 0 0 $space-20 $space-20;
+      padding: $space-20 $space-20;
     }
 
     &__title {
@@ -91,10 +93,10 @@
     }
 
     &__yearContainer {
-      width: 95%;
+      width: 100%;
       display: flex;
       justify-content: space-between;
-      margin: $space-20 0 0 $space-20;
+      padding: $space-20 $space-20;
     }
   }
 }

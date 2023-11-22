@@ -1,7 +1,10 @@
 import React from "react";
 import styles from "./Footer.module.scss";
 import Image from "next/image";
-const Footer = () => {
+interface IFooterProps {
+  white?: boolean;
+}
+const Footer = ({ white }: IFooterProps) => {
   return (
     <div className={styles.footer}>
       <div className={styles.footer__collab}>
@@ -16,13 +19,25 @@ const Footer = () => {
 
       <div className={styles.footer__icons}>
         <div className={styles.footer__icons_icon}>
-          <Image src="/telegram.svg" alt="telegram" fill />
+          <Image
+            src={white ? "/telegram-black.svg" : "/telegram.svg"}
+            alt="telegram"
+            fill
+          />
         </div>
         <div className={styles.footer__icons_icon}>
-          <Image src="/whatsup.svg" alt="telegram" fill />
+          <Image
+            src={white ? "/whatsup-black.svg" : "/whatsup.svg"}
+            alt="whatsup"
+            fill
+          />
         </div>
         <div className={styles.footer__icons_icon}>
-          <Image src="/inst.svg" alt="telegram" fill />
+          <Image
+            src={white ? "/inst-black.svg" : "/inst.svg"}
+            alt="instagram"
+            fill
+          />
         </div>
       </div>
       <div className={styles.footer__addressContainer}>
