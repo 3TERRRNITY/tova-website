@@ -44,6 +44,7 @@ const Projects = (props: Props) => {
           ))}
         </div>
         <Separator />
+
         {filteredProjects.map((proj) => (
           <React.Fragment key={proj.title}>
             <div className={styles.projects__project}>
@@ -57,7 +58,7 @@ const Projects = (props: Props) => {
               </div>
               <div className={styles.projects__project__cards}>
                 <Card description={proj.description} title={proj.title} />
-                <Card description={""} title={""} />
+                <Card animation={false} description={""} title={""} />
               </div>
             </div>
             <Separator />

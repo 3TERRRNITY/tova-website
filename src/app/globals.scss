@@ -1,20 +1,17 @@
+@import url(https://db.onlinewebfonts.com/c/fa97d7829ba5e317077a6a7a94128c98?family=Code+Next-Trial);
 @font-face {
-  font-family: "CodeNext-Trial Regular";
-  src: local("CodeNext-Trial-Regular"),
-    url("../fonts/CodeNext-Trial-Regular.otf") format("truetype");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "CodeNext-Trial RegularItalic";
-  src: local("CodeNext-Trial-RegularItalic"),
-    url("../fonts/CodeNext-Trial-Regular.otf") format("truetype");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "CodeNext-Trial SemiBold";
-  src: local("CodeNext-Trial-SemiBold"),
-    url("../fonts/CodeNext-Trial-SemiBold.otf") format("truetype");
-  font-weight: 400;
+  font-family: "Code Next-Trial";
+  src: url("https://db.onlinewebfonts.com/t/fa97d7829ba5e317077a6a7a94128c98.eot");
+  src: url("https://db.onlinewebfonts.com/t/fa97d7829ba5e317077a6a7a94128c98.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/fa97d7829ba5e317077a6a7a94128c98.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/fa97d7829ba5e317077a6a7a94128c98.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/fa97d7829ba5e317077a6a7a94128c98.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/fa97d7829ba5e317077a6a7a94128c98.svg#Code Next-Trial")
+      format("svg");
 }
 
 * {
@@ -27,7 +24,7 @@ html,
 body {
   overflow-x: hidden;
 
-  font-family: "CodeNext-Trial RegularItalic";
+  font-family: "Code Next-Trial";
   font-weight: 400;
 }
 
@@ -38,4 +35,8 @@ a {
 
 ul {
   list-style-type: none;
+}
+
+span {
+  font-family: "Inter", sans-serif;
 }

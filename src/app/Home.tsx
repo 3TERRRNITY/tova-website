@@ -85,9 +85,9 @@ export default function Home() {
                   {service.description}
                 </div>
               </div>
-              <div className={styles.services__card__price}>
+              <span className={styles.services__card__price}>
                 {service.price}
-              </div>
+              </span>
             </div>
           ))}
         </div>

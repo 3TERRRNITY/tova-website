@@ -6,9 +6,11 @@ import styles from "../../styles/hero.module.scss";
 export default function Card({
   title,
   description,
+  animation = true,
 }: {
   title: string;
   description: string;
+  animation?: boolean;
 }) {
   const controls = useAnimation();
   const [isHovered, setIsHovered] = useState(false);
@@ -16,11 +18,14 @@ export default function Card({
   const heightRef = useRef(null as null | HTMLDivElement);
 
   const handleHover = () => {
-    controls.start({
-      opacity: 1,
-      x: 0,
-    });
-    setIsHovered(true);
+    if (animation) {
+      controls.start({
+        opacity: 1,
+        x: 0,
+      });
+      setIsHovered(true);
+    } else {
+    }
   };
 
   const handleUnhover = () => {
