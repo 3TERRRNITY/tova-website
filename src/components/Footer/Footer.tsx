@@ -11,9 +11,11 @@ const Footer = ({ white }: IFooterProps) => {
         <div className={styles.footer__collaboration}>Сотрудничество</div>
         <div className={styles.footer__contacts}>
           <div className={styles.footer__contacts__number}>
-            +7 925 400-01-34
+            <span>+</span>7 925 400-01-34
           </div>
-          <div className={styles.footer__contacts__number}>info@tov-a.ru</div>
+          <div className={styles.footer__contacts__number}>
+            info<span>@</span>tov-a.ru
+          </div>
         </div>
       </div>
 

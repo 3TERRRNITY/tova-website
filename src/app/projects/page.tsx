@@ -9,6 +9,8 @@ import { IProjects } from "../../constants/types";
 import Card from "../../components/Card/Card";
 import Header from "../../components/Header/Header";
 import { Separator } from "../../components/Separator/Separator";
+import Lottie from "lottie-react";
+import emptyAnimation from "../../../public/animations/empty.json";
 type Props = {};
 
 const Projects = (props: Props) => {
@@ -44,26 +46,38 @@ const Projects = (props: Props) => {
           ))}
         </div>
         <Separator />
-        {filteredProjects.map((proj) => (
-          <React.Fragment key={proj.title}>
-            <div className={styles.projects__project}>
-              <div className={styles.projects__project__container}>
-                <div className={styles.projects__project__title}>
-                  {proj.title}
+
+        {filteredProjects &&
+          filteredProjects.map((proj) => (
+            <React.Fragment key={proj.title}>
+              <div className={styles.projects__project}>
+                <div className={styles.projects__project__container}>
+                  <div className={styles.projects__project__title}>
+                    {proj.title}
+                  </div>
+                  <div className={styles.projects_project__description}>
+                    {proj.category}
+                  </div>
                 </div>
-                <div className={styles.projects_project__description}>
-                  {proj.category}
+                <div className={styles.projects__project__cards}>
+                  <Card description={proj.description} title={proj.title} />
+                  <Card animation={false} description={""} title={""} />
                 </div>
               </div>
-              <div className={styles.projects__project__cards}>
-                <Card description={proj.description} title={proj.title} />
-                <Card description={""} title={""} />
-              </div>
-            </div>
-            <Separator />
-          </React.Fragment>
-        ))}
+              <Separator />
+            </React.Fragment>
+          ))}
+        {filteredProjects.length === 0 && (
+          <div className={styles.projects__emptyError}>
+            Пока пусто...
+            <Lottie
+              className={styles.projects__emptyError_animation}
+              animationData={emptyAnimation}
+            />
+          </div>
+        )}
       </div>
+
       <Footer />
     </div>
   );

@@ -51,4 +51,18 @@
       gap: $space-20;
     }
   }
+
+  &__emptyError {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    padding: $space-40;
+    align-items: center;
+
+    @include h3Title;
+
+    &_animation {
+    }
+  }
 }
