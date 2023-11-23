@@ -62,7 +62,11 @@ const ServiceCard = ({ title, description, points, href }: IService) => {
       >
         {filteredProjects.map((project) => (
           <React.Fragment key={project.title}>
-            <Card description={project.description} title={project.title} />
+            <Card
+              image={project.img}
+              description={project.description}
+              title={project.title}
+            />
           </React.Fragment>
         ))}
       </motion.div>
