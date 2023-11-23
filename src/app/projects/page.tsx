@@ -60,8 +60,17 @@ const Projects = (props: Props) => {
                   </div>
                 </div>
                 <div className={styles.projects__project__cards}>
-                  <Card description={proj.description} title={proj.title} />
-                  <Card animation={false} description={""} title={""} />
+                  <Card
+                    image={proj.img}
+                    description={proj.description}
+                    title={proj.title}
+                  />
+                  <Card
+                    image={proj.img}
+                    animation={false}
+                    description={""}
+                    title={""}
+                  />
                 </div>
               </div>
               <Separator />

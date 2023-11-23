@@ -23,7 +23,7 @@ export const IMAGES: ILogos[] = [
 export const PROJECTS: IProjects[] = [
   {
     title: "Avivir",
-    img: "",
+    img: "/main/avivir.jpg",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
     id: "webdev",
@@ -31,7 +31,7 @@ export const PROJECTS: IProjects[] = [
   },
   {
     title: "Aimi",
-    img: "",
+    img: "/main/aimi.jpg",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
     id: "brand",
@@ -39,7 +39,7 @@ export const PROJECTS: IProjects[] = [
   },
   {
     title: "Madaia",
-    img: "",
+    img: "/main/madaia.jpg",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
     id: "graphics",
@@ -47,7 +47,7 @@ export const PROJECTS: IProjects[] = [
   },
   {
     title: "frenchi",
-    img: "",
+    img: "/main/frenchi.jpg",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
     id: "smm",
@@ -55,7 +55,7 @@ export const PROJECTS: IProjects[] = [
   },
   {
     title: "vademekum",
-    img: "",
+    img: "/main/vdm.jpg",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
     id: "other",

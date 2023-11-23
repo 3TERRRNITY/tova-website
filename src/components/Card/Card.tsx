@@ -7,10 +7,12 @@ export default function Card({
   title,
   description,
   animation = true,
+  image,
 }: {
   title: string;
   description: string;
   animation?: boolean;
+  image: string;
 }) {
   const controls = useAnimation();
   const [isHovered, setIsHovered] = useState(false);
@@ -42,6 +44,7 @@ export default function Card({
   return (
     <motion.div
       className={styles.projects__card}
+      style={{ backgroundImage: `url(${image})` }}
       onHoverStart={handleHover}
       onHoverEnd={handleUnhover}
       ref={heightRef}
