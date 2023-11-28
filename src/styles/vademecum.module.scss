@@ -4,7 +4,7 @@
 // TODO: сделать флюидным
 // TODO: сделать однотипное миксинами
 
-.avivir {
+.vademecum {
   &__hero {
     width: 100%;
     height: 100vh;
@@ -15,7 +15,7 @@
     background-repeat: no-repeat;
   }
   &__about {
-    padding: $space-80 $space-40 230px $space-40;
+    padding: $space-80 $space-40 0 $space-40;
     position: relative;
     &__circle {
       position: absolute;
