@@ -37,7 +37,7 @@ const Avivir = (props: Props) => {
             <div className={styles.avivir__about__head_subtitle}>
               {aboutPoints.map((point) => (
                 <div key={point} className={styles.avivir__about__head_point}>
-                  {point}
+                  <span>{point}</span>
                 </div>
               ))}
             </div>

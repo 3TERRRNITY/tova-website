@@ -46,7 +46,7 @@ const Aimi = (props: Props) => {
             <div className={styles.aimi__about__head_subtitle}>
               {aboutPoints.map((point) => (
                 <div key={point} className={styles.aimi__about__head_point}>
-                  {point}
+                  <span>{point}</span>
                 </div>
               ))}
             </div>

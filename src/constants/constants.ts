@@ -54,7 +54,7 @@ export const PROJECTS: IProjects[] = [
     category: "smm",
   },
   {
-    title: "vademekum",
+    title: "vademecum",
     img: "/main/vdm.jpg",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",

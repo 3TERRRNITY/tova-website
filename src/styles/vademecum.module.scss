@@ -1,0 +1,227 @@
+@import "./mixins.scss";
+@import "./variable.scss";
+
+// TODO: сделать флюидным
+// TODO: сделать однотипное миксинами
+
+.vademecum {
+  &__hero {
+    width: 100%;
+    height: 100vh;
+
+    background-image: url(../../public/projects/vademkum/vanderkum-hero.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &__about {
+    padding: $space-80 $space-40 0 $space-40;
+    position: relative;
+    &__circle {
+      position: absolute;
+      left: -30%;
+      z-index: 0;
+    }
+    &__head {
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      padding-bottom: $space-50;
+
+      &_title {
+        @include h1Title;
+      }
+
+      &_subtitle {
+        @include paragraph;
+      }
+
+      &_point {
+        color: #3e3e3e;
+        &:first-of-type {
+          color: #fff;
+        }
+      }
+    }
+
+    &__description {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      padding-bottom: $space-100;
+
+      &__subtitle {
+        display: flex;
+        flex-direction: column;
+        gap: $space-40;
+
+        &_paragraph {
+          @include paragraph;
+        }
+
+        &_big {
+          @include h3Title;
+        }
+      }
+    }
+
+    &__cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: $space-20;
+
+      &__card {
+        @include paragraph;
+        padding: $space-80 0;
+        text-align: center;
+        width: 100%;
+        border: 1px solid #3e3e3e;
+      }
+    }
+  }
+
+  &__mainPage {
+    padding: 0 $space-40 160px $space-40;
+
+    &__info {
+      @include h3Title;
+      text-transform: lowercase;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $space-20;
+
+      padding: 0 0 $space-80 0;
+    }
+
+    &__cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      height: 200px;
+      gap: $space-20;
+      margin-top: $space-20;
+    }
+
+    &__card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 20px;
+
+      width: 100%;
+      height: 100%;
+
+      background-color: #161616;
+    }
+
+    &__image {
+      position: relative;
+      height: 1300px;
+    }
+
+    &__imagesGrid {
+      height: 2000px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: $space-20;
+
+      &_img1,
+      &_img2,
+      &_img3,
+      &_img4 {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        border-radius: 20px;
+      }
+
+      &_img1 {
+        grid-column: 1/3;
+        background-image: url(../../public/projects/vademkum/vanderkum-main_page1.png);
+      }
+
+      &_img2 {
+        grid-row: 2;
+        background-image: url(../../public/projects/vademkum/vanderkum-main_page2.png);
+      }
+      &_img3 {
+        grid-row: 2;
+        background-image: url(../../public/projects/vademkum/vanderkum-main_page3.png);
+      }
+      &_img4 {
+        grid-row: 3;
+        grid-column: 1/3;
+        background-image: url(../../public/projects/vademkum/vanderkum-main_page4.png);
+      }
+    }
+  }
+
+  &__shop {
+    padding: 0 $space-40 160px $space-40;
+
+    &__info {
+      @include h3Title;
+      text-transform: lowercase;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $space-20;
+
+      padding: 0 0 $space-80 0;
+    }
+
+    &__imagesGrid {
+      height: 1300px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: $space-20;
+
+      &_img1,
+      &_img2,
+      &_img3 {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        border-radius: 20px;
+      }
+
+      &_img1 {
+        grid-column: 1/3;
+        background-image: url(../../public/projects/vademkum/vanderkum-shop1.png);
+      }
+
+      &_img2 {
+        grid-row: 2;
+        background-image: url(../../public/projects/vademkum/vanderkum-shop2.png);
+      }
+      &_img3 {
+        grid-row: 2;
+        background-image: url(../../public/projects/vademkum/vanderkum-shop3.png);
+      }
+    }
+  }
+
+  &__team {
+    padding: 0 $space-40 160px $space-40;
+
+    &_title {
+      @include h3Title;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: $space-50;
+    }
+
+    &__member {
+      display: flex;
+      justify-content: space-between;
+      padding: $space-20 0;
+      @include paragraph;
+      border-bottom: 1px solid #3e3e3e;
+    }
+  }
+}

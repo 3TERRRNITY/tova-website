@@ -6,10 +6,10 @@ import { ScrollTrigger } from "gsap/all";
 import styles from "../styles/hero.module.scss";
 import commonStyles from "../styles/common.module.scss";
 import { IMAGES, PROJECTS, SERVICES } from "../constants/constants";
-import Header from "../components/Header/Header";
 import Card from "../components/Card/Card";
 import Footer from "../components/Footer/Footer";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   const firstContainer = useRef(null);
@@ -57,7 +57,19 @@ export default function Home() {
           креатив - он как нейросеть <br /> главное правильно <br />{" "}
           сформулировать запрос
         </div>
-        <Header />
+        <div className={styles.hero__header}>
+          <Link href={"/"}>
+            <div className={styles.hero__header__logo}>
+              <Image src="/TOVA-logo.svg" alt="logo" fill />
+            </div>
+          </Link>
+
+          <div className={styles.hero__header__text}>
+            tova
+            <br />
+            про дизайн
+          </div>
+        </div>
       </div>
       <div className={styles.sliderContainer}>
         <div className={styles.slider}>
