@@ -49,7 +49,7 @@ const Vademecum = (props: Props) => {
           <div className={styles.vademecum__about__head_subtitle}>
             {aboutPoints.map((point) => (
               <div key={point} className={styles.vademecum__about__head_point}>
-                {point}
+                <span>{point}</span>
               </div>
             ))}
           </div>
