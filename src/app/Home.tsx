@@ -10,46 +10,9 @@ import Card from "../components/Card/Card";
 import Footer from "../components/Footer/Footer";
 import Link from "next/link";
 import Image from "next/image";
+import Slider from "../components/Slider/Slider";
 
 export default function Home() {
-  const firstContainer = useRef(null);
-  const secondContainer = useRef(null);
-  const slider = useRef(null);
-  let xPercent = 0;
-  let direction = -1;
-
-  useLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.to(slider.current, {
-      scrollTrigger: {
-        trigger: document.documentElement,
-        scrub: 0.25,
-        start: 0,
-        end: window.innerHeight,
-        onUpdate: (e) => (direction = e.direction * -1),
-      },
-      x: "-500px",
-    });
-    requestAnimationFrame(animate);
-  }, []);
-
-  const animate = () => {
-    if (xPercent < -100) {
-      xPercent = 0;
-    } else if (xPercent > 0) {
-      xPercent = -100;
-    }
-    gsap.set(firstContainer.current, { xPercent: xPercent });
-    gsap.set(secondContainer.current, { xPercent: xPercent });
-    requestAnimationFrame(animate);
-    xPercent += 0.1 * direction;
-  };
-  const brandsContainer = IMAGES.map(({ img, key }) => (
-    <div className={styles.slider__item} key={key}>
-      <img src={img} alt="brand" />
-    </div>
-  ));
-
   return (
     <div className={commonStyles.mainPageBody}>
       <div className={styles.hero}>
@@ -71,24 +34,12 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className={styles.sliderContainer}>
-        <div className={styles.slider}>
-          <div className={styles.slider__container} ref={firstContainer}>
-            {brandsContainer}
-          </div>
-          <div
-            className={styles.slider__container_duplicate}
-            ref={secondContainer}
-          >
-            {brandsContainer}
-          </div>
-        </div>
-      </div>
+      <Slider />
       <div className={styles.services}>
         <div className={styles.services__title}>услуги</div>
         <div className={styles.services__serviceGrid}>
           {SERVICES.map((service) => (
-            <div className={styles.services__card}>
+            <div className={styles.services__card} key={service.title}>
               <div className={styles.services__card__info}>
                 <div className={styles.services__card__info_title}>
                   {service.title}
