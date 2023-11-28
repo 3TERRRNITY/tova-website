@@ -9,7 +9,7 @@
     width: 100%;
     height: 100vh;
 
-    background-image: url(../../public/projects/vademkum/vanderkum-hero.png);
+    background-image: url(../../public/projects/frenchi/banner.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -116,52 +116,32 @@
       background-color: #161616;
     }
 
-    &__image {
-      position: relative;
-      height: 1300px;
-    }
-
-    &__imagesGrid {
-      height: 2000px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(3, 1fr);
+    &__images {
+      display: flex;
+      flex-direction: column;
       gap: $space-20;
-
-      &_img1,
-      &_img2,
-      &_img3,
-      &_img4 {
-        width: 100%;
-        height: 100%;
+      &_img1 {
+        background-image: url(../../public/projects/frenchi/1.png);
+        background-size: contain;
         background-position: center;
-        background-size: cover;
+        background-repeat: no-repeat;
+        height: 450px;
         border-radius: 20px;
       }
 
-      &_img1 {
-        grid-column: 1/3;
-        background-image: url(../../public/projects/vademkum/vanderkum-main_page1.png);
-      }
-
       &_img2 {
-        grid-row: 2;
-        background-image: url(../../public/projects/vademkum/vanderkum-main_page2.png);
-      }
-      &_img3 {
-        grid-row: 2;
-        background-image: url(../../public/projects/vademkum/vanderkum-main_page3.png);
-      }
-      &_img4 {
-        grid-row: 3;
-        grid-column: 1/3;
-        background-image: url(../../public/projects/vademkum/vanderkum-main_page4.png);
+        background-image: url(../../public/projects/frenchi/2.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 600px;
+        border-radius: 20px;
       }
     }
   }
 
-  &__shop {
-    padding: 0 $space-40 160px $space-40;
+  &__adaptive {
+    padding: 0 0 200px 0;
 
     &__info {
       @include h3Title;
@@ -169,40 +149,38 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: $space-20;
-
-      padding: 0 0 $space-80 0;
     }
 
-    &__imagesGrid {
-      height: 1300px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      gap: $space-20;
+    &__image {
+      background-image: url(../../public/projects/frenchi/3.png);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 1200px;
+    }
+  }
 
-      &_img1,
-      &_img2,
-      &_img3 {
-        width: 100%;
-        height: 100%;
-        background-position: center;
-        background-size: cover;
-        border-radius: 20px;
-      }
+  &__images {
+    padding-bottom: 145px;
+    &_img1,
+    &_img2,
+    &_img3 {
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
 
-      &_img1 {
-        grid-column: 1/3;
-        background-image: url(../../public/projects/vademkum/vanderkum-shop1.png);
-      }
-
-      &_img2 {
-        grid-row: 2;
-        background-image: url(../../public/projects/vademkum/vanderkum-shop2.png);
-      }
-      &_img3 {
-        grid-row: 2;
-        background-image: url(../../public/projects/vademkum/vanderkum-shop3.png);
-      }
+    &_img1 {
+      height: 1000px;
+      background-image: url(../../public/projects/frenchi/4.png);
+    }
+    &_img2 {
+      height: 1100px;
+      background-image: url(../../public/projects/frenchi/5.png);
+    }
+    &_img3 {
+      height: 1100px;
+      background-image: url(../../public/projects/frenchi/6.png);
     }
   }
 
