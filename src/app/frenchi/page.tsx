@@ -36,40 +36,36 @@ const Frenchi = () => {
   return (
     <div className={commonStyles.mainPageBody}>
       <Header />
-      <div className={styles.vademecum__hero} />
+      <div className={styles.frenchi__hero} />
 
-      <div className={styles.vademecum__about}>
-        <div className={styles.vademecum__about__head}>
-          <div className={styles.vademecum__about__head_title}>О проекте</div>
-          <div className={styles.vademecum__about__head_subtitle}>
+      <div className={styles.frenchi__about}>
+        <div className={styles.frenchi__about__head}>
+          <div className={styles.frenchi__about__head_title}>О проекте</div>
+          <div className={styles.frenchi__about__head_subtitle}>
             {aboutPoints.map((point) => (
-              <div key={point} className={styles.vademecum__about__head_point}>
+              <div key={point} className={styles.frenchi__about__head_point}>
                 <span>{point}</span>
               </div>
             ))}
           </div>
         </div>
-        <div className={styles.vademecum__about__description}>
-          <div className={styles.vademecum__about__description__subtitle}>
+        <div className={styles.frenchi__about__description}>
+          <div className={styles.frenchi__about__description__subtitle}>
             <div
-              className={
-                styles.vademecum__about__description__subtitle_paragraph
-              }
+              className={styles.frenchi__about__description__subtitle_paragraph}
             >
               Madaia – бренд одежды для повседневной <br /> жизни и спорта,
               идейным вдохновителем <br /> которого является бывшая
             </div>
             <div
-              className={
-                styles.vademecum__about__description__subtitle_paragraph
-              }
+              className={styles.frenchi__about__description__subtitle_paragraph}
             >
               побуждает ее творить красоту, бренд Madaia <br /> - результат
               вдохновения. Madaia – <br />
               бренд одежды для повседневной жизни и спорта
             </div>
           </div>
-          <div className={styles.vademecum__about__description__subtitle_big}>
+          <div className={styles.frenchi__about__description__subtitle_big}>
             Madaia – бренд одежды для повседневной жизни и спорта, идейным
             вдохновителем которого является бывшая побуждает ее творить красоту,
             бренд Madaia - результат вдохновения. бренд одежды для повседневной
@@ -77,54 +73,54 @@ const Frenchi = () => {
           </div>
         </div>
 
-        <div className={styles.vademecum__mainPage}>
-          <div className={styles.vademecum__mainPage__info}>
-            <div className={styles.vademecum__mainPage__info_title}>
+        <div className={styles.frenchi__mainPage}>
+          <div className={styles.frenchi__mainPage__info}>
+            <div className={styles.frenchi__mainPage__info_title}>
               дизайн главной страницы сайта
             </div>
-            <div className={styles.vademecum__mainPage__info_description}>
+            <div className={styles.frenchi__mainPage__info_description}>
               Madaia – бренд одежды для повседневной жизни и спорта, идейным
               вдохновителем которого является бывшая побуждает ее творить
               красоту
             </div>
           </div>
-          <div className={styles.vademecum__mainPage__images}>
-            <div className={styles.vademecum__mainPage__images_img1} />
-            <div className={styles.vademecum__mainPage__images_img2} />
+          <div className={styles.frenchi__mainPage__images}>
+            <div className={styles.frenchi__mainPage__images_img1} />
+            <div className={styles.frenchi__mainPage__images_img2} />
           </div>
         </div>
 
-        <div className={styles.vademecum__adaptive}>
-          <div className={styles.vademecum__adaptive__info}>
-            <div className={styles.vademecum__adaptive__info_title}>
+        <div className={styles.frenchi__adaptive}>
+          <div className={styles.frenchi__adaptive__info}>
+            <div className={styles.frenchi__adaptive__info_title}>
               дизайн главной страницы сайта
             </div>
-            <div className={styles.vademecum__adaptive__info_description}>
+            <div className={styles.frenchi__adaptive__info_description}>
               Madaia – бренд одежды для повседневной жизни и спорта, идейным
               вдохновителем которого является бывшая побуждает ее творить
               красоту
             </div>
           </div>
-          <div className={styles.vademecum__adaptive__image} />
+          <div className={styles.frenchi__adaptive__image} />
         </div>
 
-        <div className={styles.vademecum__images}>
-          <div className={styles.vademecum__images_img1} />
-          <div className={styles.vademecum__images_img2} />
-          <div className={styles.vademecum__images_img3} />
+        <div className={styles.frenchi__images}>
+          <div className={styles.frenchi__images_img1} />
+          <div className={styles.frenchi__images_img2} />
+          <div className={styles.frenchi__images_img3} />
         </div>
 
-        <div className={styles.vademecum__team}>
-          <div className={styles.vademecum__team_title}>
+        <div className={styles.frenchi__team}>
+          <div className={styles.frenchi__team_title}>
             Над проектом работали
           </div>
           {team.map((member) => (
             <React.Fragment key={member.name}>
-              <div className={styles.vademecum__team__member}>
-                <div className={styles.vademecum__team__member_position}>
+              <div className={styles.frenchi__team__member}>
+                <div className={styles.frenchi__team__member_position}>
                   {member.position}
                 </div>
-                <div className={styles.vademecum__team__member_name}>
+                <div className={styles.frenchi__team__member_name}>
                   {member.name}
                 </div>
               </div>
