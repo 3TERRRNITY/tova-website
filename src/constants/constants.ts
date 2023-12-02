@@ -61,6 +61,22 @@ export const PROJECTS: IProjects[] = [
     id: "other",
     category: "ведение",
   },
+  {
+    title: "mindly",
+    img: "/main/mindly.jpg",
+    description:
+      "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
+    id: "other",
+    category: "ведение",
+  },
+  {
+    title: "mindly",
+    img: "/main/mindly.jpg",
+    description:
+      "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
+    id: "other",
+    category: "ведение",
+  },
 ];
 
 export const DEPARTAMENTS: IDepartaments[] = [

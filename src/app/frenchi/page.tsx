@@ -32,7 +32,6 @@ const Frenchi = () => {
       name: "Александр Рязанов",
     },
   ];
-  const aboutCards = ["исследование", "user fow", "дизайн", "разработка"];
   return (
     <div className={commonStyles.mainPageBody}>
       <Header />
