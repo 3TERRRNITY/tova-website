@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import styles from "../../styles/aimi.module.scss";
 import commonStyles from "../../styles/common.module.scss";
@@ -75,7 +76,7 @@ const Aimi = (props: Props) => {
             </div>
           </div>
         </div>
-        {/* <Separator /> */}
+        <Separator />
         <div className={styles.aimi__mainPage}>
           <div className={styles.aimi__mainPage__info}>
             <div className={styles.aimi__mainPage__info_title}>
@@ -119,7 +120,7 @@ const Aimi = (props: Props) => {
             </div>
           </div>
         </div>
-        {/* <Separator /> */}
+        <Separator />
         <div className={styles.aimi__firm}>
           <div className={styles.aimi__firm__info}>
             <div className={styles.aimi__firm__info_title}>
@@ -138,7 +139,7 @@ const Aimi = (props: Props) => {
             <div className={styles.aimi__firm__imageGridContainer_image3} />
           </div>
         </div>
-        {/* <Separator /> */}
+        <Separator />
         <div className={styles.aimi__typography}>
           <div className={styles.aimi__typography__info}>
             <div className={styles.aimi__typography__info_title}>
@@ -166,7 +167,7 @@ const Aimi = (props: Props) => {
           </div>
         </div>
 
-        {/* <Separator />  */}
+        <Separator />
 
         <div className={styles.aimi__smm}>
           <div className={styles.aimi__smm__info}>
@@ -178,7 +179,7 @@ const Aimi = (props: Props) => {
           </div>
         </div>
 
-        {/* <Separator /> */}
+        <Separator />
 
         <div className={styles.aimi__linkedin}>
           <div className={styles.aimi__linkedin_title}>linkedin</div>

@@ -1,11 +1,8 @@
 "use client";
-import { useEffect, useLayoutEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
 
 import styles from "../styles/hero.module.scss";
 import commonStyles from "../styles/common.module.scss";
-import { IMAGES, PROJECTS, SERVICES } from "../constants/constants";
+import { PROJECTS, SERVICES } from "../constants/constants";
 import Card from "../components/Card/Card";
 import Footer from "../components/Footer/Footer";
 import Link from "next/link";

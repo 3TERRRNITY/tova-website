@@ -66,7 +66,9 @@ export default function Card({
           y: isHovered ? cardHeight - 100 : 0,
         }}
       >
-        <motion.h2 className={styles.projects__card__title}>{title}</motion.h2>
+        <motion.h2 className={styles.projects__card__title}>
+          {title.toLowerCase()}
+        </motion.h2>
         <motion.p
           initial={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
@@ -75,7 +77,7 @@ export default function Card({
             opacity: isHovered ? 1 : 0,
           }}
         >
-          {description}
+          {description.toLowerCase()}
         </motion.p>
       </motion.div>
     </motion.div>
