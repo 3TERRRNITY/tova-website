@@ -6,10 +6,9 @@ import commonStyles from "../../styles/common.module.scss";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import NeonCircle from "../../components/NeonCircle/NeonCircle";
+import { Separator } from "../../components/Separator/Separator";
 
-type Props = {};
-
-const Avivir = (props: Props) => {
+const Avivir = () => {
   const aboutPoints = [
     "проект",
     "клиент / avivir",
@@ -122,14 +121,14 @@ const Avivir = (props: Props) => {
               красоту
             </div>
           </div>
-          {/* <Separator /> */}
+          <Separator />
           <div className={styles.avivir__smm__circle}>
             <NeonCircle />
           </div>
           <div className={styles.avivir__smm__image} />
         </div>
 
-        {/* <Separator /> */}
+        <Separator />
 
         <div className={styles.avivir__firm}>
           <div className={styles.avivir__firm__info}>
@@ -142,7 +141,7 @@ const Avivir = (props: Props) => {
               красоту
             </div>
           </div>
-          {/* <Separator /> */}
+          <Separator />
           <div className={styles.avivir__firm__imageGridContainer}>
             <div className={styles.avivir__firm__images}></div>
           </div>
