@@ -15,7 +15,7 @@ export default function Card({
   image: string;
 }) {
   const controls = useAnimation();
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState<boolean>(false);
   const [cardHeight, setCardHeight] = useState<number>(0);
   const heightRef = useRef(null as null | HTMLDivElement);
 
@@ -44,39 +44,56 @@ export default function Card({
   return (
     <motion.div
       className={styles.projects__card}
-      style={{ backgroundImage: `url(${image})` }}
       onHoverStart={handleHover}
       onHoverEnd={handleUnhover}
       ref={heightRef}
     >
       <motion.div
-        initial={{ opacity: 0, x: -100 }}
-        transition={{ duration: 0.25 }}
-        animate={controls}
+        initial={{ opacity: 0, y: -200 }}
+        transition={{ duration: 0.3 }}
+        animate={{
+          opacity: isHovered ? 1 : 0,
+          y: isHovered ? 0 : -200,
+        }}
         className={styles.projects__card__yearContainer}
       >
         <Image src="/right-arrow.svg" alt="arrow" width={41} height={21} />
         <div className="year">2023</div>
       </motion.div>
+
       <motion.div
-        className={styles.projects__card__container}
-        initial={{ y: 0 }}
+        initial={{ opacity: 0 }}
         transition={{ duration: 0.25 }}
         animate={{
-          y: isHovered ? cardHeight - 100 : 0,
+          opacity: isHovered ? 0 : 1,
         }}
+        className={styles.projects__card__startContainer}
+      >
+        {title.toLowerCase()}
+      </motion.div>
+      <motion.img
+        initial={{ scale: 1 }}
+        transition={{ duration: 0.3 }}
+        animate={{
+          scale: isHovered ? 1.2 : 1,
+        }}
+        className={styles.projects__card_bgImage}
+        src={image}
+        alt="background image"
+      />
+      <motion.div
+        initial={{ opacity: 0, y: 200 }}
+        transition={{ duration: 0.3 }}
+        animate={{
+          opacity: isHovered ? 1 : 0,
+          y: isHovered ? 0 : 200,
+        }}
+        className={styles.projects__card__container}
       >
         <motion.h2 className={styles.projects__card__title}>
           {title.toLowerCase()}
         </motion.h2>
-        <motion.p
-          initial={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
-          className={styles.projects__card__description}
-          animate={{
-            opacity: isHovered ? 1 : 0,
-          }}
-        >
+        <motion.p className={styles.projects__card__description}>
           {description.toLowerCase()}
         </motion.p>
       </motion.div>
