@@ -2,14 +2,21 @@
 import React from "react";
 import styles from "../../styles/aimi.module.scss";
 import commonStyles from "../../styles/common.module.scss";
+
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import { Separator } from "../../components/Separator/Separator";
-import motion from "framer-motion";
 
-type Props = {};
+import Lottie from "lottie-react";
+import Logo from "../../../public/projects/aimi/aimations/logo-aimi.json";
+import Scheme1 from "../../../public/projects/aimi/aimations/scheme1-aimi.json";
+import Graphic1 from "../../../public/projects/aimi/aimations/Graphic1.json";
+import Graphic2 from "../../../public/projects/aimi/aimations/Graphic2.json";
+import Graphic3 from "../../../public/projects/aimi/aimations/Graphic3.json";
+import Graphic4 from "../../../public/projects/aimi/aimations/Graphic4.json";
+import Carousel from "../../components/Carousel/Carousel";
 
-const Aimi = (props: Props) => {
+const Aimi = () => {
   const aboutPoints = [
     "проект",
     "клиент / aimi",
@@ -89,13 +96,11 @@ const Aimi = (props: Props) => {
             </div>
           </div>
           <div className={styles.aimi__mainPage__images}>
-            <div className={styles.aimi__mainPage__images_image1} />
-            <div className={styles.aimi__mainPage__images_image2} />
-            <div className={styles.aimi__mainPage__images_image3} />
-            <div className={styles.aimi__mainPage__images_image4} />
+            <Lottie animationData={Logo} />
+            <Lottie animationData={Scheme1} />
           </div>
         </div>
-
+        <Separator />
         <div className={styles.aimi__infographics}>
           <div className={styles.aimi__infographics__info}>
             <div className={styles.aimi__infographics__info_title}>
@@ -110,13 +115,13 @@ const Aimi = (props: Props) => {
           <div className={styles.aimi__infographics__images}>
             <span>Графики 1</span>
             <div className={styles.aimi__infographics__images_container}>
-              <div className={styles.aimi__infographics__images_image1} />
-              <div className={styles.aimi__infographics__images_image2} />
+              <Lottie animationData={Graphic1} />
+              <Lottie animationData={Graphic2} />
             </div>
             <span>Графики 2</span>
             <div className={styles.aimi__infographics__images_container}>
-              <div className={styles.aimi__infographics__images_image3} />
-              <div className={styles.aimi__infographics__images_image4} />
+              <Lottie animationData={Graphic3} />
+              <Lottie animationData={Graphic4} />
             </div>
           </div>
         </div>
@@ -134,16 +139,28 @@ const Aimi = (props: Props) => {
           </div>
 
           <div className={styles.aimi__firm__imageGridContainer}>
-            <div className={styles.aimi__firm__imageGridContainer_image1} />
-            <div className={styles.aimi__firm__imageGridContainer_image2} />
-            <div className={styles.aimi__firm__imageGridContainer_image3} />
+            <img
+              className={styles.aimi__firm__imageGridContainer_image}
+              src="/projects/aimi/aimi_firm1.png"
+              alt="design"
+            />
+            <img
+              className={styles.aimi__firm__imageGridContainer_image}
+              src="/projects/aimi/aimi_firm2.png"
+              alt="design"
+            />
+            <img
+              className={styles.aimi__firm__imageGridContainer_imageBig}
+              src="/projects/aimi/aimi_firm3.png"
+              alt="design"
+            />
           </div>
         </div>
         <Separator />
         <div className={styles.aimi__typography}>
           <div className={styles.aimi__typography__info}>
             <div className={styles.aimi__typography__info_title}>
-              фирменные носители
+              типография
             </div>
             <div className={styles.aimi__typography__info__example}>
               <div className={styles.aimi__typography__info__example_title}>
@@ -176,6 +193,10 @@ const Aimi = (props: Props) => {
               <div className={styles.aimi__smm__info__images_image1} />
               <div className={styles.aimi__smm__info__images_image2} />
             </div>
+            <Carousel
+              width={315}
+              images={["/projects/aimi/smm1.png", "/projects/aimi/smm2.png"]}
+            />
           </div>
         </div>
 
@@ -187,6 +208,16 @@ const Aimi = (props: Props) => {
             <div className={styles.aimi__linkedin__images_image1} />
             <div className={styles.aimi__linkedin__images_image2} />
             <div className={styles.aimi__linkedin__images_image3} />
+          </div>
+          <div className={styles.aimi__linkedin__slider}>
+            <Carousel
+              width={268}
+              images={[
+                "/projects/aimi/linkedin1.png",
+                "/projects/aimi/linkedin2.png",
+                "/projects/aimi/linkedin3.png",
+              ]}
+            />
           </div>
         </div>
 

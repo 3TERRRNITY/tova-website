@@ -4,28 +4,49 @@
 .aimi {
   &__hero {
     width: 100%;
-    height: 100vh;
+    height: 100svh;
 
     background-image: url(../../public/projects/aimi/aimi.png);
     background-size: cover;
     background-repeat: no-repeat;
+
+    @media (max-width: 480px) {
+      display: none;
+    }
   }
   &__about {
     padding: $space-80 $space-40 230px $space-40;
     position: relative;
+    @media (max-width: 480px) {
+      padding: 100px 20px 90px 20px;
+    }
     &__head {
       z-index: 1;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
 
       padding-bottom: $space-50;
-
+      @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        padding-bottom: 40px;
+      }
       &_title {
         @include h1Title;
+        text-transform: uppercase;
+        @media (max-width: 480px) {
+          font-size: 22px;
+          line-height: 23.87px;
+        }
       }
 
       &_subtitle {
         @include paragraph;
+        @media (max-width: 480px) {
+          font-size: 16px;
+          line-height: 20.8px;
+        }
       }
 
       &_point {
@@ -41,18 +62,35 @@
       grid-template-columns: repeat(2, 1fr);
 
       padding-bottom: $space-100;
-
+      @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 0;
+      }
       &__subtitle {
         display: flex;
         flex-direction: column;
         gap: $space-40;
 
+        @media (max-width: 480px) {
+          gap: 20px;
+        }
+
         &_paragraph {
           @include paragraph;
+          @media (max-width: 480px) {
+            font-size: 16px;
+            line-height: 20.8px;
+          }
         }
 
         &_big {
           @include h3Title;
+          @media (max-width: 480px) {
+            padding-top: 20px;
+            font-size: 16px;
+            line-height: 20.8px;
+          }
         }
       }
     }
@@ -63,8 +101,10 @@
   &__firm,
   &__typography,
   &__smm {
-    padding: 0 $space-40 160px $space-40;
-
+    padding: $space-80 $space-40 160px $space-40;
+    @media (max-width: 480px) {
+      padding: 40px 20px 90px 20px;
+    }
     &__info {
       @include h3Title;
       text-transform: lowercase;
@@ -73,6 +113,19 @@
       gap: $space-20;
 
       padding: 0 0 $space-80 0;
+      @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        line-height: 26px;
+
+        &_description {
+          padding-top: 20px;
+          font-size: 16px;
+          line-height: 20.8px;
+          font-weight: 400;
+        }
+      }
     }
   }
 
@@ -80,73 +133,36 @@
     &__images {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
       gap: $space-20;
-      &_image1,
-      &_image2,
-      &_image3,
-      &_image4 {
-        width: 100%;
-        height: 500px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        border-radius: $space-20;
-      }
-
-      &_image1 {
-        background-image: url(../../public/projects/aimi/aimi_design1.png);
-      }
-      &_image2 {
-        background-image: url(../../public/projects/aimi/aimi_design2.png);
-      }
-      &_image3 {
-        background-image: url(../../public/projects/aimi/aimi_design3.png);
-      }
-      &_image4 {
-        background-image: url(../../public/projects/aimi/aimi_design4.png);
+      @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
       }
     }
   }
 
   &__infographics {
     &__images {
-      &_title {
-        @include h3Title;
-        text-transform: lowercase;
-      }
       span {
         @include h3Title;
         text-transform: lowercase;
+        @media (max-width: 480px) {
+          font-size: 16px;
+          line-height: 20.8px;
+        }
       }
       &_container {
         margin-top: $space-20;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: $space-20;
-      }
-
-      &_image1,
-      &_image2,
-      &_image3,
-      &_image4 {
-        width: 100%;
-        height: 500px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        border-radius: $space-20;
-      }
-
-      &_image1 {
-        background-image: url(../../public/projects/aimi/aimi_graphics1.png);
-      }
-      &_image2 {
-        background-image: url(../../public/projects/aimi/aimi_graphics2.png);
-      }
-      &_image3 {
-        background-image: url(../../public/projects/aimi/aimi_graphics3.png);
-      }
-      &_image4 {
-        background-image: url(../../public/projects/aimi/aimi_graphics4.png);
+        @media (max-width: 480px) {
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
       }
     }
   }
@@ -155,53 +171,62 @@
     &__imageGridContainer {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
+
       gap: $space-20;
 
-      &_image1,
-      &_image2,
-      &_image3 {
-        width: 100%;
-        height: 500px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        border-radius: $space-20;
+      @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
       }
 
-      &_image1 {
-        grid-row: 1;
+      &_imageBig {
         grid-column: 1/3;
-        background-image: url(../../public/projects/aimi/aimi_firm1.png);
       }
-      &_image2 {
-        background-image: url(../../public/projects/aimi/aimi_firm2.png);
-      }
-      &_image3 {
-        background-image: url(../../public/projects/aimi/aimi_firm3.png);
+
+      &_image,
+      &_imageBig {
+        object-fit: cover;
+        width: 100%;
+        height: 500px;
+        border-radius: 20px;
+
+        @media (max-width: 480px) {
+          height: 254px;
+        }
       }
     }
   }
 
   &__typography {
     &__info__example {
-      text-transform: none;
+      text-transform: lowercase;
       display: grid;
       grid-template-columns: 0.5fr 1fr;
-
+      @media (max-width: 480px) {
+        margin-top: 20px;
+      }
       &_letters {
         display: flex;
         flex-direction: column;
         gap: $space-20;
+
+        @media (max-width: 480px) {
+          gap: 10px;
+        }
       }
     }
   }
 
   &__smm {
+    position: relative;
     &__info {
       &__images {
         display: flex;
         gap: $space-20;
-
+        @media (max-width: 480px) {
+          display: none;
+        }
         &_image1,
         &_image2 {
           width: 397px;
@@ -221,13 +246,22 @@
   }
 
   &__linkedin {
-    padding: 0 $space-40 160px $space-40;
+    padding: $space-80 $space-40 160px $space-40;
     @include h3Title;
     text-transform: lowercase;
+    @media (max-width: 480px) {
+      padding: 40px 20px 0 20px;
+      font-size: 20px;
+      line-height: 26px;
+      font-weight: 600;
+    }
     &__images {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       margin-top: $space-80;
+      @media (max-width: 480px) {
+        display: none;
+      }
 
       &_image1,
       &_image2,
@@ -248,11 +282,21 @@
         background-image: url(../../public/projects/aimi/linkedin3.png);
       }
     }
+
+    &__slider {
+      display: none;
+      @media (max-width: 480px) {
+        display: block;
+        margin-bottom: 150px;
+      }
+    }
   }
 
   &__team {
     padding: 0 $space-40 160px $space-40;
-
+    @media (max-width: 480px) {
+      display: none;
+    }
     &_title {
       @include h3Title;
       text-transform: uppercase;
