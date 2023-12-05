@@ -63,7 +63,7 @@ export default function Card({
 
       <motion.div
         initial={{ opacity: 0 }}
-        transition={{ duration: 0.25 }}
+        transition={{ duration: 0.2 }}
         animate={{
           opacity: isHovered ? 0 : 1,
         }}
@@ -76,6 +76,7 @@ export default function Card({
         transition={{ duration: 0.3 }}
         animate={{
           scale: isHovered ? 1.2 : 1,
+          opacity: isHovered ? 0.7 : 1,
         }}
         className={styles.projects__card_bgImage}
         src={image}

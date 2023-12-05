@@ -1,0 +1,17 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variable.scss";
+.carousel {
+  &__item {
+    padding: $space-20;
+    img {
+      width: $sliderImageWidth;
+      max-height: $sliderImageHeight;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      text-align: center;
+      opacity: 0.7;
+    }
+  }
+}
