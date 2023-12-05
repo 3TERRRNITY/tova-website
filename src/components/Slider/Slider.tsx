@@ -10,7 +10,22 @@ const SliderContainer = () => {
     </div>
   ));
 
-  return <Marquee>{brandsContainer}</Marquee>;
+  return (
+    <Marquee>
+      {brandsContainer}
+      {brandsContainer}
+      {brandsContainer}
+      {brandsContainer}
+      {brandsContainer}
+      {brandsContainer}
+      {brandsContainer}
+      {brandsContainer}
+      {brandsContainer}
+      {brandsContainer}
+      {brandsContainer}
+      {brandsContainer}
+    </Marquee>
+  );
 };
 
 export default SliderContainer;
