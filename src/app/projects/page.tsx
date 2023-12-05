@@ -65,12 +65,14 @@ const Projects = (props: Props) => {
                     description={proj.description}
                     title={proj.title}
                   />
-                  <Card
-                    image={proj.img}
-                    animation={false}
-                    description={""}
-                    title={""}
-                  />
+                  <div className={styles.projects__project__cards_deskCard}>
+                    <Card
+                      image={proj.img}
+                      animation={true}
+                      description={""}
+                      title={""}
+                    />
+                  </div>
                 </div>
               </div>
               <Separator />
