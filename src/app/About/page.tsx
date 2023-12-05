@@ -8,7 +8,7 @@ import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
 
 import { DEPARTAMENTS, VACANCY } from "../../constants/constants";
-import { lineAnimation, textAnimation } from "../../common/animations";
+import { textAnimation } from "../../common/animations";
 import { Separator } from "../../components/Separator/Separator";
 import Footer from "../../components/Footer/Footer";
 

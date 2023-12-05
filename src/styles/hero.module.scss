@@ -3,7 +3,7 @@
 
 .hero {
   width: 100vw;
-  height: 100vh;
+  height: 100svh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -15,9 +15,10 @@
     padding: $space-40 $space-40;
     @include h1Title;
     text-align: left;
-
     @media (max-width: 480px) {
       padding: 20px;
+      font-size: 36px;
+      line-height: 39.06px;
     }
   }
   &__header {
@@ -26,7 +27,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    @media (max-width: 480px) {
+      padding: 30px 20px;
+    }
     &__logo {
       position: relative;
       width: $logoWidth;
@@ -44,57 +47,9 @@
         display: none;
       }
     }
-
-    @media (max-width: 480px) {
-      padding: 20px;
-    }
   }
   @media (max-width: 480px) {
     flex-direction: column-reverse;
-  }
-}
-
-.sliderContainer {
-  height: $sliderHeight;
-  width: 100%;
-
-  @media (max-width: 480px) {
-    height: 60px;
-  }
-}
-
-.slider {
-  position: relative;
-  display: flex;
-  gap: $space-80;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  opacity: 0.5;
-  overflow: hidden;
-  &__item {
-    position: relative;
-
-    img {
-      width: $sliderImageWidth;
-      max-height: $sliderImageHeight;
-    }
-  }
-
-  &__container {
-    display: flex;
-    gap: $space-80;
-    align-items: center;
-    margin-right: $space-80;
-
-    &_duplicate {
-      position: absolute;
-      left: $sliderDuplicateSpace;
-
-      display: flex;
-      gap: $space-80;
-      align-items: center;
-    }
   }
 }
 
@@ -124,17 +79,20 @@
     grid-template-rows: repeat(2, 1fr);
 
     color: #fff;
+
+    @media (max-width: 480px) {
+      width: 100%;
+      height: 215px;
+    }
+
     &_bgImage {
       position: absolute;
       width: 100%;
       height: 100%;
       transition: scale 0.3s ease-in;
+      object-fit: cover;
 
       z-index: 1;
-    }
-    @media (max-width: 480px) {
-      width: 350px;
-      height: 215px;
     }
 
     &__startContainer {
@@ -142,6 +100,14 @@
       position: absolute;
       top: $space-20;
       left: $space-20;
+      z-index: 5;
+
+      @media (max-width: 480px) {
+        top: 10px;
+        left: 10px;
+        font-size: 20px;
+        line-height: 26px;
+      }
     }
     &__container {
       height: 100%;
@@ -153,15 +119,28 @@
 
       padding: $space-20 $space-20;
       z-index: 5;
+
+      @media (max-width: 480px) {
+        padding: 10px;
+      }
     }
 
     &__title {
       @include paragraph;
       z-index: 5;
+
+      @media (max-width: 480px) {
+        font-size: 20px;
+        line-height: 26px;
+      }
     }
     &__description {
       @include smallParagraph;
       z-index: 5;
+      @media (max-width: 480px) {
+        font-size: 16px;
+        line-height: 23px;
+      }
     }
 
     &__yearContainer {
@@ -170,6 +149,22 @@
       justify-content: space-between;
       padding: $space-20 $space-20;
       z-index: 10;
+      @media (max-width: 480px) {
+        padding: 10px;
+        font-size: 20px;
+        line-height: 26px;
+      }
+
+      &_arrow {
+        position: relative;
+        width: 40px;
+        height: 20px;
+
+        @media (max-width: 480px) {
+          width: 40px;
+          height: 20px;
+        }
+      }
     }
   }
 }
@@ -179,14 +174,19 @@
   flex-direction: column;
   gap: $space-40;
   padding: $space-40 $space-40 $space-100 $space-40;
-
+  @media (max-width: 480px) {
+    padding: 60px 20px;
+    gap: 10px;
+  }
   &__serviceGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: $space-20;
+
     @media (max-width: 480px) {
       display: flex;
       flex-direction: column;
+      gap: 10px;
       align-items: center;
     }
   }
@@ -194,6 +194,11 @@
     @include h3Title;
     font-weight: 600;
     text-transform: uppercase;
+
+    @media (max-width: 480px) {
+      font-size: 20px;
+      line-height: 26px;
+    }
   }
   &__card {
     height: $servicesCardHeight;
@@ -202,28 +207,49 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
+    overflow: hidden;
     @media (max-width: 480px) {
       width: 100%;
       height: 215px;
+      padding: 10px;
     }
     &__info {
       display: flex;
       flex-direction: column;
       gap: $space-10;
+      @media (max-width: 480px) {
+        gap: 10px;
+      }
 
       &_title {
         @include h3Title;
         font-weight: 600;
-      }
-
-      &_description {
-        @include paragraph;
+        @media (max-width: 480px) {
+          font-size: 20px;
+          line-height: 26px;
+        }
       }
     }
 
     &__price {
       @include h3Title;
       font-weight: 600;
+      @media (max-width: 480px) {
+        font-size: 16px;
+        line-height: 20.8px;
+      }
+    }
+
+    &__image {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 50%;
+      object-fit: contain;
+      @media (max-width: 480px) {
+        width: 200px;
+      }
     }
   }
 }

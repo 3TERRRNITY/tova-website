@@ -25,6 +25,7 @@ export interface IServices {
   description: string;
   price: string;
   href: string;
+  image: string;
 }
 
 export interface IService {

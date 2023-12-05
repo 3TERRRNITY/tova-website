@@ -6,30 +6,84 @@
   justify-content: space-between;
   padding: $space-40;
 
+  @media (max-width: 480px) {
+    padding: 20px;
+    flex-direction: column;
+  }
+
   &__collab {
     display: flex;
     gap: $space-40;
+    @media (max-width: 480px) {
+      gap: 15px;
+      flex-direction: column;
+    }
   }
 
-  &__colaboration,
+  &__collaboration,
   &__contacts,
   &__addressContainer {
     @include smallParagraph;
   }
+  &__collaboration {
+    @media (max-width: 480px) {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
 
+  &__contacts {
+    @media (max-width: 480px) {
+      font-size: 16px;
+      line-height: 21.36px;
+      padding-bottom: 40px;
+    }
+  }
   &__icons {
     display: flex;
     gap: $space-20;
-
+    @media (max-width: 480px) {
+      display: none;
+    }
     &_icon {
       position: relative;
       width: $hamburgerHeight;
       height: $hamburgerHeight;
     }
   }
-
+  &__iconsMobile {
+    display: none;
+    @media (max-width: 480px) {
+      display: flex;
+      gap: 20px;
+      &_icon {
+        position: relative;
+        width: 30px;
+        height: 25px;
+      }
+    }
+  }
   &__addressContainer {
     display: flex;
     gap: $space-40;
+    @media (max-width: 480px) {
+      padding-bottom: 40px;
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+  &__address {
+    @media (max-width: 480px) {
+      font-size: 20px;
+      line-height: 26px;
+      font-weight: 600;
+    }
+  }
+  &__addressInfo {
+    @media (max-width: 480px) {
+      font-size: 16px;
+      line-height: 17.36px;
+      font-weight: 300;
+    }
   }
 }

@@ -8,11 +8,19 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  @media (max-width: 480px) {
+    height: 350px;
+    padding: 30px;
+  }
   &__body {
-    margin-top: $space-100;
+    margin-top: $space-50;
     display: flex;
     flex-direction: column;
     gap: $space-10;
+    @media (max-width: 480px) {
+      margin-top: 40px;
+      gap: 10px;
+    }
   }
 
   &__linkContainer {
@@ -23,15 +31,44 @@
       color: #fff;
       text-decoration: none;
       font-size: $h2;
+      transition: opacity 0.3s ease-in;
+      &:hover {
+        opacity: 0.5;
+      }
+      @media (max-width: 480px) {
+        font-size: 22px;
+      }
     }
   }
 
   &__footer {
-    display: flex;
-    flex-wrap: wrap;
-    a {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    &__tova {
       font-size: $h3;
-      width: 50%;
+      color: #fff;
+
+      @media (max-width: 480px) {
+        font-size: 16px;
+      }
+    }
+    &_links {
+      display: flex;
+      justify-content: space-around;
+      gap: $space-10;
+      align-items: end;
+      padding-right: $space-20;
+      a {
+        font-size: $h3;
+        width: 50%;
+        transition: opacity 0.3s ease-in;
+        &:hover {
+          opacity: 0.5;
+        }
+        @media (max-width: 480px) {
+          font-size: 16px;
+        }
+      }
     }
   }
 }

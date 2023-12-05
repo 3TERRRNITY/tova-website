@@ -57,13 +57,15 @@ export default function Card({
         }}
         className={styles.projects__card__yearContainer}
       >
-        <Image src="/right-arrow.svg" alt="arrow" width={41} height={21} />
+        <div className={styles.projects__card__yearContainer_arrow}>
+          <Image src="/right-arrow.svg" alt="arrow" fill />
+        </div>
         <div className="year">2023</div>
       </motion.div>
 
       <motion.div
         initial={{ opacity: 0 }}
-        transition={{ duration: 0.25 }}
+        transition={{ duration: 0.2 }}
         animate={{
           opacity: isHovered ? 0 : 1,
         }}
@@ -76,6 +78,7 @@ export default function Card({
         transition={{ duration: 0.3 }}
         animate={{
           scale: isHovered ? 1.2 : 1,
+          opacity: isHovered ? 0.7 : 1,
         }}
         className={styles.projects__card_bgImage}
         src={image}

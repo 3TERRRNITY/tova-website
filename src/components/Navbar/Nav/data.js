@@ -1,5 +1,9 @@
 export const LINKS = [
   {
+    title: "Главная",
+    href: "/",
+  },
+  {
     title: "О нас",
     href: "/About",
   },
@@ -16,14 +20,10 @@ export const LINKS = [
 export const FOOTER_LINKS = [
   {
     title: "VK",
-    href: "/about",
-  },
-  {
-    title: "Telegram",
-    href: "/projects",
+    href: "/",
   },
   {
     title: "Instagram",
-    href: "/services",
+    href: "/",
   },
 ];
