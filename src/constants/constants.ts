@@ -70,8 +70,8 @@ export const PROJECTS: IProjects[] = [
     category: "ведение",
   },
   {
-    title: "mindly",
-    img: "/main/mindly.jpg",
+    title: "approval",
+    img: "/projects/approval/banner.png",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
     id: "other",
