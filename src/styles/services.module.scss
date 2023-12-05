@@ -3,30 +3,59 @@
 
 .services {
   padding: $space-100 $space-40;
-
+  @media (max-width: 480px) {
+    padding: 100px 20px;
+  }
   &__title {
     @include h1Title;
     text-transform: uppercase;
     padding-bottom: $space-80;
+    @media (max-width: 480px) {
+      padding-bottom: 60px;
+      font-size: 22px;
+      line-height: 23.87px;
+    }
   }
 
   &__preview {
     padding: $space-80 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    @media (max-width: 480px) {
+      display: flex;
+      flex-direction: column;
+      padding: 40px 0;
+    }
     &__title,
     &__links_title {
       @include h3Title;
+      @media (max-width: 480px) {
+        font-size: 20px;
+        line-height: 26px;
+      }
+    }
+    &__title {
+      @media (max-width: 480px) {
+        padding-bottom: 20px;
+      }
     }
     &__links {
       display: flex;
       flex-direction: column;
       &_title {
         padding-bottom: $space-40;
+        @media (max-width: 480px) {
+          padding-bottom: 20px;
+        }
       }
       &_link {
         @include paragraph;
         padding: $space-40 0;
+        @media (max-width: 480px) {
+          padding: 20px 0;
+          font-size: 16px;
+          line-height: 20.8px;
+        }
         a {
           color: #818181;
           transition: color 0.2s ease;
