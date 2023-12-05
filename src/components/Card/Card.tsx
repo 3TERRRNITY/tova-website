@@ -57,7 +57,9 @@ export default function Card({
         }}
         className={styles.projects__card__yearContainer}
       >
-        <Image src="/right-arrow.svg" alt="arrow" width={41} height={21} />
+        <div className={styles.projects__card__yearContainer_arrow}>
+          <Image src="/right-arrow.svg" alt="arrow" fill />
+        </div>
         <div className="year">2023</div>
       </motion.div>
 

@@ -49,6 +49,29 @@ const Footer = ({ white }: IFooterProps) => {
           Инновационного Центра <br /> Сколково, ул Нобеля, д. 5
         </div>
       </div>
+      <div className={styles.footer__iconsMobile}>
+        <div className={styles.footer__iconsMobile_icon}>
+          <Image
+            src={white ? "/telegram-black.svg" : "/telegram.svg"}
+            alt="telegram"
+            fill
+          />
+        </div>
+        <div className={styles.footer__iconsMobile_icon}>
+          <Image
+            src={white ? "/whatsup-black.svg" : "/whatsup.svg"}
+            alt="whatsup"
+            fill
+          />
+        </div>
+        <div className={styles.footer__iconsMobile_icon}>
+          <Image
+            src={white ? "/inst-black.svg" : "/inst.svg"}
+            alt="instagram"
+            fill
+          />
+        </div>
+      </div>
     </div>
   );
 };

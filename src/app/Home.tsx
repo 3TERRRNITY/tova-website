@@ -41,13 +41,15 @@ export default function Home() {
                 <div className={styles.services__card__info_title}>
                   {service.title}
                 </div>
-                <div className={styles.services__card__info_description}>
-                  {service.description}
-                </div>
               </div>
               <span className={styles.services__card__price}>
                 {service.price}
               </span>
+              <img
+                src={service.image}
+                alt="service image"
+                className={styles.services__card__image}
+              />
             </div>
           ))}
         </div>

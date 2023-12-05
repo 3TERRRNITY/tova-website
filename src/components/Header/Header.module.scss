@@ -15,6 +15,11 @@
     position: relative;
     width: $logoWidth;
     height: $logoHeight;
+
+    @media (max-width: 480px) {
+      width: 75px;
+      height: 13px;
+    }
   }
 
   &__text {
