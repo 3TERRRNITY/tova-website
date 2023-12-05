@@ -10,6 +10,8 @@ import { Separator } from "../../components/Separator/Separator";
 import Lottie from "lottie-react";
 import Logo from "../../../public/projects/avivir/animations/logo.json";
 import Grid from "../../../public/projects/avivir/animations/grid.json";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 const Avivir = () => {
   const aboutPoints = [
@@ -79,7 +81,7 @@ const Avivir = () => {
               ))}
             </div>
           </div>
-          <Separator />
+
           <div className={styles.avivir__mainPage}>
             <div className={styles.avivir__mainPage__info}>
               <div className={styles.avivir__mainPage__info_title}>
@@ -93,7 +95,7 @@ const Avivir = () => {
             </div>
             <div className={styles.avivir__mainPage__image} />
           </div>
-          <Separator />
+
           <div className={styles.avivir__adaptiveDesign}>
             <div className={styles.avivir__adaptiveDesign__circle}>
               <NeonCircle />
@@ -120,7 +122,7 @@ const Avivir = () => {
               ></div>
             </div>
           </div>
-          <Separator />
+
           <div className={styles.avivir__smm}>
             <div className={styles.avivir__smm__info}>
               <div className={styles.avivir__smm__info_title}>smm</div>
@@ -130,14 +132,60 @@ const Avivir = () => {
                 красоту
               </div>
             </div>
-            <Separator />
+
             <div className={styles.avivir__smm__circle}>
               <NeonCircle />
             </div>
-            <div className={styles.avivir__smm__image} />
+            <div className={styles.avivir__smm__images}>
+              <Swiper
+                slidesPerView={3}
+                centeredSlides={true}
+                loop={true}
+                className={styles.avivir__smm__images__slider}
+              >
+                <SwiperSlide
+                  className={styles.avivir__smm__images__slider_slide}
+                >
+                  <img src="/projects/avivir/avivir_smm1.png" />
+                </SwiperSlide>
+                <SwiperSlide
+                  className={styles.avivir__smm__images__slider_slide}
+                >
+                  <img src="/projects/avivir/avivir_smm2.png" />
+                </SwiperSlide>
+                <SwiperSlide
+                  className={styles.avivir__smm__images__slider_slide}
+                >
+                  <img src="/projects/avivir/avivir_smm3.png" />
+                </SwiperSlide>
+              </Swiper>
+            </div>
+            <div className={styles.avivir__smm__imagesMobile}>
+              <Swiper
+                slideToClickedSlide={true}
+                slidesPerView={"auto"}
+                centeredSlides={true}
+                loop={true}
+                className={styles.avivir__smm__images__slider}
+              >
+                <SwiperSlide
+                  className={styles.avivir__smm__images__slider_slide}
+                >
+                  <img src="/projects/avivir/avivir_smm1.png" />
+                </SwiperSlide>
+                <SwiperSlide
+                  className={styles.avivir__smm__images__slider_slide}
+                >
+                  <img src="/projects/avivir/avivir_smm2.png" />
+                </SwiperSlide>
+                <SwiperSlide
+                  className={styles.avivir__smm__images__slider_slide}
+                >
+                  <img src="/projects/avivir/avivir_smm3.png" />
+                </SwiperSlide>
+              </Swiper>
+            </div>
           </div>
-
-          <Separator />
 
           <div className={styles.avivir__firm}>
             <div className={styles.avivir__firm__info}>
@@ -155,49 +203,67 @@ const Avivir = () => {
           <Lottie animationData={Grid} />
 
           <div className={styles.avivir__information}>
-            <div className={styles.avivir__information__card1}>
-              <div className={styles.avivir__information__cardTexts}>
-                <div className={styles.avivir__information__cardTexts_title}>
-                  avivir
-                </div>
-                <div
-                  className={styles.avivir__information__cardTexts_description}
-                >
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Eveniet illo consequatur laudantium vero dolor accusamus
-                  fugiat dolores asperiores aut fugit sit dolore distinctio,
-                  aliquid saepe incidunt excepturi iusto qui. Velit.
-                </div>
+            <div className={styles.avivir__information__info}>
+              <div className={styles.avivir__information__info_title}>
+                Фирменный стиль
+              </div>
+              <div className={styles.avivir__information__info_description}>
+                Madaia – бренд одежды для повседневной жизни и спорта, идейным
+                вдохновителем которого является бывшая побуждает ее творить
+                красоту
               </div>
             </div>
+            <div className={styles.avivir__information__cards}>
+              <div className={styles.avivir__information__card1}>
+                <div className={styles.avivir__information__cardTexts}>
+                  <div className={styles.avivir__information__cardTexts_title}>
+                    avivir
+                  </div>
+                  <div
+                    className={
+                      styles.avivir__information__cardTexts_description
+                    }
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Eveniet illo consequatur laudantium vero dolor accusamus
+                    fugiat dolores asperiores aut fugit sit dolore distinctio,
+                    aliquid saepe incidunt excepturi iusto qui. Velit.
+                  </div>
+                </div>
+              </div>
 
-            <div className={styles.avivir__information__card2}>
-              <div className={styles.avivir__information__cardTexts}>
-                <div className={styles.avivir__information__cardTexts_title}>
-                  avivir
-                </div>
-                <div
-                  className={styles.avivir__information__cardTexts_description}
-                >
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Eveniet illo consequatur laudantium vero dolor accusamus
-                  fugiat dolores asperiores aut fugit sit dolore distinctio,
-                  aliquid saepe incidunt excepturi iusto qui. Velit.
+              <div className={styles.avivir__information__card2}>
+                <div className={styles.avivir__information__cardTexts}>
+                  <div className={styles.avivir__information__cardTexts_title}>
+                    avivir
+                  </div>
+                  <div
+                    className={
+                      styles.avivir__information__cardTexts_description
+                    }
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Eveniet illo consequatur laudantium vero dolor accusamus
+                    fugiat dolores asperiores aut fugit sit dolore distinctio,
+                    aliquid saepe incidunt excepturi iusto qui. Velit.
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className={styles.avivir__information__card_big}>
-              <div className={styles.avivir__information__cardTexts}>
-                <div className={styles.avivir__information__cardTexts_title}>
-                  avivir
-                </div>
-                <div
-                  className={styles.avivir__information__cardTexts_description}
-                >
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Eveniet illo consequatur laudantium vero dolor accusamus
-                  fugiat dolores asperiores aut fugit sit dolore distinctio,
-                  aliquid saepe incidunt excepturi iusto qui. Velit.
+              <div className={styles.avivir__information__card_big}>
+                <div className={styles.avivir__information__cardTexts}>
+                  <div className={styles.avivir__information__cardTexts_title}>
+                    avivir
+                  </div>
+                  <div
+                    className={
+                      styles.avivir__information__cardTexts_description
+                    }
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Eveniet illo consequatur laudantium vero dolor accusamus
+                    fugiat dolores asperiores aut fugit sit dolore distinctio,
+                    aliquid saepe incidunt excepturi iusto qui. Velit.
+                  </div>
                 </div>
               </div>
             </div>
