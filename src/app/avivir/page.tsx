@@ -146,17 +146,52 @@ const Avivir = () => {
                 <SwiperSlide
                   className={styles.avivir__smm__images__slider_slide}
                 >
-                  <img src="/projects/avivir/avivir_smm1.png" />
+                  <img src="/projects/avivir/carousel/avivir-carousel1.png" />
                 </SwiperSlide>
                 <SwiperSlide
                   className={styles.avivir__smm__images__slider_slide}
                 >
-                  <img src="/projects/avivir/avivir_smm2.png" />
+                  <img src="/projects/avivir/carousel/avivir-carousel2.png" />
                 </SwiperSlide>
                 <SwiperSlide
                   className={styles.avivir__smm__images__slider_slide}
                 >
-                  <img src="/projects/avivir/avivir_smm3.png" />
+                  <img src="/projects/avivir/carousel/avivir-carousel3.png" />
+                </SwiperSlide>
+                <SwiperSlide
+                  className={styles.avivir__smm__images__slider_slide}
+                >
+                  <img src="/projects/avivir/carousel/avivir-carousel4.png" />
+                </SwiperSlide>
+                <SwiperSlide
+                  className={styles.avivir__smm__images__slider_slide}
+                >
+                  <img src="/projects/avivir/carousel/avivir-carousel5.png" />
+                </SwiperSlide>
+                <SwiperSlide
+                  className={styles.avivir__smm__images__slider_slide}
+                >
+                  <img src="/projects/avivir/carousel/avivir-carousel6.png" />
+                </SwiperSlide>
+                <SwiperSlide
+                  className={styles.avivir__smm__images__slider_slide}
+                >
+                  <img src="/projects/avivir/carousel/avivir-carousel7.png" />
+                </SwiperSlide>
+                <SwiperSlide
+                  className={styles.avivir__smm__images__slider_slide}
+                >
+                  <img src="/projects/avivir/carousel/avivir-carousel8.png" />
+                </SwiperSlide>
+                <SwiperSlide
+                  className={styles.avivir__smm__images__slider_slide}
+                >
+                  <img src="/projects/avivir/carousel/avivir-carousel9.png" />
+                </SwiperSlide>
+                <SwiperSlide
+                  className={styles.avivir__smm__images__slider_slide}
+                >
+                  <img src="/projects/avivir/carousel/avivir-carousel10.png" />
                 </SwiperSlide>
               </Swiper>
             </div>
@@ -171,17 +206,52 @@ const Avivir = () => {
                 <SwiperSlide
                   className={styles.avivir__smm__images__slider_slide}
                 >
-                  <img src="/projects/avivir/avivir_smm1.png" />
+                  <img src="/projects/avivir/carousel/avivir-carousel1.png" />
                 </SwiperSlide>
                 <SwiperSlide
                   className={styles.avivir__smm__images__slider_slide}
                 >
-                  <img src="/projects/avivir/avivir_smm2.png" />
+                  <img src="/projects/avivir/carousel/avivir-carousel2.png" />
                 </SwiperSlide>
                 <SwiperSlide
                   className={styles.avivir__smm__images__slider_slide}
                 >
-                  <img src="/projects/avivir/avivir_smm3.png" />
+                  <img src="/projects/avivir/carousel/avivir-carousel3.png" />
+                </SwiperSlide>
+                <SwiperSlide
+                  className={styles.avivir__smm__images__slider_slide}
+                >
+                  <img src="/projects/avivir/carousel/avivir-carousel4.png" />
+                </SwiperSlide>
+                <SwiperSlide
+                  className={styles.avivir__smm__images__slider_slide}
+                >
+                  <img src="/projects/avivir/carousel/avivir-carousel5.png" />
+                </SwiperSlide>
+                <SwiperSlide
+                  className={styles.avivir__smm__images__slider_slide}
+                >
+                  <img src="/projects/avivir/carousel/avivir-carousel6.png" />
+                </SwiperSlide>
+                <SwiperSlide
+                  className={styles.avivir__smm__images__slider_slide}
+                >
+                  <img src="/projects/avivir/carousel/avivir-carousel7.png" />
+                </SwiperSlide>
+                <SwiperSlide
+                  className={styles.avivir__smm__images__slider_slide}
+                >
+                  <img src="/projects/avivir/carousel/avivir-carousel8.png" />
+                </SwiperSlide>
+                <SwiperSlide
+                  className={styles.avivir__smm__images__slider_slide}
+                >
+                  <img src="/projects/avivir/carousel/avivir-carousel9.png" />
+                </SwiperSlide>
+                <SwiperSlide
+                  className={styles.avivir__smm__images__slider_slide}
+                >
+                  <img src="/projects/avivir/carousel/avivir-carousel10.png" />
                 </SwiperSlide>
               </Swiper>
             </div>
