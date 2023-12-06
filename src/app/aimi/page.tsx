@@ -15,6 +15,7 @@ import Graphic2 from "../../../public/projects/aimi/aimations/Graphic2.json";
 import Graphic3 from "../../../public/projects/aimi/aimations/Graphic3.json";
 import Graphic4 from "../../../public/projects/aimi/aimations/Graphic4.json";
 import Carousel from "../../components/Carousel/Carousel";
+import SplineAimi from "../../components/SplineAimi/SplineAimi";
 
 const Aimi = () => {
   const aboutPoints = [
@@ -47,6 +48,9 @@ const Aimi = () => {
       <Header />
       <div className={commonStyles.projectContainer}>
         <div className={styles.aimi__hero} />
+        <div className={styles.aimi__hero_animation}>
+          <SplineAimi />
+        </div>
 
         <div className={styles.aimi__about}>
           <div className={styles.aimi__about__head}>

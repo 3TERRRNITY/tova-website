@@ -4,13 +4,33 @@
 .aimi {
   &__hero {
     width: 100%;
-    height: 100svh;
+    height: 100vh;
+    z-index: 1;
 
     background-image: url(../../public/projects/aimi/aimi_background.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
+    &_animation {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      width: 100vw;
+      height: 100vh;
+      top: $space-100;
+      z-index: 1;
+      pointer-events: none;
+      &_title {
+        @include h1Title;
+        text-transform: uppercase;
+      }
 
+      @media (max-width: 480px) {
+        display: none;
+      }
+    }
     @media (max-width: 480px) {
       display: none;
     }
