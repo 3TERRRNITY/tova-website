@@ -54,23 +54,27 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <div className={styles.projects}>
-        {PROJECTS.map(
-          ({
-            img,
-            description,
-            title,
-          }: {
-            img: string;
-            description: string;
-            title: string;
-          }) => (
-            <Link key={title} href={title.toLowerCase()}>
-              <Card image={img} title={title} description={description} />
-            </Link>
-          )
-        )}
+      <div className={styles.projectsContainer}>
+        <div className={styles.projects__title}>проекты</div>
+        <div className={styles.projects}>
+          {PROJECTS.map(
+            ({
+              img,
+              description,
+              title,
+            }: {
+              img: string;
+              description: string;
+              title: string;
+            }) => (
+              <Link key={title} href={title.toLowerCase()}>
+                <Card image={img} title={title} description={description} />
+              </Link>
+            )
+          )}
+        </div>
       </div>
+
       <Footer />
     </div>
   );
