@@ -2,7 +2,7 @@
 @import "../../styles/variable.scss";
 .carousel {
   &__item {
-    padding: $space-20 $space-40;
+    padding: $space-80 $space-40;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,6 +13,7 @@
     }
     img {
       width: $sliderImageWidth;
+
       height: $sliderImageHeight;
       display: flex;
       align-items: center;
