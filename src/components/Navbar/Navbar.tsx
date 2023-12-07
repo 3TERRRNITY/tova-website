@@ -7,7 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Nav from "./Nav/Nav";
 
 type Props = {};
-const navbarHeight = `90vh`;
+const navbarHeight = `80vh`;
 const navbarWidth = `40vw`;
 
 const navbarHeightMobile = `370px`;

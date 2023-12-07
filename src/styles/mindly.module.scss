@@ -13,7 +13,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
-    height: 900px;
+    height: clamp(18.75rem, -0.0208rem + 62.5694vw, 75.0625rem);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,28 +24,28 @@
     }
     &_element1 {
       position: absolute;
-      top: 60px;
-      width: 1200px;
-      height: 965px;
+      top: clamp(0.6875rem, 0rem + 2.2917vw, 2.75rem);
+      width: clamp(25rem, -0.0417rem + 83.4722vw, 100.125rem);
+      height: clamp(20.5rem, 0.0208rem + 68.2639vw, 81.9375rem);
     }
     &_element2 {
       position: absolute;
-      top: 50px;
+      top: clamp(1rem, -0.0208rem + 3.4028vw, 4.0625rem);
       left: 0;
-      width: 460px;
-      height: 500px;
+      width: clamp(9.5625rem, 0rem + 31.875vw, 38.25rem);
+      height: clamp(10.375rem, 0rem + 34.5833vw, 41.5rem);
     }
     &_element3 {
       position: absolute;
-      top: 270px;
+      top: clamp(5.625rem, -0.0208rem + 18.8194vw, 22.5625rem);
       right: -200px;
-      width: 460px;
-      height: 700px;
+      width: clamp(9.5625rem, 0rem + 31.875vw, 38.25rem);
+      height: clamp(14.5625rem, -0.0208rem + 48.6111vw, 58.3125rem);
     }
   }
 
   &__about {
-    padding: $space-80 0 210px 0;
+    padding: $space-80 0 clamp(4.375rem, -0.0417rem + 14.7222vw, 17.625rem) 0;
     position: relative;
     @media (max-width: 480px) {
       padding: 100px 0 90px 0;
@@ -173,7 +173,7 @@
       }
     }
     &__brandbook {
-      height: 950px;
+      height: clamp(19.75rem, 0.0208rem + 65.7639vw, 78.9375rem);
       width: 100%;
       background-image: url(../../public/projects/mindly/brandbook/фон.png);
       background-position: center;
@@ -207,23 +207,23 @@
         }
       }
       &_row1 {
-        padding-right: 44px;
+        padding-right: clamp(0.875rem, -0.0208rem + 2.9861vw, 3.5625rem);
       }
 
       &_row2 {
-        padding-left: 44px;
+        padding-left: clamp(0.875rem, -0.0208rem + 2.9861vw, 3.5625rem);
       }
 
       &_row3 {
-        padding-right: 44px;
+        padding-right: clamp(0.875rem, -0.0208rem + 2.9861vw, 3.5625rem);
       }
 
       &_leaf {
         position: absolute;
-        top: 900px;
+        top: clamp(18.75rem, 0.0208rem + 62.4306vw, 74.9375rem);
         left: -40px;
-        width: 500px;
-        height: 400px;
+        width: clamp(10.375rem, 0rem + 34.5833vw, 41.5rem);
+        height: clamp(8.25rem, 0rem + 27.5vw, 33rem);
         pointer-events: none;
         @media (max-width: 480px) {
           display: none;

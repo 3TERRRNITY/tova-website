@@ -67,6 +67,7 @@ const Projects = (props: Props) => {
                   />
                   <div className={styles.projects__project__cards_deskCard}>
                     <Card
+                      secondImage={proj.secondImage}
                       image={proj.img}
                       animation={true}
                       description={""}

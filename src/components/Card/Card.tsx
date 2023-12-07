@@ -9,11 +9,13 @@ export default function Card({
   description,
   animation = true,
   image,
+  secondImage,
 }: {
   title: string;
   description: string;
   animation?: boolean;
   image: string;
+  secondImage?: string;
 }) {
   const controls = useAnimation();
   const [isHovered, setIsHovered] = useState<boolean>(false);
@@ -83,7 +85,7 @@ export default function Card({
             opacity: isHovered ? 0.7 : 1,
           }}
           className={styles.projects__card_bgImage}
-          src={image}
+          src={secondImage ? secondImage : image}
           alt="background image"
         />
         <motion.div
