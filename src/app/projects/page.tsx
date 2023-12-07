@@ -22,7 +22,7 @@ const Projects = (props: Props) => {
   const filteredProjects: IProjects[] =
     selectedOption === "all"
       ? PROJECTS
-      : PROJECTS.filter((project) => project.id === selectedOption);
+      : PROJECTS.filter((project) => project.id.includes(selectedOption));
 
   return (
     <div className={commonStyles.mainPageBody}>
