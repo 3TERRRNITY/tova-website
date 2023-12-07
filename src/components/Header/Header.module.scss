@@ -7,10 +7,16 @@
   position: absolute;
   left: $space-40;
   right: $space-40;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 2;
+  @media (max-width: 480px) {
+    left: 20px;
+    right: 20px;
+    top: 20px;
+  }
   &__logo {
     position: relative;
     width: $logoWidth;
@@ -25,5 +31,11 @@
   &__text {
     @include h3Title;
     text-align: right;
+    @media (max-width: 480px) {
+      display: none;
+      padding-top: 20px;
+      font-size: 16px;
+      line-height: 20.8px;
+    }
   }
 }

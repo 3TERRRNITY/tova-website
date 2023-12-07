@@ -18,7 +18,8 @@
     }
   }
   &__about {
-    padding: $space-80 $space-40 230px $space-40;
+    padding: $space-80 $space-40 clamp(4.8125rem, 0rem + 16.0417vw, 19.25rem)
+      $space-40;
     position: relative;
     @media (max-width: 480px) {
       padding: 100px 20px 90px 20px;
@@ -108,7 +109,8 @@
   }
 
   &__mainPage {
-    padding: $space-80 $space-40 160px $space-40;
+    padding: $space-80 $space-40
+      clamp(3.3125rem, 0.0208rem + 10.9722vw, 13.1875rem) $space-40;
     @media (max-width: 480px) {
       padding: 40px 20px 90px 20px;
     }
@@ -180,7 +182,8 @@
     }
   }
   &__team {
-    padding: 0 $space-40 160px $space-40;
+    padding: 0 $space-40 clamp(3.3125rem, 0.0208rem + 10.9722vw, 13.1875rem)
+      $space-40;
 
     &_title {
       @include h3Title;

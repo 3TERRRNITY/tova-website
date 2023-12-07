@@ -36,7 +36,8 @@
     }
   }
   &__about {
-    padding: $space-80 $space-40 230px $space-40;
+    padding: $space-80 $space-40 clamp(4.8125rem, 0rem + 16.0417vw, 19.25rem)
+      $space-40;
     position: relative;
     @media (max-width: 480px) {
       padding: 100px 20px 90px 20px;
@@ -122,7 +123,8 @@
   &__firm,
   &__typography,
   &__smm {
-    padding: $space-80 $space-40 160px $space-40;
+    padding: $space-80 $space-40
+      clamp(3.3125rem, 0.0208rem + 10.9722vw, 13.1875rem) $space-40;
     @media (max-width: 480px) {
       padding: 40px 20px 90px 20px;
     }
@@ -209,7 +211,7 @@
       &_imageBig {
         object-fit: cover;
         width: 100%;
-        height: 500px;
+        height: clamp(10.375rem, 0rem + 34.5833vw, 41.5rem);
         border-radius: 20px;
 
         @media (max-width: 480px) {
@@ -250,8 +252,8 @@
         }
         &_image1,
         &_image2 {
-          width: 397px;
-          height: 321px;
+          width: clamp(8.25rem, 0rem + 27.5vw, 33rem);
+          height: clamp(6.6875rem, 0.0208rem + 22.2222vw, 26.6875rem);
           background-size: contain;
           background-repeat: no-repeat;
         }
@@ -267,7 +269,8 @@
   }
 
   &__linkedin {
-    padding: $space-80 $space-40 160px $space-40;
+    padding: $space-80 $space-40
+      clamp(3.3125rem, 0.0208rem + 10.9722vw, 13.1875rem) $space-40;
     @include h3Title;
     text-transform: lowercase;
     @media (max-width: 480px) {
@@ -288,7 +291,7 @@
       &_image2,
       &_image3 {
         width: 100%;
-        height: 500px;
+        height: clamp(10.375rem, 0rem + 34.5833vw, 41.5rem);
         background-size: contain;
         background-repeat: no-repeat;
         border-radius: $space-20;
@@ -314,7 +317,8 @@
   }
 
   &__team {
-    padding: 0 $space-40 160px $space-40;
+    padding: 0 $space-40 clamp(3.3125rem, 0.0208rem + 10.9722vw, 13.1875rem)
+      $space-40;
     @media (max-width: 480px) {
       display: none;
     }

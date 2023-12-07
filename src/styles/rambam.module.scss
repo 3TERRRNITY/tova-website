@@ -1,0 +1,268 @@
+@import "./mixins.scss";
+@import "./variable.scss";
+
+.rambam {
+  padding: 0 $space-40;
+  &__hero {
+    width: 100vw;
+    height: 100vh;
+    background-color: #1b1b1b;
+    video {
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    @media (max-width: 1600px) {
+      object-fit: contain;
+    }
+    @media (max-width: 480px) {
+      display: none;
+    }
+  }
+  &__about {
+    padding: $space-80 $space-40 230px $space-40;
+    position: relative;
+    @media (max-width: 480px) {
+      padding: 100px 20px 90px 20px;
+    }
+    &__circle {
+      position: absolute;
+      left: -30%;
+      z-index: 0;
+      @media (max-width: 480px) {
+        display: none;
+      }
+    }
+    &__head {
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      padding-bottom: $space-50;
+      @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        padding-bottom: 40px;
+      }
+      &_title {
+        @include h1Title;
+        text-transform: uppercase;
+        @media (max-width: 480px) {
+          font-size: 22px;
+          line-height: 23.87px;
+        }
+      }
+
+      &_subtitle {
+        @include paragraph;
+        @media (max-width: 480px) {
+          font-size: 16px;
+          line-height: 20.8px;
+        }
+      }
+      &_point {
+        color: #3e3e3e;
+        &:first-of-type {
+          color: #fff;
+        }
+      }
+    }
+
+    &__description {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      padding-bottom: $space-100;
+
+      @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 0;
+      }
+      &__subtitle {
+        display: flex;
+        flex-direction: column;
+        gap: $space-40;
+
+        @media (max-width: 480px) {
+          gap: 20px;
+        }
+
+        &_paragraph {
+          @include paragraph;
+          @media (max-width: 480px) {
+            font-size: 16px;
+            line-height: 20.8px;
+          }
+        }
+
+        &_big {
+          @include h3Title;
+          @media (max-width: 480px) {
+            padding-top: 20px;
+            font-size: 16px;
+            line-height: 20.8px;
+          }
+        }
+      }
+    }
+  }
+
+  &__mainPage {
+    padding: $space-80 $space-40 160px $space-40;
+    @media (max-width: 480px) {
+      padding: 40px 20px 90px 20px;
+    }
+    &__info {
+      @include h3Title;
+      text-transform: lowercase;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $space-20;
+
+      padding: 0 0 $space-80 0;
+      @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        line-height: 26px;
+
+        &_description {
+          padding-top: 20px;
+          font-size: 16px;
+          line-height: 20.8px;
+          font-weight: 400;
+        }
+      }
+    }
+    &__imageMobile {
+      display: none;
+      @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 20px;
+      }
+    }
+
+    &__images {
+      width: 100%;
+      height: clamp(8.9375rem, 0rem + 29.7917vw, 35.75rem);
+
+      background-image: url(../../public/projects/rambam/rambam1.png);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      @media (max-width: 480px) {
+        background-image: url(../../public/projects/rambam/rambam_mobile1.png);
+        height: 210px;
+      }
+    }
+    &__logos {
+      width: 100%;
+      height: clamp(9.5625rem, 0rem + 31.875vw, 38.25rem);
+
+      background-image: url(../../public/projects/rambam/rambam2.png);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      @media (max-width: 480px) {
+        background-image: url(../../public/projects/rambam/rambam_mobile2.png);
+        height: 522px;
+      }
+    }
+    &__colors {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: $space-100;
+      img {
+        width: 100%;
+        height: clamp(10.625rem, -0.0208rem + 35.4861vw, 42.5625rem);
+        @media (max-width: 480px) {
+          height: 250px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+    &__typography {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: $space-100;
+      img {
+        max-width: 570px;
+        height: clamp(3.5rem, 0rem + 11.6667vw, 14rem);
+
+        @media (max-width: 480px) {
+          width: 250px;
+          height: 76px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+    &__firm {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: $space-20;
+      img {
+        width: 100%;
+        height: clamp(12.25rem, 0.0208rem + 40.7639vw, 48.9375rem);
+
+        @media (max-width: 480px) {
+          width: 100%;
+          height: 253px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  }
+  &__team {
+    padding: 0 $space-40 160px $space-40;
+
+    &_title {
+      @include h3Title;
+      font-weight: 600;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: $space-50;
+
+      @media (max-width: 480px) {
+        text-transform: lowercase;
+        text-align: left;
+        font-size: 16px;
+        line-height: 20.8px;
+      }
+    }
+
+    &__member {
+      display: flex;
+      justify-content: space-between;
+      padding: $space-20 0;
+      @include paragraph;
+      border-bottom: 1px solid #3e3e3e;
+      @media (max-width: 480px) {
+        padding: 20px 0;
+        font-size: 16px;
+        line-height: 20.8px;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}

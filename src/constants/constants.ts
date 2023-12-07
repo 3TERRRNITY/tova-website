@@ -24,58 +24,74 @@ export const PROJECTS: IProjects[] = [
   {
     title: "Avivir",
     img: "/main/avivir.jpg",
+    secondImage: "/projects/projects_avivir.png",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
     id: ["webdev", "brand", "graphic", "smm", "marketing", "other"],
-    category: "веб-разработка",
+    category: "брендинг, веб-разработка, графический дизайн, smm",
   },
   {
     title: "Aimi",
     img: "/main/aimi.jpg",
+    secondImage: "/projects/projects_aimi.png",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
-    id: ["brand", "graphic"],
-    category: "брендинг",
+    id: ["brand", "graphic", "smm"],
+    category: "брендинг, графический дизайн, smm",
   },
   {
     title: "Madaia",
     img: "/main/madaia.jpg",
+    secondImage: "/projects/projects_madaia2.png",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
     id: ["smm", "marketing", "other"],
-    category: "графический дизайн",
+    category: "веб-разработка",
   },
   {
     title: "frenchi",
     img: "/main/frenchi.jpg",
+    secondImage: "/projects/projects_frenchi.png",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
     id: ["webdev"],
-    category: "smm",
+    category: "веб-разработка",
   },
   {
     title: "vademecum",
     img: "/main/vdm.jpg",
+    secondImage: "/projects/projects_vdm.png",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
     id: ["webdev"],
-    category: "ведение",
+    category: "веб-разработка",
   },
   {
     title: "mindly",
     img: "/main/mindly.jpg",
+    secondImage: "/projects/projects_mindly.png",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
     id: ["brand", "graphic", "smm", "marketing", "other"],
-    category: "ведение",
+    category: "брендинг, веб-разработка, графический дизайн, smm",
   },
   {
     title: "approval",
-    img: "/projects/approval/banner.png",
+    img: "/projects/projects_approval1.png",
+    secondImage: "/projects/projects_approval2.png",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
     id: [],
-    category: "ведение",
+    category: "брендинг,графический дизайн",
+  },
+  {
+    title: "rambam",
+    img: "/projects/projects_rambam1.png",
+    secondImage: "/projects/projects_rambam2.png",
+    description:
+      "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
+    id: [],
+    category: "брендинг,графический дизайн",
   },
 ];
 

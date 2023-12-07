@@ -1,6 +1,7 @@
 export interface IProjects {
   title: string;
   img: string;
+  secondImage?: string;
   description: string;
   id: string[];
   category: string;
