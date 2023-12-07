@@ -12,14 +12,23 @@
     background-image: url(../../public/projects/approval/banner.png);
     background-size: cover;
     background-repeat: no-repeat;
+    @media (max-width: 480px) {
+      display: none;
+    }
   }
   &__about {
     padding: $space-80 $space-40 230px $space-40;
     position: relative;
+    @media (max-width: 480px) {
+      padding: 100px 20px 90px 20px;
+    }
     &__circle {
       position: absolute;
       left: -30%;
       z-index: 0;
+      @media (max-width: 480px) {
+        display: none;
+      }
     }
     &__head {
       z-index: 1;
@@ -27,15 +36,28 @@
       grid-template-columns: repeat(2, 1fr);
 
       padding-bottom: $space-50;
-
+      @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        padding-bottom: 40px;
+      }
       &_title {
         @include h1Title;
+        text-transform: uppercase;
+        @media (max-width: 480px) {
+          font-size: 22px;
+          line-height: 23.87px;
+        }
       }
 
       &_subtitle {
         @include paragraph;
+        @media (max-width: 480px) {
+          font-size: 16px;
+          line-height: 20.8px;
+        }
       }
-
       &_point {
         color: #3e3e3e;
         &:first-of-type {
@@ -50,40 +72,45 @@
 
       padding-bottom: $space-100;
 
+      @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 0;
+      }
       &__subtitle {
         display: flex;
         flex-direction: column;
         gap: $space-40;
 
+        @media (max-width: 480px) {
+          gap: 20px;
+        }
+
         &_paragraph {
           @include paragraph;
+          @media (max-width: 480px) {
+            font-size: 16px;
+            line-height: 20.8px;
+          }
         }
 
         &_big {
           @include h3Title;
+          @media (max-width: 480px) {
+            padding-top: 20px;
+            font-size: 16px;
+            line-height: 20.8px;
+          }
         }
-      }
-    }
-
-    &__cards {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      gap: $space-20;
-
-      &__card {
-        @include paragraph;
-        padding: $space-80 0;
-        text-align: center;
-        width: 100%;
-        border: 1px solid #3e3e3e;
       }
     }
   }
 
   &__mainPage {
     padding: $space-80 $space-40 160px $space-40;
-
+    @media (max-width: 480px) {
+      padding: 40px 20px 90px 20px;
+    }
     &__info {
       @include h3Title;
       text-transform: lowercase;
@@ -92,33 +119,63 @@
       gap: $space-20;
 
       padding: 0 0 $space-80 0;
-    }
+      @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        line-height: 26px;
 
+        &_description {
+          padding-top: 20px;
+          font-size: 16px;
+          line-height: 20.8px;
+          font-weight: 400;
+        }
+      }
+    }
+    &__imageMobile {
+      display: none;
+      @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 20px;
+      }
+    }
     &__image {
-      height: 1079px;
+      height: clamp(22.4375rem, 0.0417rem + 74.6528vw, 89.625rem);
       width: 100%;
       background-image: url(../../public/projects/approval/1.png);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @media (max-width: 480px) {
+        display: none;
+      }
     }
     &__images {
       width: 100%;
-      height: 620px;
+      height: clamp(12.875rem, 0.0208rem + 42.8472vw, 51.4375rem);
 
       background-image: url(../../public/projects/approval/2.png);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @media (max-width: 480px) {
+        display: none;
+      }
     }
     &__cards {
       width: 100%;
-      height: 1500px;
+      height: clamp(25rem, -0.0417rem + 83.4722vw, 100.125rem);
 
       background-image: url(../../public/projects/approval/3.png);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @media (max-width: 480px) {
+        display: none;
+      }
     }
   }
   &__team {
@@ -126,9 +183,17 @@
 
     &_title {
       @include h3Title;
+      font-weight: 600;
       text-transform: uppercase;
       text-align: center;
       margin-bottom: $space-50;
+
+      @media (max-width: 480px) {
+        text-transform: lowercase;
+        text-align: left;
+        font-size: 16px;
+        line-height: 20.8px;
+      }
     }
 
     &__member {
@@ -137,6 +202,13 @@
       padding: $space-20 0;
       @include paragraph;
       border-bottom: 1px solid #3e3e3e;
+      @media (max-width: 480px) {
+        padding: 20px 0;
+        font-size: 16px;
+        line-height: 20.8px;
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 }
