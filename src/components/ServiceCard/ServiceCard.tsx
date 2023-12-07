@@ -8,7 +8,9 @@ import { motion } from "framer-motion";
 import { textAnimation } from "../../common/animations";
 
 const ServiceCard = ({ title, description, points, href }: IService) => {
-  const filteredProjects = PROJECTS.filter((project) => project.id === href);
+  const filteredProjects = PROJECTS.filter((project) =>
+    project.id.includes(href)
+  );
   return (
     <motion.div
       className={styles.serviceCard}

@@ -86,6 +86,9 @@ const Frenchi = () => {
           <div className={styles.frenchi__mainPage__images}>
             <div className={styles.frenchi__mainPage__images_img1} />
             <div className={styles.frenchi__mainPage__images_img2} />
+            <div className={styles.frenchi__mainPage__images_img3} />
+            <div className={styles.frenchi__mainPage__images_img4} />
+            <div className={styles.frenchi__mainPage__images_img5} />
           </div>
         </div>
 
@@ -101,6 +104,11 @@ const Frenchi = () => {
             </div>
           </div>
           <div className={styles.frenchi__adaptive__image} />
+          <div className={styles.frenchi__adaptive__mobileImages}>
+            <div className={styles.frenchi__adaptive__mobileImages_img1} />
+            <div className={styles.frenchi__adaptive__mobileImages_img2} />
+            <div className={styles.frenchi__adaptive__mobileImages_img3} />
+          </div>
         </div>
 
         <div className={styles.frenchi__images}>

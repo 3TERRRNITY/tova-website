@@ -4,6 +4,9 @@
 .mindly {
   overflow-x: hidden;
   padding: 0 $space-40;
+  @media (max-width: 480px) {
+    padding: 0 20px;
+  }
   &__hero {
     background-image: url(../../public/projects/mindly/mindly_hero1.png);
     background-position: center;
@@ -16,7 +19,9 @@
     justify-content: center;
     overflow: hidden;
     position: relative;
-
+    @media (max-width: 480px) {
+      display: none;
+    }
     &_element1 {
       position: absolute;
       top: 60px;
@@ -42,38 +47,70 @@
   &__about {
     padding: $space-80 0 210px 0;
     position: relative;
-
+    @media (max-width: 480px) {
+      padding: 100px 0 90px 0;
+    }
     &__head {
       z-index: 1;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
 
       padding-bottom: $space-50;
-
+      @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 40px;
+        gap: 60px;
+      }
       &_title {
         @include h1Title;
+        text-transform: uppercase;
+        @media (max-width: 480px) {
+          font-size: 22px;
+          line-height: 23.87px;
+        }
       }
 
       &_subtitle {
         @include paragraph;
+        @media (max-width: 480px) {
+          font-size: 16px;
+          line-height: 20.8px;
+        }
       }
     }
 
     &__description {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+      }
 
       &__subtitle {
         display: flex;
         flex-direction: column;
         gap: $space-40;
+        @media (max-width: 480px) {
+          gap: 20px;
+        }
 
         &_paragraph {
           @include paragraph;
+          @media (max-width: 480px) {
+            font-size: 16px;
+            line-height: 20.8px;
+          }
         }
 
         &_big {
-          @include h3Title;
+          @include paragraph;
+          @media (max-width: 480px) {
+            padding-top: 20px;
+            font-size: 16px;
+            line-height: 20.8px;
+          }
         }
       }
     }
@@ -82,7 +119,9 @@
   &__palette {
     padding: $space-80 0 $space-50 0;
     position: relative;
-
+    @media (max-width: 480px) {
+      padding: 40px 0 90px 0;
+    }
     &__info {
       @include h3Title;
       text-transform: lowercase;
@@ -91,8 +130,48 @@
       gap: $space-20;
 
       padding: 0 0 $space-80 0;
-    }
+      @media (max-width: 480px) {
+        padding: 0 0 40px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
 
+      &_title {
+        @include h3Title;
+        font-weight: 600;
+
+        @media (max-width: 480px) {
+          font-size: 20px;
+          line-height: 26px;
+        }
+      }
+
+      &_description {
+        @include paragraph;
+        font-weight: 400;
+        @media (max-width: 480px) {
+          font-size: 16px;
+          line-height: 20.8px;
+        }
+      }
+    }
+    &__brandbookMobile {
+      display: none;
+      @media (max-width: 480px) {
+        display: block;
+        height: 510px;
+        background-image: url(../../public/projects/mindly/mindly_mobile.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+    &__logo {
+      @media (max-width: 480px) {
+        display: none;
+      }
+    }
     &__brandbook {
       height: 950px;
       width: 100%;
@@ -104,7 +183,9 @@
       display: grid;
       grid-template-rows: repeat(3, 1fr);
       gap: $space-20;
-
+      @media (max-width: 480px) {
+        display: none;
+      }
       &_image {
         width: 100%;
         height: 280px;
@@ -144,6 +225,9 @@
         width: 500px;
         height: 400px;
         pointer-events: none;
+        @media (max-width: 480px) {
+          display: none;
+        }
       }
     }
   }
@@ -152,17 +236,54 @@
     padding: $space-80 0 0 0;
     position: relative;
     overflow: hidden;
-
+    @media (max-width: 480px) {
+      padding: 40px 0 50px 0;
+    }
     &__info {
-      @include h3Title;
       text-transform: lowercase;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: $space-20;
 
       padding: 0 0 $space-80 0;
-    }
+      @media (max-width: 480px) {
+        padding: 0 0 40px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
 
+      &_title {
+        @include h3Title;
+        font-weight: 600;
+
+        @media (max-width: 480px) {
+          font-size: 20px;
+          line-height: 26px;
+        }
+      }
+
+      &_description {
+        @include paragraph;
+        font-weight: 400;
+        @media (max-width: 480px) {
+          font-size: 16px;
+          line-height: 20.8px;
+        }
+      }
+    }
+    &__mob {
+      display: none;
+      @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
     &__images {
       display: flex;
       flex-direction: column;
@@ -170,7 +291,11 @@
       padding-bottom: $space-100;
       img {
         width: 100%;
-        height: 700px;
+        height: clamp(14.5625rem, -0.0208rem + 48.6111vw, 58.3125rem);
+      }
+
+      @media (max-width: 480px) {
+        display: none;
       }
     }
 
@@ -178,56 +303,111 @@
       background-image: url(../../public/projects/mindly/adaptive.png);
       background-position: center;
       background-size: contain;
-      height: 1750px;
+      height: clamp(36.4375rem, 0.0417rem + 121.3194vw, 145.625rem);
       background-repeat: no-repeat;
       padding-bottom: $space-100;
+
+      @media (max-width: 480px) {
+        padding: 0;
+        height: 300px;
+        width: 100%;
+      }
     }
 
     &__imagesDesktop {
       background-image: url(../../public/projects/mindly/desktop.png);
       background-position: center;
       background-size: contain;
-      height: 1750px;
+      height: clamp(36.4375rem, 0.0417rem + 121.3194vw, 145.625rem);
       background-repeat: no-repeat;
       padding-bottom: $space-100;
+      @media (max-width: 480px) {
+        padding: 0;
+        height: 300px;
+        width: 100%;
+      }
+    }
+    &__instagramMobile {
+      display: none;
+      @media (max-width: 480px) {
+        background-image: url(../../public/projects/mindly/smm-background.png);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 50px 0;
+      }
     }
     &__instagram {
       background-image: url(../../public/projects/mindly/smm.png);
       background-position: center;
       background-size: contain;
-      height: 940px;
+      height: clamp(19.5625rem, 0.0417rem + 65.0694vw, 78.125rem);
       background-repeat: no-repeat;
       padding-bottom: $space-100;
+      @media (max-width: 480px) {
+        display: none;
+      }
     }
   }
 
   &__team {
-    padding: 0 $space-40 160px $space-40;
+    padding: 0 $space-40 clamp(3.3125rem, 0.0208rem + 10.9722vw, 13.1875rem)
+      $space-40;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    @media (max-width: 480px) {
+      padding: 0 0 100px 0;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
     &_title {
       @include h3Title;
+      font-weight: 600;
       text-transform: uppercase;
       text-align: center;
       margin-bottom: $space-50;
+      @media (max-width: 480px) {
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 40px;
+        text-align: left;
+      }
     }
 
     &__member {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      width: 815px;
+      width: clamp(16.9375rem, 0.0417rem + 56.3194vw, 67.625rem);
 
       padding: $space-20 0;
       @include paragraph;
+      @media (max-width: 480px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 16px 0;
 
+        font-size: 16px;
+        line-height: 20.8px;
+
+        border-bottom: 1px solid #c4c4c4;
+      }
       &_position {
         text-align: left;
+        font-weight: 600;
       }
       &_name {
         text-align: right;
+        @media (max-width: 480px) {
+          text-align: left;
+        }
       }
     }
   }

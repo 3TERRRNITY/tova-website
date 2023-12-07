@@ -2,7 +2,7 @@ export interface IProjects {
   title: string;
   img: string;
   description: string;
-  id: string;
+  id: string[];
   category: string;
 }
 export interface ILogos {

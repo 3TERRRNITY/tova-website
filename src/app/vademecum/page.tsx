@@ -8,6 +8,7 @@ import Footer from "../../components/Footer/Footer";
 import Lottie from "lottie-react";
 import Palette from "../../../public/projects/vademkum/animations/palette.json";
 import Image from "next/image";
+import { Separator } from "../../components/Separator/Separator";
 
 type Props = {};
 
@@ -81,7 +82,7 @@ const Vademecum = (props: Props) => {
             жизни и спорта
           </div>
         </div>
-
+        <Separator />
         <div className={styles.vademecum__mainPage}>
           <div className={styles.vademecum__mainPage__info}>
             <div className={styles.vademecum__mainPage__info_title}>
@@ -102,7 +103,7 @@ const Vademecum = (props: Props) => {
             ))}
           </div>
         </div>
-
+        <Separator />
         <div className={styles.vademecum__mainPage}>
           <div className={styles.vademecum__mainPage__info}>
             <div className={styles.vademecum__mainPage__info_title}>
@@ -119,10 +120,11 @@ const Vademecum = (props: Props) => {
               src="/projects/vademkum/vademcum-mainPage.png"
               alt="main-page"
               fill
+              className={styles.vademecum__mainPage__image_img}
             />
           </div>
         </div>
-
+        <Separator />
         <div className={styles.vademecum__mainPage}>
           <div className={styles.vademecum__mainPage__info}>
             <div className={styles.vademecum__mainPage__info_title}>
@@ -141,7 +143,7 @@ const Vademecum = (props: Props) => {
             <div className={styles.vademecum__mainPage__imagesGrid_img4} />
           </div>
         </div>
-
+        <Separator />
         <div className={styles.vademecum__shop}>
           <div className={styles.vademecum__shop__info}>
             <div className={styles.vademecum__shop__info_title}>

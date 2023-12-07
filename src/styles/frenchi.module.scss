@@ -13,14 +13,24 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    @media (max-width: 480px) {
+      display: none;
+    }
   }
   &__about {
     padding: $space-80 $space-40 0 $space-40;
     position: relative;
+    @media (max-width: 480px) {
+      padding: 100px 20px 90px 20px;
+    }
     &__circle {
       position: absolute;
       left: -30%;
       z-index: 0;
+      @media (max-width: 480px) {
+        display: none;
+      }
     }
     &__head {
       z-index: 1;
@@ -28,13 +38,26 @@
       grid-template-columns: repeat(2, 1fr);
 
       padding-bottom: $space-50;
-
+      @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 40px;
+        gap: 60px;
+      }
       &_title {
         @include h1Title;
+        @media (max-width: 480px) {
+          font-size: 22px;
+          line-height: 23.87px;
+        }
       }
 
       &_subtitle {
         @include paragraph;
+        @media (max-width: 480px) {
+          font-size: 16px;
+          line-height: 20.8px;
+        }
       }
 
       &_point {
@@ -50,40 +73,43 @@
       grid-template-columns: repeat(2, 1fr);
 
       padding-bottom: $space-100;
-
+      @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 90px;
+      }
       &__subtitle {
         display: flex;
         flex-direction: column;
         gap: $space-40;
-
+        @media (max-width: 480px) {
+          gap: 20px;
+        }
         &_paragraph {
           @include paragraph;
+          @media (max-width: 480px) {
+            font-size: 16px;
+            line-height: 20.8px;
+          }
         }
 
         &_big {
           @include h3Title;
+          @media (max-width: 480px) {
+            padding-top: 20px;
+            font-size: 16px;
+            line-height: 20.8px;
+          }
         }
-      }
-    }
-
-    &__cards {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      gap: $space-20;
-
-      &__card {
-        @include paragraph;
-        padding: $space-80 0;
-        text-align: center;
-        width: 100%;
-        border: 1px solid #3e3e3e;
       }
     }
   }
 
   &__mainPage {
-    padding: 0 0 160px 0;
+    padding: 0 0 clamp(3.3125rem, 0.0208rem + 10.9722vw, 13.1875rem) 0;
+    @media (max-width: 480px) {
+      padding: 0 0 90px 0;
+    }
 
     &__info {
       @include h3Title;
@@ -93,40 +119,51 @@
       gap: $space-20;
 
       padding: 0 0 $space-80 0;
-    }
+      @media (max-width: 480px) {
+        padding: 0 0 40px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
 
-    &__cards {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      height: 200px;
-      gap: $space-20;
-      margin-top: $space-20;
-    }
+      &_title {
+        @include h3Title;
+        font-weight: 600;
 
-    &__card {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+        @media (max-width: 480px) {
+          font-size: 20px;
+          line-height: 26px;
+        }
+      }
 
-      border-radius: 20px;
-
-      width: 100%;
-      height: 100%;
-
-      background-color: #161616;
+      &_description {
+        @include paragraph;
+        font-weight: 400;
+        @media (max-width: 480px) {
+          font-size: 16px;
+          line-height: 20.8px;
+        }
+      }
     }
 
     &__images {
       display: flex;
       flex-direction: column;
       gap: $space-20;
+      @media (max-width: 480px) {
+        gap: 20px;
+      }
       &_img1 {
         background-image: url(../../public/projects/frenchi/1.png);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        height: 450px;
+        height: clamp(9.375rem, 0.0417rem + 31.1111vw, 37.375rem);
         border-radius: 20px;
+        @media (max-width: 480px) {
+          background-image: url(../../public/projects/frenchi/frenchi_mobile1.png);
+          height: 360px;
+        }
       }
 
       &_img2 {
@@ -134,21 +171,81 @@
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        height: 600px;
+        height: clamp(12.5rem, -0.0208rem + 41.7361vw, 50.0625rem);
         border-radius: 20px;
+        @media (max-width: 480px) {
+          background-image: url(../../public/projects/frenchi/frenchi_mobile2.png);
+          height: 360px;
+        }
+      }
+      &_img3,
+      &_img4,
+      &_img5 {
+        display: none;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        @media (max-width: 480px) {
+          display: block;
+        }
+      }
+      &_img3 {
+        @media (max-width: 480px) {
+          background-image: url(../../public/projects/frenchi/frenchi_mobile3.png);
+          height: 360px;
+        }
+      }
+      &_img4 {
+        @media (max-width: 480px) {
+          background-image: url(../../public/projects/frenchi/frenchi_mobile4.png);
+          height: 360px;
+        }
+      }
+      &_img5 {
+        @media (max-width: 480px) {
+          background-image: url(../../public/projects/frenchi/frenchi_mobile5.png);
+          height: 360px;
+        }
       }
     }
   }
 
   &__adaptive {
-    padding: 0 0 200px 0;
-
+    padding: 0 0 clamp(4.125rem, 0rem + 13.75vw, 16.5rem) 0;
+    @media (max-width: 480px) {
+      padding: 0 0 90px 0;
+    }
     &__info {
       @include h3Title;
       text-transform: lowercase;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: $space-20;
+      @media (max-width: 480px) {
+        padding: 0 0 40px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      &_title {
+        @include h3Title;
+        font-weight: 600;
+
+        @media (max-width: 480px) {
+          font-size: 20px;
+          line-height: 26px;
+        }
+      }
+
+      &_description {
+        @include paragraph;
+        font-weight: 400;
+        @media (max-width: 480px) {
+          font-size: 16px;
+          line-height: 20.8px;
+        }
+      }
     }
 
     &__image {
@@ -156,12 +253,48 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      height: 1200px;
+      height: clamp(25rem, -0.0417rem + 83.4722vw, 100.125rem);
+      @media (max-width: 480px) {
+        display: none;
+      }
+    }
+    &__mobileImages {
+      display: none;
+      @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      &_img1,
+      &_img2,
+      &_img3 {
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 267px;
+        width: 100%;
+        border-radius: 20px;
+      }
+      &_img1 {
+        background-image: url(../../public/projects/frenchi/frenchi_adaptive_mob1.png);
+        @media (max-width: 480px) {
+          height: 321px;
+        }
+      }
+      &_img2 {
+        background-image: url(../../public/projects/frenchi/frenchi_adaptive_mob2.png);
+      }
+      &_img3 {
+        background-image: url(../../public/projects/frenchi/frenchi_adaptive_mob3.png);
+      }
     }
   }
 
   &__images {
-    padding-bottom: 145px;
+    padding-bottom: clamp(3rem, -0.0417rem + 10.1389vw, 12.125rem);
+    @media (max-width: 480px) {
+      padding-bottom: 0;
+    }
     &_img1,
     &_img2,
     &_img3 {
@@ -171,22 +304,34 @@
     }
 
     &_img1 {
-      height: 1000px;
+      height: clamp(20.8125rem, -0.0208rem + 69.4444vw, 83.3125rem);
       background-image: url(../../public/projects/frenchi/4.png);
+      @media (max-width: 480px) {
+        height: 300px;
+      }
     }
     &_img2 {
-      height: 1100px;
+      height: clamp(22.875rem, -0.0208rem + 76.3194vw, 91.5625rem);
       background-image: url(../../public/projects/frenchi/5.png);
+      @media (max-width: 480px) {
+        height: 300px;
+      }
     }
     &_img3 {
-      height: 1100px;
+      height: clamp(22.875rem, -0.0208rem + 76.3194vw, 91.5625rem);
       background-image: url(../../public/projects/frenchi/6.png);
+      @media (max-width: 480px) {
+        height: 300px;
+      }
     }
   }
 
   &__team {
-    padding: 0 $space-40 160px $space-40;
-
+    padding: 0 $space-40 clamp(3.3125rem, 0.0208rem + 10.9722vw, 13.1875rem)
+      $space-40;
+    @media (max-width: 480px) {
+      display: none;
+    }
     &_title {
       @include h3Title;
       text-transform: uppercase;
