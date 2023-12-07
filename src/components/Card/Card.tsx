@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
 import styles from "../../styles/hero.module.scss";
+import Link from "next/link";
 
 export default function Card({
   title,
@@ -42,64 +43,66 @@ export default function Card({
     setCardHeight(heightRef.current?.clientHeight ?? 0);
   }, [cardHeight]);
   return (
-    <motion.div
-      className={styles.projects__card}
-      onHoverStart={handleHover}
-      onHoverEnd={handleUnhover}
-      ref={heightRef}
-    >
+    <Link href={`/${title.toLowerCase()}`}>
       <motion.div
-        initial={{ opacity: 0, y: -200 }}
-        transition={{ duration: 0.3 }}
-        animate={{
-          opacity: isHovered ? 1 : 0,
-          y: isHovered ? 0 : -200,
-        }}
-        className={styles.projects__card__yearContainer}
+        className={styles.projects__card}
+        onHoverStart={handleHover}
+        onHoverEnd={handleUnhover}
+        ref={heightRef}
       >
-        <div className={styles.projects__card__yearContainer_arrow}>
-          <Image src="/right-arrow.svg" alt="arrow" fill />
-        </div>
-        <div className="year">2023</div>
-      </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: -200 }}
+          transition={{ duration: 0.3 }}
+          animate={{
+            opacity: isHovered ? 1 : 0,
+            y: isHovered ? 0 : -200,
+          }}
+          className={styles.projects__card__yearContainer}
+        >
+          <div className={styles.projects__card__yearContainer_arrow}>
+            <Image src="/right-arrow.svg" alt="arrow" fill />
+          </div>
+          <div className="year">2023</div>
+        </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        transition={{ duration: 0.2 }}
-        animate={{
-          opacity: isHovered ? 0 : 1,
-        }}
-        className={styles.projects__card__startContainer}
-      >
-        {title.toLowerCase()}
-      </motion.div>
-      <motion.img
-        initial={{ scale: 1 }}
-        transition={{ duration: 0.3 }}
-        animate={{
-          scale: isHovered ? 1.2 : 1,
-          opacity: isHovered ? 0.7 : 1,
-        }}
-        className={styles.projects__card_bgImage}
-        src={image}
-        alt="background image"
-      />
-      <motion.div
-        initial={{ opacity: 0, y: 200 }}
-        transition={{ duration: 0.3 }}
-        animate={{
-          opacity: isHovered ? 1 : 0,
-          y: isHovered ? 0 : 200,
-        }}
-        className={styles.projects__card__container}
-      >
-        <motion.h2 className={styles.projects__card__title}>
+        <motion.div
+          initial={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
+          animate={{
+            opacity: isHovered ? 0 : 1,
+          }}
+          className={styles.projects__card__startContainer}
+        >
           {title.toLowerCase()}
-        </motion.h2>
-        <motion.p className={styles.projects__card__description}>
-          {description.toLowerCase()}
-        </motion.p>
+        </motion.div>
+        <motion.img
+          initial={{ scale: 1 }}
+          transition={{ duration: 0.3 }}
+          animate={{
+            scale: isHovered ? 1.2 : 1,
+            opacity: isHovered ? 0.7 : 1,
+          }}
+          className={styles.projects__card_bgImage}
+          src={image}
+          alt="background image"
+        />
+        <motion.div
+          initial={{ opacity: 0, y: 200 }}
+          transition={{ duration: 0.3 }}
+          animate={{
+            opacity: isHovered ? 1 : 0,
+            y: isHovered ? 0 : 200,
+          }}
+          className={styles.projects__card__container}
+        >
+          <motion.h2 className={styles.projects__card__title}>
+            {title.toLowerCase()}
+          </motion.h2>
+          <motion.p className={styles.projects__card__description}>
+            {description.toLowerCase()}
+          </motion.p>
+        </motion.div>
       </motion.div>
-    </motion.div>
+    </Link>
   );
 }

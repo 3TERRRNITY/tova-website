@@ -10,6 +10,10 @@ import Image from "next/image";
 import Slider from "../components/Slider/Slider";
 
 export default function Home() {
+  const redirectToServicePage = (serviceTitle: string) => {
+    const url = `/services#${serviceTitle}`;
+    window.location.href = url;
+  };
   return (
     <div className={commonStyles.mainPageBody}>
       <div className={styles.hero}>
@@ -36,7 +40,11 @@ export default function Home() {
         <div className={styles.services__title}>услуги</div>
         <div className={styles.services__serviceGrid}>
           {SERVICES.map((service) => (
-            <div className={styles.services__card} key={service.title}>
+            <Link
+              className={styles.services__card}
+              key={service.title}
+              href={`/services#${service.href}`}
+            >
               <div className={styles.services__card__info}>
                 <div className={styles.services__card__info_title}>
                   {service.title}
@@ -50,7 +58,7 @@ export default function Home() {
                 alt="service image"
                 className={styles.services__card__image}
               />
-            </div>
+            </Link>
           ))}
         </div>
       </div>

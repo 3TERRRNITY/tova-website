@@ -26,7 +26,7 @@ export const PROJECTS: IProjects[] = [
     img: "/main/avivir.jpg",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
-    id: "webdev",
+    id: ["webdev", "brand", "graphic", "smm", "marketing", "other"],
     category: "веб-разработка",
   },
   {
@@ -34,7 +34,7 @@ export const PROJECTS: IProjects[] = [
     img: "/main/aimi.jpg",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
-    id: "brand",
+    id: ["brand", "graphic"],
     category: "брендинг",
   },
   {
@@ -42,7 +42,7 @@ export const PROJECTS: IProjects[] = [
     img: "/main/madaia.jpg",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
-    id: "graphics",
+    id: ["smm", "marketing", "other"],
     category: "графический дизайн",
   },
   {
@@ -50,7 +50,7 @@ export const PROJECTS: IProjects[] = [
     img: "/main/frenchi.jpg",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
-    id: "smm",
+    id: ["webdev"],
     category: "smm",
   },
   {
@@ -58,7 +58,7 @@ export const PROJECTS: IProjects[] = [
     img: "/main/vdm.jpg",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
-    id: "other",
+    id: ["webdev"],
     category: "ведение",
   },
   {
@@ -66,7 +66,7 @@ export const PROJECTS: IProjects[] = [
     img: "/main/mindly.jpg",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
-    id: "other",
+    id: ["brand", "graphic", "smm", "marketing", "other"],
     category: "ведение",
   },
   {
@@ -74,7 +74,7 @@ export const PROJECTS: IProjects[] = [
     img: "/projects/approval/banner.png",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
-    id: "other",
+    id: [],
     category: "ведение",
   },
 ];
@@ -129,7 +129,7 @@ export const SERVICES: IServices[] = [
     image: "/main/service/graphic.png",
   },
   {
-    title: "дизайн-поддержка",
+    title: "маркетинг",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     href: "marketing",
     price: "от 2700/час",
