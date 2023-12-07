@@ -75,9 +75,7 @@ export default function Home() {
               description: string;
               title: string;
             }) => (
-              <Link key={title} href={title.toLowerCase()}>
-                <Card image={img} title={title} description={description} />
-              </Link>
+              <Card image={img} title={title} description={description} />
             )
           )}
         </div>
