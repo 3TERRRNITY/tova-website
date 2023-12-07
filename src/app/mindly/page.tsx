@@ -110,6 +110,7 @@ const Mindly = () => {
             </div>
           </div>
           <Lottie animationData={Palette} />
+          <div className={styles.mindly__palette__brandbookMobile} />
           <div className={styles.mindly__palette__brandbook}>
             <div className={styles.mindly__palette__brandbook_row1}>
               <img
@@ -171,7 +172,7 @@ const Mindly = () => {
             className={styles.mindly__palette__brandbook_leaf}
           />
         </div>
-        <Lottie animationData={Logo} />
+        <Lottie className={styles.mindly__palette__logo} animationData={Logo} />
         <Separator />
         <div className={styles.mindly__adaptive}>
           <div className={styles.mindly__adaptive__info}>
@@ -183,6 +184,28 @@ const Mindly = () => {
               вдохновителем которого является бывшая побуждает ее творить
               красоту
             </div>
+          </div>
+          <div className={styles.mindly__adaptive__mob}>
+            <img
+              src="/projects/mindly/mindly_mobile1.png"
+              alt="mindly-adaptive"
+            />
+            <img
+              src="/projects/mindly/mindly_mobile1.1.png"
+              alt="mindly-adaptive"
+            />
+            <img
+              src="/projects/mindly/mindly_mobile2.png"
+              alt="mindly-adaptive"
+            />
+            <img
+              src="/projects/mindly/mindly_mobile3.png"
+              alt="mindly-adaptive"
+            />
+            <img
+              src="/projects/mindly/mindly_mobile4.png"
+              alt="mindly-adaptive"
+            />
           </div>
           <div className={styles.mindly__adaptive__images}>
             <img src="/projects/mindly/prod-1.png" alt="mindly-adaptive" />
@@ -229,6 +252,11 @@ const Mindly = () => {
               вдохновителем которого является бывшая побуждает ее творить
               красоту
             </div>
+          </div>
+          <div className={styles.mindly__adaptive__instagramMobile}>
+            <img src="/projects/mindly/smm_mobile1.png" alt="instagram post" />
+            <img src="/projects/mindly/smm_mobile2.png" alt="instagram post" />
+            <img src="/projects/mindly/smm_mobile3.png" alt="instagram post" />
           </div>
           <div className={styles.mindly__adaptive__instagram} />
         </div>
