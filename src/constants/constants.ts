@@ -77,6 +77,14 @@ export const PROJECTS: IProjects[] = [
     id: [],
     category: "ведение",
   },
+  {
+    title: "rambam",
+    img: "/projects/rambam/rambam7.png",
+    description:
+      "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
+    id: [],
+    category: "графический дизайн",
+  },
 ];
 
 export const DEPARTAMENTS: IDepartaments[] = [
