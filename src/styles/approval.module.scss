@@ -1,9 +1,6 @@
 @import "./mixins.scss";
 @import "./variable.scss";
 
-// TODO: сделать флюидным
-// TODO: сделать однотипное миксинами
-
 .approval {
   &__hero {
     width: 100%;
@@ -11,7 +8,11 @@
 
     background-image: url(../../public/projects/approval/banner.png);
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
+    @media (max-width: 1600px) {
+      object-fit: contain;
+    }
     @media (max-width: 480px) {
       display: none;
     }
