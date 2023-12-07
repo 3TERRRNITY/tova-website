@@ -13,10 +13,16 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    @media (max-width: 480px) {
+      display: none;
+    }
   }
   &__about {
     padding: $space-80 $space-40 0 $space-40;
     position: relative;
+    @media (max-width: 480px) {
+      padding: 100px 20px 90px 20px;
+    }
     &__circle {
       position: absolute;
       left: -30%;
@@ -28,15 +34,28 @@
       grid-template-columns: repeat(2, 1fr);
 
       padding-bottom: $space-50;
-
+      @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        padding-bottom: 40px;
+      }
       &_title {
         @include h1Title;
+        text-transform: uppercase;
+        @media (max-width: 480px) {
+          font-size: 22px;
+          line-height: 23.87px;
+        }
       }
 
       &_subtitle {
         @include paragraph;
+        @media (max-width: 480px) {
+          font-size: 16px;
+          line-height: 20.8px;
+        }
       }
-
       &_point {
         color: #3e3e3e;
         &:first-of-type {
@@ -50,40 +69,45 @@
       grid-template-columns: repeat(2, 1fr);
 
       padding-bottom: $space-100;
-
+      @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 0;
+      }
       &__subtitle {
         display: flex;
         flex-direction: column;
         gap: $space-40;
 
+        @media (max-width: 480px) {
+          gap: 20px;
+        }
+
         &_paragraph {
           @include paragraph;
+          @media (max-width: 480px) {
+            font-size: 16px;
+            line-height: 20.8px;
+          }
         }
 
         &_big {
           @include h3Title;
+          @media (max-width: 480px) {
+            padding: 20px 0 90px 0;
+            font-size: 16px;
+            line-height: 20.8px;
+          }
         }
-      }
-    }
-
-    &__cards {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      gap: $space-20;
-
-      &__card {
-        @include paragraph;
-        padding: $space-80 0;
-        text-align: center;
-        width: 100%;
-        border: 1px solid #3e3e3e;
       }
     }
   }
 
   &__mainPage {
-    padding: 0 0 160px 0;
+    padding: $space-80 0 clamp(3.3125rem, 0.0208rem + 10.9722vw, 13.1875rem) 0;
+    @media (max-width: 480px) {
+      padding: 40px 0 90px 0;
+    }
 
     &__info {
       @include h3Title;
@@ -93,14 +117,36 @@
       gap: $space-20;
 
       padding: 0 0 $space-80 0;
+      @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        line-height: 26px;
+        padding-bottom: 20px;
+
+        &_description {
+          padding-top: 20px;
+          font-size: 16px;
+          line-height: 20.8px;
+          font-weight: 400;
+        }
+      }
     }
 
     &__cards {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      height: 200px;
+      height: clamp(4.125rem, 0rem + 13.75vw, 16.5rem);
       gap: $space-20;
       margin-top: $space-20;
+
+      @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+        height: max-content;
+      }
     }
 
     &__card {
@@ -114,19 +160,32 @@
       height: 100%;
 
       background-color: #161616;
+      @media (max-width: 480px) {
+        height: 74px;
+      }
     }
 
     &__image {
       position: relative;
-      height: 1300px;
+      height: clamp(27.0625rem, 0.0208rem + 90.1389vw, 108.1875rem);
+      @media (max-width: 480px) {
+        height: 500px;
+      }
     }
 
     &__imagesGrid {
-      height: 2000px;
+      height: clamp(41.625rem, 0.0417rem + 138.6111vw, 166.375rem);
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(3, 1fr);
       gap: $space-20;
+
+      @media (max-width: 480px) {
+        height: 802px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
 
       &_img1,
       &_img2,
@@ -137,6 +196,9 @@
         background-position: center;
         background-size: cover;
         border-radius: 20px;
+        @media (max-width: 480px) {
+          object-fit: contain;
+        }
       }
 
       &_img1 {
@@ -161,7 +223,10 @@
   }
 
   &__shop {
-    padding: 0 $space-40 160px $space-40;
+    padding: $space-80 $space-40 160px $space-40;
+    @media (max-width: 480px) {
+      padding: 40px 0 90px 0;
+    }
 
     &__info {
       @include h3Title;
@@ -171,15 +236,33 @@
       gap: $space-20;
 
       padding: 0 0 $space-80 0;
-    }
+      @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        line-height: 26px;
+        padding-bottom: 20px;
 
+        &_description {
+          padding-top: 20px;
+          font-size: 16px;
+          line-height: 20.8px;
+          font-weight: 400;
+        }
+      }
+    }
     &__imagesGrid {
-      height: 1300px;
+      height: clamp(27.0625rem, -0.0417rem + 90.3472vw, 108.375rem);
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
       gap: $space-20;
-
+      @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        height: max-content;
+        gap: 10px;
+      }
       &_img1,
       &_img2,
       &_img3 {
@@ -188,6 +271,10 @@
         background-position: center;
         background-size: cover;
         border-radius: 20px;
+
+        @media (max-width: 480px) {
+          height: 193px;
+        }
       }
 
       &_img1 {
@@ -208,7 +295,9 @@
 
   &__team {
     padding: 0 $space-40 160px $space-40;
-
+    @media (max-width: 480px) {
+      display: none;
+    }
     &_title {
       @include h3Title;
       text-transform: uppercase;
