@@ -11,9 +11,10 @@ import Header from "../../components/Header/Header";
 import { Separator } from "../../components/Separator/Separator";
 import Lottie from "lottie-react";
 import emptyAnimation from "../../../public/animations/empty.json";
-type Props = {};
+import { motion } from "framer-motion";
+import { textAnimation } from "../../common/animations";
 
-const Projects = (props: Props) => {
+const Projects = () => {
   const [selectedOption, setSelectedOption] = useState<string>("all");
 
   const handleOptionClick = (option: string) => {
@@ -52,20 +53,48 @@ const Projects = (props: Props) => {
             <React.Fragment key={proj.title}>
               <div className={styles.projects__project}>
                 <div className={styles.projects__project__container}>
-                  <div className={styles.projects__project__title}>
+                  <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    variants={textAnimation}
+                    custom={1}
+                    viewport={{ amount: 0.2, once: true }}
+                    className={styles.projects__project__title}
+                  >
                     {proj.title}
-                  </div>
-                  <div className={styles.projects_project__description}>
+                  </motion.div>
+                  <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    variants={textAnimation}
+                    custom={2}
+                    viewport={{ amount: 0.2, once: true }}
+                    className={styles.projects_project__description}
+                  >
                     {proj.category}
-                  </div>
+                  </motion.div>
                 </div>
-                <div className={styles.projects__project__cards}>
+                <motion.div
+                  initial="hidden"
+                  whileInView="visible"
+                  variants={textAnimation}
+                  custom={3}
+                  viewport={{ once: true }}
+                  className={styles.projects__project__cards}
+                >
                   <Card
                     image={proj.img}
                     description={proj.description}
                     title={proj.title}
                   />
-                  <div className={styles.projects__project__cards_deskCard}>
+                  <motion.div
+                    className={styles.projects__project__cards_deskCard}
+                    initial="hidden"
+                    whileInView="visible"
+                    variants={textAnimation}
+                    custom={3}
+                    viewport={{ once: true }}
+                  >
                     <Card
                       secondImage={proj.secondImage}
                       image={proj.img}
@@ -73,8 +102,8 @@ const Projects = (props: Props) => {
                       description={""}
                       title={""}
                     />
-                  </div>
-                </div>
+                  </motion.div>
+                </motion.div>
               </div>
               <Separator />
             </React.Fragment>

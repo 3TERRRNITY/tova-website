@@ -23,7 +23,7 @@ export const IMAGES: ILogos[] = [
 export const PROJECTS: IProjects[] = [
   {
     title: "Avivir",
-    img: "/main/avivir.jpg",
+    img: "/main/avivir.webp",
     secondImage: "/projects/projects_avivir.png",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
@@ -32,7 +32,7 @@ export const PROJECTS: IProjects[] = [
   },
   {
     title: "Aimi",
-    img: "/main/aimi.jpg",
+    img: "/main/aimi.webp",
     secondImage: "/projects/projects_aimi.png",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
@@ -41,7 +41,7 @@ export const PROJECTS: IProjects[] = [
   },
   {
     title: "Madaia",
-    img: "/main/madaia.jpg",
+    img: "/main/madaia.webp",
     secondImage: "/projects/projects_madaia2.png",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
@@ -50,7 +50,7 @@ export const PROJECTS: IProjects[] = [
   },
   {
     title: "frenchi",
-    img: "/main/frenchi.jpg",
+    img: "/main/frenchi.webp",
     secondImage: "/projects/projects_frenchi.png",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
@@ -59,7 +59,7 @@ export const PROJECTS: IProjects[] = [
   },
   {
     title: "vademecum",
-    img: "/main/vdm.jpg",
+    img: "/main/vdm.webp",
     secondImage: "/projects/projects_vdm.png",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
@@ -68,7 +68,7 @@ export const PROJECTS: IProjects[] = [
   },
   {
     title: "mindly",
-    img: "/main/mindly.jpg",
+    img: "/main/mindly.webp",
     secondImage: "/projects/projects_mindly.png",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
@@ -77,8 +77,8 @@ export const PROJECTS: IProjects[] = [
   },
   {
     title: "approval",
-    img: "/projects/projects_approval1.png",
-    secondImage: "/projects/projects_approval2.png",
+    img: "/projects/projects_approval1.webp",
+    secondImage: "/projects/projects_approval2.webp",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
     id: [],
@@ -86,8 +86,8 @@ export const PROJECTS: IProjects[] = [
   },
   {
     title: "rambam",
-    img: "/projects/projects_rambam1.png",
-    secondImage: "/projects/projects_rambam2.png",
+    img: "/projects/projects_rambam1.webp",
+    secondImage: "/projects/projects_rambam2.webp",
     description:
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
     id: [],
@@ -128,42 +128,42 @@ export const SERVICES: IServices[] = [
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     href: "brand",
     price: "от 2700/час",
-    image: "/main/service/brand.png",
+    image: "/main/service/brand.webp",
   },
   {
     title: "веб-разработка",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     href: "webdev",
     price: "от 2700/час",
-    image: "/main/service/webdev.png",
+    image: "/main/service/webdev.webp",
   },
   {
     title: "графический дизайн",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     href: "graphic",
     price: "от 2700/час",
-    image: "/main/service/graphic.png",
+    image: "/main/service/graphic.webp",
   },
   {
     title: "маркетинг",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     href: "marketing",
     price: "от 2700/час",
-    image: "/main/service/design-help.png",
+    image: "/main/service/design-help.webp",
   },
   {
     title: "SMM",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     href: "smm",
     price: "от 2700/час",
-    image: "/main/service/smm-service.png",
+    image: "/main/service/smm-service.webp",
   },
   {
     title: "Другое",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     href: "other",
     price: "от 2700/час",
-    image: "/main/service/other.png",
+    image: "/main/service/other.webp",
   },
 ];
 
