@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../styles/projects.module.scss";
 import commonStyles from "../../styles/common.module.scss";
 import Footer from "../../components/Footer/Footer";
@@ -16,14 +16,40 @@ import { textAnimation } from "../../common/animations";
 
 const Projects = () => {
   const [selectedOption, setSelectedOption] = useState<string>("all");
+  const [filteredProjects, setFilteredProjects] = useState<IProjects[]>([]);
 
   const handleOptionClick = (option: string) => {
     setSelectedOption(option);
   };
-  const filteredProjects: IProjects[] =
-    selectedOption === "all"
-      ? PROJECTS
-      : PROJECTS.filter((project) => project.id.includes(selectedOption));
+  function shuffleArray(array: any[]) {
+    const shuffled = array.slice();
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+
+  // Эффект, отслеживающий изменения selectedOption
+  useEffect(() => {
+    let newFilteredProjects: IProjects[] = [];
+
+    if (selectedOption === "all") {
+      newFilteredProjects = PROJECTS;
+    } else {
+      newFilteredProjects = PROJECTS.filter((project) =>
+        project.id.includes(selectedOption)
+      );
+    }
+
+    // Перемешивание массива, если он не пустой
+    if (newFilteredProjects.length > 0) {
+      const shuffledProjects = shuffleArray(newFilteredProjects);
+      setFilteredProjects(shuffledProjects);
+    } else {
+      setFilteredProjects(newFilteredProjects);
+    }
+  }, [selectedOption]);
 
   return (
     <div className={commonStyles.mainPageBody}>
@@ -78,7 +104,6 @@ const Projects = () => {
                   initial="hidden"
                   whileInView="visible"
                   variants={textAnimation}
-                  custom={3}
                   viewport={{ once: true }}
                   className={styles.projects__project__cards}
                 >
@@ -92,7 +117,6 @@ const Projects = () => {
                     initial="hidden"
                     whileInView="visible"
                     variants={textAnimation}
-                    custom={3}
                     viewport={{ once: true }}
                   >
                     <Card
