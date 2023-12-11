@@ -101,10 +101,10 @@ const page = () => {
             </div>
             <div className={styles.approval__mainPage__image} />
             <div className={styles.approval__mainPage__imageMobile}>
-              <img src="/projects/approval/approval_mobile1.png" alt="image" />
-              <img src="/projects/approval/approval_mobile2.png" alt="image" />
-              <img src="/projects/approval/approval_mobile3.png" alt="image" />
-              <img src="/projects/approval/approval_mobile4.png" alt="image" />
+              <img src="/projects/approval/approval_mobile1.webp" alt="image" />
+              <img src="/projects/approval/approval_mobile2.webp" alt="image" />
+              <img src="/projects/approval/approval_mobile3.webp" alt="image" />
+              <img src="/projects/approval/approval_mobile4.webp" alt="image" />
             </div>
           </div>
           <Separator />
@@ -121,8 +121,8 @@ const page = () => {
             </div>
             <Lottie animationData={Palette} />
             <div className={styles.approval__mainPage__imageMobile}>
-              <img src="/projects/approval/approval_mobile5.png" alt="image" />
-              <img src="/projects/approval/approval_mobile6.png" alt="image" />
+              <img src="/projects/approval/approval_mobile5.webp" alt="image" />
+              <img src="/projects/approval/approval_mobile6.webp" alt="image" />
             </div>
             <div className={styles.approval__mainPage__images} />
           </div>
@@ -139,9 +139,9 @@ const page = () => {
               </div>
             </div>
             <div className={styles.approval__mainPage__imageMobile}>
-              <img src="/projects/approval/approval_mobile7.png" alt="image" />
-              <img src="/projects/approval/approval_mobile8.png" alt="image" />
-              <img src="/projects/approval/approval_mobile9.png" alt="image" />
+              <img src="/projects/approval/approval_mobile7.webp" alt="image" />
+              <img src="/projects/approval/approval_mobile8.webp" alt="image" />
+              <img src="/projects/approval/approval_mobile9.webp" alt="image" />
             </div>
             <div className={styles.approval__mainPage__cards} />
           </div>

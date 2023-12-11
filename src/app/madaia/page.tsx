@@ -27,7 +27,7 @@ const page = () => {
         <div className={styles.madaia__hero}>
           <img
             className={styles.madaia__hero_logo}
-            src="/projects/madaia/madaia_logo-rotate.png"
+            src="/projects/madaia/madaia_logo-rotate.webp"
             alt="madaia logo"
           />
           <div className={styles.madaia__hero_photo} />
@@ -36,7 +36,7 @@ const page = () => {
           <div className={styles.madaia__info__title}>
             дизайн онлайн магазина
           </div>
-          <img src="/projects/madaia/madaia_logo.png" alt="madaia logo" />
+          <img src="/projects/madaia/madaia_logo.webp" alt="madaia logo" />
           <div className={styles.madaia__info__paragraph}>
             Madaia – бренд одежды для повседневной жизни и спорта, идейным
             вдохновителем которого является бывшая профессиональная теннисистка
@@ -58,17 +58,17 @@ const page = () => {
           </div>
         </div>
         <div className={styles.madaia__desktopDesign}>
-          <img src="/projects/madaia/madaia1.png" alt="desktop design" />
+          <img src="/projects/madaia/madaia1.webp" alt="desktop design" />
         </div>
         <div className={styles.madaia__tabletDesign}>
-          <img src="/projects/madaia/madaia2.png" alt="tablet design" />
+          <img src="/projects/madaia/madaia2.webp" alt="tablet design" />
         </div>
         <div className={styles.madaia__clothes}>
-          <img src="/projects/madaia/madaia3.png" alt="clothes" />
-          <img src="/projects/madaia/madaia4.png" alt="clothes" />
+          <img src="/projects/madaia/madaia3.webp" alt="clothes" />
+          <img src="/projects/madaia/madaia4.webp" alt="clothes" />
         </div>
         <div className={styles.madaia__mobileDesign}>
-          <img src="/projects/madaia/madaia5.png" alt="mobile design" />
+          <img src="/projects/madaia/madaia5.webp" alt="mobile design" />
         </div>
 
         <div className={styles.madaia__team}>

@@ -10,9 +10,7 @@ import Palette from "../../../public/projects/vademkum/animations/palette.json";
 import Image from "next/image";
 import { Separator } from "../../components/Separator/Separator";
 
-type Props = {};
-
-const Vademecum = (props: Props) => {
+const Vademecum = () => {
   const aboutPoints = [
     "проект",
     "клиент / avivir",
@@ -117,7 +115,7 @@ const Vademecum = (props: Props) => {
           </div>
           <div className={styles.vademecum__mainPage__image}>
             <Image
-              src="/projects/vademkum/vademcum-mainPage.png"
+              src="/projects/vademkum/vademcum-mainPage.webp"
               alt="main-page"
               fill
               className={styles.vademecum__mainPage__image_img}

@@ -45,7 +45,7 @@ export default function Card({
     setCardHeight(heightRef.current?.clientHeight ?? 0);
   }, [cardHeight]);
   return (
-    <Link href={`/${title.toLowerCase()}`}>
+    <Link href={`/${title.toLowerCase()}`} className={styles.projects__link}>
       <motion.div
         className={styles.projects__card}
         onHoverStart={handleHover}

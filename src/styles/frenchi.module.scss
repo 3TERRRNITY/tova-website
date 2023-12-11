@@ -151,27 +151,27 @@
         gap: 20px;
       }
       &_img1 {
-        background-image: url(../../public/projects/frenchi/1.png);
+        background-image: url(../../public/projects/frenchi/1.webp);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
         height: clamp(9.375rem, 0.0417rem + 31.1111vw, 37.375rem);
         border-radius: 20px;
         @media (max-width: 480px) {
-          background-image: url(../../public/projects/frenchi/frenchi_mobile1.png);
+          background-image: url(../../public/projects/frenchi/frenchi_mobile1.webp);
           height: 360px;
         }
       }
 
       &_img2 {
-        background-image: url(../../public/projects/frenchi/2.png);
+        background-image: url(../../public/projects/frenchi/2.webp);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
         height: clamp(12.5rem, -0.0208rem + 41.7361vw, 50.0625rem);
         border-radius: 20px;
         @media (max-width: 480px) {
-          background-image: url(../../public/projects/frenchi/frenchi_mobile2.png);
+          background-image: url(../../public/projects/frenchi/frenchi_mobile2.webp);
           height: 360px;
         }
       }
@@ -188,19 +188,19 @@
       }
       &_img3 {
         @media (max-width: 480px) {
-          background-image: url(../../public/projects/frenchi/frenchi_mobile3.png);
+          background-image: url(../../public/projects/frenchi/frenchi_mobile3.webp);
           height: 360px;
         }
       }
       &_img4 {
         @media (max-width: 480px) {
-          background-image: url(../../public/projects/frenchi/frenchi_mobile4.png);
+          background-image: url(../../public/projects/frenchi/frenchi_mobile4.webp);
           height: 360px;
         }
       }
       &_img5 {
         @media (max-width: 480px) {
-          background-image: url(../../public/projects/frenchi/frenchi_mobile5.png);
+          background-image: url(../../public/projects/frenchi/frenchi_mobile5.webp);
           height: 360px;
         }
       }
@@ -246,7 +246,7 @@
     }
 
     &__image {
-      background-image: url(../../public/projects/frenchi/3.png);
+      background-image: url(../../public/projects/frenchi/3.webp);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
@@ -273,16 +273,16 @@
         border-radius: 20px;
       }
       &_img1 {
-        background-image: url(../../public/projects/frenchi/frenchi_adaptive_mob1.png);
+        background-image: url(../../public/projects/frenchi/frenchi_adaptive_mob1.webp);
         @media (max-width: 480px) {
           height: 321px;
         }
       }
       &_img2 {
-        background-image: url(../../public/projects/frenchi/frenchi_adaptive_mob2.png);
+        background-image: url(../../public/projects/frenchi/frenchi_adaptive_mob2.webp);
       }
       &_img3 {
-        background-image: url(../../public/projects/frenchi/frenchi_adaptive_mob3.png);
+        background-image: url(../../public/projects/frenchi/frenchi_adaptive_mob3.webp);
       }
     }
   }
@@ -302,21 +302,21 @@
 
     &_img1 {
       height: clamp(20.8125rem, -0.0208rem + 69.4444vw, 83.3125rem);
-      background-image: url(../../public/projects/frenchi/4.png);
+      background-image: url(../../public/projects/frenchi/4.webp);
       @media (max-width: 480px) {
         height: 300px;
       }
     }
     &_img2 {
       height: clamp(22.875rem, -0.0208rem + 76.3194vw, 91.5625rem);
-      background-image: url(../../public/projects/frenchi/5.png);
+      background-image: url(../../public/projects/frenchi/5.webp);
       @media (max-width: 480px) {
         height: 300px;
       }
     }
     &_img3 {
       height: clamp(22.875rem, -0.0208rem + 76.3194vw, 91.5625rem);
-      background-image: url(../../public/projects/frenchi/6.png);
+      background-image: url(../../public/projects/frenchi/6.webp);
       @media (max-width: 480px) {
         height: 300px;
       }
