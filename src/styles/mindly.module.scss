@@ -8,7 +8,7 @@
     padding: 0 20px;
   }
   &__hero {
-    background-image: url(../../public/projects/mindly/mindly_hero1.png);
+    background-image: url(../../public/projects/mindly/mindly_hero1.webp);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -161,7 +161,7 @@
       @media (max-width: 480px) {
         display: block;
         height: 510px;
-        background-image: url(../../public/projects/mindly/mindly_mobile.png);
+        background-image: url(../../public/projects/mindly/mindly_mobile.webp);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -175,7 +175,7 @@
     &__brandbook {
       height: clamp(19.75rem, 0.0208rem + 65.7639vw, 78.9375rem);
       width: 100%;
-      background-image: url(../../public/projects/mindly/brandbook/фон.png);
+      background-image: url(../../public/projects/mindly/brandbook/фон.webp);
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -300,7 +300,7 @@
     }
 
     &__imagesMobile {
-      background-image: url(../../public/projects/mindly/adaptive.png);
+      background-image: url(../../public/projects/mindly/adaptive.webp);
       background-position: center;
       background-size: contain;
       height: clamp(36.4375rem, 0.0417rem + 121.3194vw, 145.625rem);
@@ -315,7 +315,7 @@
     }
 
     &__imagesDesktop {
-      background-image: url(../../public/projects/mindly/desktop.png);
+      background-image: url(../../public/projects/mindly/desktop.webp);
       background-position: center;
       background-size: contain;
       height: clamp(36.4375rem, 0.0417rem + 121.3194vw, 145.625rem);
@@ -330,7 +330,7 @@
     &__instagramMobile {
       display: none;
       @media (max-width: 480px) {
-        background-image: url(../../public/projects/mindly/smm-background.png);
+        background-image: url(../../public/projects/mindly/smm-background.webp);
         background-position: center;
         background-size: cover;
         width: 100%;
@@ -342,7 +342,7 @@
       }
     }
     &__instagram {
-      background-image: url(../../public/projects/mindly/smm.png);
+      background-image: url(../../public/projects/mindly/smm.webp);
       background-position: center;
       background-size: contain;
       height: clamp(19.5625rem, 0.0417rem + 65.0694vw, 78.125rem);

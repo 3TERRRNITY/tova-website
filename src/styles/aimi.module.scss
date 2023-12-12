@@ -7,7 +7,7 @@
     height: 100vh;
     z-index: 1;
 
-    background-image: url(../../public/projects/aimi/aimi_background.png);
+    background-image: url(../../public/projects/aimi/aimi_background.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -259,10 +259,10 @@
         }
 
         &_image1 {
-          background-image: url(../../public/projects/aimi/smm1.png);
+          background-image: url(../../public/projects/aimi/smm1.webp);
         }
         &_image2 {
-          background-image: url(../../public/projects/aimi/smm2.png);
+          background-image: url(../../public/projects/aimi/smm2.webp);
         }
       }
     }
@@ -297,13 +297,13 @@
         border-radius: $space-20;
       }
       &_image1 {
-        background-image: url(../../public/projects/aimi/linkedin1.png);
+        background-image: url(../../public/projects/aimi/linkedin1.webp);
       }
       &_image2 {
-        background-image: url(../../public/projects/aimi/linkedin2.png);
+        background-image: url(../../public/projects/aimi/linkedin2.webp);
       }
       &_image3 {
-        background-image: url(../../public/projects/aimi/linkedin3.png);
+        background-image: url(../../public/projects/aimi/linkedin3.webp);
       }
     }
 

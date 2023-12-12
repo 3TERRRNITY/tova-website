@@ -140,12 +140,12 @@ const page = () => {
           </div>
           <div className={styles.rambam__mainPage__colors}>
             <img
-              src="/projects/rambam/rambam3.png"
+              src="/projects/rambam/rambam3.webp"
               alt="colors"
               className={styles.rambam__mainPage__colors_img1}
             />
             <img
-              src="/projects/rambam/rambam4.png"
+              src="/projects/rambam/rambam4.webp"
               alt="colors"
               className={styles.rambam__mainPage__colors_img2}
             />
@@ -166,12 +166,12 @@ const page = () => {
           </div>
           <div className={styles.rambam__mainPage__typography}>
             <img
-              src="/projects/rambam/rambam5.png"
+              src="/projects/rambam/rambam5.webp"
               alt="colors"
               className={styles.rambam__mainPage__typography_img1}
             />
             <img
-              src="/projects/rambam/rambam6.png"
+              src="/projects/rambam/rambam6.webp"
               alt="colors"
               className={styles.rambam__mainPage__typography_img2}
             />
@@ -192,12 +192,12 @@ const page = () => {
           </div>
           <div className={styles.rambam__mainPage__firm}>
             <img
-              src="/projects/rambam/rambam7.png"
+              src="/projects/rambam/rambam7.webp"
               alt="colors"
               className={styles.rambam__mainPage__firm_img1}
             />
             <img
-              src="/projects/rambam/rambam8.png"
+              src="/projects/rambam/rambam8.webp"
               alt="colors"
               className={styles.rambam__mainPage__firm_img2}
             />

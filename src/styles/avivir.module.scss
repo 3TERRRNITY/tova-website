@@ -10,7 +10,7 @@
     width: 100%;
     height: 100vh;
 
-    background-image: url(../../public/projects/avivir/avivir-hero.png);
+    background-image: url(../../public/projects/avivir/avivir-hero.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -178,7 +178,7 @@
     &__image {
       height: clamp(22.4375rem, 0.0417rem + 74.6528vw, 89.625rem);
       width: 100%;
-      background-image: url(../../public/projects/avivir/avivir-mainPage.png);
+      background-image: url(../../public/projects/avivir/avivir-mainpage.webp);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -260,16 +260,16 @@
       }
 
       &_image1 {
-        background-image: url(../../public/projects/avivir/avivir-adaptive-1.png);
+        background-image: url(../../public/projects/avivir/avivir-adaptive-1.webp);
         @media (max-width: 480px) {
           display: none;
         }
       }
       &_image2 {
-        background-image: url(../../public/projects/avivir/avivir-adaptive-2.png);
+        background-image: url(../../public/projects/avivir/avivir-adaptive-2.webp);
       }
       &_image3 {
-        background-image: url(../../public/projects/avivir/avivir-adaptive-3.png);
+        background-image: url(../../public/projects/avivir/avivir-adaptive-3.webp);
       }
     }
   }
@@ -331,7 +331,7 @@
     &__images {
       z-index: 2;
 
-      background-image: url(../../public/projects/avivir/avivir_smm-bg.png);
+      background-image: url(../../public/projects/avivir/avivir_smm-bg.webp);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
@@ -351,10 +351,12 @@
         &_slide {
           width: 100%;
           height: 100%;
+
           img {
             object-fit: cover;
             width: 100%;
             height: 100%;
+            cursor: grab;
           }
         }
       }
@@ -366,7 +368,7 @@
         display: block;
         z-index: 2;
 
-        background-image: url(../../public/projects/avivir/avivir_smm-bg.png);
+        background-image: url(../../public/projects/avivir/avivir_smm-bg.webp);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -498,19 +500,11 @@
       display: flex;
       flex-direction: column;
       gap: $space-10;
-      position: absolute;
+
       padding: $space-40;
       justify-content: end;
-      z-index: 2;
+      z-index: 10;
       opacity: 0;
-      transition: opacity 0.3s ease;
-
-      &:hover {
-        opacity: 1;
-      }
-
-      width: 100%;
-      height: 100%;
 
       &_title {
         @include h3Title;
@@ -527,12 +521,31 @@
     &__card1,
     &__card2,
     &__card_big {
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      align-items: end;
+
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
       z-index: 0;
       cursor: pointer;
       position: relative;
+
+      &_overflow {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0;
+        z-index: 4;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
     }
 
     &__card1,
@@ -546,19 +559,19 @@
 
     &__card1 {
       grid-column: 1;
-      background-image: url(../../public/projects/avivir/firmstyle.png);
+      background-image: url(../../public/projects/avivir/firmstyle.webp);
     }
 
     &__card2 {
       grid-column: 2;
-      background-image: url(../../public/projects/avivir/firmstyle2.png);
+      background-image: url(../../public/projects/avivir/firmstyle2.webp);
     }
 
     &__card_big {
       height: clamp(16.375rem, 0.0208rem + 54.5139vw, 65.4375rem);
       grid-row: 2;
       grid-column: 1/3;
-      background-image: url(../../public/projects/avivir/firmstyle3.png);
+      background-image: url(../../public/projects/avivir/firmstyle3.webp);
       @media (max-width: 480px) {
         height: 360px;
         width: 100%;

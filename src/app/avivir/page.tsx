@@ -1,17 +1,20 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import styles from "../../styles/avivir.module.scss";
 import commonStyles from "../../styles/common.module.scss";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import NeonCircle from "../../components/NeonCircle/NeonCircle";
-import { Separator } from "../../components/Separator/Separator";
+
 import Lottie from "lottie-react";
 import Logo from "../../../public/projects/avivir/animations/logo.json";
 import Grid from "../../../public/projects/avivir/animations/grid.json";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
+import { Autoplay } from "swiper";
 
 const Avivir = () => {
   const aboutPoints = [
@@ -26,6 +29,51 @@ const Avivir = () => {
     "фирменный стиль",
     "smm",
   ];
+  const controls = useAnimation();
+  // TODO: сделать в отдельном компоненте и убрать эту чушь
+  const [isHoveredCard1, setIsHoveredCard1] = useState<boolean>(false);
+  const [isHoveredCard2, setIsHoveredCard2] = useState<boolean>(false);
+  const [isHoveredCard3, setIsHoveredCard3] = useState<boolean>(false);
+  const handleHover1 = () => {
+    controls.start({
+      opacity: 1,
+    });
+    setIsHoveredCard1(true);
+  };
+
+  const handleUnhover1 = () => {
+    controls.start({
+      opacity: 0,
+    });
+    setIsHoveredCard1(false);
+  };
+  const handleHover2 = () => {
+    controls.start({
+      opacity: 1,
+    });
+    setIsHoveredCard2(true);
+  };
+
+  const handleUnhover2 = () => {
+    controls.start({
+      opacity: 0,
+    });
+    setIsHoveredCard2(false);
+  };
+  const handleHover3 = () => {
+    controls.start({
+      opacity: 1,
+    });
+    setIsHoveredCard3(true);
+  };
+
+  const handleUnhover3 = () => {
+    controls.start({
+      opacity: 0,
+    });
+    setIsHoveredCard3(false);
+  };
+
   return (
     <div className={commonStyles.mainPageBody}>
       <Header />
@@ -141,57 +189,62 @@ const Avivir = () => {
                 slidesPerView={3}
                 centeredSlides={true}
                 loop={true}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
+                modules={[Autoplay]}
                 className={styles.avivir__smm__images__slider}
               >
                 <SwiperSlide
                   className={styles.avivir__smm__images__slider_slide}
                 >
-                  <img src="/projects/avivir/carousel/avivir-carousel1.png" />
+                  <img src="/projects/avivir/carousel/avivir-carousel1.webp" />
                 </SwiperSlide>
                 <SwiperSlide
                   className={styles.avivir__smm__images__slider_slide}
                 >
-                  <img src="/projects/avivir/carousel/avivir-carousel2.png" />
+                  <img src="/projects/avivir/carousel/avivir-carousel2.webp" />
                 </SwiperSlide>
                 <SwiperSlide
                   className={styles.avivir__smm__images__slider_slide}
                 >
-                  <img src="/projects/avivir/carousel/avivir-carousel3.png" />
+                  <img src="/projects/avivir/carousel/avivir-carousel3.webp" />
                 </SwiperSlide>
                 <SwiperSlide
                   className={styles.avivir__smm__images__slider_slide}
                 >
-                  <img src="/projects/avivir/carousel/avivir-carousel4.png" />
+                  <img src="/projects/avivir/carousel/avivir-carousel4.webp" />
                 </SwiperSlide>
                 <SwiperSlide
                   className={styles.avivir__smm__images__slider_slide}
                 >
-                  <img src="/projects/avivir/carousel/avivir-carousel5.png" />
+                  <img src="/projects/avivir/carousel/avivir-carousel5.webp" />
                 </SwiperSlide>
                 <SwiperSlide
                   className={styles.avivir__smm__images__slider_slide}
                 >
-                  <img src="/projects/avivir/carousel/avivir-carousel6.png" />
+                  <img src="/projects/avivir/carousel/avivir-carousel6.webp" />
                 </SwiperSlide>
                 <SwiperSlide
                   className={styles.avivir__smm__images__slider_slide}
                 >
-                  <img src="/projects/avivir/carousel/avivir-carousel7.png" />
+                  <img src="/projects/avivir/carousel/avivir-carousel7.webp" />
                 </SwiperSlide>
                 <SwiperSlide
                   className={styles.avivir__smm__images__slider_slide}
                 >
-                  <img src="/projects/avivir/carousel/avivir-carousel8.png" />
+                  <img src="/projects/avivir/carousel/avivir-carousel8.webp" />
                 </SwiperSlide>
                 <SwiperSlide
                   className={styles.avivir__smm__images__slider_slide}
                 >
-                  <img src="/projects/avivir/carousel/avivir-carousel9.png" />
+                  <img src="/projects/avivir/carousel/avivir-carousel9.webp" />
                 </SwiperSlide>
                 <SwiperSlide
                   className={styles.avivir__smm__images__slider_slide}
                 >
-                  <img src="/projects/avivir/carousel/avivir-carousel10.png" />
+                  <img src="/projects/avivir/carousel/avivir-carousel10.webp" />
                 </SwiperSlide>
               </Swiper>
             </div>
@@ -200,58 +253,63 @@ const Avivir = () => {
                 slideToClickedSlide={true}
                 slidesPerView={"auto"}
                 centeredSlides={true}
+                autoplay={{
+                  delay: 2000,
+                  disableOnInteraction: false,
+                }}
+                modules={[Autoplay]}
                 loop={true}
                 className={styles.avivir__smm__images__slider}
               >
                 <SwiperSlide
                   className={styles.avivir__smm__images__slider_slide}
                 >
-                  <img src="/projects/avivir/carousel/avivir-carousel1.png" />
+                  <img src="/projects/avivir/carousel/avivir-carousel1.webp" />
                 </SwiperSlide>
                 <SwiperSlide
                   className={styles.avivir__smm__images__slider_slide}
                 >
-                  <img src="/projects/avivir/carousel/avivir-carousel2.png" />
+                  <img src="/projects/avivir/carousel/avivir-carousel2.webp" />
                 </SwiperSlide>
                 <SwiperSlide
                   className={styles.avivir__smm__images__slider_slide}
                 >
-                  <img src="/projects/avivir/carousel/avivir-carousel3.png" />
+                  <img src="/projects/avivir/carousel/avivir-carousel3.webp" />
                 </SwiperSlide>
                 <SwiperSlide
                   className={styles.avivir__smm__images__slider_slide}
                 >
-                  <img src="/projects/avivir/carousel/avivir-carousel4.png" />
+                  <img src="/projects/avivir/carousel/avivir-carousel4.webp" />
                 </SwiperSlide>
                 <SwiperSlide
                   className={styles.avivir__smm__images__slider_slide}
                 >
-                  <img src="/projects/avivir/carousel/avivir-carousel5.png" />
+                  <img src="/projects/avivir/carousel/avivir-carousel5.webp" />
                 </SwiperSlide>
                 <SwiperSlide
                   className={styles.avivir__smm__images__slider_slide}
                 >
-                  <img src="/projects/avivir/carousel/avivir-carousel6.png" />
+                  <img src="/projects/avivir/carousel/avivir-carousel6.webp" />
                 </SwiperSlide>
                 <SwiperSlide
                   className={styles.avivir__smm__images__slider_slide}
                 >
-                  <img src="/projects/avivir/carousel/avivir-carousel7.png" />
+                  <img src="/projects/avivir/carousel/avivir-carousel7.webp" />
                 </SwiperSlide>
                 <SwiperSlide
                   className={styles.avivir__smm__images__slider_slide}
                 >
-                  <img src="/projects/avivir/carousel/avivir-carousel8.png" />
+                  <img src="/projects/avivir/carousel/avivir-carousel8.webp" />
                 </SwiperSlide>
                 <SwiperSlide
                   className={styles.avivir__smm__images__slider_slide}
                 >
-                  <img src="/projects/avivir/carousel/avivir-carousel9.png" />
+                  <img src="/projects/avivir/carousel/avivir-carousel9.webp" />
                 </SwiperSlide>
                 <SwiperSlide
                   className={styles.avivir__smm__images__slider_slide}
                 >
-                  <img src="/projects/avivir/carousel/avivir-carousel10.png" />
+                  <img src="/projects/avivir/carousel/avivir-carousel10.webp" />
                 </SwiperSlide>
               </Swiper>
             </div>
@@ -284,8 +342,20 @@ const Avivir = () => {
               </div>
             </div>
             <div className={styles.avivir__information__cards}>
-              <div className={styles.avivir__information__card1}>
-                <div className={styles.avivir__information__cardTexts}>
+              <motion.div
+                className={styles.avivir__information__card1}
+                onHoverStart={handleHover1}
+                onHoverEnd={handleUnhover1}
+              >
+                <div className={styles.avivir__information__card1_overflow} />
+                <motion.div
+                  className={styles.avivir__information__cardTexts}
+                  initial={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  animate={{
+                    opacity: isHoveredCard1 ? 1 : 0,
+                  }}
+                >
                   <div className={styles.avivir__information__cardTexts_title}>
                     avivir
                   </div>
@@ -299,11 +369,23 @@ const Avivir = () => {
                     fugiat dolores asperiores aut fugit sit dolore distinctio,
                     aliquid saepe incidunt excepturi iusto qui. Velit.
                   </div>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
 
-              <div className={styles.avivir__information__card2}>
-                <div className={styles.avivir__information__cardTexts}>
+              <motion.div
+                onHoverStart={handleHover2}
+                onHoverEnd={handleUnhover2}
+                className={styles.avivir__information__card2}
+              >
+                <div className={styles.avivir__information__card2_overflow} />
+                <motion.div
+                  className={styles.avivir__information__cardTexts}
+                  initial={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  animate={{
+                    opacity: isHoveredCard2 ? 1 : 0,
+                  }}
+                >
                   <div className={styles.avivir__information__cardTexts_title}>
                     avivir
                   </div>
@@ -317,10 +399,24 @@ const Avivir = () => {
                     fugiat dolores asperiores aut fugit sit dolore distinctio,
                     aliquid saepe incidunt excepturi iusto qui. Velit.
                   </div>
-                </div>
-              </div>
-              <div className={styles.avivir__information__card_big}>
-                <div className={styles.avivir__information__cardTexts}>
+                </motion.div>
+              </motion.div>
+              <motion.div
+                onHoverStart={handleHover3}
+                onHoverEnd={handleUnhover3}
+                className={styles.avivir__information__card_big}
+              >
+                <div
+                  className={styles.avivir__information__card_big_overflow}
+                />
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  animate={{
+                    opacity: isHoveredCard3 ? 1 : 0,
+                  }}
+                  className={styles.avivir__information__cardTexts}
+                >
                   <div className={styles.avivir__information__cardTexts_title}>
                     avivir
                   </div>
@@ -334,8 +430,8 @@ const Avivir = () => {
                     fugiat dolores asperiores aut fugit sit dolore distinctio,
                     aliquid saepe incidunt excepturi iusto qui. Velit.
                   </div>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             </div>
           </div>
         </div>

@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  background-image: url(/hero-image-exp.png);
+  background-image: url(/hero-image-exp.webp);
   background-size: cover;
   background-position: center;
   &__text {
@@ -85,6 +85,10 @@
       line-height: 26px;
     }
   }
+
+  &__link {
+    z-index: 8;
+  }
   &__card {
     height: $projectCardHeight;
     width: 100%;
@@ -105,7 +109,7 @@
       width: 100%;
       height: 100%;
       transition: scale 0.3s ease-in;
-
+      pointer-events: none;
       object-fit: cover;
 
       z-index: 1;

@@ -42,17 +42,17 @@ const Mindly = () => {
 
       <div className={styles.mindly__hero}>
         <img
-          src="/projects/mindly/jars.png"
+          src="/projects/mindly/jars.webp"
           alt="mindly_jars"
           className={styles.mindly__hero_element1}
         />
         <img
-          src="/projects/mindly/mindly_hero2.png"
+          src="/projects/mindly/mindly_hero2.webp"
           alt="mindly_leaf1"
           className={styles.mindly__hero_element2}
         />
         <img
-          src="/projects/mindly/mindly_hero3.png"
+          src="/projects/mindly/mindly_hero3.webp"
           alt="mindly_leaf2"
           className={styles.mindly__hero_element3}
         />
@@ -114,17 +114,17 @@ const Mindly = () => {
           <div className={styles.mindly__palette__brandbook}>
             <div className={styles.mindly__palette__brandbook_row1}>
               <img
-                src="/projects/mindly/brandbook/1.png"
+                src="/projects/mindly/brandbook/1.webp"
                 alt="brandbook-image"
                 className={styles.mindly__palette__brandbook_image}
               />
               <img
-                src="/projects/mindly/brandbook/2.png"
+                src="/projects/mindly/brandbook/2.webp"
                 alt="brandbook-image"
                 className={styles.mindly__palette__brandbook_image}
               />
               <img
-                src="/projects/mindly/brandbook/3.png"
+                src="/projects/mindly/brandbook/3.webp"
                 alt="brandbook-image"
                 className={styles.mindly__palette__brandbook_image}
               />
@@ -132,17 +132,17 @@ const Mindly = () => {
 
             <div className={styles.mindly__palette__brandbook_row2}>
               <img
-                src="/projects/mindly/brandbook/4.png"
+                src="/projects/mindly/brandbook/4.webp"
                 alt="brandbook-image"
                 className={styles.mindly__palette__brandbook_image}
               />
               <img
-                src="/projects/mindly/brandbook/5.png"
+                src="/projects/mindly/brandbook/5.webp"
                 alt="brandbook-image"
                 className={styles.mindly__palette__brandbook_image}
               />
               <img
-                src="/projects/mindly/brandbook/6.png"
+                src="/projects/mindly/brandbook/6.webp"
                 alt="brandbook-image"
                 className={styles.mindly__palette__brandbook_image}
               />
@@ -150,24 +150,24 @@ const Mindly = () => {
 
             <div className={styles.mindly__palette__brandbook_row3}>
               <img
-                src="/projects/mindly/brandbook/7.png"
+                src="/projects/mindly/brandbook/7.webp"
                 alt="brandbook-image"
                 className={styles.mindly__palette__brandbook_image}
               />
               <img
-                src="/projects/mindly/brandbook/8.png"
+                src="/projects/mindly/brandbook/8.webp"
                 alt="brandbook-image"
                 className={styles.mindly__palette__brandbook_image}
               />
               <img
-                src="/projects/mindly/brandbook/9.png"
+                src="/projects/mindly/brandbook/9.webp"
                 alt="brandbook-image"
                 className={styles.mindly__palette__brandbook_image}
               />
             </div>
           </div>
           <img
-            src="/projects/mindly/brandbook/leaf.png"
+            src="/projects/mindly/brandbook/leaf.webp"
             alt="mindly-leaf"
             className={styles.mindly__palette__brandbook_leaf}
           />
@@ -187,30 +187,30 @@ const Mindly = () => {
           </div>
           <div className={styles.mindly__adaptive__mob}>
             <img
-              src="/projects/mindly/mindly_mobile1.png"
+              src="/projects/mindly/mindly_mobile1.webp"
               alt="mindly-adaptive"
             />
             <img
-              src="/projects/mindly/mindly_mobile1.1.png"
+              src="/projects/mindly/mindly_mobile1.1.webp"
               alt="mindly-adaptive"
             />
             <img
-              src="/projects/mindly/mindly_mobile2.png"
+              src="/projects/mindly/mindly_mobile2.webp"
               alt="mindly-adaptive"
             />
             <img
-              src="/projects/mindly/mindly_mobile3.png"
+              src="/projects/mindly/mindly_mobile3.webp"
               alt="mindly-adaptive"
             />
             <img
-              src="/projects/mindly/mindly_mobile4.png"
+              src="/projects/mindly/mindly_mobile4.webp"
               alt="mindly-adaptive"
             />
           </div>
           <div className={styles.mindly__adaptive__images}>
-            <img src="/projects/mindly/prod-1.png" alt="mindly-adaptive" />
-            <img src="/projects/mindly/prod-2.png" alt="mindly-adaptive" />
-            <img src="/projects/mindly/prod-3.png" alt="mindly-adaptive" />
+            <img src="/projects/mindly/prod-1.webp" alt="mindly-adaptive" />
+            <img src="/projects/mindly/prod-2.webp" alt="mindly-adaptive" />
+            <img src="/projects/mindly/prod-3.webp" alt="mindly-adaptive" />
           </div>
         </div>
         <Separator />
@@ -254,9 +254,9 @@ const Mindly = () => {
             </div>
           </div>
           <div className={styles.mindly__adaptive__instagramMobile}>
-            <img src="/projects/mindly/smm_mobile1.png" alt="instagram post" />
-            <img src="/projects/mindly/smm_mobile2.png" alt="instagram post" />
-            <img src="/projects/mindly/smm_mobile3.png" alt="instagram post" />
+            <img src="/projects/mindly/smm_mobile1.webp" alt="instagram post" />
+            <img src="/projects/mindly/smm_mobile2.webp" alt="instagram post" />
+            <img src="/projects/mindly/smm_mobile3.webp" alt="instagram post" />
           </div>
           <div className={styles.mindly__adaptive__instagram} />
         </div>

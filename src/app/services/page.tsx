@@ -34,47 +34,7 @@ const Services = () => {
             услуги
           </motion.div>
           <Separator />
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ amount: 0.2, once: true }}
-            className={styles.services__preview}
-          >
-            <motion.div
-              variants={textAnimation}
-              custom={1}
-              className={styles.services__preview__title}
-            >
-              превью
-            </motion.div>
-            <motion.ul
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ amount: 0.2, once: true }}
-              className={styles.services__preview__links}
-            >
-              <motion.li
-                variants={textAnimation}
-                custom={2}
-                className={styles.services__preview__links_title}
-              >
-                название услуги
-              </motion.li>
-              <Separator />
-              {SERVICES.map((serv, index) => (
-                <React.Fragment key={serv.title}>
-                  <motion.li
-                    variants={textAnimation}
-                    custom={index + 2}
-                    className={styles.services__preview__links_link}
-                  >
-                    <a href={`#${serv.href}`}>{serv.title}</a>
-                  </motion.li>
-                  <Separator />
-                </React.Fragment>
-              ))}
-            </motion.ul>
-          </motion.div>
+
           <Separator />
           <div className={styles.services__projects}>
             {SERVICE.map(({ title, description, points, href }) => (

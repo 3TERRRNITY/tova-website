@@ -9,7 +9,7 @@
     width: 100%;
     height: 100vh;
 
-    background-image: url(../../public/projects/vademkum/vanderkum-hero.png);
+    background-image: url(../../public/projects/vademkum/vanderkum-hero.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -203,21 +203,21 @@
 
       &_img1 {
         grid-column: 1/3;
-        background-image: url(../../public/projects/vademkum/vanderkum-main_page1.png);
+        background-image: url(../../public/projects/vademkum/vanderkum-main_page1.webp);
       }
 
       &_img2 {
         grid-row: 2;
-        background-image: url(../../public/projects/vademkum/vanderkum-main_page2.png);
+        background-image: url(../../public/projects/vademkum/vanderkum-main_page2.webp);
       }
       &_img3 {
         grid-row: 2;
-        background-image: url(../../public/projects/vademkum/vanderkum-main_page3.png);
+        background-image: url(../../public/projects/vademkum/vanderkum-main_page3.webp);
       }
       &_img4 {
         grid-row: 3;
         grid-column: 1/3;
-        background-image: url(../../public/projects/vademkum/vanderkum-main_page4.png);
+        background-image: url(../../public/projects/vademkum/vanderkum-main_page4.webp);
       }
     }
   }
@@ -279,16 +279,16 @@
 
       &_img1 {
         grid-column: 1/3;
-        background-image: url(../../public/projects/vademkum/vanderkum-shop1.png);
+        background-image: url(../../public/projects/vademkum/vanderkum-shop1.webp);
       }
 
       &_img2 {
         grid-row: 2;
-        background-image: url(../../public/projects/vademkum/vanderkum-shop2.png);
+        background-image: url(../../public/projects/vademkum/vanderkum-shop2.webp);
       }
       &_img3 {
         grid-row: 2;
-        background-image: url(../../public/projects/vademkum/vanderkum-shop3.png);
+        background-image: url(../../public/projects/vademkum/vanderkum-shop3.webp);
       }
     }
   }

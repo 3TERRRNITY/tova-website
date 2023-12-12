@@ -151,12 +151,12 @@
       width: 100%;
       height: clamp(8.9375rem, 0rem + 29.7917vw, 35.75rem);
 
-      background-image: url(../../public/projects/rambam/rambam1.png);
+      background-image: url(../../public/projects/rambam/rambam1.webp);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
       @media (max-width: 480px) {
-        background-image: url(../../public/projects/rambam/rambam_mobile1.png);
+        background-image: url(../../public/projects/rambam/rambam_mobile1.webp);
         height: 210px;
       }
     }
@@ -164,12 +164,12 @@
       width: 100%;
       height: clamp(9.5625rem, 0rem + 31.875vw, 38.25rem);
 
-      background-image: url(../../public/projects/rambam/rambam2.png);
+      background-image: url(../../public/projects/rambam/rambam2.webp);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
       @media (max-width: 480px) {
-        background-image: url(../../public/projects/rambam/rambam_mobile2.png);
+        background-image: url(../../public/projects/rambam/rambam_mobile2.webp);
         height: 522px;
       }
     }
