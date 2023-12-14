@@ -212,7 +212,7 @@ const Mindly = () => {
           </div>
         </div>
         <div className={styles.mindly__adaptive__images}>
-          <img src="/projects/mindly/prod-1.webp" alt="mindly-adaptive" />
+          <img src="/projects/mindly/mindly-jars.webp" alt="mindly-adaptive" />
           <img src="/projects/mindly/prod-2.webp" alt="mindly-adaptive" />
           <img src="/projects/mindly/prod-3.webp" alt="mindly-adaptive" />
         </div>
@@ -234,7 +234,14 @@ const Mindly = () => {
         </div>
       </div>
 
-      <div className={styles.mindly__adaptive__imagesMobile} />
+      <img
+        src="/projects/mindly/mindly-adaptive_new.webp"
+        className={styles.mindly__adaptive__imagesMobile}
+      />
+      <img
+        src="/projects/mindly/mindly_adaptive_mob.webp"
+        className={styles.mindly__adaptive__imagesMobile_small}
+      />
       <div className={styles.mindly}>
         <Separator />
 

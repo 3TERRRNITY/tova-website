@@ -113,15 +113,16 @@ const Vademecum = () => {
               красоту
             </div>
           </div>
-          <div className={styles.vademecum__mainPage__image}>
-            <Image
-              src="/projects/vademkum/vademcum-mainPage.webp"
-              alt="main-page"
-              fill
-              className={styles.vademecum__mainPage__image_img}
-            />
-          </div>
         </div>
+      </div>
+      <div className={styles.vademecum__mainPage__image}>
+        <img
+          src="/projects/vademkum/vademcum-mainPage.png"
+          alt="main-page"
+          className={styles.vademecum__mainPage__image_img}
+        />
+      </div>
+      <div className={styles.vademecum__about}>
         <Separator />
         <div className={styles.vademecum__mainPage}>
           <div className={styles.vademecum__mainPage__info}>
