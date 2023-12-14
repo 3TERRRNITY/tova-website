@@ -16,7 +16,7 @@
     background-repeat: no-repeat;
 
     @media (max-width: 480px) {
-      display: none;
+      background-image: url(../../public/projects/avivir/avivir-mob.webp);
     }
   }
   &__about {

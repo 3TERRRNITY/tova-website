@@ -20,7 +20,7 @@
     overflow: hidden;
     position: relative;
     @media (max-width: 480px) {
-      display: none;
+      background-image: url(../../public/projects/mindly/mindly-mob.webp);
     }
     &_element1 {
       position: absolute;
