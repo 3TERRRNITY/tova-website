@@ -39,28 +39,7 @@ export default function Home() {
       return updatedPositions;
     });
   };
-  // const [hoverPositions, setHoverPositions] = useState(
-  //   Array(SERVICES.length).fill({ x: 0, y: 0 })
-  // );
 
-  // const handleMouseMove = (
-  //   index: number,
-  //   e: React.MouseEvent<HTMLDivElement>
-  // ) => {
-  //   const boundingRect = e.currentTarget.getBoundingClientRect();
-  //   const x = e.clientX - boundingRect.left;
-  //   const y = e.clientY - boundingRect.top;
-
-  //   const updatedHoverPositions = [...hoverPositions];
-  //   updatedHoverPositions[index] = { x, y };
-  //   setHoverPositions(updatedHoverPositions);
-  // };
-
-  // const resetHoverPosition = (index: number) => {
-  //   const updatedHoverPositions = [...hoverPositions];
-  //   updatedHoverPositions[index] = { x: 0, y: 0 };
-  //   setHoverPositions(updatedHoverPositions);
-  // };
   return (
     <div className={commonStyles.mainPageBody}>
       <div className={styles.hero}>
@@ -121,7 +100,7 @@ export default function Home() {
             </Link>
           ))}
         </div>
-
+        {/* DEV: старый вариант без неонового курсора */}
         {/* <div className={styles.services__serviceGrid}>
           {SERVICES.map((service) => (
             <Link
