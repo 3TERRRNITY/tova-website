@@ -270,6 +270,9 @@
       }
       &_image3 {
         background-image: url(../../public/projects/avivir/avivir-adaptive-3.webp);
+
+        background-size: cover;
+        border-radius: 15px;
       }
     }
   }
@@ -505,6 +508,7 @@
       justify-content: end;
       z-index: 10;
       opacity: 0;
+      pointer-events: none;
 
       &_title {
         @include h3Title;

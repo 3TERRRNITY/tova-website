@@ -38,7 +38,7 @@ const page = () => {
     <div className={commonStyles.otherPageBody}>
       <Header white />
       <div className={styles.rambam__hero}>
-        <video src="/projects/rambam/rambam_main.mp4" autoPlay loop />
+        <video src="/projects/rambam/rambam_main.mp4" autoPlay />
       </div>
       <div className={styles.rambam}>
         <div className={styles.rambam__about}>
@@ -145,7 +145,7 @@ const page = () => {
               className={styles.rambam__mainPage__colors_img1}
             />
             <img
-              src="/projects/rambam/rambam4.webp"
+              src="/projects/rambam/rambam4.png"
               alt="colors"
               className={styles.rambam__mainPage__colors_img2}
             />
@@ -166,12 +166,12 @@ const page = () => {
           </div>
           <div className={styles.rambam__mainPage__typography}>
             <img
-              src="/projects/rambam/rambam5.webp"
+              src="/projects/rambam/rambam5.png"
               alt="colors"
               className={styles.rambam__mainPage__typography_img1}
             />
             <img
-              src="/projects/rambam/rambam6.webp"
+              src="/projects/rambam/rambam6.png"
               alt="colors"
               className={styles.rambam__mainPage__typography_img2}
             />
@@ -192,12 +192,12 @@ const page = () => {
           </div>
           <div className={styles.rambam__mainPage__firm}>
             <img
-              src="/projects/rambam/rambam7.webp"
+              src="/projects/rambam/rambam7.png"
               alt="colors"
               className={styles.rambam__mainPage__firm_img1}
             />
             <img
-              src="/projects/rambam/rambam8.webp"
+              src="/projects/rambam/rambam8.png"
               alt="colors"
               className={styles.rambam__mainPage__firm_img2}
             />

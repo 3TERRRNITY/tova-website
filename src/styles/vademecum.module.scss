@@ -18,7 +18,7 @@
     padding: $space-80 $space-40 0 $space-40;
     position: relative;
     @media (max-width: 480px) {
-      padding: 100px 20px 90px 20px;
+      padding: 100px 20px 0 20px;
     }
     &__circle {
       position: absolute;
@@ -164,9 +164,19 @@
 
     &__image {
       position: relative;
-      height: clamp(27.0625rem, 0.0208rem + 90.1389vw, 108.1875rem);
-      @media (max-width: 480px) {
-        height: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 100%;
+        height: auto;
+
+        object-fit: contain;
+        @media (max-width: 480px) {
+          object-fit: cover;
+
+          height: 1000px;
+        }
       }
     }
 

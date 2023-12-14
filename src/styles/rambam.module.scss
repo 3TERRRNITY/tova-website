@@ -224,7 +224,7 @@
       column-gap: $space-20;
       img {
         width: 100%;
-        height: clamp(12.25rem, 0.0208rem + 40.7639vw, 48.9375rem);
+        height: auto;
 
         @media (max-width: 480px) {
           width: 100%;
