@@ -108,6 +108,7 @@ const Projects = () => {
                   className={styles.projects__project__cards}
                 >
                   <Card
+                    href={proj.title.toLowerCase()}
                     image={proj.img}
                     description={proj.description}
                     title={proj.title}
@@ -120,6 +121,7 @@ const Projects = () => {
                     viewport={{ once: true }}
                   >
                     <Card
+                      href={proj.title.toLowerCase()}
                       secondImage={proj.secondImage}
                       image={proj.img}
                       animation={true}

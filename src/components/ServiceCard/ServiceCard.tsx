@@ -65,6 +65,7 @@ const ServiceCard = ({ title, description, points, href }: IService) => {
         {filteredProjects.map((project) => (
           <React.Fragment key={project.title}>
             <Card
+              href={project.title.toLowerCase()}
               image={project.img}
               description={project.description}
               title={project.title}

@@ -13,7 +13,7 @@ import { Separator } from "../../components/Separator/Separator";
 import Footer from "../../components/Footer/Footer";
 
 const About = () => {
-  const Departaments = DEPARTAMENTS.map(({ title, description }) => (
+  const Departaments = DEPARTAMENTS.map(({ title, description }, index) => (
     <React.Fragment key={title}>
       <motion.div
         className={styles.about__team__departaments__departament}
@@ -39,7 +39,7 @@ const About = () => {
           </motion.div>
         ))}
       </motion.div>
-      <Separator />
+      {index !== DEPARTAMENTS.length - 1 && <Separator />}
     </React.Fragment>
   ));
   return (

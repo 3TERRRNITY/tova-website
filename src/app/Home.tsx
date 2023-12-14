@@ -75,7 +75,12 @@ export default function Home() {
               description: string;
               title: string;
             }) => (
-              <Card image={img} title={title} description={description} />
+              <Card
+                href={title.toLowerCase()}
+                image={img}
+                title={title}
+                description={description}
+              />
             )
           )}
         </div>
