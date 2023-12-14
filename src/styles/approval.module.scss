@@ -14,7 +14,7 @@
       object-fit: contain;
     }
     @media (max-width: 480px) {
-      display: none;
+      background-image: url(../../public/projects/approval/approval-mob.webp);
     }
   }
   &__about {

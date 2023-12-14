@@ -1,9 +1,6 @@
 @import "./mixins.scss";
 @import "./variable.scss";
 
-// TODO: сделать флюидным
-// TODO: сделать однотипное миксинами
-
 .vademecum {
   &__hero {
     width: 100%;
@@ -14,7 +11,7 @@
     background-position: center;
     background-repeat: no-repeat;
     @media (max-width: 480px) {
-      display: none;
+      background-image: url(../../public/projects/vademkum/vdm-mob.webp);
     }
   }
   &__about {
