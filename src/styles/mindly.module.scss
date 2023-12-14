@@ -173,13 +173,14 @@
       }
     }
     &__brandbook {
-      height: clamp(19.75rem, 0.0208rem + 65.7639vw, 78.9375rem);
+      height: clamp(19.75rem, 0.0208rem + 65.7639vw, 150.9375rem);
       width: 100%;
       background-image: url(../../public/projects/mindly/brandbook/фон.webp);
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-
+      position: relative;
+      padding: 0 $space-40;
       display: grid;
       grid-template-rows: repeat(3, 1fr);
       gap: $space-20;
@@ -188,8 +189,9 @@
       }
       &_image {
         width: 100%;
-        height: 280px;
+        height: auto;
         cursor: pointer;
+        object-fit: cover;
       }
 
       &_row1,
@@ -220,10 +222,9 @@
 
       &_leaf {
         position: absolute;
-        top: clamp(18.75rem, 0.0208rem + 62.4306vw, 74.9375rem);
-        left: -40px;
-        width: clamp(10.375rem, 0rem + 34.5833vw, 41.5rem);
-        height: clamp(8.25rem, 0rem + 27.5vw, 33rem);
+        top: 20%;
+        width: clamp(10.375rem, 0rem + 34.5833vw, 50.5rem);
+        height: clamp(8.25rem, 0rem + 27.5vw, 40rem);
         pointer-events: none;
         @media (max-width: 480px) {
           display: none;
@@ -309,21 +310,22 @@
 
       @media (max-width: 480px) {
         padding: 0;
-        height: 300px;
+
         width: 100%;
       }
     }
 
     &__imagesDesktop {
-      background-image: url(../../public/projects/mindly/desktop.webp);
+      background-image: url(../../public/projects/mindly/desktop.png);
       background-position: center;
       background-size: contain;
-      height: clamp(36.4375rem, 0.0417rem + 121.3194vw, 145.625rem);
+      width: 100%;
+      height: clamp(36.4375rem, 0.0417rem + 130.3194vw, 180.625rem);
       background-repeat: no-repeat;
       padding-bottom: $space-100;
       @media (max-width: 480px) {
         padding: 0;
-        height: 300px;
+
         width: 100%;
       }
     }
@@ -354,6 +356,129 @@
     }
   }
 
+  &__examples {
+    padding: $space-80 0 0 0;
+    position: relative;
+    overflow: hidden;
+    @media (max-width: 480px) {
+      padding: 40px 0 50px 0;
+    }
+    &__info {
+      text-transform: lowercase;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $space-20;
+
+      padding: 0 0 $space-80 0;
+      @media (max-width: 480px) {
+        padding: 0 0 40px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      &_title {
+        @include h3Title;
+        font-weight: 600;
+
+        @media (max-width: 480px) {
+          font-size: 20px;
+          line-height: 26px;
+        }
+      }
+
+      &_description {
+        @include paragraph;
+        font-weight: 400;
+        @media (max-width: 480px) {
+          font-size: 16px;
+          line-height: 20.8px;
+        }
+      }
+    }
+    &__mob {
+      display: none;
+      @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+    &__images {
+      display: flex;
+      flex-direction: column;
+      gap: $space-20;
+      padding-bottom: $space-100;
+      img {
+        width: 100%;
+        height: clamp(14.5625rem, -0.0208rem + 48.6111vw, 58.3125rem);
+      }
+
+      @media (max-width: 480px) {
+        display: none;
+      }
+    }
+
+    &__imagesMobile {
+      background-image: url(../../public/projects/mindly/adaptive.webp);
+      background-position: center;
+      background-size: contain;
+      height: clamp(36.4375rem, 0.0417rem + 121.3194vw, 145.625rem);
+      background-repeat: no-repeat;
+      padding-bottom: $space-100;
+
+      @media (max-width: 480px) {
+        padding: 0;
+        height: 300px;
+        width: 100%;
+      }
+    }
+
+    &__imagesDesktop {
+      background-image: url(../../public/projects/mindly/desktop.webp);
+      background-position: center;
+      background-size: contain;
+      height: clamp(36.4375rem, 0.0417rem + 121.3194vw, 150.625rem);
+      background-repeat: no-repeat;
+      padding-bottom: $space-100;
+      @media (max-width: 480px) {
+        padding: 0;
+        height: 300px;
+        width: 100%;
+      }
+    }
+    &__instagramMobile {
+      display: none;
+      @media (max-width: 480px) {
+        background-image: url(../../public/projects/mindly/smm-background.webp);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 50px 20px;
+      }
+    }
+    &__instagram {
+      background-image: url(../../public/projects/mindly/smm.webp);
+      background-position: center;
+      background-size: contain;
+      width: 100%;
+      height: clamp(19.5625rem, 0.0417rem + 65.0694vw, 150.125rem);
+      background-repeat: no-repeat;
+      padding-bottom: $space-100;
+      @media (max-width: 480px) {
+        display: none;
+      }
+    }
+  }
+
   &__team {
     padding: 0 $space-40 clamp(3.3125rem, 0.0208rem + 10.9722vw, 13.1875rem)
       $space-40;
@@ -362,7 +487,7 @@
     justify-content: center;
     align-items: center;
     @media (max-width: 480px) {
-      padding: 0 0 100px 0;
+      padding: 80px 0 100px 0;
       justify-content: flex-start;
       align-items: flex-start;
     }

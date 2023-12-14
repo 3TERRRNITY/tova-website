@@ -8,12 +8,14 @@ export default function Card({
   title,
   description,
   animation = true,
+  href,
   image,
   secondImage,
 }: {
   title: string;
   description: string;
   animation?: boolean;
+  href: string;
   image: string;
   secondImage?: string;
 }) {
@@ -45,7 +47,7 @@ export default function Card({
     setCardHeight(heightRef.current?.clientHeight ?? 0);
   }, [cardHeight]);
   return (
-    <Link href={`/${title.toLowerCase()}`} className={styles.projects__link}>
+    <Link href={href} className={styles.projects__link}>
       <motion.div
         className={styles.projects__card}
         onHoverStart={handleHover}

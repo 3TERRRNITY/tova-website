@@ -22,15 +22,6 @@ export const IMAGES: ILogos[] = [
 ];
 export const PROJECTS: IProjects[] = [
   {
-    title: "Avivir",
-    img: "/main/avivir.webp",
-    secondImage: "/projects/projects_avivir.png",
-    description:
-      "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
-    id: ["webdev", "brand", "graphic", "smm", "marketing", "other"],
-    category: "брендинг, веб-разработка, графический дизайн, smm",
-  },
-  {
     title: "Aimi",
     img: "/main/aimi.webp",
     secondImage: "/projects/projects_aimi.png",
@@ -47,6 +38,15 @@ export const PROJECTS: IProjects[] = [
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
     id: ["smm", "marketing", "other"],
     category: "веб-разработка",
+  },
+  {
+    title: "Avivir",
+    img: "/main/avivir.webp",
+    secondImage: "/projects/projects_avivir.png",
+    description:
+      "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
+    id: ["webdev", "brand", "graphic", "smm", "marketing", "other"],
+    category: "брендинг, веб-разработка, графический дизайн, smm",
   },
   {
     title: "frenchi",
