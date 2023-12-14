@@ -110,68 +110,71 @@ const Mindly = () => {
             </div>
           </div>
           <Lottie animationData={Palette} />
-          <div className={styles.mindly__palette__brandbookMobile} />
-          <div className={styles.mindly__palette__brandbook}>
-            <div className={styles.mindly__palette__brandbook_row1}>
-              <img
-                src="/projects/mindly/brandbook/1.webp"
-                alt="brandbook-image"
-                className={styles.mindly__palette__brandbook_image}
-              />
-              <img
-                src="/projects/mindly/brandbook/2.webp"
-                alt="brandbook-image"
-                className={styles.mindly__palette__brandbook_image}
-              />
-              <img
-                src="/projects/mindly/brandbook/3.webp"
-                alt="brandbook-image"
-                className={styles.mindly__palette__brandbook_image}
-              />
-            </div>
-
-            <div className={styles.mindly__palette__brandbook_row2}>
-              <img
-                src="/projects/mindly/brandbook/4.webp"
-                alt="brandbook-image"
-                className={styles.mindly__palette__brandbook_image}
-              />
-              <img
-                src="/projects/mindly/brandbook/5.webp"
-                alt="brandbook-image"
-                className={styles.mindly__palette__brandbook_image}
-              />
-              <img
-                src="/projects/mindly/brandbook/6.webp"
-                alt="brandbook-image"
-                className={styles.mindly__palette__brandbook_image}
-              />
-            </div>
-
-            <div className={styles.mindly__palette__brandbook_row3}>
-              <img
-                src="/projects/mindly/brandbook/7.webp"
-                alt="brandbook-image"
-                className={styles.mindly__palette__brandbook_image}
-              />
-              <img
-                src="/projects/mindly/brandbook/8.webp"
-                alt="brandbook-image"
-                className={styles.mindly__palette__brandbook_image}
-              />
-              <img
-                src="/projects/mindly/brandbook/9.webp"
-                alt="brandbook-image"
-                className={styles.mindly__palette__brandbook_image}
-              />
-            </div>
-          </div>
+        </div>
+      </div>
+      <div className={styles.mindly__palette__brandbookMobile} />
+      <div className={styles.mindly__palette__brandbook}>
+        <div className={styles.mindly__palette__brandbook_row1}>
           <img
-            src="/projects/mindly/brandbook/leaf.webp"
-            alt="mindly-leaf"
-            className={styles.mindly__palette__brandbook_leaf}
+            src="/projects/mindly/brandbook/1.webp"
+            alt="brandbook-image"
+            className={styles.mindly__palette__brandbook_image}
+          />
+          <img
+            src="/projects/mindly/brandbook/2.webp"
+            alt="brandbook-image"
+            className={styles.mindly__palette__brandbook_image}
+          />
+          <img
+            src="/projects/mindly/brandbook/3.webp"
+            alt="brandbook-image"
+            className={styles.mindly__palette__brandbook_image}
           />
         </div>
+
+        <div className={styles.mindly__palette__brandbook_row2}>
+          <img
+            src="/projects/mindly/brandbook/4.webp"
+            alt="brandbook-image"
+            className={styles.mindly__palette__brandbook_image}
+          />
+          <img
+            src="/projects/mindly/brandbook/5.webp"
+            alt="brandbook-image"
+            className={styles.mindly__palette__brandbook_image}
+          />
+          <img
+            src="/projects/mindly/brandbook/6.webp"
+            alt="brandbook-image"
+            className={styles.mindly__palette__brandbook_image}
+          />
+        </div>
+
+        <div className={styles.mindly__palette__brandbook_row3}>
+          <img
+            src="/projects/mindly/brandbook/7.webp"
+            alt="brandbook-image"
+            className={styles.mindly__palette__brandbook_image}
+          />
+          <img
+            src="/projects/mindly/brandbook/8.webp"
+            alt="brandbook-image"
+            className={styles.mindly__palette__brandbook_image}
+          />
+          <img
+            src="/projects/mindly/brandbook/9.webp"
+            alt="brandbook-image"
+            className={styles.mindly__palette__brandbook_image}
+          />
+        </div>
+        <img
+          src="/projects/mindly/brandbook/leaf.webp"
+          alt="mindly-leaf"
+          className={styles.mindly__palette__brandbook_leaf}
+        />
+      </div>
+
+      <div className={styles.mindly}>
         <Lottie className={styles.mindly__palette__logo} animationData={Logo} />
         <Separator />
         <div className={styles.mindly__adaptive}>
@@ -207,13 +210,16 @@ const Mindly = () => {
               alt="mindly-adaptive"
             />
           </div>
-          <div className={styles.mindly__adaptive__images}>
-            <img src="/projects/mindly/prod-1.webp" alt="mindly-adaptive" />
-            <img src="/projects/mindly/prod-2.webp" alt="mindly-adaptive" />
-            <img src="/projects/mindly/prod-3.webp" alt="mindly-adaptive" />
-          </div>
         </div>
+        <div className={styles.mindly__adaptive__images}>
+          <img src="/projects/mindly/prod-1.webp" alt="mindly-adaptive" />
+          <img src="/projects/mindly/prod-2.webp" alt="mindly-adaptive" />
+          <img src="/projects/mindly/prod-3.webp" alt="mindly-adaptive" />
+        </div>
+      </div>
+      <div className={styles.mindly}>
         <Separator />
+
         <div className={styles.mindly__adaptive}>
           <div className={styles.mindly__adaptive__info}>
             <div className={styles.mindly__adaptive__info_title}>
@@ -225,9 +231,13 @@ const Mindly = () => {
               красоту
             </div>
           </div>
-          <div className={styles.mindly__adaptive__imagesMobile} />
         </div>
+      </div>
+
+      <div className={styles.mindly__adaptive__imagesMobile} />
+      <div className={styles.mindly}>
         <Separator />
+
         <div className={styles.mindly__adaptive}>
           <div className={styles.mindly__adaptive__info}>
             <div className={styles.mindly__adaptive__info_title}>
@@ -239,27 +249,34 @@ const Mindly = () => {
               красоту
             </div>
           </div>
-          <div className={styles.mindly__adaptive__imagesDesktop} />
         </div>
+      </div>
+      <div className={styles.mindly__adaptive__imagesDesktop} />
+      <div className={styles.mindly}>
         <Separator />
-        <div className={styles.mindly__adaptive}>
-          <div className={styles.mindly__adaptive__info}>
-            <div className={styles.mindly__adaptive__info_title}>
+
+        <div className={styles.mindly__examples}>
+          <div className={styles.mindly__examples__info}>
+            <div className={styles.mindly__examples__info_title}>
               адаптивный дизайн
             </div>
-            <div className={styles.mindly__adaptive__info_description}>
+            <div className={styles.mindly__examples__info_description}>
               Madaia – бренд одежды для повседневной жизни и спорта, идейным
               вдохновителем которого является бывшая побуждает ее творить
               красоту
             </div>
           </div>
-          <div className={styles.mindly__adaptive__instagramMobile}>
-            <img src="/projects/mindly/smm_mobile1.webp" alt="instagram post" />
-            <img src="/projects/mindly/smm_mobile2.webp" alt="instagram post" />
-            <img src="/projects/mindly/smm_mobile3.webp" alt="instagram post" />
-          </div>
-          <div className={styles.mindly__adaptive__instagram} />
         </div>
+      </div>
+
+      <div className={styles.mindly__examples__instagramMobile}>
+        <img src="/projects/mindly/smm_mobile1.webp" alt="instagram post" />
+        <img src="/projects/mindly/smm_mobile2.webp" alt="instagram post" />
+        <img src="/projects/mindly/smm_mobile3.webp" alt="instagram post" />
+      </div>
+      <div className={styles.mindly__examples__instagram} />
+
+      <div className={styles.mindly}>
         <div className={styles.mindly__team}>
           <div className={styles.mindly__team_title}>Над проектом работали</div>
           {team.map((member) => (
