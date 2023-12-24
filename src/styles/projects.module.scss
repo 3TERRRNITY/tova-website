@@ -30,19 +30,31 @@
       line-height: 26px;
       gap: 0;
     }
+
     &__option {
       padding: $space-20 $space-40;
       border: 1px solid #fff;
       cursor: pointer;
-      opacity: 0.5;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      transition: color 0.5s, background-color 0.5s;
+
       @media (max-width: 480px) {
         padding: 20px;
         border-left: none;
         border-right: none;
       }
 
+      &:hover {
+        color: black;
+        background-color: #fff;
+      }
+
       &_active {
-        opacity: 1;
+        color: black;
+        background-color: white;
       }
     }
   }
