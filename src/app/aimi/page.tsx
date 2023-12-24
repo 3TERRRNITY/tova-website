@@ -48,6 +48,9 @@ const Aimi = () => {
       <Header />
       <div className={commonStyles.projectContainer}>
         <div className={styles.aimi__hero} />
+        <div className={styles.aimi__hero_animationTop}>
+          <SplineAimi />
+        </div>
         <div className={styles.aimi__hero_animation}>
           <SplineAimi />
         </div>
