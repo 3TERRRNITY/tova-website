@@ -231,6 +231,7 @@
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+    overflow: hidden;
 
     @media (max-width: 480px) {
       width: 100%;
@@ -240,10 +241,10 @@
 
     &__cursor {
       position: absolute;
-      width: clamp(4.0625rem, 0rem + 6.875vw, 11.25rem);
-      height: clamp(4.0625rem, 0rem + 6.875vw, 11.25rem);
+      width: clamp(8.0625rem, 0rem + 6.875vw, 11.25rem);
+      height: clamp(8.0625rem, 0rem + 6.875vw, 11.25rem);
       border-radius: 50%;
-      background-color: rgb(255, 0, 0);
+      background-color: #fff;
       pointer-events: none;
       transition: all 0.3s ease;
       z-index: 999;
