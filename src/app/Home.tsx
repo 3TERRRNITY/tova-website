@@ -9,6 +9,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Slider from "../components/Slider/Slider";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const redirectToServicePage = (serviceTitle: string) => {
@@ -67,7 +68,7 @@ export default function Home() {
         <div className={styles.services__serviceGrid}>
           {SERVICES.map((service, index) => (
             <Link key={service.title} href={`/services#${service.href}`}>
-              <div
+              <motion.div
                 className={styles.services__card}
                 onMouseMove={(e) => handleMouseMove(index, e)}
                 onMouseLeave={() => resetHoverPosition(index)}
@@ -79,13 +80,18 @@ export default function Home() {
                   </div>
                   {hoverPosition[index]?.x !== undefined &&
                     hoverPosition[index]?.y !== undefined && (
-                      <div
+                      <motion.div
                         className={styles.services__card__cursor}
                         style={{
                           left: hoverPosition[index].x + "px",
                           top: hoverPosition[index].y + "px",
+                          position: "absolute",
                         }}
-                      ></div>
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0 }}
+                        transition={{ duration: 0.2, ease: "easeInOut" }}
+                      ></motion.div>
                     )}
                 </div>
                 <span className={styles.services__card__price}>
@@ -96,7 +102,7 @@ export default function Home() {
                   alt="service image"
                   className={styles.services__card__image}
                 />
-              </div>
+              </motion.div>
             </Link>
           ))}
         </div>

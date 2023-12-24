@@ -34,7 +34,6 @@ const Projects = () => {
       );
     }
 
-    // Перемешивание массива, если он не пустой
     if (newFilteredProjects.length > 0) {
       const shuffledProjects = newFilteredProjects;
       setFilteredProjects(shuffledProjects);
@@ -60,7 +59,7 @@ const Projects = () => {
               id={option.id}
               onClick={() => handleOptionClick(option.id)}
             >
-              {option.title}
+              <p>{option.title}</p>
             </div>
           ))}
         </div>
