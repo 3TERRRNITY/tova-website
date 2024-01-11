@@ -10,6 +10,7 @@ import Image from "next/image";
 import Slider from "../components/Slider/Slider";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import ServicesComponent from "../components/ServicesCard/ServicesCard";
 
 export default function Home() {
   const redirectToServicePage = (serviceTitle: string) => {
@@ -65,47 +66,9 @@ export default function Home() {
       <Slider />
       <div className={styles.services}>
         <div className={styles.services__title}>услуги</div>
-        <div className={styles.services__serviceGrid}>
-          {SERVICES.map((service, index) => (
-            <Link key={service.title} href={`/services#${service.href}`}>
-              <motion.div
-                className={styles.services__card}
-                onMouseMove={(e) => handleMouseMove(index, e)}
-                onMouseLeave={() => resetHoverPosition(index)}
-                style={{ position: "relative" }}
-              >
-                <div className={styles.services__card__info}>
-                  <div className={styles.services__card__info_title}>
-                    {service.title}
-                  </div>
-                  {hoverPosition[index]?.x !== undefined &&
-                    hoverPosition[index]?.y !== undefined && (
-                      <motion.div
-                        className={styles.services__card__cursor}
-                        style={{
-                          left: hoverPosition[index].x + "px",
-                          top: hoverPosition[index].y + "px",
-                          position: "absolute",
-                        }}
-                        initial={{ opacity: 0, scale: 0 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0 }}
-                        transition={{ duration: 0.2, ease: "easeInOut" }}
-                      ></motion.div>
-                    )}
-                </div>
-                <span className={styles.services__card__price}>
-                  {service.price}
-                </span>
-                <img
-                  src={service.image}
-                  alt="service image"
-                  className={styles.services__card__image}
-                />
-              </motion.div>
-            </Link>
-          ))}
-        </div>
+
+        <ServicesComponent />
+
         {/* DEV: старый вариант без неонового курсора */}
         {/* <div className={styles.services__serviceGrid}>
           {SERVICES.map((service) => (

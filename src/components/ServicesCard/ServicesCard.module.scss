@@ -1,0 +1,30 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variable.scss";
+
+.card {
+  height: $servicesCardHeight;
+  background-color: #1d1b1b;
+  padding: $space-20;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: 480px) {
+    width: 100%;
+    height: 215px;
+    padding: 10px;
+  }
+
+  img {
+    pointer-events: none;
+  }
+}
+
+[glow] .card {
+  background-color: white;
+  overflow: auto;
+  filter: blur(100px);
+  z-index: 999;
+}
