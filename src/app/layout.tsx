@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.scss";
-import Footer from "../components/Footer/Footer";
+
 import Navbar from "../components/Navbar/Navbar";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "TOVA",
   description: "Про дизайн",
+  icons: "/favicons/favicon.ico",
 };
 
 export default function RootLayout({
