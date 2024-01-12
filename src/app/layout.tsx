@@ -3,6 +3,7 @@ import "./globals.scss";
 
 import Navbar from "../components/Navbar/Navbar";
 import Head from "next/head";
+import Cursor from "../components/Cursor/Cursor";
 
 export const metadata: Metadata = {
   title: "TOVA",
@@ -18,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en" style={{ scrollBehavior: "smooth" }}>
       <body suppressHydrationWarning={true}>
+        <Cursor />
         <Navbar />
+
         {children}
       </body>
     </html>

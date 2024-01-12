@@ -46,6 +46,7 @@ export default function Card({
   useEffect(() => {
     setCardHeight(heightRef.current?.clientHeight ?? 0);
   }, [cardHeight]);
+
   return (
     <Link href={href} className={styles.projects__link}>
       <motion.div
