@@ -8,7 +8,7 @@ interface IButtonProps {
 
 const Button = ({ isActive, setIsActive }: IButtonProps) => {
   return (
-    <div
+    <a
       onClick={() => {
         setIsActive(!isActive);
       }}
@@ -26,7 +26,7 @@ const Button = ({ isActive, setIsActive }: IButtonProps) => {
           <PerspectiveText label="Close" />
         </div>
       </motion.div>
-    </div>
+    </a>
   );
 };
 

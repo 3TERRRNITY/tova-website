@@ -1,0 +1,13 @@
+.custom_cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid grey;
+  background-color: transparent;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}

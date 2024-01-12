@@ -13,6 +13,7 @@ import Lottie from "lottie-react";
 import emptyAnimation from "../../../public/animations/empty.json";
 import { motion } from "framer-motion";
 import { textAnimation } from "../../common/animations";
+import Link from "next/link";
 
 const Projects = () => {
   const [selectedOption, setSelectedOption] = useState<string>("all");
@@ -49,7 +50,7 @@ const Projects = () => {
         <div className={styles.projects__title}>проекты</div>
         <div className={styles.projects__select}>
           {OPTIONS.map((option) => (
-            <div
+            <a
               key={option.title}
               className={`${styles.projects__select__option} ${
                 selectedOption === option.id
@@ -60,7 +61,7 @@ const Projects = () => {
               onClick={() => handleOptionClick(option.id)}
             >
               <p>{option.title}</p>
-            </div>
+            </a>
           ))}
         </div>
         <Separator />
@@ -122,6 +123,7 @@ const Projects = () => {
                   </motion.div>
                 </motion.div>
               </div>
+
               <Separator />
             </React.Fragment>
           ))}
