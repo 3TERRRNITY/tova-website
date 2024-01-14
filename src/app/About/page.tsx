@@ -11,6 +11,7 @@ import { DEPARTAMENTS, VACANCY } from "../../constants/constants";
 import { textAnimation } from "../../common/animations";
 import { Separator } from "../../components/Separator/Separator";
 import Footer from "../../components/Footer/Footer";
+import Cursor from "../../components/Cursor/Cursor";
 
 const About = () => {
   const Departaments = DEPARTAMENTS.map(({ title, description }, index) => (
@@ -44,6 +45,7 @@ const About = () => {
   ));
   return (
     <>
+      <Cursor />
       <Header white />
       <Navbar />
       <motion.div

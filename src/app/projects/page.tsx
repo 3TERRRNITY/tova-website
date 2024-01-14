@@ -14,6 +14,7 @@ import emptyAnimation from "../../../public/animations/empty.json";
 import { motion } from "framer-motion";
 import { textAnimation } from "../../common/animations";
 import Link from "next/link";
+import Cursor from "../../components/Cursor/Cursor";
 
 const Projects = () => {
   const [selectedOption, setSelectedOption] = useState<string>("all");
@@ -44,102 +45,105 @@ const Projects = () => {
   }, [selectedOption]);
 
   return (
-    <div className={commonStyles.mainPageBody}>
-      <Header />
-      <div className={styles.projects}>
-        <div className={styles.projects__title}>проекты</div>
-        <div className={styles.projects__select}>
-          {OPTIONS.map((option) => (
-            <a
-              key={option.title}
-              className={`${styles.projects__select__option} ${
-                selectedOption === option.id
-                  ? styles.projects__select__option_active
-                  : ""
-              }`}
-              id={option.id}
-              onClick={() => handleOptionClick(option.id)}
-            >
-              <p>{option.title}</p>
-            </a>
-          ))}
-        </div>
-        <Separator />
+    <>
+      <Cursor />
+      <div className={commonStyles.mainPageBody}>
+        <Header />
+        <div className={styles.projects}>
+          <div className={styles.projects__title}>проекты</div>
+          <div className={styles.projects__select}>
+            {OPTIONS.map((option) => (
+              <a
+                key={option.title}
+                className={`${styles.projects__select__option} ${
+                  selectedOption === option.id
+                    ? styles.projects__select__option_active
+                    : ""
+                }`}
+                id={option.id}
+                onClick={() => handleOptionClick(option.id)}
+              >
+                <p>{option.title}</p>
+              </a>
+            ))}
+          </div>
+          <Separator />
 
-        {filteredProjects &&
-          filteredProjects.map((proj) => (
-            <React.Fragment key={proj.title}>
-              <div className={styles.projects__project}>
-                <div className={styles.projects__project__container}>
+          {filteredProjects &&
+            filteredProjects.map((proj) => (
+              <React.Fragment key={proj.title}>
+                <div className={styles.projects__project}>
+                  <div className={styles.projects__project__container}>
+                    <motion.div
+                      initial="hidden"
+                      whileInView="visible"
+                      variants={textAnimation}
+                      custom={1}
+                      viewport={{ amount: 0.2, once: true }}
+                      className={styles.projects__project__title}
+                    >
+                      {proj.title}
+                    </motion.div>
+                    <motion.div
+                      initial="hidden"
+                      whileInView="visible"
+                      variants={textAnimation}
+                      custom={2}
+                      viewport={{ amount: 0.2, once: true }}
+                      className={styles.projects_project__description}
+                    >
+                      {proj.category}
+                    </motion.div>
+                  </div>
                   <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    variants={textAnimation}
-                    custom={1}
-                    viewport={{ amount: 0.2, once: true }}
-                    className={styles.projects__project__title}
-                  >
-                    {proj.title}
-                  </motion.div>
-                  <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    variants={textAnimation}
-                    custom={2}
-                    viewport={{ amount: 0.2, once: true }}
-                    className={styles.projects_project__description}
-                  >
-                    {proj.category}
-                  </motion.div>
-                </div>
-                <motion.div
-                  initial="hidden"
-                  whileInView="visible"
-                  variants={textAnimation}
-                  viewport={{ once: true }}
-                  className={styles.projects__project__cards}
-                >
-                  <Card
-                    href={proj.title.toLowerCase()}
-                    image={proj.img}
-                    description={proj.description}
-                    title={proj.title}
-                  />
-                  <motion.div
-                    className={styles.projects__project__cards_deskCard}
                     initial="hidden"
                     whileInView="visible"
                     variants={textAnimation}
                     viewport={{ once: true }}
+                    className={styles.projects__project__cards}
                   >
                     <Card
                       href={proj.title.toLowerCase()}
-                      secondImage={proj.secondImage}
                       image={proj.img}
-                      animation={true}
-                      description={""}
-                      title={""}
+                      description={proj.description}
+                      title={proj.title}
                     />
+                    <motion.div
+                      className={styles.projects__project__cards_deskCard}
+                      initial="hidden"
+                      whileInView="visible"
+                      variants={textAnimation}
+                      viewport={{ once: true }}
+                    >
+                      <Card
+                        href={proj.title.toLowerCase()}
+                        secondImage={proj.secondImage}
+                        image={proj.img}
+                        animation={true}
+                        description={""}
+                        title={""}
+                      />
+                    </motion.div>
                   </motion.div>
-                </motion.div>
-              </div>
+                </div>
 
-              <Separator />
-            </React.Fragment>
-          ))}
-        {filteredProjects.length === 0 && (
-          <div className={styles.projects__emptyError}>
-            Пока пусто...
-            <Lottie
-              className={styles.projects__emptyError_animation}
-              animationData={emptyAnimation}
-            />
-          </div>
-        )}
+                <Separator />
+              </React.Fragment>
+            ))}
+          {filteredProjects.length === 0 && (
+            <div className={styles.projects__emptyError}>
+              Пока пусто...
+              <Lottie
+                className={styles.projects__emptyError_animation}
+                animationData={emptyAnimation}
+              />
+            </div>
+          )}
+        </div>
+
+        <Footer />
       </div>
-
-      <Footer />
-    </div>
+    </>
   );
 };
 

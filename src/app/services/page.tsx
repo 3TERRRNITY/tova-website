@@ -11,10 +11,12 @@ import { motion } from "framer-motion";
 import { textAnimation } from "../../common/animations";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import Cursor from "../../components/Cursor/Cursor";
 
 const Services = () => {
   return (
     <>
+      <Cursor />
       <Header white />
       <Navbar />
       <div className={commonStyles.otherPageBody}>

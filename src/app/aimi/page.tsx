@@ -16,6 +16,7 @@ import Graphic3 from "../../../public/projects/aimi/aimations/Graphic3.json";
 import Graphic4 from "../../../public/projects/aimi/aimations/Graphic4.json";
 import Carousel from "../../components/Carousel/Carousel";
 import SplineAimi from "../../components/SplineAimi/SplineAimi";
+import Cursor from "../../components/Cursor/Cursor";
 
 const Aimi = () => {
   const aboutPoints = [
@@ -44,209 +45,220 @@ const Aimi = () => {
     },
   ];
   return (
-    <div className={commonStyles.mainPageBody}>
-      <Header />
-      <div className={commonStyles.projectContainer}>
-        <div className={styles.aimi__hero} />
-        <div className={styles.aimi__hero_animationTop}>
-          <SplineAimi />
-        </div>
-        <div className={styles.aimi__hero_animation}>
-          <SplineAimi />
-        </div>
-
-        <div className={styles.aimi__about}>
-          <div className={styles.aimi__about__head}>
-            <div className={styles.aimi__about__head_title}>О проекте</div>
-            <div className={styles.aimi__about__head_subtitle}>
-              {aboutPoints.map((point) => (
-                <div key={point} className={styles.aimi__about__head_point}>
-                  <span>{point}</span>
-                </div>
-              ))}
-            </div>
+    <>
+      <Cursor />
+      <div className={commonStyles.mainPageBody}>
+        <Header />
+        <div className={commonStyles.projectContainer}>
+          <div className={styles.aimi__hero} />
+          <div className={styles.aimi__hero_animationTop}>
+            <SplineAimi />
           </div>
-          <div className={styles.aimi__about__description}>
-            <div className={styles.aimi__about__description__subtitle}>
-              <div
-                className={styles.aimi__about__description__subtitle_paragraph}
-              >
-                Madaia – бренд одежды для повседневной <br /> жизни и спорта,
-                идейным вдохновителем <br /> которого является бывшая
-              </div>
-              <div
-                className={styles.aimi__about__description__subtitle_paragraph}
-              >
-                побуждает ее творить красоту, бренд Madaia <br /> - результат
-                вдохновения. Madaia – <br />
-                бренд одежды для повседневной жизни и спорта
-              </div>
-            </div>
-            <div className={styles.aimi__about__description__subtitle_big}>
-              Madaia – бренд одежды для повседневной жизни и спорта, идейным
-              вдохновителем которого является бывшая побуждает ее творить
-              красоту, бренд Madaia - результат вдохновения. бренд одежды для
-              повседневной жизни и спорта
-            </div>
-          </div>
-        </div>
-        <Separator />
-        <div className={styles.aimi__mainPage}>
-          <div className={styles.aimi__mainPage__info}>
-            <div className={styles.aimi__mainPage__info_title}>
-              дизайн главной страницы сайта
-            </div>
-            <div className={styles.aimi__mainPage__info_description}>
-              Madaia – бренд одежды для повседневной жизни и спорта, идейным
-              вдохновителем которого является бывшая побуждает ее творить
-              красоту
-            </div>
-          </div>
-          <div className={styles.aimi__mainPage__images}>
-            <Lottie animationData={Logo} />
-            <Lottie animationData={Scheme1} />
-          </div>
-        </div>
-        <Separator />
-        <div className={styles.aimi__infographics}>
-          <div className={styles.aimi__infographics__info}>
-            <div className={styles.aimi__infographics__info_title}>
-              Инфографика
-            </div>
-            <div className={styles.aimi__infographics__info_description}>
-              Madaia – бренд одежды для повседневной жизни и спорта, идейным
-              вдохновителем которого является бывшая побуждает ее творить
-              красоту
-            </div>
-          </div>
-          <div className={styles.aimi__infographics__images}>
-            <span>Графики 1</span>
-            <div className={styles.aimi__infographics__images_container}>
-              <Lottie animationData={Graphic1} />
-              <Lottie animationData={Graphic2} />
-            </div>
-            <span>Графики 2</span>
-            <div className={styles.aimi__infographics__images_container}>
-              <Lottie animationData={Graphic3} />
-              <Lottie animationData={Graphic4} />
-            </div>
-          </div>
-        </div>
-        <Separator />
-        <div className={styles.aimi__firm}>
-          <div className={styles.aimi__firm__info}>
-            <div className={styles.aimi__firm__info_title}>
-              фирменные носители
-            </div>
-            <div className={styles.aimi__firm__info_description}>
-              Madaia – бренд одежды для повседневной жизни и спорта, идейным
-              вдохновителем которого является бывшая побуждает ее творить
-              красоту
-            </div>
+          <div className={styles.aimi__hero_animation}>
+            <SplineAimi />
           </div>
 
-          <div className={styles.aimi__firm__imageGridContainer}>
-            <img
-              className={styles.aimi__firm__imageGridContainer_image}
-              src="/projects/aimi/aimi_firm1.png"
-              alt="design"
-            />
-            <img
-              className={styles.aimi__firm__imageGridContainer_image}
-              src="/projects/aimi/aimi_firm2.png"
-              alt="design"
-            />
-            <img
-              className={styles.aimi__firm__imageGridContainer_imageBig}
-              src="/projects/aimi/aimi_firm3.png"
-              alt="design"
-            />
-          </div>
-        </div>
-        <Separator />
-        <div className={styles.aimi__typography}>
-          <div className={styles.aimi__typography__info}>
-            <div className={styles.aimi__typography__info_title}>
-              типография
-            </div>
-            <div className={styles.aimi__typography__info__example}>
-              <div className={styles.aimi__typography__info__example_title}>
-                muller
+          <div className={styles.aimi__about}>
+            <div className={styles.aimi__about__head}>
+              <div className={styles.aimi__about__head_title}>О проекте</div>
+              <div className={styles.aimi__about__head_subtitle}>
+                {aboutPoints.map((point) => (
+                  <div key={point} className={styles.aimi__about__head_point}>
+                    <span>{point}</span>
+                  </div>
+                ))}
               </div>
-              <div className={styles.aimi__typography__info__example_letters}>
+            </div>
+            <div className={styles.aimi__about__description}>
+              <div className={styles.aimi__about__description__subtitle}>
                 <div
-                  className={styles.aimi__typography__info__example_letters_rus}
+                  className={
+                    styles.aimi__about__description__subtitle_paragraph
+                  }
                 >
-                  Аа Бб Вв Гг Дд Ее Ёё Жж Зз Ии Йй Кк Лл Мм Нн Оо Пп Рр Сс Тт Уу
-                  Фф Хх Цц Чч Шш Щщ Ъъ Ыы Ьь Ээ Юю Яя
+                  Madaia – бренд одежды для повседневной <br /> жизни и спорта,
+                  идейным вдохновителем <br /> которого является бывшая
                 </div>
                 <div
-                  className={styles.aimi__typography__info__example_letters_en}
+                  className={
+                    styles.aimi__about__description__subtitle_paragraph
+                  }
                 >
-                  Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu
-                  Vv Ww Xx Yy Zz
+                  побуждает ее творить красоту, бренд Madaia <br /> - результат
+                  вдохновения. Madaia – <br />
+                  бренд одежды для повседневной жизни и спорта
+                </div>
+              </div>
+              <div className={styles.aimi__about__description__subtitle_big}>
+                Madaia – бренд одежды для повседневной жизни и спорта, идейным
+                вдохновителем которого является бывшая побуждает ее творить
+                красоту, бренд Madaia - результат вдохновения. бренд одежды для
+                повседневной жизни и спорта
+              </div>
+            </div>
+          </div>
+          <Separator />
+          <div className={styles.aimi__mainPage}>
+            <div className={styles.aimi__mainPage__info}>
+              <div className={styles.aimi__mainPage__info_title}>
+                дизайн главной страницы сайта
+              </div>
+              <div className={styles.aimi__mainPage__info_description}>
+                Madaia – бренд одежды для повседневной жизни и спорта, идейным
+                вдохновителем которого является бывшая побуждает ее творить
+                красоту
+              </div>
+            </div>
+            <div className={styles.aimi__mainPage__images}>
+              <Lottie animationData={Logo} />
+              <Lottie animationData={Scheme1} />
+            </div>
+          </div>
+          <Separator />
+          <div className={styles.aimi__infographics}>
+            <div className={styles.aimi__infographics__info}>
+              <div className={styles.aimi__infographics__info_title}>
+                Инфографика
+              </div>
+              <div className={styles.aimi__infographics__info_description}>
+                Madaia – бренд одежды для повседневной жизни и спорта, идейным
+                вдохновителем которого является бывшая побуждает ее творить
+                красоту
+              </div>
+            </div>
+            <div className={styles.aimi__infographics__images}>
+              <span>Графики 1</span>
+              <div className={styles.aimi__infographics__images_container}>
+                <Lottie animationData={Graphic1} />
+                <Lottie animationData={Graphic2} />
+              </div>
+              <span>Графики 2</span>
+              <div className={styles.aimi__infographics__images_container}>
+                <Lottie animationData={Graphic3} />
+                <Lottie animationData={Graphic4} />
+              </div>
+            </div>
+          </div>
+          <Separator />
+          <div className={styles.aimi__firm}>
+            <div className={styles.aimi__firm__info}>
+              <div className={styles.aimi__firm__info_title}>
+                фирменные носители
+              </div>
+              <div className={styles.aimi__firm__info_description}>
+                Madaia – бренд одежды для повседневной жизни и спорта, идейным
+                вдохновителем которого является бывшая побуждает ее творить
+                красоту
+              </div>
+            </div>
+
+            <div className={styles.aimi__firm__imageGridContainer}>
+              <img
+                className={styles.aimi__firm__imageGridContainer_image}
+                src="/projects/aimi/aimi_firm1.png"
+                alt="design"
+              />
+              <img
+                className={styles.aimi__firm__imageGridContainer_image}
+                src="/projects/aimi/aimi_firm2.png"
+                alt="design"
+              />
+              <img
+                className={styles.aimi__firm__imageGridContainer_imageBig}
+                src="/projects/aimi/aimi_firm3.png"
+                alt="design"
+              />
+            </div>
+          </div>
+          <Separator />
+          <div className={styles.aimi__typography}>
+            <div className={styles.aimi__typography__info}>
+              <div className={styles.aimi__typography__info_title}>
+                типография
+              </div>
+              <div className={styles.aimi__typography__info__example}>
+                <div className={styles.aimi__typography__info__example_title}>
+                  muller
+                </div>
+                <div className={styles.aimi__typography__info__example_letters}>
+                  <div
+                    className={
+                      styles.aimi__typography__info__example_letters_rus
+                    }
+                  >
+                    Аа Бб Вв Гг Дд Ее Ёё Жж Зз Ии Йй Кк Лл Мм Нн Оо Пп Рр Сс Тт
+                    Уу Фф Хх Цц Чч Шш Щщ Ъъ Ыы Ьь Ээ Юю Яя
+                  </div>
+                  <div
+                    className={
+                      styles.aimi__typography__info__example_letters_en
+                    }
+                  >
+                    Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt
+                    Uu Vv Ww Xx Yy Zz
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <Separator />
+          <Separator />
 
-        <div className={styles.aimi__smm}>
-          <div className={styles.aimi__smm__info}>
-            <div className={styles.aimi__smm__info_title}>smm</div>
-            <div className={styles.aimi__smm__info__images}>
-              <div className={styles.aimi__smm__info__images_image1} />
-              <div className={styles.aimi__smm__info__images_image2} />
-            </div>
-            <Carousel
-              width={315}
-              images={["/projects/aimi/smm1.png", "/projects/aimi/smm2.png"]}
-            />
-          </div>
-        </div>
-
-        <Separator />
-
-        <div className={styles.aimi__linkedin}>
-          <div className={styles.aimi__linkedin_title}>linkedin</div>
-          <div className={styles.aimi__linkedin__images}>
-            <div className={styles.aimi__linkedin__images_image1} />
-            <div className={styles.aimi__linkedin__images_image2} />
-            <div className={styles.aimi__linkedin__images_image3} />
-          </div>
-          <div className={styles.aimi__linkedin__slider}>
-            <Carousel
-              width={268}
-              images={[
-                "/projects/aimi/linkedin1.png",
-                "/projects/aimi/linkedin2.png",
-                "/projects/aimi/linkedin3.png",
-              ]}
-            />
-          </div>
-        </div>
-
-        <div className={styles.aimi__team}>
-          <div className={styles.aimi__team_title}>Над проектом работали</div>
-          {team.map((member) => (
-            <React.Fragment key={member.name}>
-              <div className={styles.aimi__team__member}>
-                <div className={styles.aimi__team__member_position}>
-                  {member.position}
-                </div>
-                <div className={styles.aimi__team__member_name}>
-                  {member.name}
-                </div>
+          <div className={styles.aimi__smm}>
+            <div className={styles.aimi__smm__info}>
+              <div className={styles.aimi__smm__info_title}>smm</div>
+              <div className={styles.aimi__smm__info__images}>
+                <div className={styles.aimi__smm__info__images_image1} />
+                <div className={styles.aimi__smm__info__images_image2} />
               </div>
-            </React.Fragment>
-          ))}
+              <Carousel
+                width={315}
+                images={["/projects/aimi/smm1.png", "/projects/aimi/smm2.png"]}
+              />
+            </div>
+          </div>
+
+          <Separator />
+
+          <div className={styles.aimi__linkedin}>
+            <div className={styles.aimi__linkedin_title}>linkedin</div>
+            <div className={styles.aimi__linkedin__images}>
+              <div className={styles.aimi__linkedin__images_image1} />
+              <div className={styles.aimi__linkedin__images_image2} />
+              <div className={styles.aimi__linkedin__images_image3} />
+            </div>
+            <div className={styles.aimi__linkedin__slider}>
+              <Carousel
+                width={268}
+                images={[
+                  "/projects/aimi/linkedin1.png",
+                  "/projects/aimi/linkedin2.png",
+                  "/projects/aimi/linkedin3.png",
+                ]}
+              />
+            </div>
+          </div>
+
+          <div className={styles.aimi__team}>
+            <div className={styles.aimi__team_title}>Над проектом работали</div>
+            {team.map((member) => (
+              <React.Fragment key={member.name}>
+                <div className={styles.aimi__team__member}>
+                  <div className={styles.aimi__team__member_position}>
+                    {member.position}
+                  </div>
+                  <div className={styles.aimi__team__member_name}>
+                    {member.name}
+                  </div>
+                </div>
+              </React.Fragment>
+            ))}
+          </div>
         </div>
+
+        <Footer />
       </div>
-
-      <Footer />
-    </div>
+    </>
   );
 };
 
