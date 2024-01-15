@@ -8,7 +8,6 @@ import Cursor from "../components/Cursor/Cursor";
 export const metadata: Metadata = {
   title: "TOVA",
   description: "Про дизайн",
-  icons: "/favicons/favicon.ico",
 };
 
 export default function RootLayout({
@@ -18,6 +17,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" style={{ scrollBehavior: "smooth" }}>
+      <head>
+        <link rel="icon" href="/favicons/favicon-black.png" />
+        <link
+          rel="icon"
+          media="(prefers-color-scheme: dark)"
+          href="/favicons/favicon-white.png"
+        ></link>
+      </head>
       <body suppressHydrationWarning={true}>
         <Navbar />
 

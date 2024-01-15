@@ -2,14 +2,13 @@
 
 import styles from "../styles/hero.module.scss";
 import commonStyles from "../styles/common.module.scss";
-import { PROJECTS, SERVICES } from "../constants/constants";
+import { PROJECTS } from "../constants/constants";
 import Card from "../components/Card/Card";
 import Footer from "../components/Footer/Footer";
 import Link from "next/link";
 import Image from "next/image";
 import Slider from "../components/Slider/Slider";
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import ServicesComponent from "../components/ServicesCard/ServicesCard";
 import Cursor from "../components/Cursor/Cursor";
 
@@ -42,12 +41,29 @@ export default function Home() {
       return updatedPositions;
     });
   };
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.muted = true;
+    }
+  }, []);
 
   return (
     <>
       <Cursor />
       <div className={commonStyles.mainPageBody}>
         <div className={styles.hero}>
+          <div className={styles.hero__video}>
+            <video
+              src="/main/това.webm"
+              autoPlay
+              muted
+              loop
+              playsInline
+              ref={videoRef}
+            />
+          </div>
+
           <div className={styles.hero__text}>
             креатив - он как нейросеть <br /> главное правильно <br />{" "}
             сформулировать запрос
