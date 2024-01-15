@@ -10,4 +10,11 @@
   pointer-events: none;
   z-index: 9999;
   mix-blend-mode: difference;
+  animation: showCursor 0.5s ease-out 1s forwards;
+  opacity: 0;
+  @keyframes showCursor {
+    to {
+      opacity: 1;
+    }
+  }
 }

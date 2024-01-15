@@ -26,6 +26,7 @@ const Cursor = () => {
     };
 
     document.addEventListener("mousemove", onMouseMove);
+
     links.forEach((link) => {
       link.addEventListener("mouseenter", onMouseEnterLink);
       link.addEventListener("mouseleave", onMouseLeaveLink);

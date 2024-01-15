@@ -12,22 +12,20 @@ const ServicesComponent = () => {
         <GlowCapture>
           <Glow color="white">
             <div className={styles.card}>
-              <div className={styles.card_content}>
-                <div className={heroStyles.services__card__info}>
-                  <div className={heroStyles.services__card__info_title}>
-                    {SERVICES[0].title}
-                  </div>
-
-                  <span className={heroStyles.services__card__price}>
-                    {SERVICES[0].price}
-                  </span>
+              <div className={heroStyles.services__card__info}>
+                <div className={heroStyles.services__card__info_title}>
+                  {SERVICES[0].title}
                 </div>
-                <img
-                  src={SERVICES[0].image}
-                  alt="service image"
-                  className={heroStyles.services__card__image}
-                />
+
+                <span className={heroStyles.services__card__price}>
+                  {SERVICES[0].price}
+                </span>
               </div>
+              <img
+                src={SERVICES[0].image}
+                alt="service image"
+                className={heroStyles.services__card__image}
+              />
             </div>
           </Glow>
         </GlowCapture>
@@ -37,22 +35,20 @@ const ServicesComponent = () => {
         <GlowCapture>
           <Glow color="white">
             <div className={styles.card}>
-              <div className={styles.card_content}>
-                <div className={heroStyles.services__card__info}>
-                  <div className={heroStyles.services__card__info_title}>
-                    {SERVICES[1].title}
-                  </div>
-
-                  <span className={heroStyles.services__card__price}>
-                    {SERVICES[1].price}
-                  </span>
+              <div className={heroStyles.services__card__info}>
+                <div className={heroStyles.services__card__info_title}>
+                  {SERVICES[1].title}
                 </div>
-                <img
-                  src={SERVICES[1].image}
-                  alt="service image"
-                  className={heroStyles.services__card__image}
-                />
+
+                <span className={heroStyles.services__card__price}>
+                  {SERVICES[1].price}
+                </span>
               </div>
+              <img
+                src={SERVICES[1].image}
+                alt="service image"
+                className={heroStyles.services__card__image}
+              />
             </div>
           </Glow>
         </GlowCapture>
@@ -61,22 +57,20 @@ const ServicesComponent = () => {
         <GlowCapture>
           <Glow color="white">
             <div className={styles.card}>
-              <div className={styles.card_content}>
-                <div className={heroStyles.services__card__info}>
-                  <div className={heroStyles.services__card__info_title}>
-                    {SERVICES[2].title}
-                  </div>
-
-                  <span className={heroStyles.services__card__price}>
-                    {SERVICES[2].price}
-                  </span>
+              <div className={heroStyles.services__card__info}>
+                <div className={heroStyles.services__card__info_title}>
+                  {SERVICES[2].title}
                 </div>
-                <img
-                  src={SERVICES[2].image}
-                  alt="service image"
-                  className={heroStyles.services__card__image}
-                />
+
+                <span className={heroStyles.services__card__price}>
+                  {SERVICES[2].price}
+                </span>
               </div>
+              <img
+                src={SERVICES[2].image}
+                alt="service image"
+                className={heroStyles.services__card__image}
+              />
             </div>
           </Glow>
         </GlowCapture>
@@ -86,22 +80,20 @@ const ServicesComponent = () => {
         <GlowCapture>
           <Glow color="white">
             <div className={styles.card}>
-              <div className={styles.card_content}>
-                <div className={heroStyles.services__card__info}>
-                  <div className={heroStyles.services__card__info_title}>
-                    {SERVICES[3].title}
-                  </div>
-
-                  <span className={heroStyles.services__card__price}>
-                    {SERVICES[3].price}
-                  </span>
+              <div className={heroStyles.services__card__info}>
+                <div className={heroStyles.services__card__info_title}>
+                  {SERVICES[3].title}
                 </div>
-                <img
-                  src={SERVICES[3].image}
-                  alt="service image"
-                  className={heroStyles.services__card__image}
-                />
+
+                <span className={heroStyles.services__card__price}>
+                  {SERVICES[3].price}
+                </span>
               </div>
+              <img
+                src={SERVICES[3].image}
+                alt="service image"
+                className={heroStyles.services__card__image}
+              />
             </div>
           </Glow>
         </GlowCapture>
@@ -111,22 +103,20 @@ const ServicesComponent = () => {
         <GlowCapture>
           <Glow color="white">
             <div className={styles.card}>
-              <div className={styles.card_content}>
-                <div className={heroStyles.services__card__info}>
-                  <div className={heroStyles.services__card__info_title}>
-                    {SERVICES[4].title}
-                  </div>
-
-                  <span className={heroStyles.services__card__price}>
-                    {SERVICES[4].price}
-                  </span>
+              <div className={heroStyles.services__card__info}>
+                <div className={heroStyles.services__card__info_title}>
+                  {SERVICES[4].title}
                 </div>
-                <img
-                  src={SERVICES[4].image}
-                  alt="service image"
-                  className={heroStyles.services__card__image}
-                />
+
+                <span className={heroStyles.services__card__price}>
+                  {SERVICES[4].price}
+                </span>
               </div>
+              <img
+                src={SERVICES[4].image}
+                alt="service image"
+                className={heroStyles.services__card__image}
+              />
             </div>
           </Glow>
         </GlowCapture>
@@ -136,22 +126,20 @@ const ServicesComponent = () => {
         <GlowCapture>
           <Glow color="white">
             <div className={styles.card}>
-              <div className={styles.card_content}>
-                <div className={heroStyles.services__card__info}>
-                  <div className={heroStyles.services__card__info_title}>
-                    {SERVICES[5].title}
-                  </div>
-
-                  <span className={heroStyles.services__card__price}>
-                    {SERVICES[5].price}
-                  </span>
+              <div className={heroStyles.services__card__info}>
+                <div className={heroStyles.services__card__info_title}>
+                  {SERVICES[5].title}
                 </div>
-                <img
-                  src={SERVICES[5].image}
-                  alt="service image"
-                  className={heroStyles.services__card__image}
-                />
+
+                <span className={heroStyles.services__card__price}>
+                  {SERVICES[5].price}
+                </span>
               </div>
+              <img
+                src={SERVICES[5].image}
+                alt="service image"
+                className={heroStyles.services__card__image}
+              />
             </div>
           </Glow>
         </GlowCapture>

@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "../../styles/rambam.module.scss";
 import commonStyles from "../../styles/common.module.scss";
 import Footer from "../../components/Footer/Footer";
@@ -35,13 +35,25 @@ const page = () => {
       name: "Александр Рязанов",
     },
   ];
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.muted = true;
+    }
+  }, []);
   return (
     <>
       <Cursor />
       <div className={commonStyles.otherPageBody}>
         <Header white />
         <div className={styles.rambam__hero}>
-          <video src="/projects/rambam/rambam_main.mp4" autoPlay />
+          <video
+            src="/projects/rambam/rambam_main.mp4"
+            autoPlay
+            muted
+            playsInline
+            ref={videoRef}
+          />
         </div>
         <div className={styles.rambam}>
           <div className={styles.rambam__about}>
