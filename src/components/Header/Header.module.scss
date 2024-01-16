@@ -12,6 +12,12 @@
   justify-content: space-between;
   align-items: center;
   z-index: 2;
+  &__link {
+    width: $space-100;
+    height: $space-100;
+    display: flex;
+    align-items: center;
+  }
   @media (max-width: 480px) {
     left: 20px;
     right: 20px;

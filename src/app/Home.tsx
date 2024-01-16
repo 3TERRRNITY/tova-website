@@ -69,7 +69,7 @@ export default function Home() {
             сформулировать запрос
           </div>
           <div className={styles.hero__header}>
-            <Link href={"/"}>
+            <Link href={"/"} className={styles.hero__header_link}>
               <div className={styles.hero__header__logo}>
                 <Image src="/TOVA-logo.svg" alt="logo" fill />
               </div>

@@ -5,16 +5,27 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 1px solid grey;
   background-color: transparent;
   pointer-events: none;
   z-index: 9999;
   mix-blend-mode: difference;
-  animation: showCursor 0.5s ease-out 1s forwards;
+  animation: showCursor 0.1s ease-out 1s forwards;
   opacity: 0;
   @keyframes showCursor {
     to {
       opacity: 1;
     }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    border: 0.1px solid grey;
+    box-sizing: border-box;
   }
 }

@@ -10,7 +10,7 @@ const ServicesComponent = () => {
     <div className={heroStyles.services__serviceGrid}>
       <Link key={SERVICES[0].title} href={`/services#${SERVICES[0].href}`}>
         <GlowCapture size={900}>
-          <Glow color="white">
+          <Glow color="white" style={{ animationDuration: "1s" }}>
             <div className={styles.card}>
               <div className={heroStyles.services__card__info}>
                 <div className={heroStyles.services__card__info_title}>
@@ -33,7 +33,7 @@ const ServicesComponent = () => {
 
       <Link key={SERVICES[1].title} href={`/services#${SERVICES[1].href}`}>
         <GlowCapture size={900}>
-          <Glow color="white">
+          <Glow color="white" style={{ animationDuration: "1s" }}>
             <div className={styles.card}>
               <div className={heroStyles.services__card__info}>
                 <div className={heroStyles.services__card__info_title}>
@@ -55,7 +55,7 @@ const ServicesComponent = () => {
       </Link>
       <Link key={SERVICES[2].title} href={`/services#${SERVICES[2].href}`}>
         <GlowCapture size={900}>
-          <Glow color="white">
+          <Glow color="white" style={{ animationDuration: "1s" }}>
             <div className={styles.card}>
               <div className={heroStyles.services__card__info}>
                 <div className={heroStyles.services__card__info_title}>
@@ -78,7 +78,7 @@ const ServicesComponent = () => {
 
       <Link key={SERVICES[3].title} href={`/services#${SERVICES[3].href}`}>
         <GlowCapture size={900}>
-          <Glow color="white">
+          <Glow color="white" style={{ animationDuration: "1s" }}>
             <div className={styles.card}>
               <div className={heroStyles.services__card__info}>
                 <div className={heroStyles.services__card__info_title}>
@@ -101,7 +101,7 @@ const ServicesComponent = () => {
 
       <Link key={SERVICES[4].title} href={`/services#${SERVICES[4].href}`}>
         <GlowCapture size={900}>
-          <Glow color="white">
+          <Glow color="white" style={{ animationDuration: "1s" }}>
             <div className={styles.card}>
               <div className={heroStyles.services__card__info}>
                 <div className={heroStyles.services__card__info_title}>
@@ -124,7 +124,7 @@ const ServicesComponent = () => {
 
       <Link key={SERVICES[5].title} href={`/services#${SERVICES[5].href}`}>
         <GlowCapture size={900}>
-          <Glow color="white">
+          <Glow color="white" style={{ animationDuration: "1s" }}>
             <div className={styles.card}>
               <div className={heroStyles.services__card__info}>
                 <div className={heroStyles.services__card__info_title}>

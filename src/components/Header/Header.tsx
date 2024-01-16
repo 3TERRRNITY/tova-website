@@ -8,7 +8,7 @@ interface IHeaderProps {
 const Header = ({ white }: IHeaderProps) => {
   return (
     <div className={styles.header}>
-      <Link href={"/"}>
+      <Link href={"/"} className={styles.header__link}>
         <div className={styles.header__logo}>
           {white ? (
             <Image src="/TOVA-logo-black.svg" alt="logo" fill />
