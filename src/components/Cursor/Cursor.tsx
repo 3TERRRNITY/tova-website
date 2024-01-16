@@ -11,7 +11,7 @@ const Cursor = () => {
 
     const onMouseMove = (e: MouseEvent) => {
       const { clientX, clientY } = e;
-      gsap.to(cursor, { x: clientX, y: clientY });
+      gsap.to(cursor, { x: clientX - 30, y: clientY - 30 });
     };
 
     const onMouseEnterLink = (e: MouseEvent) => {
