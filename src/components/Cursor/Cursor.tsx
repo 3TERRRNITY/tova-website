@@ -11,18 +11,18 @@ const Cursor = () => {
 
     const onMouseMove = (e: MouseEvent) => {
       const { clientX, clientY } = e;
-      gsap.to(cursor, { x: clientX - 30, y: clientY - 30 });
+      gsap.to(cursor, { x: clientX, y: clientY });
     };
 
     const onMouseEnterLink = (e: MouseEvent) => {
       const link = e?.target;
       if (link) {
-        gsap.to(cursor, { scale: 4 });
+        gsap.to(cursor, { width: "90px", height: "90px" });
       }
     };
 
     const onMouseLeaveLink = () => {
-      gsap.to(cursor, { scale: 1 });
+      gsap.to(cursor, { width: "30px", height: "30px" });
     };
 
     document.addEventListener("mousemove", onMouseMove);
