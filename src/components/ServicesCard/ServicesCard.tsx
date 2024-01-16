@@ -9,7 +9,7 @@ const ServicesComponent = () => {
   return (
     <div className={heroStyles.services__serviceGrid}>
       <Link key={SERVICES[0].title} href={`/services#${SERVICES[0].href}`}>
-        <GlowCapture>
+        <GlowCapture size={900}>
           <Glow color="white">
             <div className={styles.card}>
               <div className={heroStyles.services__card__info}>
@@ -32,7 +32,7 @@ const ServicesComponent = () => {
       </Link>
 
       <Link key={SERVICES[1].title} href={`/services#${SERVICES[1].href}`}>
-        <GlowCapture>
+        <GlowCapture size={900}>
           <Glow color="white">
             <div className={styles.card}>
               <div className={heroStyles.services__card__info}>
@@ -54,7 +54,7 @@ const ServicesComponent = () => {
         </GlowCapture>
       </Link>
       <Link key={SERVICES[2].title} href={`/services#${SERVICES[2].href}`}>
-        <GlowCapture>
+        <GlowCapture size={900}>
           <Glow color="white">
             <div className={styles.card}>
               <div className={heroStyles.services__card__info}>
@@ -77,7 +77,7 @@ const ServicesComponent = () => {
       </Link>
 
       <Link key={SERVICES[3].title} href={`/services#${SERVICES[3].href}`}>
-        <GlowCapture>
+        <GlowCapture size={900}>
           <Glow color="white">
             <div className={styles.card}>
               <div className={heroStyles.services__card__info}>
@@ -100,7 +100,7 @@ const ServicesComponent = () => {
       </Link>
 
       <Link key={SERVICES[4].title} href={`/services#${SERVICES[4].href}`}>
-        <GlowCapture>
+        <GlowCapture size={900}>
           <Glow color="white">
             <div className={styles.card}>
               <div className={heroStyles.services__card__info}>
@@ -123,7 +123,7 @@ const ServicesComponent = () => {
       </Link>
 
       <Link key={SERVICES[5].title} href={`/services#${SERVICES[5].href}`}>
-        <GlowCapture>
+        <GlowCapture size={900}>
           <Glow color="white">
             <div className={styles.card}>
               <div className={heroStyles.services__card__info}>
