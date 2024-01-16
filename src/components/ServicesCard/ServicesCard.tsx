@@ -9,7 +9,7 @@ const ServicesComponent = () => {
   return (
     <div className={heroStyles.services__serviceGrid}>
       <Link key={SERVICES[0].title} href={`/services#${SERVICES[0].href}`}>
-        <GlowCapture>
+        <GlowCapture size={900}>
           <Glow color="white">
             <div className={styles.card}>
               <div className={heroStyles.services__card__info}>
