@@ -35,12 +35,7 @@ const page = () => {
       name: "Александр Рязанов",
     },
   ];
-  const videoRef = useRef<HTMLVideoElement | null>(null);
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.muted = true;
-    }
-  }, []);
+
   return (
     <>
       <Cursor />
@@ -52,7 +47,6 @@ const page = () => {
             autoPlay
             muted
             playsInline
-            ref={videoRef}
           />
         </div>
         <div className={styles.rambam}>
