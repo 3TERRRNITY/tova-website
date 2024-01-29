@@ -28,4 +28,8 @@
     border: 0.1px solid grey;
     box-sizing: border-box;
   }
+
+  @media (max-width: 480px) {
+    display: none;
+  }
 }
