@@ -35,6 +35,12 @@ const page = () => {
       name: "Александр Рязанов",
     },
   ];
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.muted = true;
+    }
+  }, []);
 
   return (
     <>
@@ -42,12 +48,9 @@ const page = () => {
       <div className={commonStyles.otherPageBody}>
         <Header white />
         <div className={styles.rambam__hero}>
-          <video
-            src="/projects/rambam/rambam_main.mp4"
-            autoPlay
-            muted
-            playsInline
-          />
+          <video autoPlay muted={true} playsInline={true} ref={videoRef}>
+            <source type="video/mp4" src="/projects/rambam/rambam_main.mp4" />
+          </video>
         </div>
         <div className={styles.rambam}>
           <div className={styles.rambam__about}>
