@@ -8,7 +8,7 @@ import Footer from "../components/Footer/Footer";
 import Link from "next/link";
 import Image from "next/image";
 import Slider from "../components/Slider/Slider";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import ServicesComponent from "../components/ServicesCard/ServicesCard";
 import Cursor from "../components/Cursor/Cursor";
 
@@ -41,12 +41,6 @@ export default function Home() {
       return updatedPositions;
     });
   };
-  const videoRef = useRef<HTMLVideoElement | null>(null);
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.muted = true;
-    }
-  }, []);
 
   return (
     <>
@@ -54,14 +48,7 @@ export default function Home() {
       <div className={commonStyles.mainPageBody}>
         <div className={styles.hero}>
           <div className={styles.hero__video}>
-            <video
-              src="/main/това.webm"
-              autoPlay
-              muted
-              loop
-              playsInline
-              ref={videoRef}
-            />
+            <video src="/main/tova.webm" autoPlay muted loop playsInline />
           </div>
 
           <div className={styles.hero__text}>
