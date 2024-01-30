@@ -46,6 +46,8 @@ export default function Home() {
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.muted = true;
+      videoRef.current.playsInline = true;
+      videoRef.current.autoplay = true;
     }
   }, []);
 
