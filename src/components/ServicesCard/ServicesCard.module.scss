@@ -19,7 +19,7 @@
 
   img {
     pointer-events: none;
-    z-index: 1000;
+    z-index: 100;
   }
 }
 
@@ -27,5 +27,5 @@
   background-color: white;
   overflow: auto;
   filter: blur(300px);
-  z-index: 999;
+  z-index: 100;
 }
