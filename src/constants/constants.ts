@@ -129,6 +129,14 @@ export const SERVICES: IServices[] = [
     image: "/main/service/design.png",
   },
   {
+    title: "видео-продакшн",
+    description:
+      "мы специализируемся на полном цикле производства видеоконтента — от создания рекламных роликов до съемки сериалов и клипов.",
+    href: "other",
+    price: "по запросу",
+    image: "/main/service/video.png",
+  },
+  {
     title: "разработка",
     description:
       "Разрабатываем и усовершенствуем IT-проекты, предлагая полный спектр frontend и backend услуг в форматах аутсорсинга и аутстаффинга.",
@@ -160,14 +168,6 @@ export const SERVICES: IServices[] = [
     href: "smm",
     price: "1900/час",
     image: "/main/service/smm.png",
-  },
-  {
-    title: "видео-продакшн",
-    description:
-      "мы специализируемся на полном цикле производства видеоконтента — от создания рекламных роликов до съемки сериалов и клипов.",
-    href: "other",
-    price: "по запросу",
-    image: "/main/service/video.png",
   },
 ];
 
