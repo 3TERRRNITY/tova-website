@@ -1,46 +1,67 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Cursor.module.scss";
-import { gsap } from "gsap";
+
+import { motion } from "framer-motion";
 
 const Cursor = () => {
+  const [mousePosition, setMousePosition] = useState({
+    x: 0,
+    y: 0,
+  });
+  const [cursorVariant, setCursorVariant] = useState("default");
+  const [isHovered, setIsHovered] = useState(false);
+  const size = isHovered ? 90 : 30;
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
   useEffect(() => {
-    const cursor = document.getElementById("custom-cursor") as HTMLElement;
-    const links = document.querySelectorAll("a");
-
-    const onMouseMove = (e: MouseEvent) => {
-      const { clientX, clientY } = e;
-      gsap.to(cursor, { x: clientX - 10, y: clientY - 10 });
-    };
-
-    const onMouseEnterLink = (e: MouseEvent) => {
-      const link = e?.target;
-      if (link) {
-        gsap.to(cursor, { width: "90px", height: "90px" });
-      }
-    };
-
-    const onMouseLeaveLink = () => {
-      gsap.to(cursor, { width: "30px", height: "30px" });
-    };
-
-    document.addEventListener("mousemove", onMouseMove);
-
-    links.forEach((link) => {
-      link.addEventListener("mouseenter", onMouseEnterLink);
-      link.addEventListener("mouseleave", onMouseLeaveLink);
-    });
-
-    return () => {
-      document.removeEventListener("mousemove", onMouseMove);
-      links.forEach((link) => {
-        link.removeEventListener("mouseenter", onMouseEnterLink);
-        link.removeEventListener("mouseleave", onMouseLeaveLink);
+    const mouseMove = (e: MouseEvent) => {
+      setMousePosition({
+        x: e.clientX,
+        y: e.clientY,
       });
     };
-  }, []);
-  return <div id="custom-cursor" className={styles.custom_cursor}></div>;
+
+    window.addEventListener("mousemove", mouseMove);
+    const links = document.querySelectorAll("a");
+
+    links.forEach((link) => {
+      link.addEventListener("mouseenter", handleMouseEnter);
+      link.addEventListener("mouseleave", handleMouseLeave);
+    });
+    return () => {
+      window.removeEventListener("mousemove", mouseMove);
+      links.forEach((link) => {
+        link.removeEventListener("mouseenter", handleMouseEnter);
+        link.removeEventListener("mouseleave", handleMouseLeave);
+      });
+    };
+  }, [isHovered]);
+
+  const variants = {
+    default: {
+      x: mousePosition.x - size / 2,
+      y: mousePosition.y - size / 2,
+      width: size,
+      height: size,
+    },
+  };
+  return (
+    <motion.div
+      id="custom-cursor"
+      className={styles.custom_cursor}
+      variants={variants}
+      animate={cursorVariant}
+      transition={{ type: "tween", ease: "backOut" }}
+    ></motion.div>
+  );
 };
 
 export default Cursor;

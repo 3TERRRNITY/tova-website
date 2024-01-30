@@ -18,11 +18,21 @@ const Header = ({ white }: IHeaderProps) => {
         </div>
       </Link>
 
-      <div className={styles.header__text}>
-        tova
-        <br />
-        про дизайн
-      </div>
+      <Link href={"https://t.me/tova_agency"} target="_blank">
+        {white ? (
+          <div className={styles.header__text_black}>
+            tova
+            <br />
+            про дизайн
+          </div>
+        ) : (
+          <div className={styles.header__text}>
+            tova
+            <br />
+            про дизайн
+          </div>
+        )}
+      </Link>
     </div>
   );
 };

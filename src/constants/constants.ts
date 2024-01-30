@@ -25,8 +25,7 @@ export const PROJECTS: IProjects[] = [
     title: "Aimi",
     img: "/main/aimi.webp",
     secondImage: "/projects/projects_aimi.png",
-    description:
-      "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
+    description: "Нейминг, фирменный стиль, дизайн и копирайтинг.",
     id: ["brand", "graphic", "smm"],
     category: "брендинг, графический дизайн, smm",
   },
@@ -34,8 +33,7 @@ export const PROJECTS: IProjects[] = [
     title: "Madaia",
     img: "/main/madaia.webp",
     secondImage: "/projects/projects_madaia2.png",
-    description:
-      "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
+    description: "Фирменный стиль, дизайн, разработка сайта.",
     id: ["smm", "marketing", "other"],
     category: "веб-разработка",
   },
@@ -44,7 +42,7 @@ export const PROJECTS: IProjects[] = [
     img: "/main/avivir.webp",
     secondImage: "/projects/projects_avivir.png",
     description:
-      "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
+      "Концепция, создание фирменного стиля, дизайн, разработка сайта, техническая поддержка",
     id: ["webdev", "brand", "graphic", "smm", "marketing", "other"],
     category: "брендинг, веб-разработка, графический дизайн, smm",
   },
@@ -52,8 +50,7 @@ export const PROJECTS: IProjects[] = [
     title: "frenchi",
     img: "/main/frenchi.webp",
     secondImage: "/projects/projects_frenchi.png",
-    description:
-      "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
+    description: "Концепция, UX-исследование, дизайн и разработка сайта.",
     id: ["webdev"],
     category: "веб-разработка",
   },
@@ -124,45 +121,52 @@ export const VACANCY: IVacancy[] = [
 
 export const SERVICES: IServices[] = [
   {
-    title: "брендинг",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    href: "brand",
-    price: "от 2700/час",
-    image: "/main/service/brand.png",
-  },
-  {
-    title: "веб-разработка",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    href: "webdev",
-    price: "от 2700/час",
-    image: "/main/service/web.png",
-  },
-  {
-    title: "графический дизайн",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    href: "graphic",
-    price: "от 2700/час",
-    image: "/main/service/graphic.png",
-  },
-  {
     title: "дизайн-поддержка",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description:
+      "Ежемесячная подписка на команду проджект менеджер+дизайнер: графический, UX/UI, 3D, motion",
     href: "marketing",
-    price: "от 2700/час",
+    price: "1900/час",
     image: "/main/service/design.png",
   },
   {
+    title: "разработка",
+    description:
+      "Разрабатываем и усовершенствуем IT-проекты, предлагая полный спектр frontend и backend услуг в форматах аутсорсинга и аутстаффинга.",
+    href: "webdev",
+    price: "1900/час",
+    image: "/main/service/web.png",
+  },
+  {
+    title: "ux/ui",
+    description:
+      "осуществляем UX-анализ, разрабатывая на его основе удобные интерфейсы для комплексных сервисов. Также создаём мобильные и веб-приложения, используя no-code технологии.",
+    href: "graphic",
+    price: "1900/час",
+    image: "/main/service/graphic.png",
+  },
+
+  {
+    title: "брендинг",
+    description:
+      "разрабатываем уникальный брендинг, создавая запоминающиеся визуальные образы и концепции, подчёркивающие индивидуальность вашего бизнеса.",
+    href: "brand",
+    price: "1900/час",
+    image: "/main/service/brand.png",
+  },
+  {
     title: "SMM",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description:
+      "формируем стратегии SMM, эффективно продвигая ваш бренд в социальных сетях для повышения узнаваемости и вовлеченности аудитории.",
     href: "smm",
-    price: "от 2700/час",
+    price: "1900/час",
     image: "/main/service/smm.png",
   },
   {
     title: "видео-продакшн",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description:
+      "мы специализируемся на полном цикле производства видеоконтента — от создания рекламных роликов до съемки сериалов и клипов.",
     href: "other",
-    price: "от 2700/час",
+    price: "по запросу",
     image: "/main/service/video.png",
   },
 ];

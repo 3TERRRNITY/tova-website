@@ -15,7 +15,7 @@ import Graphic2 from "../../../public/projects/aimi/aimations/Graphic2.json";
 import Graphic3 from "../../../public/projects/aimi/aimations/Graphic3.json";
 import Graphic4 from "../../../public/projects/aimi/aimations/Graphic4.json";
 import Carousel from "../../components/Carousel/Carousel";
-import SplineAimi from "../../components/SplineAimi/SplineAimi";
+import { SplineAimi } from "../../components/SplineAimi/SplineAimi";
 import Cursor from "../../components/Cursor/Cursor";
 
 const Aimi = () => {
@@ -50,14 +50,7 @@ const Aimi = () => {
       <div className={commonStyles.mainPageBody}>
         <Header />
         <div className={commonStyles.projectContainer}>
-          <div className={styles.aimi__hero} />
-          <div className={styles.aimi__hero_animationTop}>
-            <SplineAimi />
-          </div>
-          <div className={styles.aimi__hero_animation}>
-            <SplineAimi />
-          </div>
-
+          <div className={styles.aimi__hero}>{/* <SplineAimi /> */}</div>
           <div className={styles.aimi__about}>
             <div className={styles.aimi__about__head}>
               <div className={styles.aimi__about__head_title}>О проекте</div>

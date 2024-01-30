@@ -1,5 +1,11 @@
 @import "./variable.scss";
 
+@mixin mainVideoTitle {
+  font-size: $mainVideoTitle;
+  line-height: $lineHeightVideoTitle;
+  font-weight: 600;
+}
+
 @mixin h1Title {
   font-size: $h1;
   line-height: $lineHeightH1;

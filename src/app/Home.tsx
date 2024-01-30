@@ -8,44 +8,17 @@ import Footer from "../components/Footer/Footer";
 import Link from "next/link";
 import Image from "next/image";
 import Slider from "../components/Slider/Slider";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import ServicesComponent from "../components/ServicesCard/ServicesCard";
 import Cursor from "../components/Cursor/Cursor";
 
 export default function Home() {
-  const redirectToServicePage = (serviceTitle: string) => {
-    const url = `/services#${serviceTitle}`;
-    window.location.href = url;
-  };
-  const [hoverPosition, setHoverPosition] = useState<{
-    [key: number]: { x: number; y: number };
-  }>({});
-
-  const handleMouseMove = (
-    index: number,
-    e: React.MouseEvent<HTMLDivElement>
-  ) => {
-    const boundingRect = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX - boundingRect.left;
-    const y = e.clientY - boundingRect.top;
-    setHoverPosition((prevPositions) => ({
-      ...prevPositions,
-      [index]: { x, y },
-    }));
-  };
-
-  const resetHoverPosition = (index: number) => {
-    setHoverPosition((prevPositions) => {
-      const updatedPositions = { ...prevPositions };
-      delete updatedPositions[index];
-      return updatedPositions;
-    });
-  };
-
   const videoRef = useRef<HTMLVideoElement | null>(null);
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.muted = true;
+      videoRef.current.playsInline = true;
+      videoRef.current.autoplay = true;
     }
   }, []);
 
@@ -62,8 +35,8 @@ export default function Home() {
           </div>
 
           <div className={styles.hero__text}>
-            креатив - он как нейросеть <br /> главное правильно <br />{" "}
-            сформулировать запрос
+            Воплощаем идеи в реальность – дизайн, продакшн, разработка и
+            инновации, которые определяют завтра.
           </div>
           <div className={styles.hero__header}>
             <Link href={"/"} className={styles.hero__header_link}>
@@ -71,12 +44,17 @@ export default function Home() {
                 <Image src="/TOVA-logo.svg" alt="logo" fill />
               </div>
             </Link>
-
-            <div className={styles.hero__header__text}>
-              tova
-              <br />
-              про дизайн
-            </div>
+            <Link
+              href={"https://t.me/tova_agency"}
+              target="_blank"
+              className={styles.hero__header_link}
+            >
+              <div className={styles.hero__header__text}>
+                tova
+                <br />
+                про дизайн
+              </div>
+            </Link>
           </div>
         </div>
         <Slider />

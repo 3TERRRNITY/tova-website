@@ -37,6 +37,11 @@
   &__text {
     @include h3Title;
     text-align: right;
+    &_black {
+      @include h3Title;
+      text-align: right;
+      color: black;
+    }
     @media (max-width: 480px) {
       display: none;
       padding-top: 20px;

@@ -30,7 +30,7 @@
   }
   &__text {
     padding: $space-40 $space-40;
-    @include h1Title;
+    @include mainVideoTitle;
     text-align: left;
     z-index: 10;
     @media (max-width: 480px) {
@@ -275,6 +275,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
       gap: $space-10;
       height: 100%;
       @media (max-width: 480px) {
@@ -284,6 +285,15 @@
       &_title {
         @include h3Title;
         font-weight: 600;
+        @media (max-width: 480px) {
+          font-size: 20px;
+          line-height: 26px;
+        }
+      }
+      &_description {
+        @include paragraph;
+        font-weight: 400;
+        width: 50%;
         @media (max-width: 480px) {
           font-size: 20px;
           line-height: 26px;
