@@ -31,6 +31,7 @@
   &__text {
     padding: $space-40 $space-40;
     @include mainVideoTitle;
+    margin-right: $space-40;
     text-align: left;
     z-index: 10;
     @media (max-width: 480px) {
