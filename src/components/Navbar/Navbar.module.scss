@@ -5,7 +5,7 @@
   position: fixed;
   right: $space-40;
   top: $space-100;
-  z-index: 100;
+  z-index: 1000;
 
   @media (max-width: 480px) {
     display: none;
@@ -27,7 +27,7 @@
     position: fixed;
     right: 20px;
     top: 20px;
-    z-index: 100;
+    z-index: 1000;
 
     &__menu {
       position: relative;

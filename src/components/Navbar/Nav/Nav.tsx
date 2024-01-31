@@ -71,33 +71,34 @@ const Nav = ({ closeMenu }: NavProps) => {
       </div>
 
       <div className={styles.nav__footer}>
-        <motion.div
-          custom={3}
-          variants={slideIn}
-          animate="enter"
-          exit="exit"
-          initial="initial"
-          className={styles.nav__footer__tova}
-        >
-          tova <br /> про дизайн
-        </motion.div>
-        <div className={styles.nav__footer_links}>
-          {FOOTER_LINKS.map((link, i) => {
-            return (
-              <motion.a
-                key={`f_${i}`}
-                href={link.href}
-                custom={i}
-                variants={slideIn}
-                animate="enter"
-                exit="exit"
-                initial="initial"
-              >
-                {link.title.toLowerCase()}
-              </motion.a>
-            );
-          })}
-        </div>
+        <Link href={"https://t.me/tova_agency"} target="_blank">
+          <motion.div
+            custom={3}
+            variants={slideIn}
+            animate="enter"
+            exit="exit"
+            initial="initial"
+            className={styles.nav__footer__tova}
+          >
+            tova <br /> про дизайн
+          </motion.div>
+        </Link>
+
+        {FOOTER_LINKS.map((link, i) => {
+          return (
+            <motion.a
+              key={`f_${i}`}
+              href={link.href}
+              custom={i}
+              variants={slideIn}
+              animate="enter"
+              exit="exit"
+              initial="initial"
+            >
+              {link.title.toLowerCase()}
+            </motion.a>
+          );
+        })}
       </div>
     </div>
   );

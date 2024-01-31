@@ -44,31 +44,33 @@
 
   &__footer {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    margin-top: $space-40;
     &__tova {
-      font-size: $h3;
+      font-size: $p;
       color: #fff;
+      width: 100%;
 
       @media (max-width: 480px) {
         font-size: 16px;
       }
     }
-    &_links {
-      display: flex;
-      justify-content: space-around;
-      gap: $space-10;
-      align-items: end;
-      padding-right: $space-20;
-      a {
-        font-size: $h3;
-        width: 50%;
-        transition: opacity 0.3s ease-in;
-        &:hover {
-          opacity: 0.5;
-        }
-        @media (max-width: 480px) {
-          font-size: 16px;
-        }
+
+    a {
+      font-size: $p;
+      text-align: center;
+      width: 100%;
+      transition: opacity 0.3s ease-in;
+      &:hover {
+        opacity: 0.5;
+      }
+      &:first-of-type {
+        text-align: left;
+        justify-self: left;
+      }
+      @media (max-width: 480px) {
+        font-size: 16px;
       }
     }
   }
