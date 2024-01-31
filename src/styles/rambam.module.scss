@@ -16,16 +16,6 @@
     @media (max-width: 1600px) {
       object-fit: contain;
     }
-    @media (max-width: 480px) {
-      background-image: url(../../public/projects/rambam/rambam-mob.webp);
-
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      video {
-        display: none;
-      }
-    }
   }
   &__about {
     padding: $space-80 $space-40 230px $space-40;

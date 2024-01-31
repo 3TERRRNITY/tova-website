@@ -7,13 +7,12 @@ interface IButtonProps {
 }
 
 const Button = ({ isActive, setIsActive }: IButtonProps) => {
+  const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.stopPropagation(); // Предотвращаем всплытие события
+    setIsActive(!isActive);
+  };
   return (
-    <a
-      onClick={() => {
-        setIsActive(!isActive);
-      }}
-      className={styles.button}
-    >
+    <a onClick={handleClick} className={styles.button}>
       <motion.div
         className={styles.button__slider}
         animate={{ top: isActive ? "-100%" : "0" }}

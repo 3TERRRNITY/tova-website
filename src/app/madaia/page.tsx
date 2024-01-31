@@ -39,6 +39,7 @@ const page = () => {
             <div className={styles.madaia__info__title}>
               дизайн онлайн магазина
             </div>
+            <div className={styles.madaia__info__title_mob}>о проекте</div>
             <img src="/projects/madaia/madaia_logo.webp" alt="madaia logo" />
             <div className={styles.madaia__info__paragraph}>
               Madaia – бренд одежды для повседневной жизни и спорта, идейным

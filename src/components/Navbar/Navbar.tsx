@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./Navbar.module.scss";
 import Button from "./Button/Button";
 import { AnimatePresence, motion } from "framer-motion";
@@ -47,10 +47,29 @@ const variantsMobile = {
 };
 const Navbar = (props: Props) => {
   const [isActive, setIsActive] = useState<boolean>(false);
+  const navbarRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        navbarRef.current &&
+        event.target instanceof Node &&
+        !navbarRef.current.contains(event.target)
+      ) {
+        setIsActive(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isActive]);
 
   return (
     <>
-      <div className={styles.header}>
+      <div className={styles.header} ref={navbarRef}>
         <motion.div
           className={styles.header__menu}
           variants={variants}

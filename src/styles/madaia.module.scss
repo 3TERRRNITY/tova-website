@@ -8,6 +8,11 @@
     &_logo {
       width: clamp(5.9375rem, 0.0417rem + 19.6528vw, 23.625rem);
       height: clamp(7.25rem, 0.0417rem + 24.0278vw, 28.875rem);
+
+      @media (max-width: 480px) {
+        width: 115px;
+        height: 143px;
+      }
     }
     &_photo {
       background-image: url(../../public/projects/madaia/madaia_main.webp);
@@ -24,12 +29,38 @@
     align-items: center;
     justify-content: center;
     padding-top: $space-80;
+    @media (max-width: 480px) {
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 60px 20px 90px 20px;
+    }
     &__title {
       @include h1Title;
       text-transform: uppercase;
+
+      @media (max-width: 480px) {
+        display: none;
+      }
+
+      &_mob {
+        display: none;
+        @media (max-width: 480px) {
+          width: 100%;
+          text-align: center;
+          text-transform: uppercase;
+          display: block;
+          font-size: 22px;
+          font-weight: 600;
+          line-height: 23.87px;
+          padding-bottom: 40px;
+        }
+      }
     }
     img {
       width: clamp(3.5rem, 0rem + 11.6667vw, 14rem);
+      @media (max-width: 480px) {
+        display: none;
+      }
     }
     &__paragraph {
       @include paragraph;
@@ -38,6 +69,14 @@
 
       &:last-child {
         padding-bottom: $space-100;
+      }
+      @media (max-width: 480px) {
+        font-size: 16px;
+        line-height: 20.8px;
+        padding-bottom: 20px;
+        &:last-child {
+          padding-bottom: 0;
+        }
       }
     }
   }
@@ -56,10 +95,17 @@
     img {
       width: 100%;
     }
+    @media (max-width: 480px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__mobileDesign {
     padding: $space-50 $space-80 $space-100 $space-80;
+    @media (max-width: 480px) {
+      padding: 0;
+    }
   }
 
   &__team {
@@ -68,12 +114,24 @@
     align-items: center;
     justify-content: center;
     padding-bottom: $space-100;
+    @media (max-width: 480px) {
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 0 20px;
+    }
 
     &_title {
       @include h3Title;
       font-weight: 600;
       text-transform: uppercase;
       padding-bottom: $space-50;
+      @media (max-width: 480px) {
+        text-transform: lowercase;
+        text-align: left;
+        font-size: 16px;
+        line-height: 20.8px;
+        padding: 110px 0 40px 0;
+      }
     }
 
     &_container {
@@ -81,16 +139,35 @@
       display: flex;
       flex-direction: column;
       gap: $space-20;
+      @media (max-width: 480px) {
+        width: 100%;
+        gap: 0;
+      }
     }
 
     &_member {
       display: flex;
       justify-content: space-between;
       @include paragraph;
+      font-weight: 600;
+      @media (max-width: 480px) {
+        border-bottom: 1px solid #c4c4c4;
+      }
 
       &_nameContainer {
         text-align: right;
         gap: $space-10;
+        font-weight: 400;
+        @media (max-width: 480px) {
+          text-align: left;
+        }
+      }
+      @media (max-width: 480px) {
+        padding: 16px 0;
+        font-size: 16px;
+        line-height: 20.8px;
+        display: flex;
+        flex-direction: column;
       }
     }
   }

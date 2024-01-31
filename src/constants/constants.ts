@@ -54,15 +54,7 @@ export const PROJECTS: IProjects[] = [
     id: ["webdev"],
     category: "веб-разработка",
   },
-  {
-    title: "vademecum",
-    img: "/main/vdm.webp",
-    secondImage: "/projects/projects_vdm.png",
-    description:
-      "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
-    id: ["webdev"],
-    category: "веб-разработка",
-  },
+
   {
     title: "mindly",
     img: "/main/mindly.webp",
@@ -89,6 +81,15 @@ export const PROJECTS: IProjects[] = [
       "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
     id: [],
     category: "брендинг,графический дизайн",
+  },
+  {
+    title: "vademecum",
+    img: "/main/vdm.webp",
+    secondImage: "/projects/projects_vdm.png",
+    description:
+      "Aliqua magna cillum id et irure amet est ex cillum sit dolore velit.",
+    id: ["webdev"],
+    category: "веб-разработка",
   },
 ];
 
