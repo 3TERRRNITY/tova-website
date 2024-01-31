@@ -19,7 +19,7 @@
   padding: 0;
 
   box-sizing: border-box;
-  cursor: none;
+  cursor: none !important;
 }
 html,
 body {
@@ -32,7 +32,7 @@ body {
 a {
   text-decoration: none;
   color: white;
-  z-index: 100;
+  z-index: 500;
 }
 
 ul {

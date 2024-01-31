@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "../../styles/aimi.module.scss";
 import commonStyles from "../../styles/common.module.scss";
 
@@ -15,7 +15,6 @@ import Graphic2 from "../../../public/projects/aimi/aimations/Graphic2.json";
 import Graphic3 from "../../../public/projects/aimi/aimations/Graphic3.json";
 import Graphic4 from "../../../public/projects/aimi/aimations/Graphic4.json";
 import Carousel from "../../components/Carousel/Carousel";
-import { SplineAimi } from "../../components/SplineAimi/SplineAimi";
 import Cursor from "../../components/Cursor/Cursor";
 
 const Aimi = () => {
@@ -44,13 +43,33 @@ const Aimi = () => {
       name: "Александр Рязанов",
     },
   ];
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.muted = true;
+      videoRef.current.playsInline = true;
+      videoRef.current.autoplay = true;
+    }
+  }, []);
   return (
     <>
       <Cursor />
       <div className={commonStyles.mainPageBody}>
         <Header />
         <div className={commonStyles.projectContainer}>
-          <div className={styles.aimi__hero}>{/* <SplineAimi /> */}</div>
+          <div className={styles.aimi__hero}>
+            <div className={styles.aimi__hero__video}>
+              <video
+                autoPlay
+                muted={true}
+                loop
+                playsInline={true}
+                ref={videoRef}
+              >
+                <source type="video/mp4" src="/projects/aimi/aimi_video.mp4" />
+              </video>
+            </div>
+          </div>
           <div className={styles.aimi__about}>
             <div className={styles.aimi__about__head}>
               <div className={styles.aimi__about__head_title}>О проекте</div>
