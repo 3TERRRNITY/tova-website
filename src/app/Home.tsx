@@ -24,7 +24,6 @@ export default function Home() {
 
   return (
     <>
-      <Cursor />
       <div className={commonStyles.mainPageBody}>
         <div className={styles.hero}>
           <div className={styles.hero__video}>

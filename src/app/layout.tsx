@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.scss";
 
 import Navbar from "../components/Navbar/Navbar";
-import Head from "next/head";
 import Cursor from "../components/Cursor/Cursor";
 
 export const metadata: Metadata = {
@@ -26,6 +25,7 @@ export default function RootLayout({
         ></link>
       </head>
       <body suppressHydrationWarning={true}>
+        <Cursor />
         <Navbar />
 
         {children}

@@ -240,40 +240,51 @@
     }
 
     &__images {
-      display: grid;
-      grid-template-columns: 0.5fr 0.5fr 1fr;
+      background-image: url(../../public/projects/avivir/avivir_adaptive_new.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 100%;
       height: clamp(18.6875rem, -0.0208rem + 62.3611vw, 74.8125rem);
-
       @media (max-width: 480px) {
-        display: flex;
-        flex-direction: column;
-      }
+        background-image: url(../../public/projects/avivir/avivir_adaptive_mob.png);
 
-      &_image1,
-      &_image2,
-      &_image3 {
-        height: 100%;
-        z-index: +1;
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
+        height: 600px;
       }
+      // display: grid;
+      // grid-template-columns: 0.5fr 0.5fr 1fr;
+      // height: clamp(18.6875rem, -0.0208rem + 62.3611vw, 74.8125rem);
 
-      &_image1 {
-        background-image: url(../../public/projects/avivir/avivir-adaptive-1.webp);
-        @media (max-width: 480px) {
-          display: none;
-        }
-      }
-      &_image2 {
-        background-image: url(../../public/projects/avivir/avivir-adaptive-2.webp);
-      }
-      &_image3 {
-        background-image: url(../../public/projects/avivir/avivir-adaptive-3.webp);
+      // @media (max-width: 480px) {
+      //   display: flex;
+      //   flex-direction: column;
+      // }
 
-        background-size: cover;
-        border-radius: 15px;
-      }
+      // &_image1,
+      // &_image2,
+      // &_image3 {
+      //   height: 100%;
+      //   z-index: +1;
+      //   background-size: contain;
+      //   background-position: center;
+      //   background-repeat: no-repeat;
+      // }
+
+      // &_image1 {
+      //   background-image: url(../../public/projects/avivir/avivir-adaptive-1.webp);
+      //   @media (max-width: 480px) {
+      //     display: none;
+      //   }
+      // }
+      // &_image2 {
+      //   background-image: url(../../public/projects/avivir/avivir-adaptive-2.webp);
+      // }
+      // &_image3 {
+      //   background-image: url(../../public/projects/avivir/avivir-adaptive-3.webp);
+
+      //   background-size: cover;
+      //   border-radius: 15px;
+      // }
     }
   }
 
@@ -348,8 +359,12 @@
         display: none;
       }
       &__slider {
+        margin-top: $space-100;
         width: 100vw;
         height: 80%;
+        @media (max-width: 480px) {
+          margin-top: 70px;
+        }
 
         &_slide {
           width: 100%;

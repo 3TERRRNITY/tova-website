@@ -46,12 +46,16 @@ const page = () => {
 
   return (
     <>
-      <Cursor />
       <div className={commonStyles.otherPageBody}>
         <Header white />
         <div className={styles.rambam__hero}>
           <video autoPlay muted={true} playsInline={true} ref={videoRef}>
             <source type="video/mp4" src="/projects/rambam/rambam_main.mp4" />
+          </video>
+        </div>
+        <div className={styles.rambam__hero_mob}>
+          <video autoPlay muted={true} playsInline={true} ref={videoRef}>
+            <source type="video/mp4" src="/projects/rambam/rambam_mob.mp4" />
           </video>
         </div>
         <div className={styles.rambam}>

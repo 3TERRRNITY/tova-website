@@ -8,7 +8,9 @@ import { Separator } from "../../components/Separator/Separator";
 import Lottie from "lottie-react";
 import Palette from "../../../public/projects/mindly/animations/palette-mindly.json";
 import Logo from "../../../public/projects/mindly/animations/logo.json";
-import Cursor from "../../components/Cursor/Cursor";
+import { Autoplay } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 const Mindly = () => {
   const aboutPoints = [
@@ -39,7 +41,6 @@ const Mindly = () => {
 
   return (
     <>
-      <Cursor />
       <div className={commonStyles.mindlyPage}>
         <Header white />
 
@@ -223,7 +224,6 @@ const Mindly = () => {
               alt="mindly-adaptive"
             />
             <img src="/projects/mindly/prod-2.webp" alt="mindly-adaptive" />
-            <img src="/projects/mindly/prod-3.webp" alt="mindly-adaptive" />
           </div>
         </div>
         <div className={styles.mindly}>
@@ -244,7 +244,7 @@ const Mindly = () => {
         </div>
 
         <img
-          src="/projects/mindly/mindly-adaptive_new.webp"
+          src="/projects/mindly/mindly_adaptive.png"
           className={styles.mindly__adaptive__imagesMobile}
         />
         <img
@@ -284,13 +284,137 @@ const Mindly = () => {
             </div>
           </div>
         </div>
+        <div className={styles.mindly__swiper__images}>
+          <Swiper
+            slidesPerView={4}
+            centeredSlides={true}
+            loop={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            modules={[Autoplay]}
+            className={styles.mindly__swiper__images__slider}
+          >
+            <SwiperSlide
+              className={styles.mindly__swiper__images__slider_slide}
+            >
+              <img
+                src="/projects/mindly/smm_carousel1.png"
+                alt="instagram post"
+              />
+            </SwiperSlide>
+            <SwiperSlide
+              className={styles.mindly__swiper__images__slider_slide}
+            >
+              <img
+                src="/projects/mindly/smm_carousel2.png"
+                alt="instagram post"
+              />
+            </SwiperSlide>
+            <SwiperSlide
+              className={styles.mindly__swiper__images__slider_slide}
+            >
+              <img
+                src="/projects/mindly/smm_carousel3.png"
+                alt="instagram post"
+              />
+            </SwiperSlide>
+            <SwiperSlide
+              className={styles.mindly__swiper__images__slider_slide}
+            >
+              <img
+                src="/projects/mindly/smm_carousel4.png"
+                alt="instagram post"
+              />
+            </SwiperSlide>
+            <SwiperSlide
+              className={styles.mindly__swiper__images__slider_slide}
+            >
+              <img
+                src="/projects/mindly/smm_carousel5.png"
+                alt="instagram post"
+              />
+            </SwiperSlide>
+            <SwiperSlide
+              className={styles.mindly__swiper__images__slider_slide}
+            >
+              <img
+                src="/projects/mindly/smm_carousel6.png"
+                alt="instagram post"
+              />
+            </SwiperSlide>
+          </Swiper>
+        </div>
 
-        <div className={styles.mindly__examples__instagramMobile}>
+        <div className={styles.mindly__swiper__images_mob}>
+          <Swiper
+            slidesPerView={1}
+            centeredSlides={true}
+            loop={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            modules={[Autoplay]}
+            className={styles.mindly__swiper__images_mob__slider}
+          >
+            <SwiperSlide
+              className={styles.mindly__swiper__images_mob__slider_slide}
+            >
+              <img
+                src="/projects/mindly/smm_carousel1.png"
+                alt="instagram post"
+              />
+            </SwiperSlide>
+            <SwiperSlide
+              className={styles.mindly__swiper__images_mob__slider_slide}
+            >
+              <img
+                src="/projects/mindly/smm_carousel2.png"
+                alt="instagram post"
+              />
+            </SwiperSlide>
+            <SwiperSlide
+              className={styles.mindly__swiper__images_mob__slider_slide}
+            >
+              <img
+                src="/projects/mindly/smm_carousel3.png"
+                alt="instagram post"
+              />
+            </SwiperSlide>
+            <SwiperSlide
+              className={styles.mindly__swiper__images_mob__slider_slide}
+            >
+              <img
+                src="/projects/mindly/smm_carousel4.png"
+                alt="instagram post"
+              />
+            </SwiperSlide>
+            <SwiperSlide
+              className={styles.mindly__swiper__images_mob__slider_slide}
+            >
+              <img
+                src="/projects/mindly/smm_carousel5.png"
+                alt="instagram post"
+              />
+            </SwiperSlide>
+            <SwiperSlide
+              className={styles.mindly__swiper__images_mob__slider_slide}
+            >
+              <img
+                src="/projects/mindly/smm_carousel6.png"
+                alt="instagram post"
+              />
+            </SwiperSlide>
+          </Swiper>
+        </div>
+        {/* <div className={styles.mindly__examples__instagramMobile}>
           <img src="/projects/mindly/smm_mobile1.webp" alt="instagram post" />
           <img src="/projects/mindly/smm_mobile2.webp" alt="instagram post" />
           <img src="/projects/mindly/smm_mobile3.webp" alt="instagram post" />
         </div>
-        <div className={styles.mindly__examples__instagram} />
+        <div className={styles.mindly__examples__instagram} /> */}
 
         <div className={styles.mindly}>
           <div className={styles.mindly__team}>

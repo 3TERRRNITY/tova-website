@@ -18,7 +18,25 @@
       display: flex;
       justify-content: center;
       align-items: center;
-
+      @media (max-width: 600px) {
+        display: none;
+      }
+      &_mob {
+        display: none;
+        video {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+        @media (max-width: 600px) {
+          display: block;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+        }
+      }
       video {
         object-fit: cover;
         width: 100%;
@@ -143,10 +161,9 @@
   &__firm,
   &__typography,
   &__smm {
-    padding: $space-80 $space-40
-      clamp(3.3125rem, 0.0208rem + 10.9722vw, 13.1875rem) $space-40;
+    padding: $space-80 $space-40;
     @media (max-width: 480px) {
-      padding: 40px 20px 90px 20px;
+      padding: 40px 20px;
     }
     &__info {
       @include h3Title;
@@ -200,6 +217,12 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: $space-20;
+        &:first-of-type {
+          margin-bottom: $space-80;
+          @media (max-width: 480px) {
+            margin-bottom: 40px;
+          }
+        }
         @media (max-width: 480px) {
           margin-top: 20px;
           display: flex;
@@ -313,6 +336,7 @@
         width: 100%;
         height: clamp(10.375rem, 0rem + 34.5833vw, 41.5rem);
         background-size: contain;
+        background-position: center;
         background-repeat: no-repeat;
         border-radius: $space-20;
       }
@@ -355,6 +379,108 @@
       padding: $space-20 0;
       @include paragraph;
       border-bottom: 1px solid #3e3e3e;
+    }
+  }
+
+  &__information {
+    &__cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $space-20;
+
+      @media (max-width: 480px) {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+    &__cardTexts {
+      display: flex;
+      flex-direction: column;
+      gap: $space-10;
+
+      padding: $space-40;
+      justify-content: end;
+      z-index: 10;
+      opacity: 0;
+      pointer-events: none;
+
+      &_title {
+        @include h3Title;
+
+        text-transform: lowercase;
+      }
+
+      &_description {
+        @include paragraph;
+        text-transform: lowercase;
+      }
+    }
+
+    &__card1,
+    &__card2,
+    &__card_big {
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      align-items: end;
+
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 0;
+      cursor: pointer;
+      position: relative;
+
+      &_overflow {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0;
+        z-index: 4;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+
+    &__card1,
+    &__card2 {
+      height: clamp(6.625rem, 0.0417rem + 21.9444vi, 26.375rem);
+      background-size: cover;
+      @media (max-width: 480px) {
+        height: 360px;
+        width: 100%;
+      }
+    }
+
+    &__card1 {
+      grid-row: 2;
+      grid-column: 1;
+      background-image: url(../../public/projects/aimi/aimi_firm1.png);
+    }
+
+    &__card2 {
+      grid-column: 2;
+      grid-row: 2;
+      background-image: url(../../public/projects/aimi/aimi_firm2.png);
+    }
+
+    &__card_big {
+      height: clamp(11.125rem, -0.0208rem + 37.1528vi, 44.5625rem);
+      grid-row: 1;
+      grid-column: 1/3;
+
+      background-image: url(../../public/projects/aimi/aimi_firm3.png);
+      background-size: cover;
+      @media (max-width: 480px) {
+        height: 360px;
+        width: 100%;
+      }
     }
   }
 }

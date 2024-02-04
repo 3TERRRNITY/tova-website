@@ -35,7 +35,6 @@ const Frenchi = () => {
   ];
   return (
     <>
-      <Cursor />
       <div className={commonStyles.mainPageBody}>
         <Header />
         <div className={styles.frenchi__hero} />

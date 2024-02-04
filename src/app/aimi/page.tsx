@@ -1,8 +1,7 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "../../styles/aimi.module.scss";
 import commonStyles from "../../styles/common.module.scss";
-
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import { Separator } from "../../components/Separator/Separator";
@@ -15,7 +14,7 @@ import Graphic2 from "../../../public/projects/aimi/aimations/Graphic2.json";
 import Graphic3 from "../../../public/projects/aimi/aimations/Graphic3.json";
 import Graphic4 from "../../../public/projects/aimi/aimations/Graphic4.json";
 import Carousel from "../../components/Carousel/Carousel";
-import Cursor from "../../components/Cursor/Cursor";
+import { motion, useAnimation } from "framer-motion";
 
 const Aimi = () => {
   const aboutPoints = [
@@ -43,6 +42,49 @@ const Aimi = () => {
       name: "Александр Рязанов",
     },
   ];
+  const controls = useAnimation();
+  const [isHoveredCard1, setIsHoveredCard1] = useState<boolean>(false);
+  const [isHoveredCard2, setIsHoveredCard2] = useState<boolean>(false);
+  const [isHoveredCard3, setIsHoveredCard3] = useState<boolean>(false);
+  const handleHover1 = () => {
+    controls.start({
+      opacity: 1,
+    });
+    setIsHoveredCard1(true);
+  };
+
+  const handleUnhover1 = () => {
+    controls.start({
+      opacity: 0,
+    });
+    setIsHoveredCard1(false);
+  };
+  const handleHover2 = () => {
+    controls.start({
+      opacity: 1,
+    });
+    setIsHoveredCard2(true);
+  };
+
+  const handleUnhover2 = () => {
+    controls.start({
+      opacity: 0,
+    });
+    setIsHoveredCard2(false);
+  };
+  const handleHover3 = () => {
+    controls.start({
+      opacity: 1,
+    });
+    setIsHoveredCard3(true);
+  };
+
+  const handleUnhover3 = () => {
+    controls.start({
+      opacity: 0,
+    });
+    setIsHoveredCard3(false);
+  };
   const videoRef = useRef<HTMLVideoElement | null>(null);
   useEffect(() => {
     if (videoRef.current) {
@@ -53,7 +95,6 @@ const Aimi = () => {
   }, []);
   return (
     <>
-      <Cursor />
       <div className={commonStyles.mainPageBody}>
         <Header />
         <div className={commonStyles.projectContainer}>
@@ -67,6 +108,17 @@ const Aimi = () => {
                 ref={videoRef}
               >
                 <source type="video/mp4" src="/projects/aimi/aimi_video.mp4" />
+              </video>
+            </div>
+            <div className={styles.aimi__hero__video_mob}>
+              <video
+                autoPlay
+                muted={true}
+                loop
+                playsInline={true}
+                ref={videoRef}
+              >
+                <source type="video/mp4" src="/projects/aimi/aimi_mob.mp4" />
               </video>
             </div>
           </div>
@@ -164,7 +216,91 @@ const Aimi = () => {
               </div>
             </div>
 
-            <div className={styles.aimi__firm__imageGridContainer}>
+            <div className={styles.aimi__information__cards}>
+              <motion.div
+                className={styles.aimi__information__card1}
+                onHoverStart={handleHover1}
+                onHoverEnd={handleUnhover1}
+              >
+                <div className={styles.aimi__information__card1_overflow} />
+                <motion.div
+                  className={styles.aimi__information__cardTexts}
+                  initial={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  animate={{
+                    opacity: isHoveredCard1 ? 1 : 0,
+                  }}
+                >
+                  <div className={styles.aimi__information__cardTexts_title}>
+                    aimi
+                  </div>
+                  <div
+                    className={styles.aimi__information__cardTexts_description}
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Eveniet illo consequatur laudantium vero dolor accusamus
+                    fugiat dolores asperiores aut fugit sit dolore distinctio,
+                    aliquid saepe incidunt excepturi iusto qui. Velit.
+                  </div>
+                </motion.div>
+              </motion.div>
+
+              <motion.div
+                onHoverStart={handleHover2}
+                onHoverEnd={handleUnhover2}
+                className={styles.aimi__information__card2}
+              >
+                <div className={styles.aimi__information__card2_overflow} />
+                <motion.div
+                  className={styles.aimi__information__cardTexts}
+                  initial={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  animate={{
+                    opacity: isHoveredCard2 ? 1 : 0,
+                  }}
+                >
+                  <div className={styles.aimi__information__cardTexts_title}>
+                    aimi
+                  </div>
+                  <div
+                    className={styles.aimi__information__cardTexts_description}
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Eveniet illo consequatur laudantium vero dolor accusamus
+                    fugiat dolores asperiores aut fugit sit dolore distinctio,
+                    aliquid saepe incidunt excepturi iusto qui. Velit.
+                  </div>
+                </motion.div>
+              </motion.div>
+              <motion.div
+                onHoverStart={handleHover3}
+                onHoverEnd={handleUnhover3}
+                className={styles.aimi__information__card_big}
+              >
+                <div className={styles.aimi__information__card_big_overflow} />
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  animate={{
+                    opacity: isHoveredCard3 ? 1 : 0,
+                  }}
+                  className={styles.aimi__information__cardTexts}
+                >
+                  <div className={styles.aimi__information__cardTexts_title}>
+                    aimi
+                  </div>
+                  <div
+                    className={styles.aimi__information__cardTexts_description}
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Eveniet illo consequatur laudantium vero dolor accusamus
+                    fugiat dolores asperiores aut fugit sit dolore distinctio,
+                    aliquid saepe incidunt excepturi iusto qui. Velit.
+                  </div>
+                </motion.div>
+              </motion.div>
+            </div>
+            {/* <div className={styles.aimi__firm__imageGridContainer}>
               <img
                 className={styles.aimi__firm__imageGridContainer_image}
                 src="/projects/aimi/aimi_firm1.png"
@@ -180,7 +316,7 @@ const Aimi = () => {
                 src="/projects/aimi/aimi_firm3.png"
                 alt="design"
               />
-            </div>
+            </div> */}
           </div>
           <Separator />
           <div className={styles.aimi__typography}>

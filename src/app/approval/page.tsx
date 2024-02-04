@@ -37,7 +37,6 @@ const page = () => {
   ];
   return (
     <>
-      <Cursor />
       <div className={commonStyles.mainPageBody}>
         <div className={commonStyles.otherPageBody}>
           <Header white />

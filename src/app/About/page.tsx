@@ -45,7 +45,6 @@ const About = () => {
   ));
   return (
     <>
-      <Cursor />
       <Header white />
       <Navbar />
       <motion.div
