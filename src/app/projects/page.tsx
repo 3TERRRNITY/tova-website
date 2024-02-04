@@ -13,8 +13,6 @@ import Lottie from "lottie-react";
 import emptyAnimation from "../../../public/animations/empty.json";
 import { motion } from "framer-motion";
 import { textAnimation } from "../../common/animations";
-import Link from "next/link";
-import Cursor from "../../components/Cursor/Cursor";
 
 const Projects = () => {
   const [selectedOption, setSelectedOption] = useState<string>("all");
@@ -52,7 +50,47 @@ const Projects = () => {
           <div className={styles.projects__title}>проекты</div>
           <div className={styles.projects__select}>
             {OPTIONS.map((option) => (
-              <a
+              <motion.div
+                key={option.title}
+                className={`${styles.projects__select__option} ${
+                  selectedOption === option.id
+                    ? styles.projects__select__option_active
+                    : ""
+                }`}
+                onClick={() => handleOptionClick(option.id)}
+                style={{ position: "relative" }}
+              >
+                <motion.div
+                  initial={{
+                    width: 0,
+                    height: 0,
+                    background: "white",
+                    originX: 0,
+                    originY: 1,
+                  }}
+                  animate={{
+                    width: selectedOption === option.id ? "150%" : 0,
+                    height: selectedOption === option.id ? "150%" : 0,
+                    borderTopRightRadius: "90%",
+                    transition: { duration: 0.5 },
+                  }}
+                  style={{ position: "absolute", left: 0, bottom: 0 }}
+                />
+                <p
+                  style={{
+                    position: "relative",
+                    zIndex: 2,
+                    color: selectedOption === option.id ? "black" : "white",
+                  }}
+                >
+                  {option.title}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+          {/* <div className={styles.projects__select}>
+            {OPTIONS.map((option) => (
+              <motion.a
                 key={option.title}
                 className={`${styles.projects__select__option} ${
                   selectedOption === option.id
@@ -61,11 +99,16 @@ const Projects = () => {
                 }`}
                 id={option.id}
                 onClick={() => handleOptionClick(option.id)}
+                initial={{ background: "transparent" }}
+                animate={{
+                  background: selectedOption === option.id ? "white" : "black",
+                  color: selectedOption === option.id ? "black" : "white",
+                }}
               >
                 <p>{option.title}</p>
-              </a>
+              </motion.a>
             ))}
-          </div>
+          </div> */}
           <Separator />
 
           {filteredProjects &&

@@ -38,23 +38,11 @@
       color: #fff;
       position: relative;
       overflow: hidden;
-      z-index: 1;
-      transition: color 0.5s, background-color 0.5s;
 
       @media (max-width: 480px) {
         padding: 20px;
         border-left: none;
         border-right: none;
-      }
-
-      &:hover {
-        color: black;
-        background-color: #fff;
-      }
-
-      &_active {
-        color: black;
-        background-color: white;
       }
     }
   }
