@@ -53,7 +53,6 @@ const Aimi = () => {
   }, []);
   return (
     <>
-      <Cursor />
       <div className={commonStyles.mainPageBody}>
         <Header />
         <div className={commonStyles.projectContainer}>

@@ -46,7 +46,6 @@ const page = () => {
 
   return (
     <>
-      <Cursor />
       <div className={commonStyles.otherPageBody}>
         <Header white />
         <div className={styles.rambam__hero}>

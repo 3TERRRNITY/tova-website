@@ -46,7 +46,6 @@ const Projects = () => {
 
   return (
     <>
-      <Cursor />
       <div className={commonStyles.mainPageBody}>
         <Header />
         <div className={styles.projects}>

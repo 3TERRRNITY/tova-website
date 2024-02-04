@@ -16,7 +16,6 @@ import Cursor from "../../components/Cursor/Cursor";
 const Services = () => {
   return (
     <>
-      <Cursor />
       <Header white />
       <Navbar />
       <div className={commonStyles.otherPageBody}>

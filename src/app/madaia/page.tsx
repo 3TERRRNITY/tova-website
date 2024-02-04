@@ -24,7 +24,6 @@ const page = () => {
   ];
   return (
     <>
-      <Cursor />
       <div className={commonStyle.madaiaPage}>
         <div className={styles.madaia}>
           <div className={styles.madaia__hero}>

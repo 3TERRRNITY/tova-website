@@ -40,7 +40,6 @@ const Vademecum = () => {
   const aboutCards = ["исследование", "user fow", "дизайн", "разработка"];
   return (
     <>
-      <Cursor />
       <div className={commonStyles.mainPageBody}>
         <Header />
         <div className={styles.vademecum__hero} />

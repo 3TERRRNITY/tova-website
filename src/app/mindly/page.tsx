@@ -39,7 +39,6 @@ const Mindly = () => {
 
   return (
     <>
-      <Cursor />
       <div className={commonStyles.mindlyPage}>
         <Header white />
 

@@ -10,12 +10,12 @@ import NeonCircle from "../../components/NeonCircle/NeonCircle";
 import Lottie from "lottie-react";
 import Logo from "../../../public/projects/avivir/animations/logo.json";
 import Grid from "../../../public/projects/avivir/animations/grid.json";
+import Desktop from "../../../public/projects/avivir/animations/avivir_desktop.json";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { useAnimation } from "framer-motion";
 import { motion } from "framer-motion";
 import { Autoplay } from "swiper";
-import Cursor from "../../components/Cursor/Cursor";
 
 const Avivir = () => {
   const aboutPoints = [
@@ -77,7 +77,6 @@ const Avivir = () => {
 
   return (
     <>
-      <Cursor />
       <div className={commonStyles.mainPageBody}>
         <Header />
         <div className={commonStyles.projectContainer}>
@@ -152,7 +151,8 @@ const Avivir = () => {
                   красоту
                 </div>
               </div>
-              <div className={styles.avivir__mainPage__image} />
+              {/* <div className={styles.avivir__mainPage__image} /> */}
+              <Lottie animationData={Desktop} style={{ width: "100%" }} />
             </div>
 
             <div className={styles.avivir__adaptiveDesign}>
@@ -172,7 +172,7 @@ const Avivir = () => {
                 </div>
               </div>
               <div className={styles.avivir__adaptiveDesign__images}>
-                <div
+                {/* <div
                   className={styles.avivir__adaptiveDesign__images_image1}
                 ></div>
                 <div
@@ -180,7 +180,7 @@ const Avivir = () => {
                 ></div>
                 <div
                   className={styles.avivir__adaptiveDesign__images_image3}
-                ></div>
+                ></div> */}
               </div>
             </div>
 
