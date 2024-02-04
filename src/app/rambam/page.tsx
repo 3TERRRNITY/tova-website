@@ -54,6 +54,11 @@ const page = () => {
             <source type="video/mp4" src="/projects/rambam/rambam_main.mp4" />
           </video>
         </div>
+        <div className={styles.rambam__hero_mob}>
+          <video autoPlay muted={true} playsInline={true} ref={videoRef}>
+            <source type="video/mp4" src="/projects/rambam/rambam_mob.mp4" />
+          </video>
+        </div>
         <div className={styles.rambam}>
           <div className={styles.rambam__about}>
             <div className={styles.rambam__about__head}>

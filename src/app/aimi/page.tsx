@@ -69,6 +69,17 @@ const Aimi = () => {
                 <source type="video/mp4" src="/projects/aimi/aimi_video.mp4" />
               </video>
             </div>
+            <div className={styles.aimi__hero__video_mob}>
+              <video
+                autoPlay
+                muted={true}
+                loop
+                playsInline={true}
+                ref={videoRef}
+              >
+                <source type="video/mp4" src="/projects/aimi/aimi_mob.mp4" />
+              </video>
+            </div>
           </div>
           <div className={styles.aimi__about}>
             <div className={styles.aimi__about__head}>
