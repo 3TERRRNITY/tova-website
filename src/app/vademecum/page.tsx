@@ -122,7 +122,7 @@ const Vademecum = () => {
         </div>
         <div className={styles.vademecum__mainPage__image}>
           <img
-            src="/projects/vademkum/vademcum-mainPage.png"
+            src="/projects/vademkum/vademecum_main.png"
             alt="main-page"
             className={styles.vademecum__mainPage__image_img}
           />
