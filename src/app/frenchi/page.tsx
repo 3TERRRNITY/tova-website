@@ -43,8 +43,11 @@ const Frenchi = () => {
           <div className={styles.frenchi__about__head}>
             <div className={styles.frenchi__about__head_title}>О проекте</div>
             <div className={styles.frenchi__about__head_subtitle}>
-              {aboutPoints.map((point) => (
-                <div key={point} className={styles.frenchi__about__head_point}>
+              {aboutPoints.map((point, index) => (
+                <div
+                  key={`${point}-${index}`}
+                  className={styles.frenchi__about__head_point}
+                >
                   <span>{point}</span>
                 </div>
               ))}
@@ -127,8 +130,8 @@ const Frenchi = () => {
             <div className={styles.frenchi__team_title}>
               Над проектом работали
             </div>
-            {team.map((member) => (
-              <React.Fragment key={member.name}>
+            {team.map((member, index) => (
+              <React.Fragment key={`${member.name}-${index}`}>
                 <div className={styles.frenchi__team__member}>
                   <div className={styles.frenchi__team__member_position}>
                     {member.position}

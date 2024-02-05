@@ -15,7 +15,7 @@ import Cursor from "../../components/Cursor/Cursor";
 
 const About = () => {
   const Departaments = DEPARTAMENTS.map(({ title, description }, index) => (
-    <React.Fragment key={title}>
+    <React.Fragment key={`${title}-${index}`}>
       <motion.div
         className={styles.about__team__departaments__departament}
         initial="hidden"
@@ -29,12 +29,12 @@ const About = () => {
         >
           {title}
         </motion.div>
-        {description.map((item: string) => (
+        {description.map((item: string, index: number) => (
           <motion.div
             custom={2}
             variants={textAnimation}
             className={styles.about__team__departaments__departament_item}
-            key={item}
+            key={`${item}-${index}`}
           >
             {item}
           </motion.div>
@@ -170,8 +170,8 @@ const About = () => {
             Вакансии
           </motion.div>
           <Separator />
-          {VACANCY.map(({ title, description }) => (
-            <React.Fragment key={title}>
+          {VACANCY.map(({ title, description }, index) => (
+            <React.Fragment key={`${title}-${index}`}>
               <motion.div
                 className={styles.about__vacancies__vacancy}
                 initial="hidden"

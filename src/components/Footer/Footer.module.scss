@@ -53,11 +53,11 @@
   }
   &__iconsMobile {
     display: none;
+    position: relative;
     @media (max-width: 480px) {
       display: flex;
       gap: 20px;
       &_icon {
-        position: relative;
         width: 30px;
         height: 25px;
       }

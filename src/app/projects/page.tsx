@@ -49,9 +49,9 @@ const Projects = () => {
         <div className={styles.projects}>
           <div className={styles.projects__title}>проекты</div>
           <div className={styles.projects__select}>
-            {OPTIONS.map((option) => (
+            {OPTIONS.map((option, index) => (
               <motion.div
-                key={option.title}
+                key={`${option.title}-${index}`}
                 className={`${styles.projects__select__option} ${
                   selectedOption === option.id
                     ? styles.projects__select__option_active
@@ -112,8 +112,8 @@ const Projects = () => {
           <Separator />
 
           {filteredProjects &&
-            filteredProjects.map((proj) => (
-              <React.Fragment key={proj.title}>
+            filteredProjects.map((proj, index) => (
+              <React.Fragment key={`${proj.title}-${index}`}>
                 <div className={styles.projects__project}>
                   <div className={styles.projects__project__container}>
                     <motion.div

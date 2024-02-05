@@ -91,9 +91,9 @@ const Avivir = () => {
                   О проекте
                 </div>
                 <div className={styles.avivir__about__head_subtitle}>
-                  {aboutPoints.map((point) => (
+                  {aboutPoints.map((point, index) => (
                     <div
-                      key={point}
+                      key={`${point}-${index}`}
                       className={styles.avivir__about__head_point}
                     >
                       <span>{point}</span>
@@ -132,8 +132,11 @@ const Avivir = () => {
                 </div>
               </div>
               <div className={styles.avivir__about__cards}>
-                {aboutCards.map((card) => (
-                  <div key={card} className={styles.avivir__about__cards__card}>
+                {aboutCards.map((card, index) => (
+                  <div
+                    key={`${card}-${index}`}
+                    className={styles.avivir__about__cards__card}
+                  >
                     {card}
                   </div>
                 ))}

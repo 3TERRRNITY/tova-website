@@ -49,9 +49,9 @@ const page = () => {
                   О проекте
                 </div>
                 <div className={styles.approval__about__head_subtitle}>
-                  {aboutPoints.map((point) => (
+                  {aboutPoints.map((point, index) => (
                     <div
-                      key={point}
+                      key={`${point}-${index}`}
                       className={styles.approval__about__head_point}
                     >
                       <span>{point}</span>
@@ -180,8 +180,8 @@ const page = () => {
               <div className={styles.approval__team_title}>
                 Над проектом работали
               </div>
-              {team.map((member) => (
-                <React.Fragment key={member.name}>
+              {team.map((member, index) => (
+                <React.Fragment key={`${member.name}-${index}`}>
                   <div className={styles.approval__team__member}>
                     <div className={styles.approval__team__member_position}>
                       {member.position}

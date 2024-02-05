@@ -76,6 +76,7 @@ export default function Home() {
                 title: string;
               }) => (
                 <Card
+                  key={title}
                   href={title.toLowerCase()}
                   image={img}
                   title={title}
