@@ -13,11 +13,11 @@ const Carousel = ({ images, width }: ICarousel) => {
     <div className={styles.sliderContainer}>
       <div className={styles.slider}>
         <Swiper slidesPerView={"auto"} spaceBetween={20} loop>
-          {images.map((image) => (
+          {images.map((image, index) => (
             <SwiperSlide
               style={{ width: `${width}px` }}
               className={styles.slider_slide}
-              key={image.toLowerCase()}
+              key={`${image.toLowerCase()}-${index}`}
             >
               <img src={image} alt={image} className={styles.slider_image} />
             </SwiperSlide>

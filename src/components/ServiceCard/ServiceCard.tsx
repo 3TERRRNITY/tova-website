@@ -42,7 +42,7 @@ const ServiceCard = ({ title, description, points, href }: IService) => {
           className={styles.serviceCard__information_points}
         >
           {points.map((point, index) => (
-            <React.Fragment key={point}>
+            <React.Fragment key={`${point}-${index}`}>
               <motion.li
                 variants={textAnimation}
                 custom={index + 1}
@@ -62,8 +62,8 @@ const ServiceCard = ({ title, description, points, href }: IService) => {
         variants={textAnimation}
         className={styles.serviceCard__information_projects}
       >
-        {filteredProjects.map((project) => (
-          <React.Fragment key={project.title}>
+        {filteredProjects.map((project, index) => (
+          <React.Fragment key={`${project.title}-${index}`}>
             <Card
               href={project.title.toLowerCase()}
               image={project.img}

@@ -80,16 +80,22 @@ const page = () => {
             </div>
             <div className={styles.madaia__team_container}>
               {team.map(
-                ({ position, name }: { position: string; name: string[] }) => (
-                  <div className={styles.madaia__team_member} key={position}>
+                (
+                  { position, name }: { position: string; name: string[] },
+                  index
+                ) => (
+                  <div
+                    className={styles.madaia__team_member}
+                    key={`${position}-${index}`}
+                  >
                     <div className={styles.madaia__team_member_position}>
                       {position}
                     </div>
                     <div className={styles.madaia__team_member_nameContainer}>
-                      {name.map((n) => (
+                      {name.map((n, index) => (
                         <div
                           className={styles.madaia__team_member_name}
-                          key={n}
+                          key={`${n}-${index}`}
                         >
                           {n}
                         </div>

@@ -38,10 +38,9 @@ const Services = () => {
 
           <Separator />
           <div className={styles.services__projects}>
-            {SERVICE.map(({ title, description, points, href }) => (
-              <React.Fragment key={title}>
+            {SERVICE.map(({ title, description, points, href }, index) => (
+              <React.Fragment key={`${title}-${index}`}>
                 <ServiceCard
-                  key={title}
                   title={title}
                   description={description}
                   points={points}

@@ -48,9 +48,9 @@ const Vademecum = () => {
           <div className={styles.vademecum__about__head}>
             <div className={styles.vademecum__about__head_title}>О проекте</div>
             <div className={styles.vademecum__about__head_subtitle}>
-              {aboutPoints.map((point) => (
+              {aboutPoints.map((point, index) => (
                 <div
-                  key={point}
+                  key={`${point}-${index}`}
                   className={styles.vademecum__about__head_point}
                 >
                   <span>{point}</span>
@@ -99,8 +99,11 @@ const Vademecum = () => {
             </div>
             <Lottie animationData={Palette} loop />
             <div className={styles.vademecum__mainPage__cards}>
-              {aboutCards.map((card) => (
-                <div key={card} className={styles.vademecum__mainPage__card}>
+              {aboutCards.map((card, index) => (
+                <div
+                  key={`${card}-${index}`}
+                  className={styles.vademecum__mainPage__card}
+                >
                   {card}
                 </div>
               ))}
@@ -170,8 +173,8 @@ const Vademecum = () => {
             <div className={styles.vademecum__team_title}>
               Над проектом работали
             </div>
-            {team.map((member) => (
-              <React.Fragment key={member.name}>
+            {team.map((member, index) => (
+              <React.Fragment key={`${member.name}-${index}`}>
                 <div className={styles.vademecum__team__member}>
                   <div className={styles.vademecum__team__member_position}>
                     {member.position}

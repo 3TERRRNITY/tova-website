@@ -55,6 +55,7 @@ const Nav = ({ closeMenu }: NavProps) => {
         {LINKS.map((link, i) => {
           return (
             <motion.div
+              key={`${link}-${i}`}
               custom={i}
               variants={perspective}
               animate="enter"
@@ -87,7 +88,7 @@ const Nav = ({ closeMenu }: NavProps) => {
         {FOOTER_LINKS.map((link, i) => {
           return (
             <motion.a
-              key={`f_${i}`}
+              key={`${link}-${i}`}
               href={link.href}
               custom={i}
               variants={slideIn}
