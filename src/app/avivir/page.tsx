@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import styles from "../../styles/avivir.module.scss";
+import aimiStyles from "../../styles/aimi.module.scss";
 import commonStyles from "../../styles/common.module.scss";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
@@ -21,8 +22,8 @@ const Avivir = () => {
   const aboutPoints = [
     "проект",
     "клиент / avivir",
-    "категория / веб-дизайн, ux-ui",
-    "дата / 2023",
+    "категория / фирменный стиль / веб-дизайн, ux-ui, разработка, SMM",
+    "дата / 2021 -  по наст. время",
   ];
   const aboutCards = [
     "веб-дизайн",
@@ -74,6 +75,28 @@ const Avivir = () => {
     });
     setIsHoveredCard3(false);
   };
+  const team = [
+    {
+      position: "Руководитель проекта",
+      name: "Михаил Василенко",
+    },
+    {
+      position: "Директор по маркетингу",
+      name: "Светлана Денисова",
+    },
+    {
+      position: "Арт-директор",
+      name: "Полина Гунищева",
+    },
+    {
+      position: "Дизайнер",
+      name: "Наталия Лазарева",
+    },
+    {
+      position: "Копирайтер",
+      name: "Сергей Афанасьев",
+    },
+  ];
 
   return (
     <>
@@ -108,27 +131,20 @@ const Avivir = () => {
                       styles.avivir__about__description__subtitle_paragraph
                     }
                   >
-                    Madaia – бренд одежды для повседневной <br /> жизни и
-                    спорта, идейным вдохновителем <br /> которого является
-                    бывшая
-                  </div>
-                  <div
-                    className={
-                      styles.avivir__about__description__subtitle_paragraph
-                    }
-                  >
-                    побуждает ее творить красоту, бренд Madaia <br /> -
-                    результат вдохновения. Madaia – <br />
-                    бренд одежды для повседневной жизни и спорта
+                    Компания «Авивир» реализует проекты оснащения медицинских
+                    организаций и фармацевтических производств оборудованием,
+                    строительства объектов здравоохранения; занимается
+                    поставками средств диагностики, лекарственных препаратов и
+                    парафармацевтических товаров.
                   </div>
                 </div>
                 <div
                   className={styles.avivir__about__description__subtitle_big}
                 >
-                  Madaia – бренд одежды для повседневной жизни и спорта, идейным
-                  вдохновителем которого является бывшая побуждает ее творить
-                  красоту, бренд Madaia - результат вдохновения. бренд одежды
-                  для повседневной жизни и спорта
+                  В работе с Авивир мы полностью обновили бренд: разработали
+                  новый логотип и провели глобальный ребрендинг. Кроме того, мы
+                  создали современный и функциональный сайт, отражающий
+                  обновленный имидж и деятельность компании.
                 </div>
               </div>
               <div className={styles.avivir__about__cards}>
@@ -149,9 +165,11 @@ const Avivir = () => {
                   дизайн главной страницы сайта
                 </div>
                 <div className={styles.avivir__mainPage__info_description}>
-                  Madaia – бренд одежды для повседневной жизни и спорта, идейным
-                  вдохновителем которого является бывшая побуждает ее творить
-                  красоту
+                  В создании дизайна главной страницы сайта компании мы
+                  сосредоточились на четком представлении её деятельности.
+                  Учитывая, что это визитная карточка компании, мы акцентировали
+                  важные аспекты, обеспечив при этом простоту и интуитивность
+                  навигации.
                 </div>
               </div>
               {/* <div className={styles.avivir__mainPage__image} /> */}
@@ -169,9 +187,8 @@ const Avivir = () => {
                 <div
                   className={styles.avivir__adaptiveDesign__info_description}
                 >
-                  Madaia – бренд одежды для повседневной жизни и спорта, идейным
-                  вдохновителем которого является бывшая побуждает ее творить
-                  красоту
+                  Адаптивный дизайн сайта эффектно сочетает функциональность и
+                  удобство, отлично адаптируясь под любой размер экрана
                 </div>
               </div>
               <div className={styles.avivir__adaptiveDesign__images}>
@@ -191,9 +208,9 @@ const Avivir = () => {
               <div className={styles.avivir__smm__info}>
                 <div className={styles.avivir__smm__info_title}>smm</div>
                 <div className={styles.avivir__smm__info_description}>
-                  Madaia – бренд одежды для повседневной жизни и спорта, идейным
-                  вдохновителем которого является бывшая побуждает ее творить
-                  красоту
+                  В течение двух лет мы эффективно управляем социальными сетями
+                  Авивир, применяя креативные стратегии для увеличения аудитории
+                  и укрепления имиджа бренда.
                 </div>
               </div>
 
@@ -337,9 +354,10 @@ const Avivir = () => {
                   Фирменный стиль
                 </div>
                 <div className={styles.avivir__firm__info_description}>
-                  Madaia – бренд одежды для повседневной жизни и спорта, идейным
-                  вдохновителем которого является бывшая побуждает ее творить
-                  красоту
+                  Мы освежили образ Авивир, представив две версии логотипа:
+                  классический и сокращённый 'AV'. Элегантность сокращённой
+                  версии заключается в симметричном дизайне букв 'A' и 'V',
+                  которые сохраняют свою узнаваемость при любом повороте.
                 </div>
               </div>
             </div>
@@ -455,6 +473,23 @@ const Avivir = () => {
                   </motion.div>
                 </motion.div>
               </div>
+            </div>
+            <div className={aimiStyles.aimi__team}>
+              <div className={aimiStyles.aimi__team_title}>
+                Над проектом работали
+              </div>
+              {team.map((member, index) => (
+                <React.Fragment key={`${member.name}-${index}`}>
+                  <div className={aimiStyles.aimi__team__member}>
+                    <div className={aimiStyles.aimi__team__member_position}>
+                      {member.position}
+                    </div>
+                    <div className={aimiStyles.aimi__team__member_name}>
+                      {member.name}
+                    </div>
+                  </div>
+                </React.Fragment>
+              ))}
             </div>
           </div>
         </div>
