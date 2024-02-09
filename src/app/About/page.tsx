@@ -47,6 +47,7 @@ const About = () => {
     <>
       <Header white />
       <Navbar />
+
       <motion.div
         className={styles.about}
         initial="hidden"

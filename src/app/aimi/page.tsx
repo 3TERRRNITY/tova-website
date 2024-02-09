@@ -27,19 +27,31 @@ const Aimi = () => {
   const team = [
     {
       position: "Руководитель проекта",
-      name: "Анастасия Куренкова",
+      name: "Михаил Василенко",
+    },
+    {
+      position: "Директор по маркетингу",
+      name: "Светлана Денисова",
     },
     {
       position: "Арт-директор",
-      name: "Мария Решетова",
-    },
-    {
-      position: "Дизайнер",
       name: "Наталия Лазарева",
     },
     {
+      position: "Копирайтер",
+      name: "Сергей Афанасьев",
+    },
+    {
+      position: "",
+      name: "Фарид Абдуллаев",
+    },
+    {
       position: "Команда разработки",
-      name: "Александр Рязанов",
+      name: "Алексей Ларионов",
+    },
+    {
+      position: "",
+      name: "Дмитрий Авдеев",
     },
   ];
   const controls = useAnimation();
@@ -138,15 +150,13 @@ const Aimi = () => {
             </div>
             <div className={styles.aimi__about__description}>
               <div className={styles.aimi__about__description__subtitle}>
-                <div
-                  className={
-                    styles.aimi__about__description__subtitle_paragraph
-                  }
-                >
-                  Madaia – бренд одежды для повседневной <br /> жизни и спорта,
-                  идейным вдохновителем <br /> которого является бывшая
+                <div className={styles.aimi__about__description__subtitle_big}>
+                  AIMI — сербская CRO-компания, специализирующаяся на
+                  клинических исследованиях в Европе. AIMI предоставляют полный
+                  спектр услуг, охватывающих все этапы клинических испытаний для
+                  фармацевтических и биотехнологических отраслей.
                 </div>
-                <div
+                {/* <div
                   className={
                     styles.aimi__about__description__subtitle_paragraph
                   }
@@ -154,13 +164,14 @@ const Aimi = () => {
                   побуждает ее творить красоту, бренд Madaia <br /> - результат
                   вдохновения. Madaia – <br />
                   бренд одежды для повседневной жизни и спорта
-                </div>
+                </div> */}
               </div>
               <div className={styles.aimi__about__description__subtitle_big}>
-                Madaia – бренд одежды для повседневной жизни и спорта, идейным
-                вдохновителем которого является бывшая побуждает ее творить
-                красоту, бренд Madaia - результат вдохновения. бренд одежды для
-                повседневной жизни и спорта
+                В этом кейсе команда tova под ключ создала визуальный облик для
+                стартапа в сфере клинических исследований. От нейминга до
+                дизайна сайта, каждый элемент был разработан с учетом пожеланий
+                клиента, придавая новому игроку в индустрии исследований
+                уникальный, современный и запоминающийся облик.
               </div>
             </div>
           </div>
@@ -168,12 +179,19 @@ const Aimi = () => {
           <div className={styles.aimi__mainPage}>
             <div className={styles.aimi__mainPage__info}>
               <div className={styles.aimi__mainPage__info_title}>
-                дизайн главной страницы сайта
+                <span>Artificial</span> Intelligence and Medical Innovations
               </div>
               <div className={styles.aimi__mainPage__info_description}>
-                Madaia – бренд одежды для повседневной жизни и спорта, идейным
-                вдохновителем которого является бывшая побуждает ее творить
-                красоту
+                <p>Создание нейминга и логотипа</p>
+                <p>
+                  Выбор названия AIMI - <span>Artificial</span> Intelligence and
+                  Medical Innovations был вдохновлен желанием руководителчя
+                  отразить её инновационный подход и специализацию в сфере
+                  медицинских технологий. Это название идеально сочетает
+                  использование искусственного интеллекта и передовые
+                  медицинские инновации, что отражает стратегические цели
+                  компании.
+                </p>
               </div>
             </div>
             <div className={styles.aimi__mainPage__images}>
@@ -188,9 +206,10 @@ const Aimi = () => {
                 Инфографика
               </div>
               <div className={styles.aimi__infographics__info_description}>
-                Madaia – бренд одежды для повседневной жизни и спорта, идейным
-                вдохновителем которого является бывшая побуждает ее творить
-                красоту
+                Aimi активно работает с обширной документацией, поэтому мы
+                разработали для них серию инфографик. Эти визуальные элементы
+                упрощают понимание сложных данных и улучшают представление
+                информации для их заказчиков.
               </div>
             </div>
             <div className={styles.aimi__infographics__images}>
