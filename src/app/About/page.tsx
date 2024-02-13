@@ -83,7 +83,7 @@ const About = () => {
             custom={1}
             variants={textAnimation}
           >
-            Идеология TOVA Creative Agency:
+            Идеология tova Creative Agency:
           </motion.div>
           <motion.ul
             className={styles.about__ideologyContainer__description}
