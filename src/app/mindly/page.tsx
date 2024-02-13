@@ -290,6 +290,7 @@ const Mindly = () => {
         <div className={styles.mindly__swiper__images}>
           <Swiper
             slidesPerView={4}
+            spaceBetween={100}
             centeredSlides={true}
             loop={true}
             autoplay={{

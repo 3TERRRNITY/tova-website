@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar/Navbar";
 import Cursor from "../components/Cursor/Cursor";
 
 export const metadata: Metadata = {
-  title: "TOVA",
+  title: "tova — дизайн, разработка, продакшн",
   description: "Про дизайн",
 };
 

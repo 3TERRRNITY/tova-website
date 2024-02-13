@@ -43,7 +43,7 @@ export const PROJECTS: IProjects[] = [
     secondImage: "/projects/projects_avivir.png",
     description:
       "Концепция, создание фирменного стиля, дизайн, разработка сайта, техническая поддержка",
-    id: ["webdev", "brand", "graphic", "smm", "marketing", "other"],
+    id: ["webdev", "brand", "graphic", "marketing", "other"],
     category: "брендинг, веб-разработка, графический дизайн, smm",
   },
   {
