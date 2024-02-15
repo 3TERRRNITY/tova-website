@@ -45,6 +45,12 @@
       @include h3Title;
       text-align: right;
       color: black;
+      @media (max-width: 480px) {
+        display: none;
+        padding-top: 20px;
+        font-size: 16px;
+        line-height: 20.8px;
+      }
     }
     @media (max-width: 480px) {
       display: none;

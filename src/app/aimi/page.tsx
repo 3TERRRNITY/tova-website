@@ -27,31 +27,23 @@ const Aimi = () => {
   const team = [
     {
       position: "Руководитель проекта",
-      name: "Михаил Василенко",
+      name: ["Михаил Василенко"],
     },
     {
       position: "Директор по маркетингу",
-      name: "Светлана Денисова",
+      name: ["Светлана Денисова"],
     },
     {
       position: "Арт-директор",
-      name: "Наталия Лазарева",
+      name: ["Наталия Лазарева"],
     },
     {
       position: "Копирайтер",
-      name: "Сергей Афанасьев",
-    },
-    {
-      position: "",
-      name: "Фарид Абдуллаев",
+      name: ["Сергей Афанасьев", "Фарид Абдуллаев"],
     },
     {
       position: "Команда разработки",
-      name: "Алексей Ларионов",
-    },
-    {
-      position: "",
-      name: "Дмитрий Авдеев",
+      name: ["Алексей Ларионов", "Дмитрий Авдеев"],
     },
   ];
   const controls = useAnimation();
@@ -410,6 +402,37 @@ const Aimi = () => {
           </div>
 
           <div className={styles.aimi__team}>
+            <div className={styles.aimi__team_title}>над проектом работали</div>
+            <div className={styles.aimi__team_container}>
+              {team.map(
+                (
+                  { position, name }: { position: string; name: string[] },
+                  index
+                ) => (
+                  <div
+                    className={styles.aimi__team_member}
+                    key={`${position}-${index}`}
+                  >
+                    <div className={styles.aimi__team_member_position}>
+                      {position}
+                    </div>
+                    <div className={styles.aimi__team_member_nameContainer}>
+                      {name.map((n, index) => (
+                        <div
+                          className={styles.aimi__team_member_name}
+                          key={`${n}-${index}`}
+                        >
+                          {n}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )
+              )}
+            </div>
+          </div>
+
+          {/* <div className={styles.aimi__team}>
             <div className={styles.aimi__team_title}>Над проектом работали</div>
             {team.map((member, index) => (
               <React.Fragment key={`${member.name}-${index}`}>
@@ -423,7 +446,7 @@ const Aimi = () => {
                 </div>
               </React.Fragment>
             ))}
-          </div>
+          </div> */}
         </div>
 
         <Footer />

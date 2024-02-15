@@ -176,10 +176,10 @@
     }
 
     &__image {
-      height: clamp(22.4375rem, 0.0417rem + 74.6528vw, 89.625rem);
+      height: clamp(22.4375rem, 0.0417rem + 74.6528vw, 109.625rem);
       width: 100%;
-      background-image: url(../../public/projects/avivir/avivir-mainpage.webp);
-      background-size: cover;
+      background-image: url(../../public/projects/avivir/avivir_mainPage_design.png);
+      background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
       @media (max-width: 480px) {
