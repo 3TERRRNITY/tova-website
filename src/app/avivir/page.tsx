@@ -158,6 +158,132 @@ const Avivir = () => {
                 ))}
               </div>
             </div>
+            <div className={styles.avivir__firm}>
+              <div className={styles.avivir__firm__info}>
+                <div className={styles.avivir__firm__info_title}>
+                  Фирменный стиль
+                </div>
+                <div className={styles.avivir__firm__info_description}>
+                  Мы освежили образ Авивир, представив две версии логотипа:
+                  классический и сокращённый 'AV'. Элегантность сокращённой
+                  версии заключается в симметричном дизайне букв 'A' и 'V',
+                  которые сохраняют свою узнаваемость при любом повороте.
+                </div>
+              </div>
+            </div>
+            <Lottie animationData={Logo} />
+            <Lottie animationData={Grid} />
+
+            <div className={styles.avivir__information}>
+              {/* <div className={styles.avivir__information__info}>
+                <div className={styles.avivir__information__info_title}>
+                  Фирменный стиль
+                </div>
+                <div className={styles.avivir__information__info_description}>
+                  Madaia – бренд одежды для повседневной жизни и спорта, идейным
+                  вдохновителем которого является бывшая побуждает ее творить
+                  красоту
+                </div>
+              </div> */}
+              <div className={styles.avivir__information__cards}>
+                <motion.div
+                  className={styles.avivir__information__card1}
+                  onHoverStart={handleHover1}
+                  onHoverEnd={handleUnhover1}
+                >
+                  <div className={styles.avivir__information__card1_overflow} />
+                  <motion.div
+                    className={styles.avivir__information__cardTexts}
+                    initial={{ opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    animate={{
+                      opacity: isHoveredCard1 ? 1 : 0,
+                    }}
+                  >
+                    <div
+                      className={styles.avivir__information__cardTexts_title}
+                    >
+                      avivir
+                    </div>
+                    <div
+                      className={
+                        styles.avivir__information__cardTexts_description
+                      }
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Eveniet illo consequatur laudantium vero dolor accusamus
+                      fugiat dolores asperiores aut fugit sit dolore distinctio,
+                      aliquid saepe incidunt excepturi iusto qui. Velit.
+                    </div>
+                  </motion.div>
+                </motion.div>
+
+                <motion.div
+                  onHoverStart={handleHover2}
+                  onHoverEnd={handleUnhover2}
+                  className={styles.avivir__information__card2}
+                >
+                  <div className={styles.avivir__information__card2_overflow} />
+                  <motion.div
+                    className={styles.avivir__information__cardTexts}
+                    initial={{ opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    animate={{
+                      opacity: isHoveredCard2 ? 1 : 0,
+                    }}
+                  >
+                    <div
+                      className={styles.avivir__information__cardTexts_title}
+                    >
+                      avivir
+                    </div>
+                    <div
+                      className={
+                        styles.avivir__information__cardTexts_description
+                      }
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Eveniet illo consequatur laudantium vero dolor accusamus
+                      fugiat dolores asperiores aut fugit sit dolore distinctio,
+                      aliquid saepe incidunt excepturi iusto qui. Velit.
+                    </div>
+                  </motion.div>
+                </motion.div>
+                <motion.div
+                  onHoverStart={handleHover3}
+                  onHoverEnd={handleUnhover3}
+                  className={styles.avivir__information__card_big}
+                >
+                  <div
+                    className={styles.avivir__information__card_big_overflow}
+                  />
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    animate={{
+                      opacity: isHoveredCard3 ? 1 : 0,
+                    }}
+                    className={styles.avivir__information__cardTexts}
+                  >
+                    <div
+                      className={styles.avivir__information__cardTexts_title}
+                    >
+                      avivir
+                    </div>
+                    <div
+                      className={
+                        styles.avivir__information__cardTexts_description
+                      }
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Eveniet illo consequatur laudantium vero dolor accusamus
+                      fugiat dolores asperiores aut fugit sit dolore distinctio,
+                      aliquid saepe incidunt excepturi iusto qui. Velit.
+                    </div>
+                  </motion.div>
+                </motion.div>
+              </div>
+            </div>
 
             <div className={styles.avivir__mainPage}>
               <div className={styles.avivir__mainPage__info}>
@@ -172,8 +298,8 @@ const Avivir = () => {
                   навигации.
                 </div>
               </div>
-              {/* <div className={styles.avivir__mainPage__image} /> */}
-              <Lottie animationData={Desktop} style={{ width: "100%" }} />
+              <div className={styles.avivir__mainPage__image} />
+              {/* <Lottie animationData={Desktop} style={{ width: "100%" }} /> */}
             </div>
 
             <div className={styles.avivir__adaptiveDesign}>
@@ -348,132 +474,6 @@ const Avivir = () => {
               </div>
             </div>
 
-            <div className={styles.avivir__firm}>
-              <div className={styles.avivir__firm__info}>
-                <div className={styles.avivir__firm__info_title}>
-                  Фирменный стиль
-                </div>
-                <div className={styles.avivir__firm__info_description}>
-                  Мы освежили образ Авивир, представив две версии логотипа:
-                  классический и сокращённый 'AV'. Элегантность сокращённой
-                  версии заключается в симметричном дизайне букв 'A' и 'V',
-                  которые сохраняют свою узнаваемость при любом повороте.
-                </div>
-              </div>
-            </div>
-            <Lottie animationData={Logo} />
-            <Lottie animationData={Grid} />
-
-            <div className={styles.avivir__information}>
-              <div className={styles.avivir__information__info}>
-                <div className={styles.avivir__information__info_title}>
-                  Фирменный стиль
-                </div>
-                <div className={styles.avivir__information__info_description}>
-                  Madaia – бренд одежды для повседневной жизни и спорта, идейным
-                  вдохновителем которого является бывшая побуждает ее творить
-                  красоту
-                </div>
-              </div>
-              <div className={styles.avivir__information__cards}>
-                <motion.div
-                  className={styles.avivir__information__card1}
-                  onHoverStart={handleHover1}
-                  onHoverEnd={handleUnhover1}
-                >
-                  <div className={styles.avivir__information__card1_overflow} />
-                  <motion.div
-                    className={styles.avivir__information__cardTexts}
-                    initial={{ opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    animate={{
-                      opacity: isHoveredCard1 ? 1 : 0,
-                    }}
-                  >
-                    <div
-                      className={styles.avivir__information__cardTexts_title}
-                    >
-                      avivir
-                    </div>
-                    <div
-                      className={
-                        styles.avivir__information__cardTexts_description
-                      }
-                    >
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Eveniet illo consequatur laudantium vero dolor accusamus
-                      fugiat dolores asperiores aut fugit sit dolore distinctio,
-                      aliquid saepe incidunt excepturi iusto qui. Velit.
-                    </div>
-                  </motion.div>
-                </motion.div>
-
-                <motion.div
-                  onHoverStart={handleHover2}
-                  onHoverEnd={handleUnhover2}
-                  className={styles.avivir__information__card2}
-                >
-                  <div className={styles.avivir__information__card2_overflow} />
-                  <motion.div
-                    className={styles.avivir__information__cardTexts}
-                    initial={{ opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    animate={{
-                      opacity: isHoveredCard2 ? 1 : 0,
-                    }}
-                  >
-                    <div
-                      className={styles.avivir__information__cardTexts_title}
-                    >
-                      avivir
-                    </div>
-                    <div
-                      className={
-                        styles.avivir__information__cardTexts_description
-                      }
-                    >
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Eveniet illo consequatur laudantium vero dolor accusamus
-                      fugiat dolores asperiores aut fugit sit dolore distinctio,
-                      aliquid saepe incidunt excepturi iusto qui. Velit.
-                    </div>
-                  </motion.div>
-                </motion.div>
-                <motion.div
-                  onHoverStart={handleHover3}
-                  onHoverEnd={handleUnhover3}
-                  className={styles.avivir__information__card_big}
-                >
-                  <div
-                    className={styles.avivir__information__card_big_overflow}
-                  />
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    animate={{
-                      opacity: isHoveredCard3 ? 1 : 0,
-                    }}
-                    className={styles.avivir__information__cardTexts}
-                  >
-                    <div
-                      className={styles.avivir__information__cardTexts_title}
-                    >
-                      avivir
-                    </div>
-                    <div
-                      className={
-                        styles.avivir__information__cardTexts_description
-                      }
-                    >
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Eveniet illo consequatur laudantium vero dolor accusamus
-                      fugiat dolores asperiores aut fugit sit dolore distinctio,
-                      aliquid saepe incidunt excepturi iusto qui. Velit.
-                    </div>
-                  </motion.div>
-                </motion.div>
-              </div>
-            </div>
             <div className={aimiStyles.aimi__team}>
               <div className={aimiStyles.aimi__team_title}>
                 Над проектом работали

@@ -361,24 +361,70 @@
   }
 
   &__team {
-    padding: 0 $space-40 clamp(3.3125rem, 0.0208rem + 10.9722vw, 13.1875rem)
-      $space-40;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: $space-100;
     @media (max-width: 480px) {
-      display: none;
-    }
-    &_title {
-      @include h3Title;
-      text-transform: uppercase;
-      text-align: center;
-      margin-bottom: $space-50;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 0 20px;
     }
 
-    &__member {
+    &_title {
+      @include h3Title;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding-bottom: $space-50;
+      @media (max-width: 480px) {
+        text-transform: lowercase;
+        text-align: left;
+        font-size: 16px;
+        line-height: 20.8px;
+        padding: 110px 0 40px 0;
+      }
+    }
+
+    &_container {
+      width: clamp(15.125rem, 0rem + 50.4167vw, 60.5rem);
+      display: flex;
+      flex-direction: column;
+
+      gap: $space-20;
+      @media (max-width: 480px) {
+        width: 100%;
+        gap: 0;
+      }
+    }
+
+    &_member {
       display: flex;
       justify-content: space-between;
-      padding: $space-20 0;
+      padding-bottom: $space-20;
+      border-bottom: 1px solid #fff;
+
       @include paragraph;
-      border-bottom: 1px solid #3e3e3e;
+      font-weight: 400;
+      @media (max-width: 480px) {
+        border-bottom: 1px solid #c4c4c4;
+      }
+
+      &_nameContainer {
+        text-align: right;
+        gap: $space-10;
+        font-weight: 400;
+        @media (max-width: 480px) {
+          text-align: left;
+        }
+      }
+      @media (max-width: 480px) {
+        padding: 16px 0;
+        font-size: 16px;
+        line-height: 20.8px;
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 
