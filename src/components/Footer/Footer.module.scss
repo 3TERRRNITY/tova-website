@@ -57,7 +57,10 @@
     @media (max-width: 480px) {
       display: flex;
       gap: 20px;
+
       &_icon {
+        margin: 0 auto;
+        position: relative;
         width: 30px;
         height: 25px;
       }

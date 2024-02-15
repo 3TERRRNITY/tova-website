@@ -11,9 +11,15 @@ const Footer = ({ white }: IFooterProps) => {
         <div className={styles.footer__collaboration}>Сотрудничество</div>
         <div className={styles.footer__contacts}>
           <div className={styles.footer__contacts__number}>
-            <a href="tel: +79254000134">
-              <span>+</span>7 925 400-01-34
-            </a>
+            {white ? (
+              <a href="tel: +79254000134" style={{ color: "#000" }}>
+                <span>+</span>7 925 400-01-34
+              </a>
+            ) : (
+              <a href="tel: +79254000134" style={{ color: "#fff" }}>
+                <span>+</span>7 925 400-01-34
+              </a>
+            )}
           </div>
           <div className={styles.footer__contacts__number}>
             info<span>@</span>tova.agency
