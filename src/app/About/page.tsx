@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import styles from "../../styles/about.module.scss";
+import commonStyles from "../../styles/common.module.scss";
 
 import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
@@ -44,7 +45,7 @@ const About = () => {
     </React.Fragment>
   ));
   return (
-    <>
+    <div className={commonStyles.otherPageBody}>
       <Header white />
       <Navbar />
 
@@ -200,7 +201,7 @@ const About = () => {
         </motion.div>
       </motion.div>
       <Footer white />
-    </>
+    </div>
   );
 };
 

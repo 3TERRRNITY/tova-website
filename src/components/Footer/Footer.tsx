@@ -16,7 +16,7 @@ const Footer = ({ white }: IFooterProps) => {
             </a>
           </div>
           <div className={styles.footer__contacts__number}>
-            info<span>@</span>tov-a.ru
+            info<span>@</span>tova.agency
           </div>
         </div>
       </div>
@@ -30,11 +30,7 @@ const Footer = ({ white }: IFooterProps) => {
           />
         </div>
         <div className={styles.footer__icons_icon}>
-          <Image
-            src={white ? "/whatsup-black.svg" : "/whatsup.svg"}
-            alt="whatsup"
-            fill
-          />
+          <Image src={white ? "/vk-black.svg" : "/vk.svg"} alt="whatsup" fill />
         </div>
         <div className={styles.footer__icons_icon}>
           <Image

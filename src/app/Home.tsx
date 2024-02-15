@@ -10,7 +10,6 @@ import Image from "next/image";
 import Slider from "../components/Slider/Slider";
 import { useEffect, useRef } from "react";
 import ServicesComponent from "../components/ServicesCard/ServicesCard";
-import Cursor from "../components/Cursor/Cursor";
 
 export default function Home() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
