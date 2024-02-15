@@ -78,23 +78,23 @@ const Avivir = () => {
   const team = [
     {
       position: "Руководитель проекта",
-      name: "Михаил Василенко",
+      name: ["Михаил Василенко"],
     },
     {
       position: "Директор по маркетингу",
-      name: "Светлана Денисова",
+      name: ["Светлана Денисова"],
     },
     {
       position: "Арт-директор",
-      name: "Полина Гунищева",
+      name: ["Полина Гунищева"],
     },
     {
       position: "Дизайнер",
-      name: "Наталия Лазарева",
+      name: ["Наталия Лазарева"],
     },
     {
       position: "Копирайтер",
-      name: "Сергей Афанасьев",
+      name: ["Сергей Афанасьев"],
     },
   ];
 
@@ -476,20 +476,37 @@ const Avivir = () => {
 
             <div className={aimiStyles.aimi__team}>
               <div className={aimiStyles.aimi__team_title}>
-                Над проектом работали
+                над проектом работали
               </div>
-              {team.map((member, index) => (
-                <React.Fragment key={`${member.name}-${index}`}>
-                  <div className={aimiStyles.aimi__team__member}>
-                    <div className={aimiStyles.aimi__team__member_position}>
-                      {member.position}
+              <div className={aimiStyles.aimi__team_container}>
+                {team.map(
+                  (
+                    { position, name }: { position: string; name: string[] },
+                    index
+                  ) => (
+                    <div
+                      className={aimiStyles.aimi__team_member}
+                      key={`${position}-${index}`}
+                    >
+                      <div className={aimiStyles.aimi__team_member_position}>
+                        {position}
+                      </div>
+                      <div
+                        className={aimiStyles.aimi__team_member_nameContainer}
+                      >
+                        {name.map((n, index) => (
+                          <div
+                            className={aimiStyles.aimi__team_member_name}
+                            key={`${n}-${index}`}
+                          >
+                            {n}
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                    <div className={aimiStyles.aimi__team__member_name}>
-                      {member.name}
-                    </div>
-                  </div>
-                </React.Fragment>
-              ))}
+                  )
+                )}
+              </div>
             </div>
           </div>
         </div>
