@@ -1,0 +1,39 @@
+@import "/src/styles/mixins.scss";
+@import "/src/styles/variable.scss";
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $space-20;
+  &__formContainer {
+    display: flex;
+    flex-direction: column;
+    gap: $space-20;
+
+    textarea,
+    input {
+      background-color: transparent;
+      border: none;
+      padding: $space-10 0;
+      border-bottom: 1px solid #3c3c3c;
+
+      color: #3c3c3c;
+      @include paragraph;
+      &:hover,
+      &:active,
+      &:focus {
+        border-bottom: 1px solid white;
+        transition: 0.5s ease-in;
+        color: white;
+        &::placeholder {
+          color: white;
+          transition: 0.25s ease-in;
+        }
+      }
+
+      &:focus-visible {
+        outline: none;
+      }
+    }
+  }
+}
