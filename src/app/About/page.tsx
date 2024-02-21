@@ -13,6 +13,7 @@ import { textAnimation } from "../../common/animations";
 import { Separator } from "../../components/Separator/Separator";
 import Footer from "../../components/Footer/Footer";
 import Cursor from "../../components/Cursor/Cursor";
+import Form from "../../components/Form/Form";
 
 const About = () => {
   const Departaments = DEPARTAMENTS.map(({ title, description }, index) => (
@@ -200,6 +201,7 @@ const About = () => {
           ))}
         </motion.div>
       </motion.div>
+      <Form />
       <Footer white />
     </div>
   );

@@ -10,6 +10,7 @@ import Image from "next/image";
 import Slider from "../components/Slider/Slider";
 import { useEffect, useRef } from "react";
 import ServicesComponent from "../components/ServicesCard/ServicesCard";
+import Form from "../components/Form/Form";
 
 export default function Home() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -84,6 +85,7 @@ export default function Home() {
               )
             )}
           </div>
+          <Form />
         </div>
 
         <Footer />

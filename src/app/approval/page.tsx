@@ -159,21 +159,43 @@ const page = () => {
                   красоту
                 </div>
               </div>
-              <div className={styles.approval__mainPage__imageMobile}>
-                <img
-                  src="/projects/approval/approval_mobile7.webp"
-                  alt="image"
-                />
-                <img
-                  src="/projects/approval/approval_mobile8.webp"
-                  alt="image"
-                />
-                <img
-                  src="/projects/approval/approval_mobile9.webp"
-                  alt="image"
-                />
+              <div className={styles.approval__mainPage__imageMobile_cards}>
+                <div
+                  className={styles.approval__mainPage__imageMobile_cards_img1}
+                >
+                  <img
+                    src="/projects/approval/approval_mobile7.webp"
+                    alt="image"
+                  />
+                </div>
+
+                <div
+                  className={styles.approval__mainPage__imageMobile_cards_img23}
+                >
+                  <div
+                    className={
+                      styles.approval__mainPage__imageMobile_cards_img2
+                    }
+                  >
+                    <img
+                      src="/projects/approval/approval_mobile8.webp"
+                      alt="image"
+                    />
+                  </div>
+
+                  <div
+                    className={
+                      styles.approval__mainPage__imageMobile_cards_img3
+                    }
+                  >
+                    <img
+                      src="/projects/approval/approval_mobile9.png"
+                      alt="image"
+                    />
+                  </div>
+                </div>
               </div>
-              <div className={styles.approval__mainPage__cards} />
+              {/* <div className={styles.approval__mainPage__cards} /> */}
             </div>
 
             <div className={styles.approval__team}>

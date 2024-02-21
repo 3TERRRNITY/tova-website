@@ -145,6 +145,46 @@
         border-radius: 20px;
       }
     }
+    &__imageMobile_cards {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      gap: $space-20;
+      &_img1,
+      &_img2,
+      &_img3 {
+        img {
+          object-fit: cover;
+        }
+      }
+
+      &_img1 {
+        img {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+
+      &_img23 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $space-20;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        @media (max-width: 480px) {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 20px;
+      }
+    }
     &__image {
       height: clamp(22.4375rem, 0.0417rem + 74.6528vw, 89.625rem);
       width: 100%;
@@ -158,7 +198,7 @@
     }
     &__images {
       width: 100%;
-      height: clamp(12.875rem, 0.0208rem + 42.8472vw, 51.4375rem);
+      height: clamp(12.875rem, 0.0208rem + 42.8472vw, 70.4375rem);
 
       background-image: url(../../public/projects/approval/2.webp);
       background-size: contain;
