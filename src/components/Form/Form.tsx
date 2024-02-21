@@ -6,8 +6,7 @@ const Form = () => {
   const {
     handleSubmit,
     register,
-    resetField,
-
+    reset,
     formState: { errors },
   } = useForm({
     mode: "onChange",
@@ -17,75 +16,79 @@ const Form = () => {
       description: "",
       phone: "",
       email: "",
-      agree: "",
+      agree: false,
     },
   });
+
+  const onSubmit = (data: Record<string, any>) => {
+    console.log(data);
+    reset();
+  };
+
   return (
-    <form
-      onSubmit={handleSubmit((data) => {
-        console.log(data);
-        resetField("name");
-        resetField("company");
-        resetField("description");
-        resetField("phone");
-        resetField("email");
-        resetField("agree");
-      })}
-      className={styles.form}
-    >
-      <div className={styles.form__formContainer}>
-        <input
-          {...register("name", { required: "Это обязательное поле" })}
-          defaultValue=""
-          placeholder="Имя"
-        />
-        <p>{errors.name?.message?.toString()}</p>
-        <input
-          {...register("company", { required: "Это обязательное поле" })}
-          defaultValue=""
-          placeholder="Компания"
-        />
-        <p>{errors.company?.message?.toString()}</p>
-        <textarea
-          {...register("description", { required: "Это обязательное поле" })}
-          defaultValue=""
-          placeholder="Описание задачи"
-        />
-        <p>{errors.description?.message?.toString()}</p>
-      </div>
+    <>
+      <div className={styles.title}>ОБСУДИТЬ ПРОЕКТ</div>
 
-      <div className={styles.form__formContainer}>
-        <input
-          {...register("phone", {
-            valueAsNumber: true,
-            required: "Это обязательное поле",
-            minLength: 10,
-          })}
-          defaultValue=""
-          placeholder="Телефон"
-          type="phone"
-        />
-        <p>{errors.phone?.message?.toString()}</p>
-        <input
-          {...register("email", { required: "Это обязательное поле" })}
-          defaultValue=""
-          placeholder="E-mail"
-          type="email"
-        />
-        <p>{errors.email?.message?.toString()}</p>
-      </div>
-      <label>
-        <input
-          type="checkbox"
-          defaultValue=""
-          {...register("agree", { required: "Это обязательное поле" })}
-        />
-        Я согласен с <a>правилами обработки персональных данных</a>
-      </label>
+      <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+        <div className={styles.form__formContainer}>
+          <input
+            {...register("name", { required: "Это обязательное поле" })}
+            placeholder="Имя"
+            type="text"
+            className={errors.name ? styles.error : ""}
+          />
 
-      <p>{errors.agree?.message?.toString()}</p>
-      <button type="submit">Отправить</button>
-    </form>
+          <input
+            {...register("company", { required: "Это обязательное поле" })}
+            placeholder="Компания"
+            type="text"
+            className={errors.company ? styles.error : ""}
+          />
+
+          <textarea
+            {...register("description", { required: "Это обязательное поле" })}
+            placeholder="Описание задачи"
+            className={errors.description ? styles.error : ""}
+          />
+        </div>
+
+        <div className={styles.form__formContainer}>
+          <input
+            {...register("phone", {
+              required: "Это обязательное поле",
+              minLength: { value: 10, message: "Минимум 10 символов" },
+            })}
+            placeholder="Телефон"
+            type="tel"
+            className={errors.phone ? styles.error : ""}
+          />
+
+          <input
+            {...register("email", { required: "Это обязательное поле" })}
+            placeholder="E-mail"
+            type="email"
+            className={errors.email ? styles.error : ""}
+          />
+        </div>
+        <div className={styles.agreementContainer}>
+          <div className={styles.checkboxContainer}>
+            <input
+              type="checkbox"
+              {...register("agree", { required: "Это обязательное поле" })}
+              className={`${styles.checkbox}`}
+              id="agreeCheckbox"
+            />
+            <label htmlFor="agreeCheckbox">
+              Я согласен с правилами обработки персональных данных
+            </label>
+          </div>
+
+          <button type="submit" className={styles.agreementContainer__button}>
+            Отправить
+          </button>
+        </div>
+      </form>
+    </>
   );
 };
 

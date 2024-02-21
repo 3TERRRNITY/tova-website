@@ -85,9 +85,8 @@ export default function Home() {
               )
             )}
           </div>
+          <Form />
         </div>
-
-        <Form />
 
         <Footer />
       </div>
