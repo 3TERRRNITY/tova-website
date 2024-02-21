@@ -13,6 +13,7 @@ import Lottie from "lottie-react";
 import emptyAnimation from "../../../public/animations/empty.json";
 import { motion } from "framer-motion";
 import { textAnimation } from "../../common/animations";
+import Form from "../../components/Form/Form";
 
 const Projects = () => {
   const [selectedOption, setSelectedOption] = useState<string>("all");
@@ -88,27 +89,7 @@ const Projects = () => {
               </motion.div>
             ))}
           </div>
-          {/* <div className={styles.projects__select}>
-            {OPTIONS.map((option) => (
-              <motion.a
-                key={option.title}
-                className={`${styles.projects__select__option} ${
-                  selectedOption === option.id
-                    ? styles.projects__select__option_active
-                    : ""
-                }`}
-                id={option.id}
-                onClick={() => handleOptionClick(option.id)}
-                initial={{ background: "transparent" }}
-                animate={{
-                  background: selectedOption === option.id ? "white" : "black",
-                  color: selectedOption === option.id ? "black" : "white",
-                }}
-              >
-                <p>{option.title}</p>
-              </motion.a>
-            ))}
-          </div> */}
+
           <Separator />
 
           {filteredProjects &&
@@ -182,7 +163,7 @@ const Projects = () => {
             </div>
           )}
         </div>
-
+        <Form />
         <Footer />
       </div>
     </>

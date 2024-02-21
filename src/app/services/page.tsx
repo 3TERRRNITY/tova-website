@@ -12,6 +12,7 @@ import { textAnimation } from "../../common/animations";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import Cursor from "../../components/Cursor/Cursor";
+import Form from "../../components/Form/Form";
 
 const Services = () => {
   return (
@@ -51,6 +52,7 @@ const Services = () => {
             ))}
           </div>
         </motion.div>
+        <Form />
         <Footer white />
       </div>
     </>
