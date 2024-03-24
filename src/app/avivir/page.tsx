@@ -96,6 +96,10 @@ const Avivir = () => {
       position: "Копирайтер",
       name: ["Сергей Афанасьев"],
     },
+    {
+      position: "Команда разработки",
+      name: ["Алексей Ларионов", "Дмитрий Авдеев", "Леонид Захваткин"],
+    },
   ];
 
   return (
@@ -175,16 +179,6 @@ const Avivir = () => {
             <Lottie animationData={Grid} />
 
             <div className={styles.avivir__information}>
-              {/* <div className={styles.avivir__information__info}>
-                <div className={styles.avivir__information__info_title}>
-                  Фирменный стиль
-                </div>
-                <div className={styles.avivir__information__info_description}>
-                  Madaia – бренд одежды для повседневной жизни и спорта, идейным
-                  вдохновителем которого является бывшая побуждает ее творить
-                  красоту
-                </div>
-              </div> */}
               <div className={styles.avivir__information__cards}>
                 <motion.div
                   className={styles.avivir__information__card1}
@@ -210,10 +204,7 @@ const Avivir = () => {
                         styles.avivir__information__cardTexts_description
                       }
                     >
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Eveniet illo consequatur laudantium vero dolor accusamus
-                      fugiat dolores asperiores aut fugit sit dolore distinctio,
-                      aliquid saepe incidunt excepturi iusto qui. Velit.
+                      рекламные баннеры
                     </div>
                   </motion.div>
                 </motion.div>
@@ -242,10 +233,7 @@ const Avivir = () => {
                         styles.avivir__information__cardTexts_description
                       }
                     >
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Eveniet illo consequatur laudantium vero dolor accusamus
-                      fugiat dolores asperiores aut fugit sit dolore distinctio,
-                      aliquid saepe incidunt excepturi iusto qui. Velit.
+                      дизайн полиграфической продукции
                     </div>
                   </motion.div>
                 </motion.div>
@@ -275,10 +263,7 @@ const Avivir = () => {
                         styles.avivir__information__cardTexts_description
                       }
                     >
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Eveniet illo consequatur laudantium vero dolor accusamus
-                      fugiat dolores asperiores aut fugit sit dolore distinctio,
-                      aliquid saepe incidunt excepturi iusto qui. Velit.
+                      визитки
                     </div>
                   </motion.div>
                 </motion.div>

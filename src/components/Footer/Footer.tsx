@@ -28,23 +28,35 @@ const Footer = ({ white }: IFooterProps) => {
       </div>
 
       <div className={styles.footer__icons}>
-        <div className={styles.footer__icons_icon}>
+        <a
+          href="https://t.me/tova_agency"
+          target="_blank"
+          className={styles.footer__icons_icon}
+        >
           <Image
             src={white ? "/telegram-black.svg" : "/telegram.svg"}
             alt="telegram"
             fill
           />
-        </div>
-        <div className={styles.footer__icons_icon}>
-          <Image src={white ? "/vk-black.svg" : "/vk.svg"} alt="whatsup" fill />
-        </div>
-        <div className={styles.footer__icons_icon}>
+        </a>
+        <a
+          href=" https://vk.com/tova.agency"
+          target="_blank"
+          className={styles.footer__icons_icon}
+        >
+          <Image src={white ? "/vk-black.svg" : "/vk.svg"} alt="vk" fill />
+        </a>
+        <a
+          href="https://www.instagram.com/tova.agency/"
+          target="_blank"
+          className={styles.footer__icons_icon}
+        >
           <Image
             src={white ? "/inst-black.svg" : "/inst.svg"}
             alt="instagram"
             fill
           />
-        </div>
+        </a>
       </div>
       <div className={styles.footer__addressContainer}>
         <div className={styles.footer__address}>Адрес</div>
@@ -54,27 +66,35 @@ const Footer = ({ white }: IFooterProps) => {
         </div>
       </div>
       <div className={styles.footer__iconsMobile}>
-        <div className={styles.footer__iconsMobile_icon}>
+        <a
+          href="https://t.me/tova_agency"
+          target="_blank"
+          className={styles.footer__iconsMobile_icon}
+        >
           <Image
             src={white ? "/telegram-black.svg" : "/telegram.svg"}
             alt="telegram"
             fill
           />
-        </div>
-        <div className={styles.footer__iconsMobile_icon}>
-          <Image
-            src={white ? "/whatsup-black.svg" : "/whatsup.svg"}
-            alt="whatsup"
-            fill
-          />
-        </div>
-        <div className={styles.footer__iconsMobile_icon}>
+        </a>
+        <a
+          href=" https://vk.com/tova.agency"
+          target="_blank"
+          className={styles.footer__iconsMobile_icon}
+        >
+          <Image src={white ? "/vk-black.svg" : "/vk.svg"} alt="vk" fill />
+        </a>
+        <a
+          href="https://www.instagram.com/tova.agency/"
+          target="_blank"
+          className={styles.footer__iconsMobile_icon}
+        >
           <Image
             src={white ? "/inst-black.svg" : "/inst.svg"}
             alt="instagram"
             fill
           />
-        </div>
+        </a>
       </div>
     </div>
   );
