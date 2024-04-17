@@ -1,12 +1,14 @@
 @import "/src/styles/mixins.scss";
 @import "/src/styles/variable.scss";
-
+.formContainer {
+  margin: 160px $space-40;
+}
 .title {
   @include h2Title;
   margin-bottom: $space-40;
-  margin: 0 $space-40 $space-40 $space-40;
+
   @media (max-width: 480px) {
-    margin: 0 20px 20px 20px;
+    margin: 20px 20px 20px;
     font-size: 32px;
   }
 }
@@ -14,7 +16,6 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: $space-20;
-  margin: 0 $space-40;
 
   @media (max-width: 480px) {
     display: flex;
@@ -34,6 +35,7 @@
 
     textarea {
       resize: none;
+
       @media (max-width: 480px) {
         height: 100px;
       }
@@ -49,7 +51,8 @@
       padding: $space-10 0;
       border-bottom: 1px solid #3c3c3c;
       color: #3c3c3c;
-      @include paragraph;
+      @include h3Title;
+      font-family: "Code Next-Trial";
 
       @media (max-width: 480px) {
         font-size: 16px;
@@ -104,9 +107,9 @@
       }
 
       &:hover {
-        background-color: white;
-        mix-blend-mode: difference;
-        border-color: white;
+        // background-color: white;
+        // mix-blend-mode: difference;
+        // border-color: white;
         color: #3c3c3c;
       }
     }
@@ -139,10 +142,11 @@
   }
 
   .checkbox + label {
-    display: inline-flex; /* Заменяем inline-block на inline-flex */
-    align-items: center; /* Чтобы выровнять по вертикали */
+    display: inline-flex;
+    align-items: center;
     cursor: pointer;
-    margin-left: 5px; /* Добавляем небольшое расстояние между чекбоксом и текстом */
+    margin-left: 5px;
+    @include paragraph;
   }
 
   .checkbox + label:before {

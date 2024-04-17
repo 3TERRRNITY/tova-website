@@ -48,7 +48,7 @@ const ServiceCard = ({ title, description, points, href }: IService) => {
                 custom={index + 1}
                 className={styles.serviceCard__information_point}
               >
-                {point}
+                <span>{point}</span>
               </motion.li>
               <Separator />
             </React.Fragment>
@@ -69,6 +69,7 @@ const ServiceCard = ({ title, description, points, href }: IService) => {
               image={project.img}
               description={project.description}
               title={project.title}
+              year={project.year}
             />
           </React.Fragment>
         ))}

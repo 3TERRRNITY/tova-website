@@ -1,6 +1,11 @@
 @import "./mixins.scss";
 @import "./variable.scss";
 
+.lottie {
+  // TODO: изначально не было
+  height: 400px;
+}
+
 .avivir {
   padding: 0 $space-40;
   @media (max-width: 480px) {

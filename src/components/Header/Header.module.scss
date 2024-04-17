@@ -4,7 +4,7 @@
 .header {
   height: max-content;
 
-  position: absolute;
+  position: fixed;
   left: $space-40;
   right: $space-40;
 
@@ -12,11 +12,15 @@
   justify-content: space-between;
   align-items: center;
   z-index: 2;
+  svg {
+    mix-blend-mode: difference;
+  }
   &__link {
     width: $space-100;
     height: $space-100;
     display: flex;
     align-items: center;
+
     @media (max-width: 480px) {
       width: 75px;
       height: 13px;
@@ -31,6 +35,9 @@
     position: relative;
     width: $logoWidth;
     height: $logoHeight;
+    img {
+      mix-blend-mode: difference;
+    }
 
     @media (max-width: 480px) {
       width: 75px;

@@ -9,6 +9,7 @@ export default function Card({
   description,
   animation = true,
   href,
+  year,
   image,
   secondImage,
 }: {
@@ -16,6 +17,7 @@ export default function Card({
   description: string;
   animation?: boolean;
   href: string;
+  year?: number;
   image: string;
   secondImage?: string;
 }) {
@@ -67,7 +69,7 @@ export default function Card({
           <div className={styles.projects__card__yearContainer_arrow}>
             <Image src="/right-arrow.svg" alt="arrow" fill />
           </div>
-          <div className="year">2023</div>
+          <div className="year">{year}</div>
         </motion.div>
 
         <motion.div

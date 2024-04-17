@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import styles from "./Form.module.scss";
+import { motion } from "framer-motion";
 
 const Form = () => {
+  const [isHovered, setIsHovered] = useState(false);
   const {
     handleSubmit,
     register,
@@ -26,7 +28,7 @@ const Form = () => {
   };
 
   return (
-    <>
+    <div className={styles.formContainer}>
       <div className={styles.title}>ОБСУДИТЬ ПРОЕКТ</div>
 
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
@@ -82,13 +84,41 @@ const Form = () => {
               Я согласен с правилами обработки персональных данных
             </label>
           </div>
-
-          <button type="submit" className={styles.agreementContainer__button}>
-            Отправить
-          </button>
+          <motion.button
+            className={styles.agreementContainer__button}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            style={{ position: "relative", overflow: "hidden" }}
+          >
+            <motion.div
+              initial={{
+                width: 0,
+                height: 0,
+                background: "white",
+                originX: 0,
+                originY: 0,
+              }}
+              animate={{
+                width: isHovered ? "200%" : 0,
+                height: isHovered ? "200%" : 0,
+                borderRadius: "50%",
+                transition: { duration: 0.5 },
+              }}
+              style={{ position: "absolute", left: "-200px", bottom: "-20px" }}
+            />
+            <p
+              style={{
+                position: "relative",
+                zIndex: 2,
+                color: isHovered ? "black" : "white",
+              }}
+            >
+              Отправить
+            </p>
+          </motion.button>
         </div>
       </form>
-    </>
+    </div>
   );
 };
 

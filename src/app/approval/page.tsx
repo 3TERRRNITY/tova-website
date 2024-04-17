@@ -8,7 +8,7 @@ import { Separator } from "../../components/Separator/Separator";
 import Header from "../../components/Header/Header";
 import Lottie from "lottie-react";
 import Palette from "../../../public/projects/approval/animations/palette-approval.json";
-import Cursor from "../../components/Cursor/Cursor";
+
 const page = () => {
   const aboutPoints = [
     "проект",

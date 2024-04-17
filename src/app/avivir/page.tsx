@@ -175,8 +175,8 @@ const Avivir = () => {
                 </div>
               </div>
             </div>
-            <Lottie animationData={Logo} />
-            <Lottie animationData={Grid} />
+            <Lottie className={styles.lottie} animationData={Logo} />
+            <Lottie className={styles.lottie} animationData={Grid} />
 
             <div className={styles.avivir__information}>
               <div className={styles.avivir__information__cards}>
