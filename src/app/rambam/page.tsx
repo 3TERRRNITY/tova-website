@@ -11,28 +11,27 @@ import Logo from "../../../public/projects/rambam/animation/logo.json";
 import Cursor from "../../components/Cursor/Cursor";
 const page = () => {
   const aboutPoints = [
-    "проект",
-    "клиент / avivir",
-    "категория / веб-дизайн, ux-ui",
-    "дата / 2023",
+    "клиент / rambam",
+    "категория / фирменный стиль, брендинг",
+    "дата / 2021",
   ];
 
   const team = [
     {
       position: "Руководитель проекта",
-      name: "Анастасия Куренкова",
+      name: "Михаил Василенко",
+    },
+    {
+      position: "Директор по маркетингу",
+      name: "Светлана Денисова",
     },
     {
       position: "Арт-директор",
-      name: "Мария Решетова",
+      name: "Леонид Станько",
     },
     {
       position: "Дизайнер",
-      name: "Наталия Лазарева",
-    },
-    {
-      position: "Команда разработки",
-      name: "Александр Рязанов",
+      name: "Кира Рубинская",
     },
   ];
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -47,7 +46,7 @@ const page = () => {
   return (
     <>
       <div className={commonStyles.otherPageBody}>
-        <Header />
+        <Header white />
         <div className={styles.rambam__hero}>
           <video
             autoPlay
@@ -86,24 +85,21 @@ const page = () => {
                     styles.rambam__about__description__subtitle_paragraph
                   }
                 >
-                  Madaia – бренд одежды для повседневной <br /> жизни и спорта,
-                  идейным вдохновителем <br /> которого является бывшая
-                </div>
-                <div
-                  className={
-                    styles.rambam__about__description__subtitle_paragraph
-                  }
-                >
-                  побуждает ее творить красоту, бренд Madaia <br /> - результат
-                  вдохновения. Madaia – <br />
-                  бренд одежды для повседневной жизни и спорта
+                  rambam — консалтинговая компания в сфере здравоохранения,
+                  предоставляющая услуги организациям, стремящимся укрепить своё
+                  присутствие и рост на рынках Ближнего Востока и Европы.
+                  Специализируясь на разработке стратегий выхода на рынок,
+                  проведении маркетинговых исследований и оптимизации
+                  позиционирования.
                 </div>
               </div>
               <div className={styles.rambam__about__description__subtitle_big}>
-                Madaia – бренд одежды для повседневной жизни и спорта, идейным
-                вдохновителем которого является бывшая побуждает ее творить
-                красоту, бренд Madaia - результат вдохновения. бренд одежды для
-                повседневной жизни и спорта
+                для Rambam мы разработали логотип и фирменный стиль, который
+                отражает их лидирующую роль в консалтинге в области
+                здравоохранения. Мы сфокусировались на создании сильного
+                визуального сообщения, которое выделяет Rambam на фоне
+                конкурентов и подчеркивает их специализацию и инновационный
+                подход к предоставлению услуг.
               </div>
             </div>
           </div>
@@ -111,15 +107,18 @@ const page = () => {
           <div className={styles.rambam__mainPage}>
             <div className={styles.rambam__mainPage__info}>
               <div className={styles.rambam__mainPage__info_title}>
-                дизайн главной страницы сайта
+                разработка логотипа
               </div>
               <div className={styles.rambam__mainPage__info_description}>
-                Madaia – бренд одежды для повседневной жизни и спорта, идейным
-                вдохновителем которого является бывшая побуждает ее творить
-                красоту
+                логотип Rambam, выполненный в зеленой цветовой гамме,
+                символизирует их приверженность медицинской отрасли.
+                Закругленные формы, вдохновленные арабской письменностью,
+                подчеркивают культурную связь бренда с арабскими странами,
+                улучшая его узнаваемость. Массивный, но дружелюбный шрифт
+                выражает доверие и открытость.
               </div>
             </div>
-            <Lottie animationData={Logo} />
+            <Lottie animationData={Logo} className={styles.lottie} />
           </div>
           <Separator />
           <div className={styles.rambam__mainPage}>

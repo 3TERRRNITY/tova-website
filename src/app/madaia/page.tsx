@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../../styles/madaia.module.scss";
 import commonStyle from "../../styles/common.module.scss";
 import Cursor from "../../components/Cursor/Cursor";
+import Footer from "../../components/Footer/Footer";
 
 const page = () => {
   const team = [
@@ -136,6 +137,7 @@ const page = () => {
             </div>
           </div>
         </div>
+        <Footer white />
       </div>
     </>
   );

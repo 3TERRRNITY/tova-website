@@ -2,6 +2,9 @@
 @import "/src/styles/variable.scss";
 .formContainer {
   margin: 160px $space-40;
+  @media (max-width: 480px) {
+    margin: 90px 0;
+  }
 }
 .title {
   @include h2Title;
@@ -9,7 +12,7 @@
 
   @media (max-width: 480px) {
     margin: 20px 20px 20px;
-    font-size: 32px;
+    font-size: 22px;
   }
 }
 .form {
@@ -92,6 +95,8 @@
     }
     &__button {
       @include paragraph;
+      position: relative;
+      height: 49px;
       width: 50%;
       padding: $space-20 $space-80;
       background-color: transparent;
@@ -100,24 +105,36 @@
       mix-blend-mode: difference;
       cursor: pointer;
       transition: background-color 0.5s ease-in-out;
+      p {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
       @media (max-width: 480px) {
         width: 80%;
-        padding: 20px 80px;
+        height: 43px;
         font-size: 16px;
+        font-weight: 300;
+        text-align: center;
       }
 
       &:hover {
-        // background-color: white;
-        // mix-blend-mode: difference;
-        // border-color: white;
         color: #3c3c3c;
       }
     }
     label {
       display: flex;
       gap: $space-10;
+      @include paragraph;
       @media (max-width: 480px) {
         gap: 10px;
+        font-size: 10px;
+        line-height: 20px;
       }
     }
 
@@ -146,7 +163,6 @@
     align-items: center;
     cursor: pointer;
     margin-left: 5px;
-    @include paragraph;
   }
 
   .checkbox + label:before {

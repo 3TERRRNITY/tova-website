@@ -108,8 +108,6 @@ const Form = () => {
             />
             <p
               style={{
-                position: "relative",
-                zIndex: 2,
                 color: isHovered ? "black" : "white",
               }}
             >

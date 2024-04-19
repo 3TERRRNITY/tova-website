@@ -7,7 +7,8 @@ import Cursor from "../components/Cursor/Cursor";
 
 export const metadata: Metadata = {
   title: "tova — дизайн, разработка, продакшн",
-  description: "Про дизайн",
+  description:
+    "Создаем уникальные концепции и улучшаем существующие подходы, включая дизайн сайтов и приложений, продуктовый дизайн и разработку, дополняя все это качественным видеопродакшном.",
 };
 
 const myFont = localFont({ src: "../../public/fonts/Code Next-Trial.woff2" });

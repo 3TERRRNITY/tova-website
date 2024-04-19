@@ -284,7 +284,6 @@ const Avivir = () => {
                 </div>
               </div>
               <div className={styles.avivir__mainPage__image} />
-              {/* <Lottie animationData={Desktop} style={{ width: "100%" }} /> */}
             </div>
 
             <div className={styles.avivir__adaptiveDesign}>
@@ -302,17 +301,7 @@ const Avivir = () => {
                   удобство, отлично адаптируясь под любой размер экрана
                 </div>
               </div>
-              <div className={styles.avivir__adaptiveDesign__images}>
-                {/* <div
-                  className={styles.avivir__adaptiveDesign__images_image1}
-                ></div>
-                <div
-                  className={styles.avivir__adaptiveDesign__images_image2}
-                ></div>
-                <div
-                  className={styles.avivir__adaptiveDesign__images_image3}
-                ></div> */}
-              </div>
+              <div className={styles.avivir__adaptiveDesign__images}></div>
             </div>
 
             <div className={styles.avivir__smm}>

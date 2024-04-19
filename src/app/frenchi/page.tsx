@@ -2,6 +2,7 @@
 
 import React from "react";
 import styles from "../../styles/frenchi.module.scss";
+import aimiStyles from "../../styles/aimi.module.scss";
 import commonStyles from "../../styles/common.module.scss";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
@@ -10,27 +11,31 @@ import Cursor from "../../components/Cursor/Cursor";
 const Frenchi = () => {
   const aboutPoints = [
     "проект",
-    "клиент / avivir",
+    "клиент / frenchi products",
     "категория / веб-дизайн, ux-ui",
-    "дата / 2023",
+    "дата / 2022",
   ];
 
   const team = [
     {
       position: "Руководитель проекта",
-      name: "Анастасия Куренкова",
+      name: ["Михаил Василенко"],
+    },
+    {
+      position: "Директор по маркетингу",
+      name: ["Светлана Денисова"],
     },
     {
       position: "Арт-директор",
-      name: "Мария Решетова",
+      name: ["Ирина Макарова"],
     },
     {
       position: "Дизайнер",
-      name: "Наталия Лазарева",
+      name: ["Наталия Лазарева"],
     },
     {
       position: "Команда разработки",
-      name: "Александр Рязанов",
+      name: ["Дмитрий Беляев", "Александр Рязанов"],
     },
   ];
   return (
@@ -60,24 +65,21 @@ const Frenchi = () => {
                   styles.frenchi__about__description__subtitle_paragraph
                 }
               >
-                Madaia – бренд одежды для повседневной <br /> жизни и спорта,
-                идейным вдохновителем <br /> которого является бывшая
-              </div>
-              <div
-                className={
-                  styles.frenchi__about__description__subtitle_paragraph
-                }
-              >
-                побуждает ее творить красоту, бренд Madaia <br /> - результат
-                вдохновения. Madaia – <br />
-                бренд одежды для повседневной жизни и спорта
+                Frenchi Products - эксперт в области ухода за натуральными
+                ногтями. Их продукция уникально сочетает в себе активные,
+                питательные и защитные компоненты, обеспечивая эффективное
+                решение проблем с ломкостью и отслаиванием ногтей
               </div>
             </div>
             <div className={styles.frenchi__about__description__subtitle_big}>
-              Madaia – бренд одежды для повседневной жизни и спорта, идейным
-              вдохновителем которого является бывшая побуждает ее творить
-              красоту, бренд Madaia - результат вдохновения. бренд одежды для
-              повседневной жизни и спорта
+              Для Frenchi Products, мы осуществили ребрендинг сайта,
+              сфокусировавшись на улучшении навигации и удобства использования.
+              Переструктурировав его для обслуживания как B2B, так и B2C
+              клиентов, мы обеспечили, чтобы сайт отражал имиджевую роль
+              компании. Это решение было основано на том факте, что бренд уже
+              широко известен благодаря своей обширной сети дистрибуции и
+              присутствию в аптеках, что делает основной задачей сайта
+              поддержание и укрепление имиджа
             </div>
           </div>
 
@@ -85,11 +87,6 @@ const Frenchi = () => {
             <div className={styles.frenchi__mainPage__info}>
               <div className={styles.frenchi__mainPage__info_title}>
                 дизайн главной страницы сайта
-              </div>
-              <div className={styles.frenchi__mainPage__info_description}>
-                Madaia – бренд одежды для повседневной жизни и спорта, идейным
-                вдохновителем которого является бывшая побуждает ее творить
-                красоту
               </div>
             </div>
             <div className={styles.frenchi__mainPage__images}>
@@ -106,11 +103,6 @@ const Frenchi = () => {
               <div className={styles.frenchi__adaptive__info_title}>
                 дизайн главной страницы сайта
               </div>
-              <div className={styles.frenchi__adaptive__info_description}>
-                Madaia – бренд одежды для повседневной жизни и спорта, идейным
-                вдохновителем которого является бывшая побуждает ее творить
-                красоту
-              </div>
             </div>
             <div className={styles.frenchi__adaptive__image} />
             <div className={styles.frenchi__adaptive__mobileImages}>
@@ -126,22 +118,37 @@ const Frenchi = () => {
             <div className={styles.frenchi__images_img3} />
           </div>
 
-          <div className={styles.frenchi__team}>
-            <div className={styles.frenchi__team_title}>
-              Над проектом работали
+          <div className={aimiStyles.aimi__team}>
+            <div className={aimiStyles.aimi__team_title}>
+              над проектом работали
             </div>
-            {team.map((member, index) => (
-              <React.Fragment key={`${member.name}-${index}`}>
-                <div className={styles.frenchi__team__member}>
-                  <div className={styles.frenchi__team__member_position}>
-                    {member.position}
+            <div className={aimiStyles.aimi__team_container}>
+              {team.map(
+                (
+                  { position, name }: { position: string; name: string[] },
+                  index
+                ) => (
+                  <div
+                    className={aimiStyles.aimi__team_member}
+                    key={`${position}-${index}`}
+                  >
+                    <div className={aimiStyles.aimi__team_member_position}>
+                      {position}
+                    </div>
+                    <div className={aimiStyles.aimi__team_member_nameContainer}>
+                      {name.map((n, index) => (
+                        <div
+                          className={aimiStyles.aimi__team_member_name}
+                          key={`${n}-${index}`}
+                        >
+                          {n}
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                  <div className={styles.frenchi__team__member_name}>
-                    {member.name}
-                  </div>
-                </div>
-              </React.Fragment>
-            ))}
+                )
+              )}
+            </div>
           </div>
         </div>
 
