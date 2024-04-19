@@ -107,18 +107,22 @@ const page = () => {
                 <img
                   src="/projects/approval/approval_mobile1.webp"
                   alt="image"
+                  loading="lazy"
                 />
                 <img
                   src="/projects/approval/approval_mobile2.webp"
                   alt="image"
+                  loading="lazy"
                 />
                 <img
                   src="/projects/approval/approval_mobile3.webp"
                   alt="image"
+                  loading="lazy"
                 />
                 <img
                   src="/projects/approval/approval_mobile4.webp"
                   alt="image"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -139,10 +143,12 @@ const page = () => {
                 <img
                   src="/projects/approval/approval_mobile5.webp"
                   alt="image"
+                  loading="lazy"
                 />
                 <img
                   src="/projects/approval/approval_mobile6.webp"
                   alt="image"
+                  loading="lazy"
                 />
               </div>
               <div className={styles.approval__mainPage__images} />
@@ -166,6 +172,7 @@ const page = () => {
                   <img
                     src="/projects/approval/approval_mobile7.webp"
                     alt="image"
+                    loading="lazy"
                   />
                 </div>
 
@@ -180,6 +187,7 @@ const page = () => {
                     <img
                       src="/projects/approval/approval_mobile8.webp"
                       alt="image"
+                      loading="lazy"
                     />
                   </div>
 
@@ -191,11 +199,11 @@ const page = () => {
                     <img
                       src="/projects/approval/approval_mobile9.png"
                       alt="image"
+                      loading="lazy"
                     />
                   </div>
                 </div>
               </div>
-              {/* <div className={styles.approval__mainPage__cards} /> */}
             </div>
 
             <div className={styles.approval__team}>

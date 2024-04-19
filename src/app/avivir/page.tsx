@@ -343,52 +343,82 @@ const Avivir = () => {
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel1.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel1.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel2.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel2.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel3.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel3.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel4.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel4.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel5.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel5.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel6.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel6.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel7.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel7.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel8.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel8.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel9.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel9.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel10.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel10.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                 </Swiper>
               </div>
@@ -408,52 +438,82 @@ const Avivir = () => {
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel1.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel1.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel2.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel2.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel3.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel3.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel4.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel4.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel5.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel5.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel6.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel6.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel7.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel7.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel8.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel8.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel9.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel9.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel10.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel10.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                 </Swiper>
               </div>

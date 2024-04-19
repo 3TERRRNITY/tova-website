@@ -66,6 +66,7 @@ const ServiceCard = ({ service }: any) => {
               initial={{ x: 0, y: 0 }}
               animate={cardControls}
               transition={{ duration: 0.2 }}
+              loading="lazy"
             />
           </div>
         </Glow>

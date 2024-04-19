@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Footer.module.scss";
 import Image from "next/image";
+import imageLoader from "../Loader/Loader";
 interface IFooterProps {
   white?: boolean;
 }
@@ -37,6 +38,7 @@ const Footer = ({ white }: IFooterProps) => {
             src={white ? "/telegram-black.svg" : "/telegram.svg"}
             alt="telegram"
             fill
+            loading="lazy"
           />
         </a>
         <a
@@ -44,7 +46,12 @@ const Footer = ({ white }: IFooterProps) => {
           target="_blank"
           className={styles.footer__icons_icon}
         >
-          <Image src={white ? "/vk-black.svg" : "/vk.svg"} alt="vk" fill />
+          <Image
+            src={white ? "/vk-black.svg" : "/vk.svg"}
+            alt="vk"
+            fill
+            loading="lazy"
+          />
         </a>
         <a
           href="https://www.instagram.com/tova.agency/"
@@ -55,6 +62,7 @@ const Footer = ({ white }: IFooterProps) => {
             src={white ? "/inst-black.svg" : "/inst.svg"}
             alt="instagram"
             fill
+            loading="lazy"
           />
         </a>
       </div>
@@ -75,6 +83,7 @@ const Footer = ({ white }: IFooterProps) => {
             src={white ? "/telegram-black.svg" : "/telegram.svg"}
             alt="telegram"
             fill
+            loading="lazy"
           />
         </a>
         <a
@@ -82,7 +91,12 @@ const Footer = ({ white }: IFooterProps) => {
           target="_blank"
           className={styles.footer__iconsMobile_icon}
         >
-          <Image src={white ? "/vk-black.svg" : "/vk.svg"} alt="vk" fill />
+          <Image
+            src={white ? "/vk-black.svg" : "/vk.svg"}
+            alt="vk"
+            fill
+            loading="lazy"
+          />
         </a>
         <a
           href="https://www.instagram.com/tova.agency/"
@@ -93,6 +107,7 @@ const Footer = ({ white }: IFooterProps) => {
             src={white ? "/inst-black.svg" : "/inst.svg"}
             alt="instagram"
             fill
+            loading="lazy"
           />
         </a>
       </div>

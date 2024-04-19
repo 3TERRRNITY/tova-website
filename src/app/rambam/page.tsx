@@ -49,7 +49,13 @@ const page = () => {
       <div className={commonStyles.otherPageBody}>
         <Header />
         <div className={styles.rambam__hero}>
-          <video autoPlay muted={true} playsInline={true} ref={videoRef}>
+          <video
+            autoPlay
+            muted={true}
+            playsInline={true}
+            ref={videoRef}
+            preload="auto"
+          >
             <source type="video/mp4" src="/projects/rambam/rambam_main.mp4" />
           </video>
         </div>
@@ -165,11 +171,13 @@ const page = () => {
                 src="/projects/rambam/rambam3.webp"
                 alt="colors"
                 className={styles.rambam__mainPage__colors_img1}
+                loading="lazy"
               />
               <img
                 src="/projects/rambam/rambam4.png"
                 alt="colors"
                 className={styles.rambam__mainPage__colors_img2}
+                loading="lazy"
               />
             </div>
           </div>
@@ -191,11 +199,13 @@ const page = () => {
                 src="/projects/rambam/rambam5.png"
                 alt="colors"
                 className={styles.rambam__mainPage__typography_img1}
+                loading="lazy"
               />
               <img
                 src="/projects/rambam/rambam6.png"
                 alt="colors"
                 className={styles.rambam__mainPage__typography_img2}
+                loading="lazy"
               />
             </div>
           </div>
@@ -217,11 +227,13 @@ const page = () => {
                 src="/projects/rambam/rambam7.png"
                 alt="colors"
                 className={styles.rambam__mainPage__firm_img1}
+                loading="lazy"
               />
               <img
                 src="/projects/rambam/rambam8.png"
                 alt="colors"
                 className={styles.rambam__mainPage__firm_img2}
+                loading="lazy"
               />
             </div>
           </div>

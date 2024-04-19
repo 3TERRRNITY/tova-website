@@ -48,16 +48,19 @@ const Mindly = () => {
           <img
             src="/projects/mindly/jars.webp"
             alt="mindly_jars"
+            loading="lazy"
             className={styles.mindly__hero_element1}
           />
           <img
             src="/projects/mindly/mindly_hero2.webp"
             alt="mindly_leaf1"
+            loading="lazy"
             className={styles.mindly__hero_element2}
           />
           <img
             src="/projects/mindly/mindly_hero3.webp"
             alt="mindly_leaf2"
+            loading="lazy"
             className={styles.mindly__hero_element3}
           />
         </div>
@@ -126,16 +129,19 @@ const Mindly = () => {
               src="/projects/mindly/brandbook/1.webp"
               alt="brandbook-image"
               className={styles.mindly__palette__brandbook_image}
+              loading="lazy"
             />
             <img
               src="/projects/mindly/brandbook/2.webp"
               alt="brandbook-image"
               className={styles.mindly__palette__brandbook_image}
+              loading="lazy"
             />
             <img
               src="/projects/mindly/brandbook/3.webp"
               alt="brandbook-image"
               className={styles.mindly__palette__brandbook_image}
+              loading="lazy"
             />
           </div>
 
@@ -144,16 +150,19 @@ const Mindly = () => {
               src="/projects/mindly/brandbook/4.webp"
               alt="brandbook-image"
               className={styles.mindly__palette__brandbook_image}
+              loading="lazy"
             />
             <img
               src="/projects/mindly/brandbook/5.webp"
               alt="brandbook-image"
               className={styles.mindly__palette__brandbook_image}
+              loading="lazy"
             />
             <img
               src="/projects/mindly/brandbook/6.webp"
               alt="brandbook-image"
               className={styles.mindly__palette__brandbook_image}
+              loading="lazy"
             />
           </div>
 
@@ -162,22 +171,26 @@ const Mindly = () => {
               src="/projects/mindly/brandbook/7.webp"
               alt="brandbook-image"
               className={styles.mindly__palette__brandbook_image}
+              loading="lazy"
             />
             <img
               src="/projects/mindly/brandbook/8.webp"
               alt="brandbook-image"
               className={styles.mindly__palette__brandbook_image}
+              loading="lazy"
             />
             <img
               src="/projects/mindly/brandbook/9.webp"
               alt="brandbook-image"
               className={styles.mindly__palette__brandbook_image}
+              loading="lazy"
             />
           </div>
           <img
             src="/projects/mindly/brandbook/leaf.webp"
             alt="mindly-leaf"
             className={styles.mindly__palette__brandbook_leaf}
+            loading="lazy"
           />
         </div>
 
@@ -202,22 +215,27 @@ const Mindly = () => {
               <img
                 src="/projects/mindly/mindly_mobile1.webp"
                 alt="mindly-adaptive"
+                loading="lazy"
               />
               <img
                 src="/projects/mindly/mindly_mobile1.1.webp"
                 alt="mindly-adaptive"
+                loading="lazy"
               />
               <img
                 src="/projects/mindly/mindly_mobile2.webp"
                 alt="mindly-adaptive"
+                loading="lazy"
               />
               <img
                 src="/projects/mindly/mindly_mobile3.webp"
                 alt="mindly-adaptive"
+                loading="lazy"
               />
               <img
                 src="/projects/mindly/mindly_mobile4.webp"
                 alt="mindly-adaptive"
+                loading="lazy"
               />
             </div>
           </div>
@@ -225,8 +243,13 @@ const Mindly = () => {
             <img
               src="/projects/mindly/mindly-jars.webp"
               alt="mindly-adaptive"
+              loading="lazy"
             />
-            <img src="/projects/mindly/prod-2.webp" alt="mindly-adaptive" />
+            <img
+              src="/projects/mindly/prod-2.webp"
+              alt="mindly-adaptive"
+              loading="lazy"
+            />
           </div>
         </div>
         <div className={styles.mindly}>
@@ -249,10 +272,12 @@ const Mindly = () => {
         <img
           src="/projects/mindly/mindly_adaptive.png"
           className={styles.mindly__adaptive__imagesMobile}
+          loading="lazy"
         />
         <img
           src="/projects/mindly/mindly_adaptive_mob.webp"
           className={styles.mindly__adaptive__imagesMobile_small}
+          loading="lazy"
         />
         <div className={styles.mindly}>
           <Separator />
@@ -306,6 +331,7 @@ const Mindly = () => {
               <img
                 src="/projects/mindly/smm_carousel1.png"
                 alt="instagram post"
+                loading="lazy"
               />
             </SwiperSlide>
             <SwiperSlide
@@ -314,6 +340,7 @@ const Mindly = () => {
               <img
                 src="/projects/mindly/smm_carousel2.png"
                 alt="instagram post"
+                loading="lazy"
               />
             </SwiperSlide>
             <SwiperSlide
@@ -322,6 +349,7 @@ const Mindly = () => {
               <img
                 src="/projects/mindly/smm_carousel3.png"
                 alt="instagram post"
+                loading="lazy"
               />
             </SwiperSlide>
             <SwiperSlide
@@ -330,6 +358,7 @@ const Mindly = () => {
               <img
                 src="/projects/mindly/smm_carousel4.png"
                 alt="instagram post"
+                loading="lazy"
               />
             </SwiperSlide>
             <SwiperSlide
@@ -338,6 +367,7 @@ const Mindly = () => {
               <img
                 src="/projects/mindly/smm_carousel5.png"
                 alt="instagram post"
+                loading="lazy"
               />
             </SwiperSlide>
             <SwiperSlide
@@ -346,6 +376,7 @@ const Mindly = () => {
               <img
                 src="/projects/mindly/smm_carousel6.png"
                 alt="instagram post"
+                loading="lazy"
               />
             </SwiperSlide>
           </Swiper>
@@ -369,6 +400,7 @@ const Mindly = () => {
               <img
                 src="/projects/mindly/smm_carousel1.png"
                 alt="instagram post"
+                loading="lazy"
               />
             </SwiperSlide>
             <SwiperSlide
@@ -377,6 +409,7 @@ const Mindly = () => {
               <img
                 src="/projects/mindly/smm_carousel2.png"
                 alt="instagram post"
+                loading="lazy"
               />
             </SwiperSlide>
             <SwiperSlide
@@ -385,6 +418,7 @@ const Mindly = () => {
               <img
                 src="/projects/mindly/smm_carousel3.png"
                 alt="instagram post"
+                loading="lazy"
               />
             </SwiperSlide>
             <SwiperSlide
@@ -393,6 +427,7 @@ const Mindly = () => {
               <img
                 src="/projects/mindly/smm_carousel4.png"
                 alt="instagram post"
+                loading="lazy"
               />
             </SwiperSlide>
             <SwiperSlide
@@ -401,6 +436,7 @@ const Mindly = () => {
               <img
                 src="/projects/mindly/smm_carousel5.png"
                 alt="instagram post"
+                loading="lazy"
               />
             </SwiperSlide>
             <SwiperSlide
@@ -409,16 +445,11 @@ const Mindly = () => {
               <img
                 src="/projects/mindly/smm_carousel6.png"
                 alt="instagram post"
+                loading="lazy"
               />
             </SwiperSlide>
           </Swiper>
         </div>
-        {/* <div className={styles.mindly__examples__instagramMobile}>
-          <img src="/projects/mindly/smm_mobile1.webp" alt="instagram post" />
-          <img src="/projects/mindly/smm_mobile2.webp" alt="instagram post" />
-          <img src="/projects/mindly/smm_mobile3.webp" alt="instagram post" />
-        </div>
-        <div className={styles.mindly__examples__instagram} /> */}
 
         <div className={styles.mindly}>
           <div className={styles.mindly__team}>

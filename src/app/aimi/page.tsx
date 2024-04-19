@@ -110,6 +110,7 @@ const Aimi = () => {
                 loop
                 playsInline={true}
                 ref={videoRef}
+                preload="auto"
               >
                 <source type="video/mp4" src="/projects/aimi/aimi_video.mp4" />
               </video>

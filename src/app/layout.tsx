@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.scss";
+import localFont from "next/font/local";
 
 import Navbar from "../components/Navbar/Navbar";
 import Cursor from "../components/Cursor/Cursor";
@@ -8,6 +9,8 @@ export const metadata: Metadata = {
   title: "tova — дизайн, разработка, продакшн",
   description: "Про дизайн",
 };
+
+const myFont = localFont({ src: "../../public/fonts/Code Next-Trial.woff2" });
 
 export default function RootLayout({
   children,
@@ -25,10 +28,12 @@ export default function RootLayout({
         ></link>
       </head>
       <body suppressHydrationWarning={true}>
-        <Cursor />
-        <Navbar />
+        <main className={myFont.className}>
+          <Cursor />
+          <Navbar />
 
-        {children}
+          {children}
+        </main>
       </body>
     </html>
   );

@@ -6,7 +6,7 @@ import Marquee from "react-fast-marquee";
 const SliderContainer = () => {
   const brandsContainer = IMAGES.map(({ img, key }) => (
     <div className={styles.carousel__item} key={`${img}-${key}`}>
-      <img src={img} alt="brand" />
+      <img src={img} alt="brand" loading="lazy" />
     </div>
   ));
 

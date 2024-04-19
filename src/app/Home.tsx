@@ -27,7 +27,14 @@ export default function Home() {
       <div className={commonStyles.mainPageBody}>
         <div className={styles.hero}>
           <div className={styles.hero__video}>
-            <video autoPlay muted={true} loop playsInline={true} ref={videoRef}>
+            <video
+              autoPlay
+              muted={true}
+              loop
+              playsInline={true}
+              ref={videoRef}
+              preload="auto"
+            >
               <source type="video/webm" src="/main/tova.webm" />
               <source type="video/mp4" src="/main/tova.mp4" />
             </video>

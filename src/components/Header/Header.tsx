@@ -11,9 +11,9 @@ const Header = ({ white }: IHeaderProps) => {
       <Link href={"/"} className={styles.header__link}>
         <div className={styles.header__logo}>
           {white ? (
-            <Image src="/TOVA-logo-black.svg" alt="logo" fill />
+            <Image src="/TOVA-logo-black.svg" alt="logo" fill loading="lazy" />
           ) : (
-            <Image src="/TOVA-logo.svg" alt="logo" fill />
+            <Image src="/TOVA-logo.svg" alt="logo" fill loading="lazy" />
           )}
         </div>
       </Link>

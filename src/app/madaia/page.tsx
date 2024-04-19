@@ -35,6 +35,7 @@ const page = () => {
               className={styles.madaia__hero_logo}
               src="/projects/madaia/madaia_logo-rotate.png"
               alt="madaia logo"
+              loading="lazy"
             />
             <div className={styles.madaia__hero_photo} />
           </div>
@@ -43,7 +44,11 @@ const page = () => {
               дизайн онлайн магазина
             </div>
             <div className={styles.madaia__info__title_mob}>о проекте</div>
-            <img src="/projects/madaia/madaia_logo.png" alt="madaia logo" />
+            <img
+              src="/projects/madaia/madaia_logo.png"
+              alt="madaia logo"
+              loading="lazy"
+            />
             <div className={styles.madaia__info__paragraph}>
               Madaia – бренд одежды для повседневной жизни и спорта, идейным
               вдохновителем которого является бывшая профессиональная
@@ -65,17 +70,37 @@ const page = () => {
             </div>
           </div>
           <div className={styles.madaia__desktopDesign}>
-            <img src="/projects/madaia/madaia1.webp" alt="desktop design" />
+            <img
+              src="/projects/madaia/madaia1.webp"
+              alt="desktop design"
+              loading="lazy"
+            />
           </div>
           <div className={styles.madaia__tabletDesign}>
-            <img src="/projects/madaia/madaia2.webp" alt="tablet design" />
+            <img
+              src="/projects/madaia/madaia2.webp"
+              alt="tablet design"
+              loading="lazy"
+            />
           </div>
           <div className={styles.madaia__clothes}>
-            <img src="/projects/madaia/madaia3.webp" alt="clothes" />
-            <img src="/projects/madaia/madaia4.webp" alt="clothes" />
+            <img
+              src="/projects/madaia/madaia3.webp"
+              alt="clothes"
+              loading="lazy"
+            />
+            <img
+              src="/projects/madaia/madaia4.webp"
+              alt="clothes"
+              loading="lazy"
+            />
           </div>
           <div className={styles.madaia__mobileDesign}>
-            <img src="/projects/madaia/madaia5.webp" alt="mobile design" />
+            <img
+              src="/projects/madaia/madaia5.webp"
+              alt="mobile design"
+              loading="lazy"
+            />
           </div>
 
           <div className={styles.madaia__team}>

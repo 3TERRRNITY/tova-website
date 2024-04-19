@@ -19,7 +19,12 @@ const Carousel = ({ images, width }: ICarousel) => {
               className={styles.slider_slide}
               key={`${image.toLowerCase()}-${index}`}
             >
-              <img src={image} alt={image} className={styles.slider_image} />
+              <img
+                src={image}
+                alt={image}
+                className={styles.slider_image}
+                loading="lazy"
+              />
             </SwiperSlide>
           ))}
         </Swiper>

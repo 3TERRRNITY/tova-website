@@ -128,6 +128,7 @@ const Vademecum = () => {
             src="/projects/vademkum/vademecum_main.png"
             alt="main-page"
             className={styles.vademecum__mainPage__image_img}
+            loading="lazy"
           />
         </div>
         <div className={styles.vademecum__about}>
