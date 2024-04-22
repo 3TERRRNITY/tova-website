@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Создаем уникальные концепции и улучшаем существующие подходы, включая дизайн сайтов и приложений, продуктовый дизайн и разработку, дополняя все это качественным видеопродакшном.",
 };
 
-const myFont = localFont({ src: "../../public/fonts/Code Next-Trial.woff2" });
+const myFont = localFont({ src: "../../public/fonts/Code_Next-Trial.woff2" });
 
 export default function RootLayout({
   children,
@@ -27,6 +27,13 @@ export default function RootLayout({
           media="(prefers-color-scheme: dark)"
           href="/favicons/favicon-white.png"
         ></link>
+        <link
+          rel="preload"
+          href="/public/fonts/Code_Next-Trial.woff2"
+          as="font"
+          crossOrigin=""
+          type="font/woff2"
+        />
       </head>
       <body suppressHydrationWarning={true}>
         <main className={myFont.className}>

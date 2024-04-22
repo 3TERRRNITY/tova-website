@@ -1,7 +1,9 @@
 @font-face {
-  font-family: "Code Next-Trial";
-  src: url();
-  font-display: swap;
+  font-family: "Code_Next-Trial";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Code_Next-Trial.woff2") format("woff2");
+  font-display: block;
 }
 * {
   margin: 0;

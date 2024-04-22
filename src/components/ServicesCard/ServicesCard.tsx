@@ -35,7 +35,7 @@ const ServiceCard = ({ service }: any) => {
   };
 
   return (
-    <Link href={`/services#${service.href}`}>
+    <Link href={`${service.href}`}>
       <GlowCapture size={700}>
         <Glow color="white">
           <div

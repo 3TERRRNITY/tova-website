@@ -130,7 +130,7 @@ export const SERVICES: IServices[] = [
     title: "дизайн-поддержка",
     description:
       "Ежемесячная подписка на команду проджект менеджер+дизайнер: графический, UX/UI, 3D, motion",
-    href: "marketing",
+    href: "/services#design",
     price: "1900/час",
     image: "/main/service/design.png",
   },
@@ -138,7 +138,7 @@ export const SERVICES: IServices[] = [
     title: "видео-продакшн",
     description:
       "мы специализируемся на полном цикле производства видеоконтента — от создания рекламных роликов до съемки сериалов и клипов.",
-    href: "other",
+    href: "/video",
     price: "по запросу",
     image: "/main/service/video.png",
   },
@@ -146,7 +146,7 @@ export const SERVICES: IServices[] = [
     title: "разработка",
     description:
       "Разрабатываем и усовершенствуем IT-проекты, предлагая полный спектр frontend и backend услуг в форматах аутсорсинга и аутстаффинга.",
-    href: "webdev",
+    href: "/services#webdev",
     price: "1900/час",
     image: "/main/service/web.png",
   },
@@ -154,7 +154,7 @@ export const SERVICES: IServices[] = [
     title: "ux/ui",
     description:
       "осуществляем UX-анализ, разрабатывая на его основе удобные интерфейсы для комплексных сервисов. Также создаём мобильные и веб-приложения, используя no-code технологии.",
-    href: "graphic",
+    href: "/services#graphic",
     price: "1900/час",
     image: "/main/service/graphic.png",
   },
@@ -163,7 +163,7 @@ export const SERVICES: IServices[] = [
     title: "брендинг",
     description:
       "разрабатываем уникальный брендинг, создавая запоминающиеся визуальные образы и концепции, подчёркивающие индивидуальность вашего бизнеса.",
-    href: "brand",
+    href: "/services#brand",
     price: "1900/час",
     image: "/main/service/brand.png",
   },
@@ -171,7 +171,7 @@ export const SERVICES: IServices[] = [
     title: "SMM",
     description:
       "формируем стратегии SMM, эффективно продвигая ваш бренд в социальных сетях для повышения узнаваемости и вовлеченности аудитории.",
-    href: "smm",
+    href: "/services#smm",
     price: "1900/час",
     image: "/main/service/smm.png",
   },
