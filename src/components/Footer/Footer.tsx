@@ -13,18 +13,21 @@ const Footer = ({ white }: IFooterProps) => {
         <div className={styles.footer__contacts}>
           <div className={styles.footer__contacts__number}>
             {white ? (
-              <a href="tel: +79254000134" style={{ color: "#000" }}>
-                <span>+</span>7 925 400-01-34
+              <a href="tel:+74954100690" style={{ color: "#000" }}>
+                <span>+</span>7 495 410-06-90
               </a>
             ) : (
-              <a href="tel: +79254000134" style={{ color: "#fff" }}>
-                <span>+</span>7 925 400-01-34
+              <a href="tel:+74954100690" style={{ color: "#fff" }}>
+                <span>+</span>7 495 410-06-90
               </a>
             )}
           </div>
-          <div className={styles.footer__contacts__number}>
+          <a
+            href="mailto:info@tova.agency"
+            className={styles.footer__contacts__number}
+          >
             info<span>@</span>tova.agency
-          </div>
+          </a>
         </div>
       </div>
 

@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import styles from "./Header.module.scss";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,33 +8,66 @@ interface IHeaderProps {
   white?: boolean;
 }
 const Header = ({ white }: IHeaderProps) => {
-  return (
-    <div className={styles.header}>
-      <Link href={"/"} className={styles.header__link}>
-        <div className={styles.header__logo}>
-          {white ? (
-            <Image src="/TOVA-logo-black.svg" alt="logo" fill loading="lazy" />
-          ) : (
-            <Image src="/TOVA-logo.svg" alt="logo" fill loading="lazy" />
-          )}
-        </div>
-      </Link>
+  const [isHovered, setIsHovered] = useState(false);
+  const [imageUrl, setImageUrl] = useState("/telegram.png");
 
-      <Link href={"https://t.me/tova_agency"} target="_blank">
-        {white ? (
-          <div className={styles.header__text_black}>
-            tova
-            <br />
-            про дизайн
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setImageUrl("/telegram_notification.png");
+    }, 5000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  const handleHover = () => {
+    setIsHovered(!isHovered);
+  };
+  return (
+    <div className={styles.main}>
+      <div className={styles.header}>
+        <Link href={"/"} className={styles.header__link}>
+          <div className={styles.header__logo}>
+            {white ? (
+              <Image
+                src="/TOVA-logo-black.svg"
+                alt="logo"
+                fill
+                loading="lazy"
+              />
+            ) : (
+              <Image src="/TOVA-logo.svg" alt="logo" fill loading="lazy" />
+            )}
           </div>
-        ) : (
-          <div className={styles.header__text}>
-            tova
-            <br />
-            про дизайн
-          </div>
-        )}
-      </Link>
+        </Link>
+
+        <Link href={"https://t.me/tova_agency"} target="_blank">
+          {white ? (
+            <div className={styles.header__text_black}>
+              tova
+              <br />
+              про дизайн
+            </div>
+          ) : (
+            <div className={styles.header__text}>
+              tova
+              <br />
+              про дизайн
+            </div>
+          )}
+        </Link>
+      </div>
+      <div className={styles.telegramLogo}>
+        <a href="https://t.me/tova_agency" target="_blank">
+          <motion.img
+            src={imageUrl}
+            alt="telegram"
+            loading="lazy"
+            whileHover={{ rotate: isHovered ? -45 : 0 }}
+            onMouseEnter={handleHover}
+            onMouseLeave={handleHover}
+          />
+        </a>
+      </div>
     </div>
   );
 };
