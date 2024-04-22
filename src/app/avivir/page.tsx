@@ -96,6 +96,10 @@ const Avivir = () => {
       position: "Копирайтер",
       name: ["Сергей Афанасьев"],
     },
+    {
+      position: "Команда разработки",
+      name: ["Алексей Ларионов", "Дмитрий Авдеев", "Леонид Захваткин"],
+    },
   ];
 
   return (
@@ -171,20 +175,10 @@ const Avivir = () => {
                 </div>
               </div>
             </div>
-            <Lottie animationData={Logo} />
-            <Lottie animationData={Grid} />
+            <Lottie className={styles.lottie} animationData={Logo} />
+            <Lottie className={styles.lottie} animationData={Grid} />
 
             <div className={styles.avivir__information}>
-              {/* <div className={styles.avivir__information__info}>
-                <div className={styles.avivir__information__info_title}>
-                  Фирменный стиль
-                </div>
-                <div className={styles.avivir__information__info_description}>
-                  Madaia – бренд одежды для повседневной жизни и спорта, идейным
-                  вдохновителем которого является бывшая побуждает ее творить
-                  красоту
-                </div>
-              </div> */}
               <div className={styles.avivir__information__cards}>
                 <motion.div
                   className={styles.avivir__information__card1}
@@ -210,10 +204,7 @@ const Avivir = () => {
                         styles.avivir__information__cardTexts_description
                       }
                     >
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Eveniet illo consequatur laudantium vero dolor accusamus
-                      fugiat dolores asperiores aut fugit sit dolore distinctio,
-                      aliquid saepe incidunt excepturi iusto qui. Velit.
+                      рекламные баннеры
                     </div>
                   </motion.div>
                 </motion.div>
@@ -242,10 +233,7 @@ const Avivir = () => {
                         styles.avivir__information__cardTexts_description
                       }
                     >
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Eveniet illo consequatur laudantium vero dolor accusamus
-                      fugiat dolores asperiores aut fugit sit dolore distinctio,
-                      aliquid saepe incidunt excepturi iusto qui. Velit.
+                      дизайн полиграфической продукции
                     </div>
                   </motion.div>
                 </motion.div>
@@ -275,10 +263,7 @@ const Avivir = () => {
                         styles.avivir__information__cardTexts_description
                       }
                     >
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Eveniet illo consequatur laudantium vero dolor accusamus
-                      fugiat dolores asperiores aut fugit sit dolore distinctio,
-                      aliquid saepe incidunt excepturi iusto qui. Velit.
+                      визитки
                     </div>
                   </motion.div>
                 </motion.div>
@@ -299,7 +284,6 @@ const Avivir = () => {
                 </div>
               </div>
               <div className={styles.avivir__mainPage__image} />
-              {/* <Lottie animationData={Desktop} style={{ width: "100%" }} /> */}
             </div>
 
             <div className={styles.avivir__adaptiveDesign}>
@@ -317,17 +301,7 @@ const Avivir = () => {
                   удобство, отлично адаптируясь под любой размер экрана
                 </div>
               </div>
-              <div className={styles.avivir__adaptiveDesign__images}>
-                {/* <div
-                  className={styles.avivir__adaptiveDesign__images_image1}
-                ></div>
-                <div
-                  className={styles.avivir__adaptiveDesign__images_image2}
-                ></div>
-                <div
-                  className={styles.avivir__adaptiveDesign__images_image3}
-                ></div> */}
-              </div>
+              <div className={styles.avivir__adaptiveDesign__images}></div>
             </div>
 
             <div className={styles.avivir__smm}>
@@ -358,52 +332,82 @@ const Avivir = () => {
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel1.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel1.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel2.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel2.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel3.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel3.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel4.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel4.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel5.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel5.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel6.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel6.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel7.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel7.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel8.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel8.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel9.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel9.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel10.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel10.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                 </Swiper>
               </div>
@@ -423,52 +427,82 @@ const Avivir = () => {
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel1.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel1.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel2.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel2.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel3.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel3.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel4.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel4.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel5.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel5.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel6.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel6.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel7.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel7.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel8.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel8.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel9.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel9.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                   <SwiperSlide
                     className={styles.avivir__smm__images__slider_slide}
                   >
-                    <img src="/projects/avivir/carousel/avivir-carousel10.webp" />
+                    <img
+                      src="/projects/avivir/carousel/avivir-carousel10.webp"
+                      loading="lazy"
+                    />
                   </SwiperSlide>
                 </Swiper>
               </div>

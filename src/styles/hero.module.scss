@@ -1,6 +1,18 @@
 @import "./mixins.scss";
 @import "./variable.scss";
+.telegramLogo {
+  width: 46px;
+  height: 46px;
+  position: fixed;
+  right: 40px;
+  top: 50%;
+  z-index: 999;
 
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
 .hero {
   width: 100vw;
   height: 100svh;
@@ -301,6 +313,7 @@
         @include paragraph;
         font-weight: 400;
         width: 50%;
+
         @media (max-width: 480px) {
           font-size: 20px;
           line-height: 26px;
@@ -323,6 +336,8 @@
       right: 0;
       width: 50%;
       object-fit: contain;
+      z-index: 100;
+
       @media (max-width: 480px) {
         width: 200px;
       }

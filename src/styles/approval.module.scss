@@ -186,8 +186,8 @@
       }
     }
     &__image {
-      height: clamp(22.4375rem, 0.0417rem + 74.6528vw, 89.625rem);
       width: 100%;
+      height: clamp(27.5rem, 0rem + 75.6667vi, 140rem);
       background-image: url(../../public/projects/approval/1.webp);
       background-size: contain;
       background-position: center;

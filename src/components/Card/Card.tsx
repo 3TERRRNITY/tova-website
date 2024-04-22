@@ -3,12 +3,14 @@ import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
 import styles from "../../styles/hero.module.scss";
 import Link from "next/link";
+import imageLoader from "../Loader/Loader";
 
 export default function Card({
   title,
   description,
   animation = true,
   href,
+  year,
   image,
   secondImage,
 }: {
@@ -16,6 +18,7 @@ export default function Card({
   description: string;
   animation?: boolean;
   href: string;
+  year?: number;
   image: string;
   secondImage?: string;
 }) {
@@ -65,9 +68,9 @@ export default function Card({
           className={styles.projects__card__yearContainer}
         >
           <div className={styles.projects__card__yearContainer_arrow}>
-            <Image src="/right-arrow.svg" alt="arrow" fill />
+            <Image src="/right-arrow.svg" alt="arrow" fill loading="lazy" />
           </div>
-          <div className="year">2023</div>
+          <div className="year">{year}</div>
         </motion.div>
 
         <motion.div
@@ -90,6 +93,7 @@ export default function Card({
           className={styles.projects__card_bgImage}
           src={secondImage ? secondImage : image}
           alt="background image"
+          loading="lazy"
         />
         <motion.div
           initial={{ opacity: 0, y: 200 }}

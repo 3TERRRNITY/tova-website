@@ -90,6 +90,7 @@ const Nav = ({ closeMenu }: NavProps) => {
             <motion.a
               key={`${link}-${i}`}
               href={link.href}
+              target="_blank"
               custom={i}
               variants={slideIn}
               animate="enter"

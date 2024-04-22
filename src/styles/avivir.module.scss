@@ -1,6 +1,14 @@
 @import "./mixins.scss";
 @import "./variable.scss";
 
+.lottie {
+  // TODO: изначально не было
+  height: 400px;
+  @media (max-width: 480px) {
+    height: 200px;
+  }
+}
+
 .avivir {
   padding: 0 $space-40;
   @media (max-width: 480px) {
@@ -73,6 +81,7 @@
     &__description {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      gap: $space-20;
 
       padding-bottom: $space-100;
       @media (max-width: 480px) {
@@ -249,42 +258,8 @@
       @media (max-width: 480px) {
         background-image: url(../../public/projects/avivir/avivir_adaptive_mob.png);
 
-        height: 600px;
+        height: 1000px;
       }
-      // display: grid;
-      // grid-template-columns: 0.5fr 0.5fr 1fr;
-      // height: clamp(18.6875rem, -0.0208rem + 62.3611vw, 74.8125rem);
-
-      // @media (max-width: 480px) {
-      //   display: flex;
-      //   flex-direction: column;
-      // }
-
-      // &_image1,
-      // &_image2,
-      // &_image3 {
-      //   height: 100%;
-      //   z-index: +1;
-      //   background-size: contain;
-      //   background-position: center;
-      //   background-repeat: no-repeat;
-      // }
-
-      // &_image1 {
-      //   background-image: url(../../public/projects/avivir/avivir-adaptive-1.webp);
-      //   @media (max-width: 480px) {
-      //     display: none;
-      //   }
-      // }
-      // &_image2 {
-      //   background-image: url(../../public/projects/avivir/avivir-adaptive-2.webp);
-      // }
-      // &_image3 {
-      //   background-image: url(../../public/projects/avivir/avivir-adaptive-3.webp);
-
-      //   background-size: cover;
-      //   border-radius: 15px;
-      // }
     }
   }
 
@@ -413,7 +388,7 @@
   }
 
   &__firm {
-    padding: $space-80 0 clamp(3.3125rem, 0.0208rem + 10.9722vw, 13.1875rem) 0;
+    padding: $space-80 0 0 0;
     position: relative;
     @media (max-width: 480px) {
       padding: 0 0 40px 0;
@@ -520,7 +495,7 @@
       gap: $space-10;
 
       padding: $space-40;
-      justify-content: end;
+      justify-content: start;
       z-index: 10;
       opacity: 0;
       pointer-events: none;
@@ -543,7 +518,7 @@
       display: flex;
       flex-direction: column;
       justify-content: end;
-      align-items: end;
+      align-items: start;
 
       background-size: cover;
       background-repeat: no-repeat;

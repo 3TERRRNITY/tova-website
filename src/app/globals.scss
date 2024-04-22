@@ -1,19 +1,10 @@
-@import url(https://db.onlinewebfonts.com/c/fa97d7829ba5e317077a6a7a94128c98?family=Code+Next-Trial);
 @font-face {
-  font-family: "Code Next-Trial";
-  src: url("https://db.onlinewebfonts.com/t/fa97d7829ba5e317077a6a7a94128c98.eot");
-  src: url("https://db.onlinewebfonts.com/t/fa97d7829ba5e317077a6a7a94128c98.eot?#iefix")
-      format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/fa97d7829ba5e317077a6a7a94128c98.woff2")
-      format("woff2"),
-    url("https://db.onlinewebfonts.com/t/fa97d7829ba5e317077a6a7a94128c98.woff")
-      format("woff"),
-    url("https://db.onlinewebfonts.com/t/fa97d7829ba5e317077a6a7a94128c98.ttf")
-      format("truetype"),
-    url("https://db.onlinewebfonts.com/t/fa97d7829ba5e317077a6a7a94128c98.svg#Code Next-Trial")
-      format("svg");
+  font-family: "Code_Next-Trial";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Code_Next-Trial.woff2") format("woff2");
+  font-display: block;
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -21,11 +12,11 @@
   box-sizing: border-box;
   cursor: none !important;
 }
+
 html,
 body {
   overflow-x: hidden;
 
-  font-family: "Code Next-Trial";
   font-weight: 400;
 }
 

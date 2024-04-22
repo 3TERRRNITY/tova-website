@@ -20,10 +20,10 @@ export const LINKS = [
 export const FOOTER_LINKS = [
   {
     title: "VK",
-    href: "/",
+    href: "https://vk.com/tova.agency",
   },
   {
     title: "Instagram",
-    href: "/",
+    href: "https://www.instagram.com/tova.agency/",
   },
 ];

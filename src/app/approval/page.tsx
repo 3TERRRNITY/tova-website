@@ -8,31 +8,31 @@ import { Separator } from "../../components/Separator/Separator";
 import Header from "../../components/Header/Header";
 import Lottie from "lottie-react";
 import Palette from "../../../public/projects/approval/animations/palette-approval.json";
-import Cursor from "../../components/Cursor/Cursor";
+
 const page = () => {
   const aboutPoints = [
     "проект",
-    "клиент / avivir",
-    "категория / веб-дизайн, ux-ui",
-    "дата / 2023",
+    "клиент / approval",
+    "категория / брендинг, фирменный стиль",
+    "дата / 2022",
   ];
 
   const team = [
     {
       position: "Руководитель проекта",
-      name: "Анастасия Куренкова",
+      name: "Михаил Василенко",
+    },
+    {
+      position: "Директор по маркетингу",
+      name: "Светлана Денисова",
     },
     {
       position: "Арт-директор",
-      name: "Мария Решетова",
+      name: "Ирина Макарова",
     },
     {
       position: "Дизайнер",
       name: "Наталия Лазарева",
-    },
-    {
-      position: "Команда разработки",
-      name: "Александр Рязанов",
     },
   ];
   return (
@@ -66,27 +66,24 @@ const page = () => {
                       styles.approval__about__description__subtitle_paragraph
                     }
                   >
-                    Madaia – бренд одежды для повседневной <br /> жизни и
-                    спорта, идейным вдохновителем <br /> которого является
-                    бывшая
-                  </div>
-                  <div
-                    className={
-                      styles.approval__about__description__subtitle_paragraph
-                    }
-                  >
-                    побуждает ее творить красоту, бренд Madaia <br /> -
-                    результат вдохновения. Madaia – <br />
-                    бренд одежды для повседневной жизни и спорта
+                    Компания Аппрувал специализируется на регистрации
+                    лекарственных препаратов и медицинских изделий. С её помощью
+                    было зарегистрировано более 400 лекарственных средств и
+                    свыше 70 медицинских изделий. Аппрувал завоевал доверие
+                    ведущих игроков отрасли, включая Johnson & Johnson, Акрихин,
+                    ekuore и др. , благодаря своей экспертизе и надежности в
+                    области регистрации.
                   </div>
                 </div>
                 <div
                   className={styles.approval__about__description__subtitle_big}
                 >
-                  Madaia – бренд одежды для повседневной жизни и спорта, идейным
-                  вдохновителем которого является бывшая побуждает ее творить
-                  красоту, бренд Madaia - результат вдохновения. бренд одежды
-                  для повседневной жизни и спорта
+                  Для Аппрувал мы разработали логотип и фирменный стиль,
+                  акцентируя на их ключевой роли в области регистрации
+                  медицинских препаратов и изделий. Разработанный нами фирменный
+                  стиль подчеркивает их экспертность и обеспечивает надежное
+                  визуальное представление компании, подкрепляя её репутацию в
+                  индустрии.
                 </div>
               </div>
             </div>
@@ -94,12 +91,19 @@ const page = () => {
             <div className={styles.approval__mainPage}>
               <div className={styles.approval__mainPage__info}>
                 <div className={styles.approval__mainPage__info_title}>
-                  дизайн главной страницы сайта
+                  разработка логотипа
                 </div>
                 <div className={styles.approval__mainPage__info_description}>
-                  Madaia – бренд одежды для повседневной жизни и спорта, идейным
-                  вдохновителем которого является бывшая побуждает ее творить
-                  красоту
+                  При разработке логотипа для Аппрувал, мы сосредоточились на
+                  создании символа, который бы не только отличал бы компанию на
+                  рынке, но и визуально передавал её суть. Выбор пал на
+                  уникальное изображение, где буква "v" трансформирована в
+                  галочку — международный символ одобрения, успеха и выполнения.
+                  Этот знак подчеркивает основную миссию Аппрувал — обеспечение
+                  успешной регистрации лекарственных препаратов и медицинских
+                  изделий. Эта деталь логотипа является ярким напоминанием о
+                  надежности и эффективности услуг компании, подкрепляя доверие
+                  клиентов к её профессионализму.
                 </div>
               </div>
               <div className={styles.approval__mainPage__image} />
@@ -107,18 +111,22 @@ const page = () => {
                 <img
                   src="/projects/approval/approval_mobile1.webp"
                   alt="image"
+                  loading="lazy"
                 />
                 <img
                   src="/projects/approval/approval_mobile2.webp"
                   alt="image"
+                  loading="lazy"
                 />
                 <img
                   src="/projects/approval/approval_mobile3.webp"
                   alt="image"
+                  loading="lazy"
                 />
                 <img
                   src="/projects/approval/approval_mobile4.webp"
                   alt="image"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -126,12 +134,7 @@ const page = () => {
             <div className={styles.approval__mainPage}>
               <div className={styles.approval__mainPage__info}>
                 <div className={styles.approval__mainPage__info_title}>
-                  дизайн главной страницы сайта
-                </div>
-                <div className={styles.approval__mainPage__info_description}>
-                  Madaia – бренд одежды для повседневной жизни и спорта, идейным
-                  вдохновителем которого является бывшая побуждает ее творить
-                  красоту
+                  фирменные цвета
                 </div>
               </div>
               <Lottie animationData={Palette} />
@@ -139,10 +142,12 @@ const page = () => {
                 <img
                   src="/projects/approval/approval_mobile5.webp"
                   alt="image"
+                  loading="lazy"
                 />
                 <img
                   src="/projects/approval/approval_mobile6.webp"
                   alt="image"
+                  loading="lazy"
                 />
               </div>
               <div className={styles.approval__mainPage__images} />
@@ -151,12 +156,7 @@ const page = () => {
             <div className={styles.approval__mainPage}>
               <div className={styles.approval__mainPage__info}>
                 <div className={styles.approval__mainPage__info_title}>
-                  дизайн главной страницы сайта
-                </div>
-                <div className={styles.approval__mainPage__info_description}>
-                  Madaia – бренд одежды для повседневной жизни и спорта, идейным
-                  вдохновителем которого является бывшая побуждает ее творить
-                  красоту
+                  Печатная продукция
                 </div>
               </div>
               <div className={styles.approval__mainPage__imageMobile_cards}>
@@ -166,6 +166,7 @@ const page = () => {
                   <img
                     src="/projects/approval/approval_mobile7.webp"
                     alt="image"
+                    loading="lazy"
                   />
                 </div>
 
@@ -180,6 +181,7 @@ const page = () => {
                     <img
                       src="/projects/approval/approval_mobile8.webp"
                       alt="image"
+                      loading="lazy"
                     />
                   </div>
 
@@ -191,11 +193,11 @@ const page = () => {
                     <img
                       src="/projects/approval/approval_mobile9.png"
                       alt="image"
+                      loading="lazy"
                     />
                   </div>
                 </div>
               </div>
-              {/* <div className={styles.approval__mainPage__cards} /> */}
             </div>
 
             <div className={styles.approval__team}>

@@ -1,5 +1,6 @@
 export interface IProjects {
   title: string;
+  year: number;
   img: string;
   secondImage?: string;
   description: string;

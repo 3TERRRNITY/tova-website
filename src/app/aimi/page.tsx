@@ -20,8 +20,8 @@ const Aimi = () => {
   const aboutPoints = [
     "проект",
     "клиент / aimi",
-    "категория / веб-дизайн, ux-ui",
-    "дата / 2023",
+    "категория / брендинг, дизайн-поддержка",
+    "дата / 2022",
   ];
 
   const team = [
@@ -110,6 +110,7 @@ const Aimi = () => {
                 loop
                 playsInline={true}
                 ref={videoRef}
+                preload="auto"
               >
                 <source type="video/mp4" src="/projects/aimi/aimi_video.mp4" />
               </video>
@@ -148,15 +149,6 @@ const Aimi = () => {
                   спектр услуг, охватывающих все этапы клинических испытаний для
                   фармацевтических и биотехнологических отраслей.
                 </div>
-                {/* <div
-                  className={
-                    styles.aimi__about__description__subtitle_paragraph
-                  }
-                >
-                  побуждает ее творить красоту, бренд Madaia <br /> - результат
-                  вдохновения. Madaia – <br />
-                  бренд одежды для повседневной жизни и спорта
-                </div> */}
               </div>
               <div className={styles.aimi__about__description__subtitle_big}>
                 В этом кейсе команда tova под ключ создала визуальный облик для
@@ -171,18 +163,17 @@ const Aimi = () => {
           <div className={styles.aimi__mainPage}>
             <div className={styles.aimi__mainPage__info}>
               <div className={styles.aimi__mainPage__info_title}>
-                <span>Artificial</span> Intelligence and Medical Innovations
+                создание нейминга и логотипа
               </div>
               <div className={styles.aimi__mainPage__info_description}>
-                <p>Создание нейминга и логотипа</p>
+                <p>cоздание нейминга и логотипа</p>
                 <p>
-                  Выбор названия AIMI - <span>Artificial</span> Intelligence and
-                  Medical Innovations был вдохновлен желанием руководителчя
-                  отразить её инновационный подход и специализацию в сфере
-                  медицинских технологий. Это название идеально сочетает
-                  использование искусственного интеллекта и передовые
-                  медицинские инновации, что отражает стратегические цели
-                  компании.
+                  выбор названия aimi - artificial intelligence and medical
+                  innovations был вдохновлен желанием руководителчя отразить её
+                  инновационный подход и специализацию в сфере медицинских
+                  технологий. это название идеально сочетает использование
+                  искусственного интеллекта и передовые медицинские инновации,
+                  что отражает стратегические цели компании.
                 </p>
               </div>
             </div>
@@ -223,11 +214,6 @@ const Aimi = () => {
               <div className={styles.aimi__firm__info_title}>
                 фирменные носители
               </div>
-              <div className={styles.aimi__firm__info_description}>
-                Madaia – бренд одежды для повседневной жизни и спорта, идейным
-                вдохновителем которого является бывшая побуждает ее творить
-                красоту
-              </div>
             </div>
 
             <div className={styles.aimi__information__cards}>
@@ -251,10 +237,7 @@ const Aimi = () => {
                   <div
                     className={styles.aimi__information__cardTexts_description}
                   >
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Eveniet illo consequatur laudantium vero dolor accusamus
-                    fugiat dolores asperiores aut fugit sit dolore distinctio,
-                    aliquid saepe incidunt excepturi iusto qui. Velit.
+                    визитки
                   </div>
                 </motion.div>
               </motion.div>
@@ -279,10 +262,7 @@ const Aimi = () => {
                   <div
                     className={styles.aimi__information__cardTexts_description}
                   >
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Eveniet illo consequatur laudantium vero dolor accusamus
-                    fugiat dolores asperiores aut fugit sit dolore distinctio,
-                    aliquid saepe incidunt excepturi iusto qui. Velit.
+                    почтовые конверты
                   </div>
                 </motion.div>
               </motion.div>
@@ -306,38 +286,16 @@ const Aimi = () => {
                   <div
                     className={styles.aimi__information__cardTexts_description}
                   >
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Eveniet illo consequatur laudantium vero dolor accusamus
-                    fugiat dolores asperiores aut fugit sit dolore distinctio,
-                    aliquid saepe incidunt excepturi iusto qui. Velit.
+                    фирменный бланк
                   </div>
                 </motion.div>
               </motion.div>
             </div>
-            {/* <div className={styles.aimi__firm__imageGridContainer}>
-              <img
-                className={styles.aimi__firm__imageGridContainer_image}
-                src="/projects/aimi/aimi_firm1.png"
-                alt="design"
-              />
-              <img
-                className={styles.aimi__firm__imageGridContainer_image}
-                src="/projects/aimi/aimi_firm2.png"
-                alt="design"
-              />
-              <img
-                className={styles.aimi__firm__imageGridContainer_imageBig}
-                src="/projects/aimi/aimi_firm3.png"
-                alt="design"
-              />
-            </div> */}
           </div>
           <Separator />
           <div className={styles.aimi__typography}>
             <div className={styles.aimi__typography__info}>
-              <div className={styles.aimi__typography__info_title}>
-                типография
-              </div>
+              <div className={styles.aimi__typography__info_title}>шрифт</div>
               <div className={styles.aimi__typography__info__example}>
                 <div className={styles.aimi__typography__info__example_title}>
                   muller

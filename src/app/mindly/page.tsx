@@ -15,9 +15,9 @@ import "swiper/css";
 const Mindly = () => {
   const aboutPoints = [
     "проект",
-    "клиент / avivir",
-    "категория / веб-дизайн, ux-ui",
-    "дата / 2023",
+    "клиент / mindly",
+    "категория / нейминг, брендинг, веб-дизайн, ux-ui, дизайн-поддержка",
+    "дата / 2021-2023",
   ];
 
   const team = [
@@ -48,16 +48,19 @@ const Mindly = () => {
           <img
             src="/projects/mindly/jars.webp"
             alt="mindly_jars"
+            loading="lazy"
             className={styles.mindly__hero_element1}
           />
           <img
             src="/projects/mindly/mindly_hero2.webp"
             alt="mindly_leaf1"
+            loading="lazy"
             className={styles.mindly__hero_element2}
           />
           <img
             src="/projects/mindly/mindly_hero3.webp"
             alt="mindly_leaf2"
+            loading="lazy"
             className={styles.mindly__hero_element3}
           />
         </div>
@@ -83,24 +86,22 @@ const Mindly = () => {
                     styles.mindly__about__description__subtitle_paragraph
                   }
                 >
-                  Madaia – бренд одежды для повседневной <br /> жизни и спорта,
-                  идейным вдохновителем <br /> которого является бывшая
-                </div>
-                <div
-                  className={
-                    styles.mindly__about__description__subtitle_paragraph
-                  }
-                >
-                  побуждает ее творить красоту, бренд Madaia <br /> - результат
-                  вдохновения. Madaia – <br />
-                  бренд одежды для повседневной жизни и спорта
+                  mindly – динамично развивающийся российский бренд,
+                  специализирующийся на производстве высококачественных БАДов и
+                  косметики из натуральных компонентов. Продукция Mindly,
+                  создаваемая как в России, так и в Европе, выделяется на рынке
+                  благодаря своему качеству и выбору ингредиентов.
                 </div>
               </div>
               <div className={styles.mindly__about__description__subtitle_big}>
-                Madaia – бренд одежды для повседневной жизни и спорта, идейным
-                вдохновителем которого является бывшая побуждает ее творить
-                красоту, бренд Madaia - результат вдохновения. бренд одежды для
-                повседневной жизни и спорта
+                для Mindly мы разработали нейминг, фирменный стиль и веб-сайт,
+                акцентируя на уникальной идентичности бренда. В нашу работу
+                вошли брендинг, веб-дизайн, UX/UI и дизайн-поддержка, целью
+                которых было создание современного и удобного сайта для
+                пользователей. Главная задача — подчеркнуть высокое качество
+                натуральной продукции Mindly и их стремление к здоровому образу
+                жизни, делая акцент на простоте и интуитивности использования
+                сайта.
               </div>
             </div>
           </div>
@@ -109,11 +110,6 @@ const Mindly = () => {
             <div className={styles.mindly__palette__info}>
               <div className={styles.mindly__palette__info_title}>
                 основная палитра бренда
-              </div>
-              <div className={styles.mindly__palette__info_description}>
-                Madaia – бренд одежды для повседневной жизни и спорта, идейным
-                вдохновителем которого является бывшая побуждает ее творить
-                красоту
               </div>
             </div>
             <Lottie animationData={Palette} />
@@ -126,16 +122,19 @@ const Mindly = () => {
               src="/projects/mindly/brandbook/1.webp"
               alt="brandbook-image"
               className={styles.mindly__palette__brandbook_image}
+              loading="lazy"
             />
             <img
               src="/projects/mindly/brandbook/2.webp"
               alt="brandbook-image"
               className={styles.mindly__palette__brandbook_image}
+              loading="lazy"
             />
             <img
               src="/projects/mindly/brandbook/3.webp"
               alt="brandbook-image"
               className={styles.mindly__palette__brandbook_image}
+              loading="lazy"
             />
           </div>
 
@@ -144,16 +143,19 @@ const Mindly = () => {
               src="/projects/mindly/brandbook/4.webp"
               alt="brandbook-image"
               className={styles.mindly__palette__brandbook_image}
+              loading="lazy"
             />
             <img
               src="/projects/mindly/brandbook/5.webp"
               alt="brandbook-image"
               className={styles.mindly__palette__brandbook_image}
+              loading="lazy"
             />
             <img
               src="/projects/mindly/brandbook/6.webp"
               alt="brandbook-image"
               className={styles.mindly__palette__brandbook_image}
+              loading="lazy"
             />
           </div>
 
@@ -162,22 +164,26 @@ const Mindly = () => {
               src="/projects/mindly/brandbook/7.webp"
               alt="brandbook-image"
               className={styles.mindly__palette__brandbook_image}
+              loading="lazy"
             />
             <img
               src="/projects/mindly/brandbook/8.webp"
               alt="brandbook-image"
               className={styles.mindly__palette__brandbook_image}
+              loading="lazy"
             />
             <img
               src="/projects/mindly/brandbook/9.webp"
               alt="brandbook-image"
               className={styles.mindly__palette__brandbook_image}
+              loading="lazy"
             />
           </div>
           <img
             src="/projects/mindly/brandbook/leaf.webp"
             alt="mindly-leaf"
             className={styles.mindly__palette__brandbook_leaf}
+            loading="lazy"
           />
         </div>
 
@@ -202,22 +208,27 @@ const Mindly = () => {
               <img
                 src="/projects/mindly/mindly_mobile1.webp"
                 alt="mindly-adaptive"
+                loading="lazy"
               />
               <img
                 src="/projects/mindly/mindly_mobile1.1.webp"
                 alt="mindly-adaptive"
+                loading="lazy"
               />
               <img
                 src="/projects/mindly/mindly_mobile2.webp"
                 alt="mindly-adaptive"
+                loading="lazy"
               />
               <img
                 src="/projects/mindly/mindly_mobile3.webp"
                 alt="mindly-adaptive"
+                loading="lazy"
               />
               <img
                 src="/projects/mindly/mindly_mobile4.webp"
                 alt="mindly-adaptive"
+                loading="lazy"
               />
             </div>
           </div>
@@ -225,8 +236,13 @@ const Mindly = () => {
             <img
               src="/projects/mindly/mindly-jars.webp"
               alt="mindly-adaptive"
+              loading="lazy"
             />
-            <img src="/projects/mindly/prod-2.webp" alt="mindly-adaptive" />
+            <img
+              src="/projects/mindly/prod-2.webp"
+              alt="mindly-adaptive"
+              loading="lazy"
+            />
           </div>
         </div>
         <div className={styles.mindly}>
@@ -249,10 +265,12 @@ const Mindly = () => {
         <img
           src="/projects/mindly/mindly_adaptive.png"
           className={styles.mindly__adaptive__imagesMobile}
+          loading="lazy"
         />
         <img
           src="/projects/mindly/mindly_adaptive_mob.webp"
           className={styles.mindly__adaptive__imagesMobile_small}
+          loading="lazy"
         />
         <div className={styles.mindly}>
           <Separator />
@@ -306,6 +324,7 @@ const Mindly = () => {
               <img
                 src="/projects/mindly/smm_carousel1.png"
                 alt="instagram post"
+                loading="lazy"
               />
             </SwiperSlide>
             <SwiperSlide
@@ -314,6 +333,7 @@ const Mindly = () => {
               <img
                 src="/projects/mindly/smm_carousel2.png"
                 alt="instagram post"
+                loading="lazy"
               />
             </SwiperSlide>
             <SwiperSlide
@@ -322,6 +342,7 @@ const Mindly = () => {
               <img
                 src="/projects/mindly/smm_carousel3.png"
                 alt="instagram post"
+                loading="lazy"
               />
             </SwiperSlide>
             <SwiperSlide
@@ -330,6 +351,7 @@ const Mindly = () => {
               <img
                 src="/projects/mindly/smm_carousel4.png"
                 alt="instagram post"
+                loading="lazy"
               />
             </SwiperSlide>
             <SwiperSlide
@@ -338,6 +360,7 @@ const Mindly = () => {
               <img
                 src="/projects/mindly/smm_carousel5.png"
                 alt="instagram post"
+                loading="lazy"
               />
             </SwiperSlide>
             <SwiperSlide
@@ -346,6 +369,7 @@ const Mindly = () => {
               <img
                 src="/projects/mindly/smm_carousel6.png"
                 alt="instagram post"
+                loading="lazy"
               />
             </SwiperSlide>
           </Swiper>
@@ -369,6 +393,7 @@ const Mindly = () => {
               <img
                 src="/projects/mindly/smm_carousel1.png"
                 alt="instagram post"
+                loading="lazy"
               />
             </SwiperSlide>
             <SwiperSlide
@@ -377,6 +402,7 @@ const Mindly = () => {
               <img
                 src="/projects/mindly/smm_carousel2.png"
                 alt="instagram post"
+                loading="lazy"
               />
             </SwiperSlide>
             <SwiperSlide
@@ -385,6 +411,7 @@ const Mindly = () => {
               <img
                 src="/projects/mindly/smm_carousel3.png"
                 alt="instagram post"
+                loading="lazy"
               />
             </SwiperSlide>
             <SwiperSlide
@@ -393,6 +420,7 @@ const Mindly = () => {
               <img
                 src="/projects/mindly/smm_carousel4.png"
                 alt="instagram post"
+                loading="lazy"
               />
             </SwiperSlide>
             <SwiperSlide
@@ -401,6 +429,7 @@ const Mindly = () => {
               <img
                 src="/projects/mindly/smm_carousel5.png"
                 alt="instagram post"
+                loading="lazy"
               />
             </SwiperSlide>
             <SwiperSlide
@@ -409,16 +438,11 @@ const Mindly = () => {
               <img
                 src="/projects/mindly/smm_carousel6.png"
                 alt="instagram post"
+                loading="lazy"
               />
             </SwiperSlide>
           </Swiper>
         </div>
-        {/* <div className={styles.mindly__examples__instagramMobile}>
-          <img src="/projects/mindly/smm_mobile1.webp" alt="instagram post" />
-          <img src="/projects/mindly/smm_mobile2.webp" alt="instagram post" />
-          <img src="/projects/mindly/smm_mobile3.webp" alt="instagram post" />
-        </div>
-        <div className={styles.mindly__examples__instagram} /> */}
 
         <div className={styles.mindly}>
           <div className={styles.mindly__team}>
