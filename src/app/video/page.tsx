@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Footer from "../../components/Footer/Footer";
 import Form from "../../components/Form/Form";
 import Header from "../../components/Header/Header";
@@ -7,10 +7,18 @@ import styles from "../../styles/video.module.scss";
 import SplineAnim from "./spline";
 import { motion, useAnimation } from "framer-motion";
 import { Separator } from "../../components/Separator/Separator";
-import { title } from "process";
+import heroStyles from "../../styles/hero.module.scss";
 
 const video = () => {
   const control = useAnimation();
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.muted = true;
+      videoRef.current.playsInline = true;
+      videoRef.current.autoplay = true;
+    }
+  }, []);
   const underlineVariants = {
     hidden: { width: "0%" },
     visible: { width: "100%" },
@@ -61,8 +69,8 @@ const video = () => {
   ];
   return (
     <>
+      <Header />
       <div className={styles.pageContainer}>
-        <Header />
         <div className={styles.hero}>
           <div className={styles.title}>
             <div className={styles.firstLine}>
@@ -158,6 +166,20 @@ const video = () => {
               {services.map(({ title, href, link }) => (
                 <HoverableTitle title={title} href={href} link={link} />
               ))}
+            </div>
+          </div>
+          <div className={styles.slider}>
+            <div className={styles.hero__video}>
+              <video
+                autoPlay
+                muted={true}
+                loop
+                playsInline={true}
+                ref={videoRef}
+                preload="auto"
+              >
+                <source type="video/mp4" src="/main/tova.mp4" />
+              </video>
             </div>
           </div>
         </div>
