@@ -2,7 +2,6 @@
 @import "../../styles/variable.scss";
 .main {
   width: 100vw;
-  height: 100vh;
   position: fixed;
   padding: 0 $space-40;
   z-index: 999;
@@ -10,18 +9,7 @@
     padding: 40px 20px;
   }
 }
-.telegramLogo {
-  width: 46px;
-  height: 46px;
-  position: absolute;
-  right: 40px;
-  top: 50%;
 
-  img {
-    height: 100%;
-    width: 100%;
-  }
-}
 .header {
   height: max-content;
 

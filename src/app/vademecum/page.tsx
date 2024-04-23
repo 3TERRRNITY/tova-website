@@ -1,17 +1,30 @@
 "use client";
-
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../styles/vademecum.module.scss";
 import commonStyles from "../../styles/common.module.scss";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Lottie from "lottie-react";
 import Palette from "../../../public/projects/vademkum/animations/palette.json";
-import Image from "next/image";
 import { Separator } from "../../components/Separator/Separator";
-import Cursor from "../../components/Cursor/Cursor";
+import { motion } from "framer-motion";
 
 const Vademecum = () => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [imageUrl, setImageUrl] = useState("/telegram.png");
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setImageUrl("/telegram_notification.png");
+    }, 5000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  const handleHover = () => {
+    setIsHovered(!isHovered);
+  };
+
   const aboutPoints = [
     "проект",
     "клиент / vademecum",
@@ -43,7 +56,18 @@ const Vademecum = () => {
       <div className={commonStyles.mainPageBody}>
         <Header />
         <div className={styles.vademecum__hero} />
-
+        <div className={commonStyles.telegramLogo}>
+          <a href="https://t.me/tova_agency" target="_blank">
+            <motion.img
+              src={imageUrl}
+              alt="telegram"
+              loading="lazy"
+              whileHover={{ rotate: isHovered ? -45 : 0 }}
+              onMouseEnter={handleHover}
+              onMouseLeave={handleHover}
+            />
+          </a>
+        </div>
         <div className={styles.vademecum__about}>
           <div className={styles.vademecum__about__head}>
             <div className={styles.vademecum__about__head_title}>О проекте</div>

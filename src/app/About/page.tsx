@@ -4,15 +4,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import styles from "../../styles/about.module.scss";
 import commonStyles from "../../styles/common.module.scss";
-
 import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
-
 import { DEPARTAMENTS, VACANCY } from "../../constants/constants";
 import { textAnimation } from "../../common/animations";
 import { Separator } from "../../components/Separator/Separator";
 import Footer from "../../components/Footer/Footer";
-import Cursor from "../../components/Cursor/Cursor";
 import Form from "../../components/Form/Form";
 
 const About = () => {

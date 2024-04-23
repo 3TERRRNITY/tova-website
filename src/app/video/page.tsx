@@ -7,11 +7,32 @@ import styles from "../../styles/video.module.scss";
 import SplineAnim from "./spline";
 import { motion, useAnimation } from "framer-motion";
 import { Separator } from "../../components/Separator/Separator";
-import heroStyles from "../../styles/hero.module.scss";
+import commonStyles from "../../styles/common.module.scss";
 
 const video = () => {
   const control = useAnimation();
   const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [isHovered, setIsHovered] = useState(false);
+  const [imageUrl, setImageUrl] = useState("/telegram.png");
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setImageUrl("/telegram_notification.png");
+    }, 5000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  const handleHover = () => {
+    setIsHovered(!isHovered);
+  };
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.muted = true;
+      videoRef.current.playsInline = true;
+      videoRef.current.autoplay = true;
+    }
+  }, []);
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.muted = true;
@@ -72,6 +93,18 @@ const video = () => {
       <Header />
       <div className={styles.pageContainer}>
         <div className={styles.hero}>
+          <div className={commonStyles.telegramLogo}>
+            <a href="https://t.me/tova_agency" target="_blank">
+              <motion.img
+                src={imageUrl}
+                alt="telegram"
+                loading="lazy"
+                whileHover={{ rotate: isHovered ? -45 : 0 }}
+                onMouseEnter={handleHover}
+                onMouseLeave={handleHover}
+              />
+            </a>
+          </div>
           <div className={styles.title}>
             <div className={styles.firstLine}>
               <motion.div
@@ -164,7 +197,12 @@ const video = () => {
             <div className={styles.services_title}>УСЛУГИ</div>
             <div className={styles.services_grid}>
               {services.map(({ title, href, link }) => (
-                <HoverableTitle title={title} href={href} link={link} />
+                <HoverableTitle
+                  href={href}
+                  link={link}
+                  title={title}
+                  key={title}
+                />
               ))}
             </div>
           </div>

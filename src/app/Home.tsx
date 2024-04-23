@@ -3,7 +3,6 @@
 import styles from "../styles/hero.module.scss";
 import commonStyles from "../styles/common.module.scss";
 import { PROJECTS } from "../constants/constants";
-
 import Card from "../components/Card/Card";
 import Footer from "../components/Footer/Footer";
 import Link from "next/link";
@@ -54,7 +53,7 @@ export default function Home() {
               <source type="video/mp4" src="/main/tova.mp4" />
             </video>
           </div>
-          <div className={styles.telegramLogo}>
+          <div className={commonStyles.telegramLogo}>
             <a href="https://t.me/tova_agency" target="_blank">
               <motion.img
                 src={imageUrl}

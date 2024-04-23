@@ -1,6 +1,5 @@
 "use client";
-
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../styles/services.module.scss";
 import commonStyles from "../../styles/common.module.scss";
 import Header from "../../components/Header/Header";
@@ -11,15 +10,40 @@ import { motion } from "framer-motion";
 import { textAnimation } from "../../common/animations";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
-import Cursor from "../../components/Cursor/Cursor";
 import Form from "../../components/Form/Form";
 
 const Services = () => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [imageUrl, setImageUrl] = useState("/telegram.png");
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setImageUrl("/telegram_notification.png");
+    }, 5000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  const handleHover = () => {
+    setIsHovered(!isHovered);
+  };
   return (
     <>
       <Header white />
       <Navbar />
       <div className={commonStyles.otherPageBody}>
+        <div className={commonStyles.telegramLogo}>
+          <a href="https://t.me/tova_agency" target="_blank">
+            <motion.img
+              src={imageUrl}
+              alt="telegram"
+              loading="lazy"
+              whileHover={{ rotate: isHovered ? -45 : 0 }}
+              onMouseEnter={handleHover}
+              onMouseLeave={handleHover}
+            />
+          </a>
+        </div>
         <motion.div
           initial="hidden"
           whileInView="visible"

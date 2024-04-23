@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../styles/mindly.module.scss";
 import commonStyles from "../../styles/common.module.scss";
 import Header from "../../components/Header/Header";
@@ -11,8 +11,23 @@ import Logo from "../../../public/projects/mindly/animations/logo.json";
 import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { motion } from "framer-motion";
 
 const Mindly = () => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [imageUrl, setImageUrl] = useState("/telegram.png");
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setImageUrl("/telegram_notification.png");
+    }, 5000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  const handleHover = () => {
+    setIsHovered(!isHovered);
+  };
   const aboutPoints = [
     "проект",
     "клиент / mindly",
@@ -43,7 +58,18 @@ const Mindly = () => {
     <>
       <div className={commonStyles.mindlyPage}>
         <Header white />
-
+        <div className={commonStyles.telegramLogo}>
+          <a href="https://t.me/tova_agency" target="_blank">
+            <motion.img
+              src={imageUrl}
+              alt="telegram"
+              loading="lazy"
+              whileHover={{ rotate: isHovered ? -45 : 0 }}
+              onMouseEnter={handleHover}
+              onMouseLeave={handleHover}
+            />
+          </a>
+        </div>
         <div className={styles.mindly__hero}>
           <img
             src="/projects/mindly/jars.webp"

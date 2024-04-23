@@ -1,10 +1,25 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import styles from "../../styles/madaia.module.scss";
-import commonStyle from "../../styles/common.module.scss";
-import Cursor from "../../components/Cursor/Cursor";
+import commonStyles from "../../styles/common.module.scss";
 import Footer from "../../components/Footer/Footer";
+import { motion } from "framer-motion";
 
 const page = () => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [imageUrl, setImageUrl] = useState("/telegram.png");
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setImageUrl("/telegram_notification.png");
+    }, 5000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  const handleHover = () => {
+    setIsHovered(!isHovered);
+  };
   const team = [
     {
       position: "Руководитель проекта",
@@ -29,7 +44,19 @@ const page = () => {
   ];
   return (
     <>
-      <div className={commonStyle.madaiaPage}>
+      <div className={commonStyles.madaiaPage}>
+        <div className={commonStyles.telegramLogo}>
+          <a href="https://t.me/tova_agency" target="_blank">
+            <motion.img
+              src={imageUrl}
+              alt="telegram"
+              loading="lazy"
+              whileHover={{ rotate: isHovered ? -45 : 0 }}
+              onMouseEnter={handleHover}
+              onMouseLeave={handleHover}
+            />
+          </a>
+        </div>
         <div className={styles.madaia}>
           <div className={styles.madaia__hero}>
             <img
