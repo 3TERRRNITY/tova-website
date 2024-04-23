@@ -5,7 +5,6 @@ import commonStyles from "../../styles/common.module.scss";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import { Separator } from "../../components/Separator/Separator";
-
 import Lottie from "lottie-react";
 import Logo from "../../../public/projects/aimi/aimations/logo-aimi.json";
 import Scheme1 from "../../../public/projects/aimi/aimations/scheme1-aimi.json";

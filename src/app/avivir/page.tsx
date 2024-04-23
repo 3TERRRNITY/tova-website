@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect, useState } from "react";
 import styles from "../../styles/avivir.module.scss";
 import aimiStyles from "../../styles/aimi.module.scss";
@@ -10,7 +9,6 @@ import NeonCircle from "../../components/NeonCircle/NeonCircle";
 import Lottie from "lottie-react";
 import Logo from "../../../public/projects/avivir/animations/logo.json";
 import Grid from "../../../public/projects/avivir/animations/grid.json";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { useAnimation } from "framer-motion";

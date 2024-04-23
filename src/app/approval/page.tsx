@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import styles from "../../styles/approval.module.scss";
 import commonStyles from "../../styles/common.module.scss";

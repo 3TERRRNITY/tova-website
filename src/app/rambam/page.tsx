@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect, useRef, useState } from "react";
 import styles from "../../styles/rambam.module.scss";
 import commonStyles from "../../styles/common.module.scss";

@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect, useState } from "react";
 import styles from "../../styles/frenchi.module.scss";
 import aimiStyles from "../../styles/aimi.module.scss";

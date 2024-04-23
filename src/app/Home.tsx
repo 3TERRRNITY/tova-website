@@ -3,7 +3,6 @@
 import styles from "../styles/hero.module.scss";
 import commonStyles from "../styles/common.module.scss";
 import { PROJECTS } from "../constants/constants";
-
 import Card from "../components/Card/Card";
 import Footer from "../components/Footer/Footer";
 import Link from "next/link";
