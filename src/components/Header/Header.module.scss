@@ -6,6 +6,9 @@
   position: fixed;
   padding: 0 $space-40;
   z-index: 999;
+  @media (max-width: 480px) {
+    padding: 40px 20px;
+  }
 }
 .telegramLogo {
   width: 46px;
