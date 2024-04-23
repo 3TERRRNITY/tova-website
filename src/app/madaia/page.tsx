@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import styles from "../../styles/madaia.module.scss";
 import commonStyles from "../../styles/common.module.scss";
