@@ -1,14 +1,28 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../styles/frenchi.module.scss";
 import aimiStyles from "../../styles/aimi.module.scss";
 import commonStyles from "../../styles/common.module.scss";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import Cursor from "../../components/Cursor/Cursor";
+import { motion } from "framer-motion";
 
 const Frenchi = () => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [imageUrl, setImageUrl] = useState("/telegram.png");
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setImageUrl("/telegram_notification.png");
+    }, 5000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  const handleHover = () => {
+    setIsHovered(!isHovered);
+  };
   const aboutPoints = [
     "проект",
     "клиент / frenchi products",
@@ -42,6 +56,18 @@ const Frenchi = () => {
     <>
       <div className={commonStyles.mainPageBody}>
         <Header />
+        <div className={commonStyles.telegramLogo}>
+          <a href="https://t.me/tova_agency" target="_blank">
+            <motion.img
+              src={imageUrl}
+              alt="telegram"
+              loading="lazy"
+              whileHover={{ rotate: isHovered ? -45 : 0 }}
+              onMouseEnter={handleHover}
+              onMouseLeave={handleHover}
+            />
+          </a>
+        </div>
         <div className={styles.frenchi__hero} />
 
         <div className={styles.frenchi__about}>

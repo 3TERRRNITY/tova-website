@@ -54,7 +54,7 @@ export default function Home() {
               <source type="video/mp4" src="/main/tova.mp4" />
             </video>
           </div>
-          <div className={styles.telegramLogo}>
+          <div className={commonStyles.telegramLogo}>
             <a href="https://t.me/tova_agency" target="_blank">
               <motion.img
                 src={imageUrl}

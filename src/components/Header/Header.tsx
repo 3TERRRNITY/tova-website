@@ -56,18 +56,6 @@ const Header = ({ white }: IHeaderProps) => {
           )}
         </Link>
       </div>
-      <div className={styles.telegramLogo}>
-        <a href="https://t.me/tova_agency" target="_blank">
-          <motion.img
-            src={imageUrl}
-            alt="telegram"
-            loading="lazy"
-            whileHover={{ rotate: isHovered ? -45 : 0 }}
-            onMouseEnter={handleHover}
-            onMouseLeave={handleHover}
-          />
-        </a>
-      </div>
     </div>
   );
 };

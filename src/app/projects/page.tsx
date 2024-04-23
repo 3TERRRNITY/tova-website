@@ -16,6 +16,20 @@ import { textAnimation } from "../../common/animations";
 import Form from "../../components/Form/Form";
 
 const Projects = () => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [imageUrl, setImageUrl] = useState("/telegram.png");
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setImageUrl("/telegram_notification.png");
+    }, 5000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  const handleHover = () => {
+    setIsHovered(!isHovered);
+  };
   const [selectedOption, setSelectedOption] = useState<string>("all");
   const [filteredProjects, setFilteredProjects] = useState<IProjects[]>([]);
 
@@ -47,6 +61,18 @@ const Projects = () => {
     <>
       <div className={commonStyles.mainPageBody}>
         <Header />
+        <div className={commonStyles.telegramLogo}>
+          <a href="https://t.me/tova_agency" target="_blank">
+            <motion.img
+              src={imageUrl}
+              alt="telegram"
+              loading="lazy"
+              whileHover={{ rotate: isHovered ? -45 : 0 }}
+              onMouseEnter={handleHover}
+              onMouseLeave={handleHover}
+            />
+          </a>
+        </div>
         <div className={styles.projects}>
           <div className={styles.projects__title}>проекты</div>
           <div className={styles.projects__select}>

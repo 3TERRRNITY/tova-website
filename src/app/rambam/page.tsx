@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "../../styles/rambam.module.scss";
 import commonStyles from "../../styles/common.module.scss";
 import Footer from "../../components/Footer/Footer";
@@ -8,8 +8,23 @@ import { Separator } from "../../components/Separator/Separator";
 import Header from "../../components/Header/Header";
 import Lottie from "lottie-react";
 import Logo from "../../../public/projects/rambam/animation/logo.json";
-import Cursor from "../../components/Cursor/Cursor";
+import { motion } from "framer-motion";
+
 const page = () => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [imageUrl, setImageUrl] = useState("/telegram.png");
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setImageUrl("/telegram_notification.png");
+    }, 5000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  const handleHover = () => {
+    setIsHovered(!isHovered);
+  };
   const aboutPoints = [
     "клиент / rambam",
     "категория / фирменный стиль, брендинг",
@@ -47,6 +62,18 @@ const page = () => {
     <>
       <div className={commonStyles.otherPageBody}>
         <Header white />
+        <div className={commonStyles.telegramLogo}>
+          <a href="https://t.me/tova_agency" target="_blank">
+            <motion.img
+              src={imageUrl}
+              alt="telegram"
+              loading="lazy"
+              whileHover={{ rotate: isHovered ? -45 : 0 }}
+              onMouseEnter={handleHover}
+              onMouseLeave={handleHover}
+            />
+          </a>
+        </div>
         <div className={styles.rambam__hero}>
           <video
             autoPlay

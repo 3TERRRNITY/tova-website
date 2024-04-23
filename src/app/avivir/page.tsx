@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../styles/avivir.module.scss";
 import aimiStyles from "../../styles/aimi.module.scss";
 import commonStyles from "../../styles/common.module.scss";
@@ -18,6 +18,20 @@ import { motion } from "framer-motion";
 import { Autoplay } from "swiper";
 
 const Avivir = () => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [imageUrl, setImageUrl] = useState("/telegram.png");
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setImageUrl("/telegram_notification.png");
+    }, 5000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  const handleHover = () => {
+    setIsHovered(!isHovered);
+  };
   const aboutPoints = [
     "проект",
     "клиент / avivir",
@@ -105,6 +119,18 @@ const Avivir = () => {
     <>
       <div className={commonStyles.mainPageBody}>
         <Header />
+        <div className={commonStyles.telegramLogo}>
+          <a href="https://t.me/tova_agency" target="_blank">
+            <motion.img
+              src={imageUrl}
+              alt="telegram"
+              loading="lazy"
+              whileHover={{ rotate: isHovered ? -45 : 0 }}
+              onMouseEnter={handleHover}
+              onMouseLeave={handleHover}
+            />
+          </a>
+        </div>
         <div className={commonStyles.projectContainer}>
           <div className={styles.avivir__hero} />
           <div className={styles.avivir}>
