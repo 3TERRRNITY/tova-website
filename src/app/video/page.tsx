@@ -207,7 +207,16 @@ const video = () => {
             </div>
           </div>
           <div className={styles.slider}>
-            <div className={styles.hero__video}>
+            <div className={styles.slider__text}>
+              <div className={styles.slider__text_title}>реклама</div>
+              <div className={styles.slider__text_description}>
+                специализируемся на производстве рекламных роликов, которые
+                выделяются на фоне традиционного контента. Создаем рекламу,
+                ориентированную на конкретную целевую аудиторию, с акцентом на
+                креативность и уникальный подход.
+              </div>
+            </div>
+            <div className={styles.slider__video}>
               <video
                 autoPlay
                 muted={true}
@@ -216,8 +225,12 @@ const video = () => {
                 ref={videoRef}
                 preload="auto"
               >
-                <source type="video/mp4" src="/main/tova.mp4" />
+                <source type="video/mp4" src="/video/ad_1.mp4" />
               </video>
+            </div>
+            <div className={styles.slider__grid}>
+              <VideoPlayer src="/video/ad_1.mp4" />
+              <VideoPlayer src="/video/ad_2.mp4" />
             </div>
           </div>
         </div>
@@ -301,5 +314,42 @@ const HoverableTitle = ({
         )}
       </div>
     </a>
+  );
+};
+
+const VideoPlayer = ({ src }: any) => {
+  const videoRef = useRef<any>(null);
+
+  const toggleFullScreen = () => {
+    const videoElement = videoRef.current;
+
+    if (videoElement?.requestFullscreen) {
+      videoElement?.requestFullscreen();
+    } else if (videoElement?.mozRequestFullScreen) {
+      /* Firefox */
+      videoElement?.mozRequestFullScreen();
+    } else if (videoElement?.webkitRequestFullscreen) {
+      /* Chrome, Safari & Opera */
+      videoElement?.webkitRequestFullscreen();
+    } else if (videoElement?.msRequestFullscreen) {
+      /* IE/Edge */
+      videoElement.msRequestFullscreen();
+    }
+  };
+
+  return (
+    <div className={styles.slider__grid_video} onClick={toggleFullScreen}>
+      <video
+        autoPlay
+        muted={true}
+        loop
+        playsInline={true}
+        ref={videoRef}
+        preload="auto"
+      >
+        <source type="video/mp4" src={src} />
+      </video>
+      <a>перейти</a>
+    </div>
   );
 };
