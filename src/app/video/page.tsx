@@ -164,7 +164,12 @@ const video = () => {
             <div className={styles.services_title}>УСЛУГИ</div>
             <div className={styles.services_grid}>
               {services.map(({ title, href, link }) => (
-                <HoverableTitle title={title} href={href} link={link} />
+                <HoverableTitle
+                  href={href}
+                  link={link}
+                  title={title}
+                  key={title}
+                />
               ))}
             </div>
           </div>

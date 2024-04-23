@@ -7,11 +7,10 @@ import commonStyles from "../../styles/common.module.scss";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import NeonCircle from "../../components/NeonCircle/NeonCircle";
-
 import Lottie from "lottie-react";
 import Logo from "../../../public/projects/avivir/animations/logo.json";
 import Grid from "../../../public/projects/avivir/animations/grid.json";
-import Desktop from "../../../public/projects/avivir/animations/avivir_desktop.json";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { useAnimation } from "framer-motion";
