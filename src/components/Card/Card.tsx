@@ -25,24 +25,40 @@ export default function Card({
   const controls = useAnimation();
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const [cardHeight, setCardHeight] = useState<number>(0);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
   const heightRef = useRef(null as null | HTMLDivElement);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 480);
+    };
+
+    handleResize(); // вызовите это, чтобы установить начальное состояние
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const handleHover = () => {
-    if (animation) {
+    if (animation && !isMobile) {
       controls.start({
         opacity: 1,
         x: 0,
       });
       setIsHovered(true);
     } else {
+      setIsHovered(true);
     }
   };
 
   const handleUnhover = () => {
-    controls.start({
-      opacity: 0,
-      x: -100,
-    });
+    if (!isMobile) {
+      controls.start({
+        opacity: 0,
+        x: -100,
+      });
+    }
     setIsHovered(false);
   };
 

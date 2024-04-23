@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { SERVICES } from "../../constants/constants";
 import styles from "./ServicesCard.module.scss";
@@ -18,20 +18,36 @@ const ServicesComponent = () => {
 
 const ServiceCard = ({ service }: any) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const cardControls = useAnimation();
   const descriptionControls = useAnimation();
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 480);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const handleMouseEnter = () => {
-    setIsHovered(true);
-    cardControls.start({ x: 60, y: 60 });
-    descriptionControls.start({ opacity: 1 });
+    if (!isMobile) {
+      setIsHovered(true);
+      cardControls.start({ x: 60, y: 60 });
+      descriptionControls.start({ opacity: 1 });
+    }
   };
 
   const handleMouseLeave = () => {
-    setIsHovered(false);
-    cardControls.start({ x: 0, y: 0 });
-    descriptionControls.start({ opacity: 0 });
+    if (!isMobile) {
+      setIsHovered(false);
+      cardControls.start({ x: 0, y: 0 });
+      descriptionControls.start({ opacity: 0 });
+    }
   };
 
   return (
