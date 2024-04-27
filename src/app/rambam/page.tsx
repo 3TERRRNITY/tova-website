@@ -240,12 +240,6 @@ const page = () => {
               <div className={styles.rambam__mainPage__info_title}>
                 Фирменные носители
               </div>
-              <div className={styles.rambam__mainPage__info_description}>
-                Фирменный шрифт компании — IBM Plex Sans. IBM Plex Sans Regular
-                можно использовать для основного текста. IBM Plex Sans Bold
-                можно использовать в заголовках и подзаголовках, когда требуется
-                более сильный акцент.
-              </div>
             </div>
             <div className={styles.rambam__mainPage__firm}>
               <img

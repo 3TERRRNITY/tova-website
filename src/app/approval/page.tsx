@@ -69,9 +69,9 @@ const page = () => {
                     лекарственных препаратов и медицинских изделий. С её помощью
                     было зарегистрировано более 400 лекарственных средств и
                     свыше 70 медицинских изделий. Аппрувал завоевал доверие
-                    ведущих игроков отрасли, включая Johnson & Johnson, Акрихин,
-                    ekuore и др. , благодаря своей экспертизе и надежности в
-                    области регистрации.
+                    ведущих игроков отрасли, включая Johnson <span>&</span>{" "}
+                    Johnson, Акрихин, ekuore и др. , благодаря своей экспертизе
+                    и надежности в области регистрации.
                   </div>
                 </div>
                 <div
@@ -96,16 +96,17 @@ const page = () => {
                   При разработке логотипа для Аппрувал, мы сосредоточились на
                   создании символа, который бы не только отличал бы компанию на
                   рынке, но и визуально передавал её суть. Выбор пал на
-                  уникальное изображение, где буква "v" трансформирована в
-                  галочку — международный символ одобрения, успеха и выполнения.
-                  Этот знак подчеркивает основную миссию Аппрувал — обеспечение
-                  успешной регистрации лекарственных препаратов и медицинских
-                  изделий. Эта деталь логотипа является ярким напоминанием о
-                  надежности и эффективности услуг компании, подкрепляя доверие
-                  клиентов к её профессионализму.
+                  уникальное изображение, где буква <span>"</span>v
+                  <span>"</span> трансформирована в галочку — международный
+                  символ одобрения, успеха и выполнения. Этот знак подчеркивает
+                  основную миссию Аппрувал — обеспечение успешной регистрации
+                  лекарственных препаратов и медицинских изделий. Эта деталь
+                  логотипа является ярким напоминанием о надежности и
+                  эффективности услуг компании, подкрепляя доверие клиентов к её
+                  профессионализму.
                 </div>
               </div>
-              <div className={styles.approval__mainPage__image} />
+
               <div className={styles.approval__mainPage__imageMobile}>
                 <img
                   src="/projects/approval/approval_mobile1.webp"
@@ -113,7 +114,7 @@ const page = () => {
                   loading="lazy"
                 />
                 <img
-                  src="/projects/approval/approval_mobile2.webp"
+                  src="/projects/approval/approval_mobile2.png"
                   alt="image"
                   loading="lazy"
                 />
@@ -139,17 +140,16 @@ const page = () => {
               <Lottie animationData={Palette} />
               <div className={styles.approval__mainPage__imageMobile}>
                 <img
-                  src="/projects/approval/approval_mobile5.webp"
+                  src="/projects/approval/raleway.png"
                   alt="image"
                   loading="lazy"
                 />
                 <img
-                  src="/projects/approval/approval_mobile6.webp"
+                  src="/projects/approval/montserrat.png"
                   alt="image"
                   loading="lazy"
                 />
               </div>
-              <div className={styles.approval__mainPage__images} />
             </div>
             <Separator />
             <div className={styles.approval__mainPage}>
@@ -163,7 +163,7 @@ const page = () => {
                   className={styles.approval__mainPage__imageMobile_cards_img1}
                 >
                   <img
-                    src="/projects/approval/approval_mobile7.webp"
+                    src="/projects/approval/approval_mobile7.png"
                     alt="image"
                     loading="lazy"
                   />

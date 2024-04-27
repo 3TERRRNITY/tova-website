@@ -22,12 +22,23 @@ const Footer = ({ white }: IFooterProps) => {
               </a>
             )}
           </div>
-          <a
-            href="mailto:info@tova.agency"
-            className={styles.footer__contacts__number}
-          >
-            info<span>@</span>tova.agency
-          </a>
+          {white ? (
+            <a
+              href="mailto:info@tova.agency"
+              className={styles.footer__contacts__number}
+              style={{ color: "#000" }}
+            >
+              info<span>@</span>tova.agency
+            </a>
+          ) : (
+            <a
+              href="mailto:info@tova.agency"
+              className={styles.footer__contacts__number}
+              style={{ color: "#fff" }}
+            >
+              info<span>@</span>tova.agency
+            </a>
+          )}
         </div>
       </div>
 

@@ -1,13 +1,13 @@
 @import "./mixins.scss";
 @import "./variable.scss";
 
-.lottie {
-  // TODO: изначально не было
-  height: 400px;
-  @media (max-width: 480px) {
-    height: 200px;
-  }
-}
+// .lottie {
+//   // TODO: изначально не было
+//   height: 400px;
+//   @media (max-width: 480px) {
+//     height: 200px;
+//   }
+// }
 
 .avivir {
   padding: 0 $space-40;
@@ -501,11 +501,20 @@
         @include h3Title;
 
         text-transform: lowercase;
+
+        @media (max-width: 480px) {
+          font-size: 20px;
+          line-height: 26px;
+        }
       }
 
       &_description {
         @include paragraph;
         text-transform: lowercase;
+        @media (max-width: 480px) {
+          font-size: 16px;
+          line-height: 20.8px;
+        }
       }
     }
 

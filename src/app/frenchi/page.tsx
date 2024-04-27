@@ -142,41 +142,39 @@ const Frenchi = () => {
             <div className={styles.frenchi__images_img2} />
             <div className={styles.frenchi__images_img3} />
           </div>
-
-          <div className={aimiStyles.aimi__team}>
-            <div className={aimiStyles.aimi__team_title}>
-              над проектом работали
-            </div>
-            <div className={aimiStyles.aimi__team_container}>
-              {team.map(
-                (
-                  { position, name }: { position: string; name: string[] },
-                  index
-                ) => (
-                  <div
-                    className={aimiStyles.aimi__team_member}
-                    key={`${position}-${index}`}
-                  >
-                    <div className={aimiStyles.aimi__team_member_position}>
-                      {position}
-                    </div>
-                    <div className={aimiStyles.aimi__team_member_nameContainer}>
-                      {name.map((n, index) => (
-                        <div
-                          className={aimiStyles.aimi__team_member_name}
-                          key={`${n}-${index}`}
-                        >
-                          {n}
-                        </div>
-                      ))}
-                    </div>
+        </div>
+        <div className={aimiStyles.aimi__team}>
+          <div className={aimiStyles.aimi__team_title}>
+            над проектом работали
+          </div>
+          <div className={aimiStyles.aimi__team_container}>
+            {team.map(
+              (
+                { position, name }: { position: string; name: string[] },
+                index
+              ) => (
+                <div
+                  className={aimiStyles.aimi__team_member}
+                  key={`${position}-${index}`}
+                >
+                  <div className={aimiStyles.aimi__team_member_position}>
+                    {position}
                   </div>
-                )
-              )}
-            </div>
+                  <div className={aimiStyles.aimi__team_member_nameContainer}>
+                    {name.map((n, index) => (
+                      <div
+                        className={aimiStyles.aimi__team_member_name}
+                        key={`${n}-${index}`}
+                      >
+                        {n}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )
+            )}
           </div>
         </div>
-
         <Footer />
       </div>
     </>

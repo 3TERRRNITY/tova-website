@@ -47,7 +47,7 @@
       }
 
       &_subtitle {
-        @include h3Title;
+        @include paragraph;
         @media (max-width: 480px) {
           font-size: 16px;
           line-height: 20.8px;
@@ -78,7 +78,7 @@
         }
 
         &_paragraph {
-          @include h3Title;
+          @include paragraph;
           @media (max-width: 480px) {
             font-size: 16px;
             line-height: 20.8px;
@@ -147,7 +147,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-
+      @include h3Title;
       border-radius: 20px;
 
       width: 100%;
@@ -166,7 +166,7 @@
       justify-content: center;
       align-items: center;
       img {
-        width: 100%;
+        width: 4000px;
         height: auto;
 
         object-fit: contain;

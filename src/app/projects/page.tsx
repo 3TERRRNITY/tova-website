@@ -153,7 +153,9 @@ const Projects = () => {
                     <Card
                       href={proj.title.toLowerCase()}
                       image={proj.img}
+                      year={proj.year}
                       description={proj.description}
+                      isProject
                       title={proj.title}
                     />
                     <motion.div
@@ -168,6 +170,8 @@ const Projects = () => {
                         secondImage={proj.secondImage}
                         image={proj.img}
                         animation={true}
+                        year={proj.year}
+                        isProject
                         description={""}
                         title={""}
                       />
