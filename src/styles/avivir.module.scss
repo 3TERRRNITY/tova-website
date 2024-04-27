@@ -63,7 +63,7 @@
       }
 
       &_subtitle {
-        @include paragraph;
+        @include h3Title;
         @media (max-width: 480px) {
           font-size: 16px;
           line-height: 20.8px;
@@ -71,10 +71,7 @@
       }
 
       &_point {
-        color: #3e3e3e;
-        &:first-of-type {
-          color: #fff;
-        }
+        color: #fff;
       }
     }
 
@@ -99,7 +96,7 @@
         }
 
         &_paragraph {
-          @include paragraph;
+          @include h3Title;
           @media (max-width: 480px) {
             font-size: 16px;
             line-height: 20.8px;

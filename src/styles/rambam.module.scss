@@ -71,7 +71,7 @@
       }
 
       &_subtitle {
-        @include paragraph;
+        @include h3Title;
         @media (max-width: 480px) {
           font-size: 16px;
           line-height: 20.8px;
@@ -85,7 +85,7 @@
     &__description {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-
+      gap: $space-40;
       padding-bottom: $space-100;
 
       @media (max-width: 480px) {
@@ -103,7 +103,7 @@
         }
 
         &_paragraph {
-          @include paragraph;
+          @include h3Title;
           @media (max-width: 480px) {
             font-size: 16px;
             line-height: 20.8px;
@@ -111,7 +111,7 @@
         }
 
         &_big {
-          @include h3Title;
+          @include paragraph;
           @media (max-width: 480px) {
             padding-top: 20px;
             font-size: 16px;

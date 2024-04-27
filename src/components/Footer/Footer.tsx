@@ -14,11 +14,11 @@ const Footer = ({ white }: IFooterProps) => {
           <div className={styles.footer__contacts__number}>
             {white ? (
               <a href="tel:+74954100690" style={{ color: "#000" }}>
-                <span>+</span>7 495 410-06-90
+                <span>+</span>7 <span>(</span> 495 <span>)</span> 410-06-90
               </a>
             ) : (
               <a href="tel:+74954100690" style={{ color: "#fff" }}>
-                <span>+</span>7 495 410-06-90
+                <span>+</span>7 <span>(</span> 495 <span>)</span> 410-06-90
               </a>
             )}
           </div>
@@ -72,7 +72,7 @@ const Footer = ({ white }: IFooterProps) => {
       <div className={styles.footer__addressContainer}>
         <div className={styles.footer__address}>Адрес</div>
         <div className={styles.footer__addressInfo}>
-          121205, г.Москва, вн.тер.г. Муниципальный Округ <br /> Можайский, тер
+          121205, г. Москва, вн.тер.г. Муниципальный Округ <br /> Можайский, тер
           Инновационного Центра <br /> Сколково, ул Нобеля, д. 5
         </div>
       </div>

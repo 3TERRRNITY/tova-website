@@ -2,6 +2,9 @@
 @import "/src/styles/variable.scss";
 .formContainer {
   margin: 160px $space-40;
+  display: flex;
+  flex-direction: column;
+
   @media (max-width: 480px) {
     margin: 90px 0;
   }
@@ -30,6 +33,8 @@
   &__formContainer {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+
     gap: $space-20;
 
     @media (max-width: 480px) {
@@ -38,7 +43,6 @@
 
     textarea {
       resize: none;
-      margin-top: 49px;
 
       @media (max-width: 480px) {
         height: 100px;
