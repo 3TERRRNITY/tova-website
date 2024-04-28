@@ -81,7 +81,7 @@ const Form = () => {
           />
         </div>
         <div className={styles.agreementContainer}>
-          <div className={styles.checkboxContainer}>
+          <div className={`${styles.checkboxContainer} ${errors.agree ? styles.shake : ""}`}>
             <input
               type="checkbox"
               {...register("agree", { required: "Это обязательное поле" })}
@@ -89,7 +89,7 @@ const Form = () => {
               id="agreeCheckbox"
             />
             <label htmlFor="agreeCheckbox">
-              Я согласен с правилами обработки персональных данных
+              Я согласен с <a href="/privacy" className={styles.privacy}>правилами обработки персональных данных</a>
             </label>
           </div>
           <motion.button
