@@ -1,5 +1,4 @@
-"use client";
-
+"use client"
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./Navbar.module.scss";
 import Button from "./Button/Button";
@@ -45,48 +44,30 @@ const variantsMobile = {
     transition: { duration: 0.5, delay: 0.35, ease: [0.76, 0, 0.24, 1] },
   },
 };
+
 const Navbar = (props: Props) => {
   const [isActive, setIsActive] = useState<boolean>(false);
+  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 480);
   const navbarRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        navbarRef.current &&
-        event.target instanceof Node &&
-        !navbarRef.current.contains(event.target)
-      ) {
-        setIsActive(false);
-      }
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 480);
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener("resize", handleResize);
     };
-  }, [isActive]);
+  }, []);
 
   return (
     <>
       <div className={styles.header} ref={navbarRef}>
         <motion.div
           className={styles.header__menu}
-          variants={variants}
-          animate={isActive ? "open" : "closed"}
-          initial="closed"
-        >
-          <AnimatePresence>
-            {isActive && <Nav closeMenu={() => setIsActive(false)} />}
-          </AnimatePresence>
-        </motion.div>
-        <Button isActive={isActive} setIsActive={setIsActive} />
-      </div>
-
-      <div className={styles.headerMobile}>
-        <motion.div
-          className={styles.headerMobile__menu}
-          variants={variantsMobile}
+          variants={isMobile ? variantsMobile : variants}
           animate={isActive ? "open" : "closed"}
           initial="closed"
         >
