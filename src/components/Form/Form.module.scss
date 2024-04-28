@@ -59,7 +59,7 @@
       border: none;
       padding: $space-10 0;
       border-bottom: 1px solid #3c3c3c;
-      color: #3c3c3c;
+      color: #fff;
       @include h3Title;
       font-family: "Code Next-Trial";
 
@@ -103,7 +103,7 @@
       @include paragraph;
       position: relative;
       height: 49px;
-      width: 50%;
+      width: 280px;
       padding: $space-20 $space-80;
       background-color: transparent;
       color: white;
@@ -218,10 +218,11 @@
     -50%,
     -50%
   ); /* Сдвигаем псевдоэлемент на половину его размеров */
-  width: 80%; /* Заливаем 80% квадрата */
-  height: 80%; /* Заливаем 80% квадрата */
+  width: 50%; /* Заливаем 80% квадрата */
+  height: 50%; /* Заливаем 80% квадрата */
   background-color: white;
   opacity: 0; /* Начально скрываем заливку */
+  transition: opacity 0.5s ease;
 }
 
 .square.filled::before {
@@ -231,3 +232,18 @@
 .input {
   padding-right: 30px;
 }
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+.shake {
+  animation: shake 0.5s;
+}
+.privacy {
+  text-decoration: underline;
+}
+
