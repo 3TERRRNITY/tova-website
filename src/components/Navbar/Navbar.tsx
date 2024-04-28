@@ -54,12 +54,14 @@ const Navbar = (props: Props) => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 480);
     };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+  
+    if (typeof window !== 'undefined') {
+      window.addEventListener("resize", handleResize);
+  
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
   }, []);
 
   return (
