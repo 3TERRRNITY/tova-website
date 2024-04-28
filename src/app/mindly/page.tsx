@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "../../styles/mindly.module.scss";
 import commonStyles from "../../styles/common.module.scss";
 import Header from "../../components/Header/Header";
@@ -12,8 +12,23 @@ import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { motion } from "framer-motion";
-
+import Carousel from "../../components/Carousel/Carousel";
+interface CardProps {
+  text: string;
+  background: string;
+}
+interface CardListProps {
+  cards: CardProps[];
+}
 const Mindly = () => {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.muted = true;
+      videoRef.current.playsInline = true;
+      videoRef.current.autoplay = true;
+    }
+  }, []);
   const [isHovered, setIsHovered] = useState(false);
   const [imageUrl, setImageUrl] = useState("/telegram.png");
 
@@ -28,6 +43,26 @@ const Mindly = () => {
   const handleHover = () => {
     setIsHovered(!isHovered);
   };
+  const cardsData: CardProps[] = [
+    { text: 'Энергия', background: '/projects/mindly/cards/energy.png' },
+    { text: 'Метаболизм ', background: '/projects/mindly/cards/metabol.png' },
+    { text: 'Здоровый сон ', background: '/projects/mindly/cards/sleep.png' },
+    { text: 'Спорт и фитнес ', background: '/projects/mindly/cards/sport.png' },
+    { text: 'Кожа, волосы и ногти ', background: '/projects/mindly/cards/skin.png' },
+    { text: 'Кости и суставы ', background: '/projects/mindly/cards/bones.png' },
+    { text: 'Сердце и сосуды ', background: '/projects/mindly/cards/heart.png' },
+    { text: 'Память и внимание ', background: '/projects/mindly/cards/memory.png' },
+    { text: 'Омега-3 ', background: '/projects/mindly/cards/omega.png' },
+    { text: 'Стресс-менеджмент ', background: '/projects/mindly/cards/stress.png' },
+    { text: 'Иммунитет ', background: '/projects/mindly/cards/immun.png' },
+    { text: 'Антиоксиданты ', background: '/projects/mindly/cards/antioks.png' },
+    { text: 'Мужское здоровье ', background: '/projects/mindly/cards/mens.png' },
+    { text: 'Женское здоровье ', background: '/projects/mindly/cards/women.png' },
+    { text: 'Активное долголетие ', background: '/projects/mindly/cards/old.png' },
+    { text: 'Настроение ', background: '/projects/mindly/cards/mood.png' }
+
+    
+  ];
   const aboutPoints = [
     "проект",
     "клиент / mindly",
@@ -122,7 +157,7 @@ const Mindly = () => {
               <div className={styles.mindly__about__description__subtitle_big}>
                 для Mindly мы разработали нейминг, фирменный стиль и веб-сайт,
                 акцентируя на уникальной идентичности бренда. В нашу работу
-                вошли брендинг, веб-дизайн, UX/UI и дизайн-поддержка, целью
+                вошли брендинг, веб-дизайн, UX<span>/</span>UI и дизайн-поддержка, целью
                 которых было создание современного и удобного сайта для
                 пользователей. Главная задача — подчеркнуть высокое качество
                 натуральной продукции Mindly и их стремление к здоровому образу
@@ -219,57 +254,76 @@ const Mindly = () => {
             animationData={Logo}
           />
           <Separator />
-          <div className={styles.mindly__adaptive}>
-            <div className={styles.mindly__adaptive__info}>
-              <div className={styles.mindly__adaptive__info_title}>
-                адаптивный дизайн
+          <div className={styles.packageDesign}>
+            <div className={styles.packageDesign__info}>
+              <div className={styles.packageDesign__info_title}>
+              дизайн упаковки
               </div>
-              <div className={styles.mindly__adaptive__info_description}>
-                Madaia – бренд одежды для повседневной жизни и спорта, идейным
-                вдохновителем которого является бывшая побуждает ее творить
-                красоту
+              <div className={styles.packageDesign__info_description}>
+                
               </div>
             </div>
-            <div className={styles.mindly__adaptive__mob}>
+            <div className={styles.packageDesign__grid}>
+              <div className={styles.packageDesign__grid_item}>
               <img
-                src="/projects/mindly/mindly_mobile1.webp"
-                alt="mindly-adaptive"
+                src="/projects/mindly/mindly_new1.png"
+                alt="mindly-package"
                 loading="lazy"
               />
-              <img
-                src="/projects/mindly/mindly_mobile1.1.webp"
-                alt="mindly-adaptive"
-                loading="lazy"
-              />
-              <img
-                src="/projects/mindly/mindly_mobile2.webp"
-                alt="mindly-adaptive"
-                loading="lazy"
-              />
-              <img
-                src="/projects/mindly/mindly_mobile3.webp"
-                alt="mindly-adaptive"
-                loading="lazy"
-              />
-              <img
-                src="/projects/mindly/mindly_mobile4.webp"
-                alt="mindly-adaptive"
-                loading="lazy"
-              />
+              </div>
+              
+              <div className={styles.packageDesign__grid_item}>
+                <img
+                  src="/projects/mindly/mindly_new2.png"
+                  alt="mindly-package"
+                  loading="lazy"
+                />
+              </div>
+              
+              <div className={styles.packageDesign__grid_item}>
+                <img
+                  src="/projects/mindly/mindly_new3.png"
+                  alt="mindly-package"
+                  loading="lazy"
+                />
+              </div>
+              
+              <div className={styles.packageDesign__grid_item}>
+                <img
+                  src="/projects/mindly/mindly_new4.png"
+                  alt="mindly-package"
+                  loading="lazy"
+                />
+              </div>
+              
+              <div className={styles.packageDesign__grid_item}>
+                <img
+                  src="/projects/mindly/mindly_new5.png"
+                  alt="mindly-package"
+                  loading="lazy"
+                />
+              </div>
+              
+              <div className={styles.packageDesign__grid_item}>
+                <img
+                  src="/projects/mindly/mindly_new6.png"
+                  alt="mindly-package"
+                  loading="lazy"
+                />
+              </div>
+              
             </div>
+            <Carousel
+                width={315}
+                images={["/projects/mindly/mindly_new1.png", "/projects/mindly/mindly_new2.png", "/projects/mindly/mindly_new3.png"]}
+              />
+              <Carousel
+                width={315}
+                images={["/projects/mindly/mindly_new4.png", "/projects/mindly/mindly_new5.png", "/projects/mindly/mindly_new6.png"]}
+              />
           </div>
-          <div className={styles.mindly__adaptive__images}>
-            <img
-              src="/projects/mindly/mindly-jars.webp"
-              alt="mindly-adaptive"
-              loading="lazy"
-            />
-            <img
-              src="/projects/mindly/prod-2.webp"
-              alt="mindly-adaptive"
-              loading="lazy"
-            />
-          </div>
+          
+          
         </div>
         <div className={styles.mindly}>
           <Separator />
@@ -280,9 +334,7 @@ const Mindly = () => {
                 адаптивный дизайн
               </div>
               <div className={styles.mindly__adaptive__info_description}>
-                Madaia – бренд одежды для повседневной жизни и спорта, идейным
-                вдохновителем которого является бывшая побуждает ее творить
-                красоту
+                
               </div>
             </div>
           </div>
@@ -293,28 +345,66 @@ const Mindly = () => {
           className={styles.mindly__adaptive__imagesMobile}
           loading="lazy"
         />
-        <img
-          src="/projects/mindly/mindly_adaptive_mob.webp"
-          className={styles.mindly__adaptive__imagesMobile_small}
-          loading="lazy"
-        />
         <div className={styles.mindly}>
-          <Separator />
-
-          <div className={styles.mindly__adaptive}>
-            <div className={styles.mindly__adaptive__info}>
-              <div className={styles.mindly__adaptive__info_title}>
-                адаптивный дизайн
+              <div className={styles.video_one_desktop}>
+                <video
+                  autoPlay
+                  muted={true}
+                  loop
+                  playsInline={true}
+                  ref={videoRef}
+                  preload="auto"
+                >
+                  <source type="video/mp4" src="/projects/mindly/mindly_video_new1.mp4" />
+                </video>
               </div>
-              <div className={styles.mindly__adaptive__info_description}>
-                Madaia – бренд одежды для повседневной жизни и спорта, идейным
-                вдохновителем которого является бывшая побуждает ее творить
-                красоту
+              <div className={styles.directions}>
+                  <div className={styles.directions_title}>Направления БАД</div>
+                  <div className={styles.directions_grid}>
+                    {cardsData.map(({text, background}) => (
+                      <Card background={background} text={text} />
+                    ))}
+                  </div>
+              </div>
+        </div>
+        <div className={styles.mobileVersion}>
+          <div className={styles.mobileVersion_items}>
+            <div className={styles.mobileVersion_item}>
+              <img src="/projects/mindly/adaptive_mobile_new1.png" alt="adaptive-mindly" loading="lazy" />
+            </div>
+            <div className={styles.mobileVersion_item}>
+              <img src="/projects/mindly/adaptive_mobile_new2.png" alt="adaptive-mindly" loading="lazy" />
+            </div>
+            <div className={styles.videos}>
+              <div className={styles.video_one}>
+                <video
+                  autoPlay
+                  muted={true}
+                  loop
+                  playsInline={true}
+                  ref={videoRef}
+                  preload="auto"
+                >
+                  <source type="video/mp4" src="/projects/mindly/mindly_video_new1.mp4" />
+                </video>
+              </div>
+              <div className={styles.video_two}>
+                <video
+                  autoPlay
+                  muted={true}
+                  loop
+                  playsInline={true}
+                  ref={videoRef}
+                  preload="auto"
+                >
+                  <source type="video/mp4" src="/projects/mindly/mindly_video_new2.mp4" />
+                </video>
               </div>
             </div>
+            
           </div>
         </div>
-        <div className={styles.mindly__adaptive__imagesDesktop} />
+
         <div className={styles.mindly}>
           <Separator />
 
@@ -324,9 +414,7 @@ const Mindly = () => {
                 адаптивный дизайн
               </div>
               <div className={styles.mindly__examples__info_description}>
-                Madaia – бренд одежды для повседневной жизни и спорта, идейным
-                вдохновителем которого является бывшая побуждает ее творить
-                красоту
+                
               </div>
             </div>
           </div>
@@ -497,3 +585,30 @@ const Mindly = () => {
 };
 
 export default Mindly;
+
+const Card: React.FC<CardProps> = ({ text, background }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <div className={styles.card} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+      <motion.img
+        className={styles.cardImage}
+        src={background}
+        alt={text}
+        loading="lazy"
+        
+        style={{
+          width: "100%",
+          height: "100%",
+          objectFit: 'cover',
+          zIndex: "0",
+          opacity: isHovered ? 1 : 0,
+          transition: "opacity 0.5s",
+        }}
+      />
+      <div className={styles.cardContent}>
+        {text}
+      </div>
+    </div>
+  );
+};

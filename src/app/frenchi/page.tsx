@@ -6,6 +6,7 @@ import commonStyles from "../../styles/common.module.scss";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import { motion } from "framer-motion";
+import { Separator } from "../../components/Separator/Separator";
 
 const Frenchi = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -107,7 +108,7 @@ const Frenchi = () => {
               поддержание и укрепление имиджа
             </div>
           </div>
-
+          <Separator />
           <div className={styles.frenchi__mainPage}>
             <div className={styles.frenchi__mainPage__info}>
               <div className={styles.frenchi__mainPage__info_title}>
@@ -122,7 +123,7 @@ const Frenchi = () => {
               <div className={styles.frenchi__mainPage__images_img5} />
             </div>
           </div>
-
+          <Separator />
           <div className={styles.frenchi__adaptive}>
             <div className={styles.frenchi__adaptive__info}>
               <div className={styles.frenchi__adaptive__info_title}>
@@ -142,41 +143,39 @@ const Frenchi = () => {
             <div className={styles.frenchi__images_img2} />
             <div className={styles.frenchi__images_img3} />
           </div>
-
-          <div className={aimiStyles.aimi__team}>
-            <div className={aimiStyles.aimi__team_title}>
-              над проектом работали
-            </div>
-            <div className={aimiStyles.aimi__team_container}>
-              {team.map(
-                (
-                  { position, name }: { position: string; name: string[] },
-                  index
-                ) => (
-                  <div
-                    className={aimiStyles.aimi__team_member}
-                    key={`${position}-${index}`}
-                  >
-                    <div className={aimiStyles.aimi__team_member_position}>
-                      {position}
-                    </div>
-                    <div className={aimiStyles.aimi__team_member_nameContainer}>
-                      {name.map((n, index) => (
-                        <div
-                          className={aimiStyles.aimi__team_member_name}
-                          key={`${n}-${index}`}
-                        >
-                          {n}
-                        </div>
-                      ))}
-                    </div>
+        </div>
+        <div className={aimiStyles.aimi__team}>
+          <div className={aimiStyles.aimi__team_title}>
+            над проектом работали
+          </div>
+          <div className={aimiStyles.aimi__team_container}>
+            {team.map(
+              (
+                { position, name }: { position: string; name: string[] },
+                index
+              ) => (
+                <div
+                  className={aimiStyles.aimi__team_member}
+                  key={`${position}-${index}`}
+                >
+                  <div className={aimiStyles.aimi__team_member_position}>
+                    {position}
                   </div>
-                )
-              )}
-            </div>
+                  <div className={aimiStyles.aimi__team_member_nameContainer}>
+                    {name.map((n, index) => (
+                      <div
+                        className={aimiStyles.aimi__team_member_name}
+                        key={`${n}-${index}`}
+                      >
+                        {n}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )
+            )}
           </div>
         </div>
-
         <Footer />
       </div>
     </>

@@ -12,6 +12,7 @@ export default function Card({
   year,
   image,
   secondImage,
+  isProject,
 }: {
   title: string;
   description: string;
@@ -20,6 +21,7 @@ export default function Card({
   year?: number;
   image: string;
   secondImage?: string;
+  isProject?: boolean;
 }) {
   const controls = useAnimation();
   const [isHovered, setIsHovered] = useState<boolean>(false);
@@ -65,6 +67,41 @@ export default function Card({
     setCardHeight(heightRef.current?.clientHeight ?? 0);
   }, [cardHeight]);
 
+  if (isProject && isMobile) {
+    return (
+      <Link href={href} className={styles.projects__link}>
+        <div
+          className={styles.projects__card}
+          onMouseEnter={handleHover}
+          onMouseLeave={handleUnhover}
+          ref={heightRef}
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+          }}
+        >
+          <div
+            className={styles.projects__card__yearContainer_arrow}
+            style={{ zIndex: "10", margin: "10px" }}
+          >
+            <Image src="/right-arrow.svg" alt="arrow" fill loading="lazy" />
+          </div>
+          <div
+            className={styles.projects__card__yearContainer_year}
+            style={{ zIndex: "10", padding: "10px" }}
+          >
+            {year}
+          </div>
+          <img
+            className={styles.projects__card_bgImage}
+            src={secondImage ? secondImage : image}
+            alt="background image"
+            loading="lazy"
+          />
+        </div>
+      </Link>
+    );
+  }
   return (
     <Link href={href} className={styles.projects__link}>
       {isMobile ? (
@@ -103,19 +140,23 @@ export default function Card({
             <div className={styles.projects__card__yearContainer_arrow}>
               <Image src="/right-arrow.svg" alt="arrow" fill loading="lazy" />
             </div>
-            <div className="year">{year}</div>
+            <div className={styles.projects__card__yearContainer_year}>
+              {year}
+            </div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            animate={{
-              opacity: isHovered ? 0 : 1,
-            }}
-            className={styles.projects__card__startContainer}
-          >
-            {title.toLowerCase()}
-          </motion.div>
+          {!isProject && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              animate={{
+                opacity: isHovered ? 0 : 1,
+              }}
+              className={styles.projects__card__startContainer}
+            >
+              {title.toLowerCase()}
+            </motion.div>
+          )}
           <motion.img
             initial={{ scale: 1 }}
             transition={{ duration: 0.3 }}
@@ -137,9 +178,12 @@ export default function Card({
             }}
             className={styles.projects__card__container}
           >
+            {!isProject && (
             <motion.h2 className={styles.projects__card__title}>
               {title.toLowerCase()}
             </motion.h2>
+            )}
+
             <motion.p className={styles.projects__card__description}>
               {description.toLowerCase()}
             </motion.p>

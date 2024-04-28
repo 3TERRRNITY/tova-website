@@ -54,7 +54,7 @@
       }
 
       &_subtitle {
-        @include paragraph;
+        @include h3Title;
         @media (max-width: 480px) {
           font-size: 16px;
           line-height: 20.8px;
@@ -62,16 +62,13 @@
       }
       &_point {
         color: #3e3e3e;
-        &:first-of-type {
-          color: #fff;
-        }
       }
     }
 
     &__description {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-
+      gap: $space-40;
       padding-bottom: $space-100;
 
       @media (max-width: 480px) {
@@ -89,7 +86,7 @@
         }
 
         &_paragraph {
-          @include paragraph;
+          @include h3Title;
           @media (max-width: 480px) {
             font-size: 16px;
             line-height: 20.8px;
@@ -137,7 +134,16 @@
       }
     }
     &__imageMobile {
-      display: none;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%;
+      gap: 20px;
+
+      img {
+        width: 100%;
+        border-radius: 10px;
+        height: 100%;
+      }
       @media (max-width: 480px) {
         display: flex;
         flex-direction: column;
@@ -155,6 +161,7 @@
       &_img3 {
         img {
           object-fit: cover;
+          border-radius: 10px;
         }
       }
 

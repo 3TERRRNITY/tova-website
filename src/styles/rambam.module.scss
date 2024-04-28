@@ -1,6 +1,19 @@
 @import "./mixins.scss";
 @import "./variable.scss";
-
+.lottie {
+  @media (max-width: 480px) {
+    width: 700px;
+    height: 250px;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    svg {
+      position: absolute;
+      left: -90px;
+      width: 80% !important;
+    }
+  }
+}
 .rambam {
   padding: 0 $space-40;
   &__hero {
@@ -71,7 +84,7 @@
       }
 
       &_subtitle {
-        @include paragraph;
+        @include h3Title;
         @media (max-width: 480px) {
           font-size: 16px;
           line-height: 20.8px;
@@ -85,7 +98,7 @@
     &__description {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-
+      gap: $space-80;
       padding-bottom: $space-100;
 
       @media (max-width: 480px) {
@@ -103,7 +116,7 @@
         }
 
         &_paragraph {
-          @include paragraph;
+          @include h3Title;
           @media (max-width: 480px) {
             font-size: 16px;
             line-height: 20.8px;
@@ -132,7 +145,7 @@
       text-transform: lowercase;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: $space-20;
+      gap: $space-80;
 
       padding: 0 0 $space-80 0;
       @media (max-width: 480px) {

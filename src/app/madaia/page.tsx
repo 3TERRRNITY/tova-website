@@ -4,6 +4,7 @@ import styles from "../../styles/madaia.module.scss";
 import commonStyles from "../../styles/common.module.scss";
 import Footer from "../../components/Footer/Footer";
 import { motion } from "framer-motion";
+import Header from "../../components/Header/Header";
 
 const page = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -44,6 +45,7 @@ const page = () => {
   ];
   return (
     <>
+      <Header white />
       <div className={commonStyles.madaiaPage}>
         <div className={commonStyles.telegramLogo}>
           <a href="https://t.me/tova_agency" target="_blank">

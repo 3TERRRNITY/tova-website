@@ -149,7 +149,7 @@ const Aimi = () => {
                   фармацевтических и биотехнологических отраслей.
                 </div>
               </div>
-              <div className={styles.aimi__about__description__subtitle_big}>
+              <div className={styles.aimi__about__description__subtitle_paragraph}>
                 В этом кейсе команда tova под ключ создала визуальный облик для
                 стартапа в сфере клинических исследований. От нейминга до
                 дизайна сайта, каждый элемент был разработан с учетом пожеланий
@@ -165,14 +165,14 @@ const Aimi = () => {
                 создание нейминга и логотипа
               </div>
               <div className={styles.aimi__mainPage__info_description}>
-                <p>cоздание нейминга и логотипа</p>
                 <p>
-                  выбор названия aimi - artificial intelligence and medical
-                  innovations был вдохновлен желанием руководителчя отразить её
-                  инновационный подход и специализацию в сфере медицинских
-                  технологий. это название идеально сочетает использование
-                  искусственного интеллекта и передовые медицинские инновации,
-                  что отражает стратегические цели компании.
+                  выбор названия aimi - arti<span>f</span>icial intelligence and
+                  medical innovations был вдохновлен желанием руководителя
+                  отразить её инновационный подход и специализацию в сфере
+                  медицинских технологий. это название идеально сочетает
+                  использование искусственного интеллекта и передовые
+                  медицинские инновации, что отражает стратегические цели
+                  компании.
                 </p>
               </div>
             </div>
@@ -230,9 +230,6 @@ const Aimi = () => {
                     opacity: isHoveredCard1 ? 1 : 0,
                   }}
                 >
-                  <div className={styles.aimi__information__cardTexts_title}>
-                    aimi
-                  </div>
                   <div
                     className={styles.aimi__information__cardTexts_description}
                   >
@@ -255,9 +252,6 @@ const Aimi = () => {
                     opacity: isHoveredCard2 ? 1 : 0,
                   }}
                 >
-                  <div className={styles.aimi__information__cardTexts_title}>
-                    aimi
-                  </div>
                   <div
                     className={styles.aimi__information__cardTexts_description}
                   >
@@ -279,9 +273,6 @@ const Aimi = () => {
                   }}
                   className={styles.aimi__information__cardTexts}
                 >
-                  <div className={styles.aimi__information__cardTexts_title}>
-                    aimi
-                  </div>
                   <div
                     className={styles.aimi__information__cardTexts_description}
                   >

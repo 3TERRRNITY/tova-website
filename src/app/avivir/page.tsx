@@ -33,7 +33,7 @@ const Avivir = () => {
   const aboutPoints = [
     "проект",
     "клиент / avivir",
-    "категория / фирменный стиль / веб-дизайн, ux-ui, разработка, SMM",
+    "категория / веб-дизайн, ux-ui, разработка, smm",
     "дата / 2021 -  по наст. время",
   ];
   const aboutCards = [
@@ -138,7 +138,7 @@ const Avivir = () => {
               </div>
               <div className={styles.avivir__about__head}>
                 <div className={styles.avivir__about__head_title}>
-                  О проекте
+                  о проекте
                 </div>
                 <div className={styles.avivir__about__head_subtitle}>
                   {aboutPoints.map((point, index) => (
@@ -158,7 +158,7 @@ const Avivir = () => {
                       styles.avivir__about__description__subtitle_paragraph
                     }
                   >
-                    Компания «Авивир» реализует проекты оснащения медицинских
+                    компания «Авивир» реализует проекты оснащения медицинских
                     организаций и фармацевтических производств оборудованием,
                     строительства объектов здравоохранения; занимается
                     поставками средств диагностики, лекарственных препаратов и
@@ -168,7 +168,7 @@ const Avivir = () => {
                 <div
                   className={styles.avivir__about__description__subtitle_big}
                 >
-                  В работе с Авивир мы полностью обновили бренд: разработали
+                  в работе с авивир мы полностью обновили бренд: разработали
                   новый логотип и провели глобальный ребрендинг. Кроме того, мы
                   создали современный и функциональный сайт, отражающий
                   обновленный имидж и деятельность компании.
@@ -192,8 +192,8 @@ const Avivir = () => {
                 </div>
                 <div className={styles.avivir__firm__info_description}>
                   Мы освежили образ Авивир, представив две версии логотипа:
-                  классический и сокращённый 'AV'. Элегантность сокращённой
-                  версии заключается в симметричном дизайне букв 'A' и 'V',
+                  классический и сокращённый <span>'</span>AV<span>'</span>. Элегантность сокращённой
+                  версии заключается в симметричном дизайне букв <span>'</span>A<span>'</span> и <span>'</span>V<span>'</span>,
                   которые сохраняют свою узнаваемость при любом повороте.
                 </div>
               </div>
@@ -217,11 +217,6 @@ const Avivir = () => {
                       opacity: isHoveredCard1 ? 1 : 0,
                     }}
                   >
-                    <div
-                      className={styles.avivir__information__cardTexts_title}
-                    >
-                      avivir
-                    </div>
                     <div
                       className={
                         styles.avivir__information__cardTexts_description
@@ -247,11 +242,6 @@ const Avivir = () => {
                     }}
                   >
                     <div
-                      className={styles.avivir__information__cardTexts_title}
-                    >
-                      avivir
-                    </div>
-                    <div
                       className={
                         styles.avivir__information__cardTexts_description
                       }
@@ -276,11 +266,6 @@ const Avivir = () => {
                     }}
                     className={styles.avivir__information__cardTexts}
                   >
-                    <div
-                      className={styles.avivir__information__cardTexts_title}
-                    >
-                      avivir
-                    </div>
                     <div
                       className={
                         styles.avivir__information__cardTexts_description
@@ -530,44 +515,40 @@ const Avivir = () => {
                 </Swiper>
               </div>
             </div>
-
-            <div className={aimiStyles.aimi__team}>
-              <div className={aimiStyles.aimi__team_title}>
-                над проектом работали
-              </div>
-              <div className={aimiStyles.aimi__team_container}>
-                {team.map(
-                  (
-                    { position, name }: { position: string; name: string[] },
-                    index
-                  ) => (
-                    <div
-                      className={aimiStyles.aimi__team_member}
-                      key={`${position}-${index}`}
-                    >
-                      <div className={aimiStyles.aimi__team_member_position}>
-                        {position}
-                      </div>
-                      <div
-                        className={aimiStyles.aimi__team_member_nameContainer}
-                      >
-                        {name.map((n, index) => (
-                          <div
-                            className={aimiStyles.aimi__team_member_name}
-                            key={`${n}-${index}`}
-                          >
-                            {n}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )
-                )}
-              </div>
-            </div>
           </div>
         </div>
-
+        <div className={aimiStyles.aimi__team}>
+          <div className={aimiStyles.aimi__team_title}>
+            над проектом работали
+          </div>
+          <div className={aimiStyles.aimi__team_container}>
+            {team.map(
+              (
+                { position, name }: { position: string; name: string[] },
+                index
+              ) => (
+                <div
+                  className={aimiStyles.aimi__team_member}
+                  key={`${position}-${index}`}
+                >
+                  <div className={aimiStyles.aimi__team_member_position}>
+                    {position}
+                  </div>
+                  <div className={aimiStyles.aimi__team_member_nameContainer}>
+                    {name.map((n, index) => (
+                      <div
+                        className={aimiStyles.aimi__team_member_name}
+                        key={`${n}-${index}`}
+                      >
+                        {n}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )
+            )}
+          </div>
+        </div>
         <Footer />
       </div>
     </>

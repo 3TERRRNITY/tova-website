@@ -8,8 +8,8 @@
   z-index: 1000;
 
   @media (max-width: 480px) {
-    display: none;
-    pointer-events: none;
+    right: 20px;
+    top: 20px;
   }
 
   &__menu {
@@ -17,19 +17,7 @@
     width: $navbarWidth;
     background-color: #000;
     border-radius: 25px;
-  }
-}
-
-.headerMobile {
-  display: none;
-  @media (max-width: 480px) {
-    display: block;
-    position: fixed;
-    right: 20px;
-    top: 20px;
-    z-index: 1000;
-
-    &__menu {
+    @media (max-width: 480px) {
       position: relative;
       width: $navbarWidth;
       background-color: #000;
@@ -37,3 +25,21 @@
     }
   }
 }
+
+// .headerMobile {
+//   display: none;
+//   @media (max-width: 480px) {
+//     display: block;
+//     position: fixed;
+//     right: 20px;
+//     top: 20px;
+//     z-index: 1000;
+
+//     &__menu {
+//       position: relative;
+//       width: $navbarWidth;
+//       background-color: #000;
+//       border-radius: 25px;
+//     }
+//   }
+// }
