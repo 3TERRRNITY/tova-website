@@ -1,11 +1,13 @@
-"use client"
+'use client';
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./Navbar.module.scss";
 import Button from "./Button/Button";
 import { AnimatePresence, motion } from "framer-motion";
 import Nav from "./Nav/Nav";
+import { isMobile } from "react-device-detect";
 
 type Props = {};
+
 const navbarHeight = `max-content`;
 const navbarWidth = `30vw`;
 
@@ -47,22 +49,7 @@ const variantsMobile = {
 
 const Navbar = (props: Props) => {
   const [isActive, setIsActive] = useState<boolean>(false);
-  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 480);
   const navbarRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 480);
-    };
-  
-    if (typeof window !== 'undefined') {
-      window.addEventListener("resize", handleResize);
-  
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
-    }
-  }, []);
 
   return (
     <>
