@@ -1,3 +1,4 @@
+"use client"
 import React, { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import styles from "./Form.module.scss";
@@ -10,7 +11,7 @@ const Form = () => {
     handleSubmit,
     register,
     reset,
-    formState: { errors },
+    formState: { errors, isDirty },
   } = useForm({
     mode: "onChange",
     defaultValues: {
@@ -22,9 +23,11 @@ const Form = () => {
       agree: false,
     },
   });
+
   const form = useRef<any>();
 
   const onSubmit = (e: any) => {
+    reset();
     emailjs
       .sendForm("service_9lobtdd", "template_uly0dx9", form.current, {
         publicKey: "W0rcqzYQdymcqkbza",
@@ -35,7 +38,6 @@ const Form = () => {
           console.error("FAILED...", error.text);
         }
       );
-    reset();
   };
 
   return (
@@ -142,12 +144,12 @@ const InputWithSquare = ({
   };
 
   return (
-    <div className={styles.inputContainer}>
+    <div className={`${styles.inputContainer} ${error ? styles.shake : ""}`}>
       <input
         {...register(name, { required: `Это обязательное поле` })}
         placeholder={placeholder}
         type="text"
-        className={`${error ? styles.error : ""} ${styles.input}`}
+        className={`${styles.input}`}
         onChange={handleInputChange}
       />
       <div className={`${styles.square} ${isFilled && styles.filled}`} />
