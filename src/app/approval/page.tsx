@@ -62,7 +62,7 @@ const page = () => {
                 <div className={styles.approval__about__description__subtitle}>
                   <div
                     className={
-                      styles.approval__about__description__subtitle_paragraph
+                      styles.approval__about__description__subtitle_big
                     }
                   >
                     Компания Аппрувал специализируется на регистрации
@@ -75,7 +75,7 @@ const page = () => {
                   </div>
                 </div>
                 <div
-                  className={styles.approval__about__description__subtitle_big}
+                  className={styles.approval__about__description__subtitle_paragraph}
                 >
                   Для Аппрувал мы разработали логотип и фирменный стиль,
                   акцентируя на их ключевой роли в области регистрации

@@ -149,7 +149,7 @@ const Aimi = () => {
                   фармацевтических и биотехнологических отраслей.
                 </div>
               </div>
-              <div className={styles.aimi__about__description__subtitle_big}>
+              <div className={styles.aimi__about__description__subtitle_paragraph}>
                 В этом кейсе команда tova под ключ создала визуальный облик для
                 стартапа в сфере клинических исследований. От нейминга до
                 дизайна сайта, каждый элемент был разработан с учетом пожеланий

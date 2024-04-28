@@ -134,7 +134,7 @@
         }
 
         &_paragraph {
-          @include paragraph;
+          @include h3Title;
           @media (max-width: 480px) {
             font-size: 16px;
             line-height: 20.8px;
