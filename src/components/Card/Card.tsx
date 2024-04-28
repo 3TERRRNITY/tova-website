@@ -178,9 +178,11 @@ export default function Card({
             }}
             className={styles.projects__card__container}
           >
+            {!isProject && (
             <motion.h2 className={styles.projects__card__title}>
               {title.toLowerCase()}
             </motion.h2>
+            )}
 
             <motion.p className={styles.projects__card__description}>
               {description.toLowerCase()}

@@ -100,9 +100,9 @@
   }
 
   &__mainPage {
-    padding: 0 0 clamp(3.3125rem, 0.0208rem + 10.9722vw, 13.1875rem) 0;
+    padding: 40px 0 clamp(3.3125rem, 0.0208rem + 10.9722vw, 13.1875rem) 0;
     @media (max-width: 480px) {
-      padding: 0 0 90px 0;
+      padding: 20px 0 90px 0;
     }
 
     &__info {
@@ -112,7 +112,7 @@
       grid-template-columns: repeat(2, 1fr);
       gap: $space-20;
 
-      padding: 0 0 $space-80 0;
+      padding: 0 0 $space-40 0;
       @media (max-width: 480px) {
         padding: 0 0 40px 0;
         display: flex;
@@ -152,7 +152,8 @@
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        height: clamp(1.375rem, 10.8417rem + 51.1111vw, 52.375rem);
+        width: 100%;
+        height: clamp(0.375rem, 10.8417rem + 25.1111vw, 46.375rem);
         border-radius: 20px;
         @media (max-width: 480px) {
           background-image: url(../../public/projects/frenchi/frenchi_mobile1.webp);
@@ -165,11 +166,12 @@
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        height: clamp(10.5rem, -0.0208rem + 60.7361vw, 72.0625rem);
-        border-radius: 20px;
+        height: clamp(10.5rem, -0.0208rem + 39.7361vw, 64.0625rem);
+        border: 1px solid #fff;
+        border-radius: 50px;
         @media (max-width: 480px) {
           background-image: url(../../public/projects/frenchi/frenchi_mobile2.webp);
-          height: 390px;
+          height: 365px;
         }
       }
       &_img3,
@@ -181,24 +183,26 @@
         background-repeat: no-repeat;
         @media (max-width: 480px) {
           display: block;
+          border: 1px solid #fff;
+          border-radius: 50px;
         }
       }
       &_img3 {
         @media (max-width: 480px) {
           background-image: url(../../public/projects/frenchi/frenchi_mobile3.webp);
-          height: 390px;
+          height: 365px;
         }
       }
       &_img4 {
         @media (max-width: 480px) {
           background-image: url(../../public/projects/frenchi/frenchi_mobile4.webp);
-          height: 390px;
+          height: 365px;
         }
       }
       &_img5 {
         @media (max-width: 480px) {
           background-image: url(../../public/projects/frenchi/frenchi_mobile5.webp);
-          height: 390px;
+          height: 365px;
         }
       }
     }
@@ -207,7 +211,7 @@
   &__adaptive {
     padding: 0 0 clamp(4.125rem, 0rem + 13.75vw, 16.5rem) 0;
     @media (max-width: 480px) {
-      padding: 0 0 90px 0;
+      padding: 0 0 40px 0;
     }
     &__info {
       @include h3Title;
@@ -225,8 +229,10 @@
       &_title {
         @include h3Title;
         font-weight: 600;
+        padding-top: $space-40;
 
         @media (max-width: 480px) {
+          padding-top: 20px;
           font-size: 20px;
           line-height: 26px;
         }
@@ -247,7 +253,7 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      height: clamp(25rem, -0.0417rem + 83.4722vw, 100.125rem);
+      height: clamp(25rem, -0.0417rem + 78.4722vw, 124.125rem);
       @media (max-width: 480px) {
         display: none;
       }
@@ -265,7 +271,7 @@
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        height: 300px;
+        height: 270px;
         width: 100%;
         border-radius: 20px;
       }
@@ -298,17 +304,21 @@
     }
 
     &_img1 {
-      height: clamp(20.8125rem, -0.0208rem + 69.4444vw, 83.3125rem);
+      height: clamp(20.8125rem, -0.0208rem + 69.4444vw, 94.3125rem);
       background-image: url(../../public/projects/frenchi/4.webp);
+      margin-bottom: $space-80;
       @media (max-width: 480px) {
-        height: 300px;
+        margin-bottom: 10px;
+        height: 210px;
       }
     }
     &_img2 {
-      height: clamp(22.875rem, -0.0208rem + 76.3194vw, 91.5625rem);
+      height: clamp(22.875rem, -0.0208rem + 76.3194vw, 110.5625rem);
       background-image: url(../../public/projects/frenchi/5.webp);
       @media (max-width: 480px) {
-        height: 300px;
+        margin-bottom: 10px;
+
+        height: 250px;
       }
     }
     &_img3 {
@@ -317,7 +327,7 @@
       background-image: url(../../public/projects/frenchi/6.webp);
       @media (max-width: 480px) {
         // height: 300px;
-        height: 510px;
+        height: 480px;
         background-image: url(../../public/projects/frenchi/frenchi_mob3.png);
         object-fit: cover;
       }
