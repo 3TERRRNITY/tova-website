@@ -55,6 +55,7 @@ const Form = () => {
           <InputWithSquare
             label="Имя"
             register={register}
+            type={'text'}
             name="name"
             placeholder="Имя"
             error={errors.name}
@@ -63,6 +64,7 @@ const Form = () => {
             label="Телефон"
             register={register}
             name="phone"
+            type={'tel'}
             placeholder="Телефон"
             error={errors.phone}
           />
@@ -70,6 +72,7 @@ const Form = () => {
             label="E-mail"
             register={register}
             name="email"
+            type={'email'}
             placeholder="E-mail"
             error={errors.email}
           />
@@ -138,22 +141,67 @@ const InputWithSquare = ({
   name,
   placeholder,
   error,
+  type
 }: any) => {
   const [isFilled, setIsFilled] = useState(false);
   const handleInputChange = (e: any) => {
     setIsFilled(!!e.target.value);
   };
+  const [formattedPhone, setFormattedPhone] = useState("");
 
+  const handleInputTelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const input = e.target.value.replace(/\D/g, ""); 
+    let formattedInput = "";
+    setIsFilled(!!e.target.value);
+
+
+    if (input.length > 0) {
+      formattedInput += "+" + input.substring(0, 1);
+    }
+    if (input.length > 1) {
+      formattedInput += " (" + input.substring(1, 4);
+    }
+    if (input.length > 4) {
+      formattedInput += ") " + input.substring(4, 7);
+    }
+    if (input.length > 7) {
+      formattedInput += "-" + input.substring(7, 9);
+    }
+    if (input.length > 9) {
+      formattedInput += "-" + input.substring(9, 11);
+    }
+
+    setFormattedPhone(formattedInput);
+  };
+  if(type==="tel") {
+    return (
+      <div className={`${styles.inputContainer} ${error ? styles.shake : ""}`}>
+      <input
+        {...register(name, { required: `Это обязательное поле` })}
+        placeholder={placeholder}
+        type={type}
+        value={formattedPhone}
+        className={`${styles.input}`}
+        onChange={type==="tel" ? handleInputTelChange : handleInputChange}
+      />
+      <div className={`${styles.square} ${isFilled && styles.filled} ${
+          formattedPhone.length > 0 && styles.filled
+        }`} />
+    </div>
+    )
+  }
   return (
     <div className={`${styles.inputContainer} ${error ? styles.shake : ""}`}>
       <input
         {...register(name, { required: `Это обязательное поле` })}
         placeholder={placeholder}
-        type="text"
+        type={type}
         className={`${styles.input}`}
         onChange={handleInputChange}
       />
-      <div className={`${styles.square} ${isFilled && styles.filled}`} />
+      <div className={`${styles.square} ${isFilled && styles.filled} ${
+          formattedPhone.length > 0 && styles.filled
+        }`} />
     </div>
   );
 };
