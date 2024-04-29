@@ -8,17 +8,16 @@ import {
   IVacancy,
 } from "./types";
 export const IMAGES: ILogos[] = [
-  { img: "/logos/approval.svg", key: 1 },
-  { img: "/logos/av.svg", key: 2 },
-  { img: "/logos/avimed.svg", key: 3 },
-  { img: "/logos/FRENCHI.svg", key: 4 },
-  { img: "/logos/ipharma.svg", key: 5 },
-  { img: "/logos/migrenol.svg", key: 6 },
+  { img: "/logos/approval.png", key: 1 },
+  { img: "/logos/avivir.png", key: 2 },
+  { img: "/logos/frenchi.png", key: 4 },
+  { img: "/logos/pfarm.png", key: 5 },
+  { img: "/logos/migrenol.png", key: 6 },
   { img: "/logos/mindly.png", key: 7 },
-  { img: "/logos/vademecum.svg", key: 8 },
-  { img: "/logos/madaia.svg", key: 9 },
-  { img: "/logos/pfarm.svg", key: 10 },
-  { img: "/logos/rambam.svg", key: 11 },
+  { img: "/logos/vadem.png", key: 8 },
+  { img: "/logos/madaia.png", key: 9 },
+  { img: "/logos/ipharma.png", key: 10 },
+  {img: "/logos/rzhd.png", key: 12}
 ];
 export const PROJECTS: IProjects[] = [
   {
