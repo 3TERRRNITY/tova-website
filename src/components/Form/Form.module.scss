@@ -4,7 +4,7 @@
   margin: 160px $space-40;
   display: flex;
   flex-direction: column;
-
+  font-family: "Code_Next-Trial";
   @media (max-width: 480px) {
     margin: 90px 0;
   }
@@ -244,6 +244,13 @@
   animation: shake 0.5s;
 }
 .privacy {
+  color: inherit;
   text-decoration: underline;
+
+  
 }
+.underline {
+  display: contents;
+}
+
 

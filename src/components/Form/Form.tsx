@@ -27,7 +27,6 @@ const Form = () => {
   const form = useRef<any>();
 
   const onSubmit = (e: any) => {
-    reset();
     emailjs
       .sendForm("service_9lobtdd", "template_uly0dx9", form.current, {
         publicKey: "W0rcqzYQdymcqkbza",
@@ -37,6 +36,9 @@ const Form = () => {
         (error) => {
           console.error("FAILED...", error.text);
         }
+      ).finally(
+        // @ts-ignore
+        reset()
       );
   };
 
@@ -89,7 +91,7 @@ const Form = () => {
               id="agreeCheckbox"
             />
             <label htmlFor="agreeCheckbox">
-              Я согласен с <a href="/privacy" className={styles.privacy}>правилами обработки персональных данных</a>
+              Я согласен с <span className={styles.underline}><a href="/privacy" target="_blank" className={styles.privacy}>правилами обработки персональных данных</a></span>
             </label>
           </div>
           <motion.button
@@ -138,7 +140,6 @@ const InputWithSquare = ({
   error,
 }: any) => {
   const [isFilled, setIsFilled] = useState(false);
-
   const handleInputChange = (e: any) => {
     setIsFilled(!!e.target.value);
   };
