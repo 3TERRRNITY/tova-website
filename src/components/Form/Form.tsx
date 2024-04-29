@@ -27,20 +27,18 @@ const Form = () => {
   const form = useRef<any>();
 
   const onSubmit = (e: any) => {
-    reset();
     emailjs
       .sendForm("service_9lobtdd", "template_uly0dx9", form.current, {
         publicKey: "W0rcqzYQdymcqkbza",
       })
       .then(
-        () => {},
+        () => {
+          reset()
+        },
         (error) => {
           console.error("FAILED...", error.text);
         }
-      ).finally(
-        // @ts-ignore
-        reset()
-      );
+      )
   };
 
   return (
@@ -60,6 +58,7 @@ const Form = () => {
             name="name"
             placeholder="Имя"
             error={errors.name}
+            reset={reset}
           />
           <InputWithSquare
             label="Телефон"
@@ -68,6 +67,7 @@ const Form = () => {
             type={'tel'}
             placeholder="Телефон"
             error={errors.phone}
+            reset={reset}
           />
           <InputWithSquare
             label="E-mail"
@@ -76,6 +76,7 @@ const Form = () => {
             type={'email'}
             placeholder="E-mail"
             error={errors.email}
+            reset={reset}
           />
         </div>
 
@@ -142,7 +143,8 @@ const InputWithSquare = ({
   name,
   placeholder,
   error,
-  type
+  type,
+  reset
 }: any) => {
   const [isFilled, setIsFilled] = useState(false);
   const handleInputChange = (e: any) => {
@@ -173,6 +175,10 @@ const InputWithSquare = ({
     }
 
     setFormattedPhone(formattedInput);
+    reset(); 
+  };
+  const handleFormSubmit = () => {
+    reset(); 
   };
   if(type==="tel") {
     return (
