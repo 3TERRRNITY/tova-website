@@ -27,6 +27,7 @@ const Form = () => {
   const form = useRef<any>();
 
   const onSubmit = (e: any) => {
+    reset();
     emailjs
       .sendForm("service_9lobtdd", "template_uly0dx9", form.current, {
         publicKey: "W0rcqzYQdymcqkbza",
