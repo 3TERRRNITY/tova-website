@@ -14,6 +14,7 @@ const video = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [isHovered, setIsHovered] = useState(false);
   const [imageUrl, setImageUrl] = useState("/telegram.png");
+  const [selectedSlider, setSelectedSlider] = useState<string | null>('/video#clips');
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -58,7 +59,9 @@ const video = () => {
       transition={{ duration: 1, delay: 7 }}
     />
   );
-
+  const handleTitleClick = (link: string) => {
+    setSelectedSlider(link);
+  };
   useEffect(() => {
     const animateWords = async () => {
       await control.start({ y: 0 });
@@ -88,6 +91,8 @@ const video = () => {
       link: "/video#prod",
     },
   ];
+  
+  
   return (
     <>
       <Header />
@@ -202,18 +207,83 @@ const video = () => {
                   link={link}
                   title={title}
                   key={title}
+                  // @ts-ignore
+                  setSelectedSlider={setSelectedSlider}
+                  selectedSlider={selectedSlider}
                 />
               ))}
             </div>
           </div>
-          <div className={styles.slider}>
+          {selectedSlider === "/video#ad" && (
+              <div className={styles.slider}>
+              <div className={styles.slider__text}>
+                <div className={styles.slider__text_title}>реклама</div>
+                <div className={styles.slider__text_description}>
+                  специализируемся на производстве рекламных роликов, которые
+                  выделяются на фоне традиционного контента. Создаем рекламу,
+                  ориентированную на конкретную целевую аудиторию, с акцентом на
+                  креативность и уникальный подход.
+                </div>
+              </div>
+              <div className={styles.slider__video}>
+                <video
+                  autoPlay
+                  muted={true}
+                  loop
+                  playsInline={true}
+                  ref={videoRef}
+                  preload="auto"
+                >
+                  <source type="video/mp4" src="/video/ad_1.mp4" />
+                </video>
+              </div>
+              <div className={styles.slider__grid}>
+                <VideoPlayer src="/video/ad_1.mp4" />
+                <VideoPlayer src="/video/ad_2.mp4" />
+              </div>
+
+              </div>
+          )}
+          
+          {selectedSlider === "/video#clips" && (
+              <div className={styles.slider}>
+              <div className={styles.slider__text}>
+                <div className={styles.slider__text_title}>Музыкальные Клипы</div>
+                <div className={styles.slider__text_description}>
+                Разработка и производство музыкальных клипов, которые не только отражают дух композиции, но и расширяют границы творчества.
+                Тесное взаимодействие с артистами и лейблами для создания впечатляющих визуальных историй.
+                </div>
+              </div>
+              <div className={styles.slider__image_clips} />
+              <div className={styles.slider__grid}>
+                <img src="/video/clips_1.png" alt="clips" className={styles.slider__grid_video} />
+                <img src="/video/clips_2.png" alt="clips" className={styles.slider__grid_video} />
+              </div>
+            </div>
+          )}
+          
+          {selectedSlider === "/video#films" && (
+            <div className={styles.slider}>
             <div className={styles.slider__text}>
-              <div className={styles.slider__text_title}>реклама</div>
+              <div className={styles.slider__text_title}>Фильмы и Телевидение</div>
               <div className={styles.slider__text_description}>
-                специализируемся на производстве рекламных роликов, которые
-                выделяются на фоне традиционного контента. Создаем рекламу,
-                ориентированную на конкретную целевую аудиторию, с акцентом на
-                креативность и уникальный подход.
+              Производство фильмов, сериалов и телевизионных программ, сочетающих в себе искусство рассказывания историй и техническое мастерство.Управление всеми аспектами производственного процесса, от сценария до постпродакшена, обеспечивая высокий уровень качества на каждом этапе.
+              </div>
+            </div>
+            <div className={styles.slider__image_films} />
+            <div className={styles.slider__grid}>
+              <img src="/video/films_1.png" alt="clips" className={styles.slider__grid_video} />
+              <img src="/video/films_2.png" alt="clips" className={styles.slider__grid_video} />
+            </div>
+          </div>
+
+          )}
+          {selectedSlider === "/video#prod" && (
+            <div className={styles.slider}>
+            <div className={styles.slider__text}>
+              <div className={styles.slider__text_title}>Всестороннее Производство</div>
+              <div className={styles.slider__text_description}>
+                Полный цикл производства видеоконтента, включая предпродакшн, съемку, монтаж и постпродакшн. Использование современных технологий и творческих методов для создания видео, которое превосходит ожидания клиентов и впечатляет аудиторию.
               </div>
             </div>
             <div className={styles.slider__video}>
@@ -225,14 +295,15 @@ const video = () => {
                 ref={videoRef}
                 preload="auto"
               >
-                <source type="video/mp4" src="/video/ad_1.mp4" />
+                <source type="video/mp4" src="/video/prod.mp4" />
               </video>
             </div>
             <div className={styles.slider__grid}>
-              <VideoPlayer src="/video/ad_1.mp4" />
-              <VideoPlayer src="/video/ad_2.mp4" />
+              <VideoPlayer src="/video/prod.mp4" />
             </div>
           </div>
+          )}
+          <PaginationBar services={services} selectedSlider={selectedSlider} setSelectedSlider={handleTitleClick} />
         </div>
       </div>
       <div className={styles.whitePageContainer}>
@@ -249,10 +320,14 @@ const HoverableTitle = ({
   title,
   href,
   link,
+  setSelectedSlider,
+   selectedSlider
 }: {
   title: string;
   href: string;
   link: string;
+  setSelectedSlider: any,
+  selectedSlider: any
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -273,10 +348,11 @@ const HoverableTitle = ({
         }}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        onClick={() => setSelectedSlider(link)}
       >
         <div style={{ zIndex: "100", width: "217px" }}>{title}</div>
 
-        {isHovered && (
+        { selectedSlider===link && (
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -293,7 +369,7 @@ const HoverableTitle = ({
           </motion.span>
         )}
 
-        {isHovered && (
+        { selectedSlider===link && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -350,6 +426,20 @@ const VideoPlayer = ({ src }: any) => {
         <source type="video/mp4" src={src} />
       </video>
       <a>перейти</a>
+    </div>
+  );
+};
+
+const PaginationBar = ({ services, selectedSlider, setSelectedSlider }: { services: { link: string }[], selectedSlider: string | null, setSelectedSlider: (link: string) => void }) => {
+  return (
+    <div className={styles.paginationBar}>
+      {services.map(({ link }, index) => (
+        <div
+          key={index}
+          className={`${styles.paginationDot} ${selectedSlider === link ? styles.active : ""}`}
+          onClick={() => setSelectedSlider(link)}
+        >{index+1}</div>
+      ))}
     </div>
   );
 };
