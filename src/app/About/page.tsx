@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import styles from "../../styles/about.module.scss";
 import commonStyles from "../../styles/common.module.scss";
@@ -13,6 +13,19 @@ import Footer from "../../components/Footer/Footer";
 import Form from "../../components/Form/Form";
 
 const About = () => {
+  const [imageUrl, setImageUrl] = useState("/telegram.png");
+  const [isHovered, setIsHovered] = useState(false);
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setImageUrl("/telegram_notification.png");
+    }, 5000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  const handleHover = () => {
+    setIsHovered(!isHovered);
+  };
   const Departaments = DEPARTAMENTS.map(({ title, description }, index) => (
     <React.Fragment key={`${title}-${index}`}>
       <motion.div
@@ -46,7 +59,18 @@ const About = () => {
     <div className={commonStyles.otherPageBody}>
       <Header white />
       <Navbar />
-
+      <div className={commonStyles.telegramLogo}>
+        <a href="https://t.me/tova_agency_bot" target="_blank">
+          <motion.img
+            src={imageUrl}
+            alt="telegram"
+            loading="lazy"
+            whileHover={{ rotate: isHovered ? -45 : 0 }}
+            onMouseEnter={handleHover}
+            onMouseLeave={handleHover}
+          />
+        </a>
+      </div>
       <motion.div
         className={styles.about}
         initial="hidden"

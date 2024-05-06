@@ -11,7 +11,7 @@ const SliderContainer = () => {
   ));
 
   return (
-    <Marquee>
+    <Marquee className={styles.carousel}>
       {brandsContainer}
       {brandsContainer}
       {brandsContainer}

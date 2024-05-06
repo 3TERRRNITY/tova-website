@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import styles from "./Form.module.scss";
@@ -28,17 +28,17 @@ const Form = () => {
 
   const onSubmit = (e: any) => {
     emailjs
-      .sendForm("service_9lobtdd", "template_uly0dx9", form.current, {
-        publicKey: "W0rcqzYQdymcqkbza",
+      .sendForm("service_hhmluw4", "template_f8mb664", form.current, {
+        publicKey: "GhqMZtnWOZkOdinFE",
       })
       .then(
         () => {
-          reset()
+          reset();
         },
         (error) => {
           console.error("FAILED...", error.text);
         }
-      )
+      );
   };
 
   return (
@@ -54,7 +54,7 @@ const Form = () => {
           <InputWithSquare
             label="Имя"
             register={register}
-            type={'text'}
+            type={"text"}
             name="name"
             placeholder="Имя"
             error={errors.name}
@@ -64,7 +64,7 @@ const Form = () => {
             label="Телефон"
             register={register}
             name="phone"
-            type={'tel'}
+            type={"tel"}
             placeholder="Телефон"
             error={errors.phone}
             reset={reset}
@@ -73,7 +73,7 @@ const Form = () => {
             label="E-mail"
             register={register}
             name="email"
-            type={'email'}
+            type={"email"}
             placeholder="E-mail"
             error={errors.email}
             reset={reset}
@@ -88,7 +88,11 @@ const Form = () => {
           />
         </div>
         <div className={styles.agreementContainer}>
-          <div className={`${styles.checkboxContainer} ${errors.agree ? styles.shake : ""}`}>
+          <div
+            className={`${styles.checkboxContainer} ${
+              errors.agree ? styles.shake : ""
+            }`}
+          >
             <input
               type="checkbox"
               {...register("agree", { required: "Это обязательное поле" })}
@@ -96,7 +100,12 @@ const Form = () => {
               id="agreeCheckbox"
             />
             <label htmlFor="agreeCheckbox">
-              Я согласен с <span className={styles.underline}><a href="/privacy" target="_blank" className={styles.privacy}>правилами обработки персональных данных</a></span>
+              Я согласен с{" "}
+              <span className={styles.underline}>
+                <a href="/privacy" target="_blank" className={styles.privacy}>
+                  правилами обработки персональных данных
+                </a>
+              </span>
             </label>
           </div>
           <motion.button
@@ -144,7 +153,7 @@ const InputWithSquare = ({
   placeholder,
   error,
   type,
-  reset
+  reset,
 }: any) => {
   const [isFilled, setIsFilled] = useState(false);
   const handleInputChange = (e: any) => {
@@ -153,10 +162,9 @@ const InputWithSquare = ({
   const [formattedPhone, setFormattedPhone] = useState("");
 
   const handleInputTelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const input = e.target.value.replace(/\D/g, ""); 
+    const input = e.target.value.replace(/\D/g, "");
     let formattedInput = "";
     setIsFilled(!!e.target.value);
-
 
     if (input.length > 0) {
       formattedInput += "+" + input.substring(0, 1);
@@ -175,27 +183,29 @@ const InputWithSquare = ({
     }
 
     setFormattedPhone(formattedInput);
-    reset(); 
+    reset();
   };
   const handleFormSubmit = () => {
-    reset(); 
+    reset();
   };
-  if(type==="tel") {
+  if (type === "tel") {
     return (
       <div className={`${styles.inputContainer} ${error ? styles.shake : ""}`}>
-      <input
-        {...register(name, { required: `Это обязательное поле` })}
-        placeholder={placeholder}
-        type={type}
-        value={formattedPhone}
-        className={`${styles.input}`}
-        onChange={type==="tel" ? handleInputTelChange : handleInputChange}
-      />
-      <div className={`${styles.square} ${isFilled && styles.filled} ${
-          formattedPhone.length > 0 && styles.filled
-        }`} />
-    </div>
-    )
+        <input
+          {...register(name, { required: `Это обязательное поле` })}
+          placeholder={placeholder}
+          type={type}
+          value={formattedPhone}
+          className={`${styles.input}`}
+          onChange={type === "tel" ? handleInputTelChange : handleInputChange}
+        />
+        <div
+          className={`${styles.square} ${isFilled && styles.filled} ${
+            formattedPhone.length > 0 && styles.filled
+          }`}
+        />
+      </div>
+    );
   }
   return (
     <div className={`${styles.inputContainer} ${error ? styles.shake : ""}`}>
@@ -206,9 +216,11 @@ const InputWithSquare = ({
         className={`${styles.input}`}
         onChange={handleInputChange}
       />
-      <div className={`${styles.square} ${isFilled && styles.filled} ${
+      <div
+        className={`${styles.square} ${isFilled && styles.filled} ${
           formattedPhone.length > 0 && styles.filled
-        }`} />
+        }`}
+      />
     </div>
   );
 };

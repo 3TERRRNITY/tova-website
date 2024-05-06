@@ -1,19 +1,27 @@
 @import "../../styles/mixins.scss";
 @import "../../styles/variable.scss";
 .carousel {
+  height: 55px;
+  margin: $space-80 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  @media (max-width: 480px) {
+    margin: 40px 0;
+  }
   &__item {
-    padding: $space-80 $space-40;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    padding: 0 $space-20;
     gap: $space-20;
     @media (max-width: 480px) {
-      padding: 20px 20px;
+      padding: 0 20px;
     }
     img {
-      width: $sliderImageWidth;
-      height: $sliderImageHeight;
+      height: 50px;
+      width: 140px;
       filter: grayscale(100);
       display: flex;
       align-items: center;
@@ -22,10 +30,7 @@
       margin: 0 auto;
       text-align: center;
       opacity: 0.7;
-      @media (max-width: 480px) {
-        height: 20px;
-        width: auto;
-      }
+      
     }
   }
 }
